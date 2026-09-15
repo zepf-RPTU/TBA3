@@ -1,0 +1,29 @@
+{
+    "header": {
+        "note": "Kopfzeile (Längsschnitt)",
+        "title": "Jahrgänge im Vergleich",
+        "subtitle": "Gegenüberstellung der letzten fünf Jahre",
+        "interface": {
+            "domain-select": {
+                "label": "Bereich",
+                "tooltip": "Wählen Sie ein Fach bzw. eine Domäne."
+            },
+            "normal-view": {
+                "label": "Normale Ansicht",
+                "tooltip": "Wählen Sie die normale Ansicht, bei der die Anteile der Kompetenzstufen als einzelne Linien angezeigt werden."
+            },
+            "stacked-view": {
+                "label": "Gestapelte Ansicht",
+                "tooltip": "Wählen Sie die gestapelte Ansicht, bei der die Anteile der Kompetenzstufen als gestapelte Flächen angezeigt werden."
+            },
+            "parallel": {
+                "label": "Punkte & Linien",
+                "tooltip": "Zeigen Sie Unterrichtsqualität und Selbstwirksamkeit mithilfe von Punkten und Linien an."
+            },
+            "boxplot": {
+                "label": "Boxplot",
+                "tooltip": "Zeigen Sie Unterrichtsqualität und Selbstwirksamkeit mithilfe von Boxplots an."
+            }
+        }
+    }
+}

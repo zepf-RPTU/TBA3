@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBA3 – Mathe 3</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="../src/ma/main.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+    <!-- Cold-start placeholder. Lives outside .main-content so the app's own
+         container wipe cannot remove it; bootstrapDashboardApp.js owns removal. -->
+    <div class="app-skeleton" id="app-skeleton">
+        <div class="app-skeleton-rail" aria-hidden="true"></div>
+        <div class="app-skeleton-main">
+            <p class="app-skeleton-status" role="status">Dashboard wird geladen …</p>
+            <div class="app-skeleton-header skeleton-card" aria-hidden="true"></div>
+            <div class="app-skeleton-body" aria-hidden="true">
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+                <div class="skeleton-card"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <main class="main-content" id="main-content" tabindex="-1">
+        <script type="module">
+            import { bootstrapDashboardApp } from '../src/common/app/bootstrapDashboardApp.js';
+            import { MaAppModule } from '../src/ma/maAppModule.js';
+
+            bootstrapDashboardApp({
+                AppModule: MaAppModule,
+                appId: 'ma-app',
+                options: { defaultView: 'welcome' },
+                appName: 'Mathe 3'
+            });
+        </script>
+    </main>
+
+</body>
+
+</html>

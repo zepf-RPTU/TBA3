@@ -1,0 +1,20 @@
+/**
+ * Responsive Root Font-Size Scaling
+ *
+ * All font-size declarations use rem tokens (--fs-sm, --fs-base, --fs-lg) and
+ * the --space-* scale is rem-based too, so both text and spacing scale
+ * proportionally from this single fluid root font-size — no per-breakpoint
+ * root steps needed.
+ *
+ * Canonical layout breakpoints (used by view/module CSS for structural reflow,
+ * NOT for root font-size): 1280px (desktop → narrow), 1024px (tablet),
+ * 768px (mobile). New responsive CSS should conform to these tiers.
+ */
+
+html {
+    /* Fluid 13px → 18px. On the root element `rem` resolves against the user's
+       default font-size (per spec), so rem-based min/max preserve browser-zoom
+       accessibility. Slope tracks the former stepped tiers (~13px @768px,
+       ~16px @1920px, 18px cap ~2800px). */
+    font-size: clamp(0.8125rem, 0.7rem + 0.24vw, 1.125rem);
+}

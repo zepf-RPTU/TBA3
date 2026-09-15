@@ -1,0 +1,20 @@
+/**
+ * WORKAROUND: MA student data/info tables can exceed their host width because
+ * Tabulator's auto-calculated minWidths outgrow the available split-view width.
+ * Until processColumn() stops imposing those minWidth floors for widthGrow
+ * columns, hide horizontal overflow on the same outer host used by the working
+ * student data table.
+ *
+ * The MA table rules every view shares live in src/ma/maAppModule.css.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    #student-tables-wrapper .data-table-section,
+    #student-top-bar .info-table-section {
+        overflow-x: hidden;
+    }
+}

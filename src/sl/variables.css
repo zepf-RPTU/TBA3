@@ -1,0 +1,102 @@
+/**
+ * School Leadership Variables - Modern Simple Design
+ * (Shared baseline lives in ../styles/foundation/variables.css)
+ */
+
+:root {
+    /* Brand palette (--primary-color, --primary-hover, --secondary-color) now
+       lives in ../styles/foundation/variables.css — shared across all subjects.
+       */
+    --success-color: #10b981;
+    --error-color: #ef4444;
+    --light-gray: #f8fafc;
+    --color-background-secondary: var(--light-gray);
+
+    /* State and School row colors */
+    --state-row-color: #92400e;
+    --school-row-color: #1e40af;
+
+    /* Competence-level colors live in
+       @tba3/modules/styles/competence-levels.css */
+
+    /* SL semantic chart colors */
+    --sl-teaching-quality: #9b59b6;
+    --sl-self-efficacy: #5b8dee;
+
+    /* Group comparison */
+    --sl-group-1: #87ceeb;
+    --sl-group-2: #1e3a8a;
+
+    /* Rating bands (self-efficacy) */
+    --sl-rating-low: #e74c3c;
+    --sl-rating-medium: #f39c12;
+    --sl-rating-good: #3498db;
+    --sl-rating-excellent: #27ae60;
+
+    /* Chart infrastructure (overrides) — alias the shared tokens so their
+       values live in one place instead of being duplicated as literals here. */
+    --chart-grid-color: var(--color-border);
+    --class-average-color: var(--success-color);
+
+    /* Header and background colors - simplified */
+    --header-background: var(--light-gray);
+    --header-background-alt: #f1f5f9;
+}
+
+/* ==========================================================================
+   Dark colour scheme (see ../styles/foundation/variables.css)
+   ========================================================================== */
+
+html[data-color-scheme='dark'] {
+    --light-gray: #262d3a;
+    --state-row-color: #f0b45a;
+    --school-row-color: #93c5fd;
+    --header-background-alt: #1f2531;
+}
+
+/* ==========================================================================
+   KS-theme variants for SL semantic colors
+   ========================================================================== */
+
+/**
+ * The KS color-theme picker (data-ks-theme on <html>) swaps the competence
+ * band; these blocks keep teaching-quality, self-efficacy, the self-efficacy
+ * rating bands and group-comparison colors coherent with it. Read live via CSS
+ * var() and, for JS-baked surfaces, via getThemeColors() — those refresh in
+ * place on a theme switch. Grayscale resolves to the shared --gray-1…5 ramp
+ * defined in @tba3/modules/styles/competence-levels.css, so the whole app
+ * speaks one gray vocabulary; colorblind uses Okabe-Ito hues matching the KS
+ * colorblind palette.
+ */
+html[data-ks-theme='grayscale'] {
+    /* Both series share one dual-axis box plot (longitudinalBoxPlotChart),
+       so they need real separation — the old #595959 / #737373 pair sat
+       about 10 L* apart. */
+    --sl-teaching-quality: var(--gray-4);
+    --sl-self-efficacy: var(--gray-2);
+
+    /* Two bar series in one chart. Never drawn alongside the KS band: the
+       group-comparison chart is either a competency chart or a points chart,
+       never both (see getBarColor in groupComparisonChart.js). */
+    --sl-group-1: var(--gray-2);
+    --sl-group-2: var(--gray-5);
+
+    /* Four bands in one legend, light → dark = low → excellent. */
+    --sl-rating-low: var(--gray-1);
+    --sl-rating-medium: var(--gray-3);
+    --sl-rating-good: var(--gray-4);
+    --sl-rating-excellent: var(--gray-5);
+}
+
+html[data-ks-theme='colorblind'] {
+    --sl-teaching-quality: #cc79a7;
+    --sl-self-efficacy: #0072b2;
+
+    --sl-group-1: #56b4e9;
+    --sl-group-2: #0072b2;
+
+    --sl-rating-low: #d55e00;
+    --sl-rating-medium: #e69f00;
+    --sl-rating-good: #56b4e9;
+    --sl-rating-excellent: #009e73;
+}

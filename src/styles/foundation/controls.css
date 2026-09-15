@@ -1,0 +1,92 @@
+/**
+ * Shared Control Taxonomy
+ *
+ * Shared native control surface for select-based dropdowns across EN, MA, and
+ * SL. Owner stylesheets keep width, layout, and context-specific token
+ * overrides.
+ */
+
+:root {
+    --control-padding: var(--space-sm);
+    --control-field-gap: var(--control-gap);
+    --control-radius: var(--radius-md);
+    --control-bg: var(--color-card-background, #fff);
+    --control-color: var(--text-color, #1f2937);
+    --control-hover-bg: var(--control-bg);
+    --control-hover-border: var(--primary-color, #1a73e8);
+}
+
+.control-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--control-field-gap);
+    min-width: 0;
+}
+
+.control-field--inline {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--control-field-gap);
+}
+
+.control-label {
+    color: var(--text-secondary, var(--text-color, #1f2937));
+    white-space: nowrap;
+}
+
+.control-select {
+    max-width: 100%;
+    padding: var(--control-padding) var(--control-padding-inline-end, var(--control-padding))
+        var(--control-padding) var(--control-padding);
+    font: inherit;
+    line-height: var(--lh-ui);
+    border: 1px solid var(--color-border, #cbd5e1);
+    border-radius: var(--control-radius);
+    background: var(--control-bg);
+    color: var(--control-color);
+    cursor: pointer;
+    transition:
+        background var(--interactive-transition-duration, 0.2s) ease,
+        border-color var(--interactive-transition-duration, 0.2s) ease,
+        box-shadow var(--interactive-transition-duration, 0.2s) ease,
+        color var(--interactive-transition-duration, 0.2s) ease;
+}
+
+.control-select:hover:not(:disabled) {
+    background: var(--control-hover-bg);
+    border-color: var(--control-hover-border);
+}
+
+.control-select:focus-visible {
+    outline-width: 0;
+    border-color: var(--control-focus-border, var(--control-hover-border));
+    box-shadow: var(--shadow-focus);
+}
+
+.control-select:disabled {
+    background: var(--light-gray, #f3f4f6);
+    color: var(--text-secondary, #6b7280);
+    cursor: default;
+}
+
+/* Card-surface variant (SL header/panel selects): reserved arrow gutter,
+   muted hover border, primary focus border. Fill/radius/padding intentionally
+   stay at the shared :root defaults above. */
+.control-select--card {
+    --control-padding-inline-end: 2rem;
+    --control-hover-border: var(--text-muted);
+    --control-focus-border: var(--primary-color);
+}
+
+/* Text entry on a touch device: iOS Safari zooms the whole page into a focused
+   field whose text is under 16px, and the fluid root sits at 13–14px on a tablet.
+   Every field the app renders is listed here, foundation-owned like
+   --touch-target-min, so the floor has one home. */
+@media (pointer: coarse) {
+    .control-select,
+    .table-filter-field-control,
+    .help-search-input,
+    .notes-drawer .ql-editor {
+        font-size: max(var(--fs-base), 16px);
+    }
+}

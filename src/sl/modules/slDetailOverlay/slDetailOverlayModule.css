@@ -1,0 +1,93 @@
+/**
+ * SL detail overlay: content panel, close button, panel proportions and the chart-with-legend
+ * layout tuned for the overlay. The backdrop shell is @tba3/modules/styles/modal-backdrop.css.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* ==========================================================================
+       SL detail overlay styles
+       ========================================================================== */
+
+    /* Backdrop shell comes from the shared .modal-backdrop class
+       (@tba3/modules/styles/modal-backdrop.css); .sl-detail-overlay remains as the
+       JS/content hook. */
+    .sl-detail-overlay-content {
+        background: var(--color-card-background);
+        margin: var(--overlay-margin);
+        border-radius: var(--radius-md);
+        display: flex;
+        flex: 1;
+        gap: var(--layout-gap);
+        padding: var(--space-md);
+        box-shadow: var(--shadow-lg);
+        min-width: 0;
+        min-height: 0;
+    }
+
+    [data-detail-overlay-action='close'] {
+        position: absolute;
+        top: var(--control-gap);
+        inset-inline-end: var(--control-gap);
+        z-index: 20;
+    }
+
+    .sl-detail-overlay-kasten {
+        flex: 0 0 25%;
+        overflow-y: auto;
+        min-width: 0;
+    }
+
+    .overlay-panel--main,
+    .overlay-panel--chart,
+    .overlay-panel--sp {
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .overlay-panel--main {
+        flex: 3;
+    }
+
+    .overlay-panel--chart {
+        flex: 1;
+    }
+
+    .overlay-panel--sp {
+        flex: 0 0 300px;
+    }
+
+    .sl-detail-overlay .chart-with-legend-panel {
+        flex-wrap: nowrap;
+        gap: var(--space-sm);
+    }
+
+    .sl-detail-overlay .chart-svg-area {
+        flex: 1 1 auto;
+    }
+
+    /* Sized by its longest pill like every legend panel, but never shrunk: in this
+       nowrap row a shrinking panel would clip the pills' unbreakable labels. */
+    .sl-detail-overlay .chart-legend-panel {
+        flex: 0 0 auto;
+        padding: var(--space-sm);
+        gap: var(--layout-gap);
+    }
+
+    @media (max-width: 1024px) {
+        .sl-detail-overlay .chart-with-legend-panel {
+            flex-wrap: wrap;
+            gap: var(--layout-gap);
+        }
+
+        .sl-detail-overlay .chart-legend-panel {
+            flex: 1 1 100%;
+            width: 100%;
+            min-width: 0;
+            max-width: none;
+        }
+    }
+}

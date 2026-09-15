@@ -1,0 +1,265 @@
+/**
+ * Shared Button Taxonomy
+ *
+ * Three structural families plus fill modifiers.
+ * State transitions (hover, active, disabled) change only background-color.
+ * Border, text color, and shadow are set once per button context and stay
+ * fixed across all states.
+ */
+
+:root {
+    --btn-gap: var(--layout-gap, 0.5rem);
+    --btn-group-gap: var(--layout-gap, 0.5rem);
+    --btn-radius: var(--radius-sm, 0.25rem);
+    --btn-height-toolbar-xs: 1.75rem;
+    --btn-height-toolbar-lg: 2.5rem;
+    --btn-height-toolbar: 2rem;
+    --btn-icon-size: 1rem;
+    --btn-padding-block: var(--space-sm);
+    --btn-padding-inline: 1rem;
+    --btn-active-fill: color-mix(in srgb, var(--primary-color, #1a73e8) 20%, transparent);
+    --btn-active-hover-fill: color-mix(in srgb, var(--primary-color, #1a73e8) 35%, transparent);
+    --btn-disabled-opacity: 0.5;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+.btn {
+    margin: 0;
+    cursor: pointer;
+    transition:
+        background-color var(--interactive-transition-duration, 0.2s) ease,
+        transform var(--interactive-transition-duration, 0.2s) ease;
+}
+
+.btn:not(:disabled):hover {
+    background-color: var(
+        --btn-hover-fill,
+        var(--color-background-hover, var(--light-gray, #f3f4f6))
+    );
+}
+
+.btn:not(:disabled):active {
+    transform: scale(var(--press-scale));
+}
+
+.btn:focus-visible {
+    outline-width: 0;
+    box-shadow: var(--shadow-focus);
+}
+
+.btn:is(.is-active, .is-selected) {
+    background-color: var(
+        --btn-active-fill,
+        color-mix(in srgb, var(--primary-color, #1a73e8) 20%, transparent)
+    );
+}
+
+.btn:is(.is-active, .is-selected):not(:disabled):hover {
+    background-color: var(
+        --btn-active-hover-fill,
+        color-mix(in srgb, var(--primary-color, #1a73e8) 35%, transparent)
+    );
+}
+
+.btn:disabled {
+    opacity: var(--btn-disabled-opacity);
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   Modifiers
+   ========================================================================== */
+
+.btn--size-control {
+    --btn-padding-block: 0.625rem;
+    --btn-padding-inline: 1.25rem;
+    --btn-radius: var(--radius-md);
+}
+
+.btn--size-toolbar-xs {
+    --btn-height-toolbar: var(--btn-height-toolbar-xs);
+}
+
+/* A fingertip needs a bigger box than a cursor does. Reassigning the token is
+   the whole change — every icon button already sizes off it.
+   `--touch-target-min` rather than `--btn-height-toolbar-lg`: the rem tokens
+   resolve against the fluid root font-size, so 2.5rem is 40px only near a
+   1920px viewport and lands at ~35px on an iPad — see variables.css.
+   `--btn-icon-size` is deliberately left alone: a 16px glyph in a 44px box is
+   correct, and growing the glyph too would change the optical weight of every
+   icon in the app.
+   This block sits after `.btn--size-toolbar-xs` on purpose: same specificity,
+   so source order gives the two xs icon buttons — both overlay *close* buttons —
+   the full target too, which is what they need most. */
+@media (pointer: coarse) {
+    .btn--icon,
+    /* The group is sized from the same token by content-module.css but is not
+       itself a `.btn--icon`, so it needs naming here too: raising only the
+       buttons would leave 44px controls inside a 2rem frame. */
+    .content-module-header-actions .btn-group--segmented:has(>.btn--icon) {
+        --btn-height-toolbar: var(--touch-target-min);
+    }
+
+    /* Labelled controls (report zoom presets, export/clear, the filter sidebar)
+       are sized by their padding, not the toolbar token, so they take the floor
+       directly. */
+    .btn--size-control {
+        min-height: var(--touch-target-min);
+    }
+}
+
+/* ==========================================================================
+   Structural families
+   ========================================================================== */
+
+/* --- Icon button: square, no text, icon-only --- */
+
+.btn--icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--btn-height-toolbar);
+    height: var(--btn-height-toolbar);
+    min-width: var(--btn-height-toolbar);
+    min-height: var(--btn-height-toolbar);
+    padding: 0;
+    border-radius: var(--btn-radius);
+    font-size: var(--btn-icon-size);
+    line-height: var(--lh-icon);
+    background-color: var(--btn-fill, var(--color-card-background, #fff));
+    border: 1px solid var(--color-border, #cbd5e1);
+    color: var(--text-secondary, var(--text-color, #1f2937));
+}
+
+.btn--icon svg {
+    width: var(--btn-icon-size);
+    height: var(--btn-icon-size);
+    display: block;
+    flex-shrink: 0;
+}
+
+/* The one typographic mark that stands in an icon button: Ø, the averages sign
+   (Material Symbols has no diameter glyph — see comparisonModeControl.js). At the
+   icon size its ink matches the 400-weight glyphs beside it; the weight is pinned
+   so it cannot inherit a bolder one from a header. */
+.btn--icon .btn-glyph {
+    display: block;
+    flex-shrink: 0;
+    font-size: var(--btn-icon-size);
+    font-weight: 400;
+    line-height: 1;
+}
+
+/* --- Text button: inline-flex with text padding --- */
+
+.btn--text {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--btn-gap);
+    border-radius: var(--btn-radius);
+    padding: var(--btn-padding-block) var(--btn-padding-inline);
+    background-color: var(--btn-fill, var(--color-card-background, #fff));
+    border: 1px solid var(--color-border, #cbd5e1);
+    color: var(--text-color, #1f2937);
+}
+
+.btn--text svg {
+    width: var(--btn-icon-size);
+    height: var(--btn-icon-size);
+    display: block;
+    flex-shrink: 0;
+}
+
+/* Beside a 400-weight label of --fs-base; the larger --fs-lg glyph read heavier
+   than the text it stands for. */
+.btn--text .sidebar-nav-icon {
+    --btn-icon-size: 1.125em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- Item button: block, full-width, menu rows --- */
+
+.btn--item {
+    display: block;
+    width: auto;
+    min-width: 100%;
+    padding: var(--btn-padding-block) var(--btn-padding-inline);
+    background-color: var(--btn-fill, transparent);
+    border: none;
+    border-radius: 0;
+    color: var(--text-color);
+    text-align: start;
+    white-space: nowrap;
+    box-shadow: none;
+}
+
+/* ==========================================================================
+   Fill modifiers
+   ========================================================================== */
+
+/* Primary fill — for CTA and confirm actions */
+.btn--primary {
+    --btn-fill: var(--color-accent-solid);
+    --btn-hover-fill: var(--color-accent-solid-hover);
+    background-color: var(--btn-fill);
+    border-color: transparent;
+    color: var(--text-on-primary, #fff);
+}
+
+/* ==========================================================================
+   Group wrappers
+   ========================================================================== */
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    gap: var(--btn-group-gap);
+    min-width: 0;
+}
+
+.btn-group--segmented {
+    gap: 0;
+    border: 1px solid var(--color-border, #cbd5e1);
+    border-radius: var(--btn-radius);
+}
+
+.btn-group--segmented > .btn {
+    border: none;
+    border-radius: 0;
+    border-inline-end: 1px solid var(--color-border, #cbd5e1);
+}
+
+.btn-group--segmented > .btn--icon {
+    background: transparent;
+}
+
+.btn-group--segmented > .btn:first-child {
+    border-start-start-radius: calc(var(--btn-radius) - 1px);
+    border-end-start-radius: calc(var(--btn-radius) - 1px);
+}
+
+.btn-group--segmented > .btn:last-child {
+    border-inline-end: none;
+    border-start-end-radius: calc(var(--btn-radius) - 1px);
+    border-end-end-radius: calc(var(--btn-radius) - 1px);
+}
+
+.btn-group--segmented > .btn:only-child {
+    border-radius: calc(var(--btn-radius) - 1px);
+}
+
+.btn-group--wrap {
+    flex-wrap: wrap;
+}
+
+.btn-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--layout-gap-relaxed);
+}

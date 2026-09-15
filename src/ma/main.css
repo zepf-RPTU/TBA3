@@ -1,0 +1,43 @@
+/**
+ * MA — Mathe 3 — entry sheet.
+ *
+ * Declares the cascade-layer order and imports the shared sheets into their layers.
+ * Unit-owned CSS is not listed here: every module/view imports its own `<unit>.css`
+ * (layer `modules` / `views`) beside its source.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+/* Foundation: tokens, reset, typography, taxonomies */
+@import '../styles/foundation/variables.css' layer(foundation);
+@import '@tba3/modules/styles/competence-levels.css' layer(foundation);
+@import '../styles/foundation/typography.css' layer(foundation);
+@import '../styles/foundation/responsive.css' layer(foundation);
+@import '../styles/foundation/interactive.css' layer(foundation);
+@import '../styles/foundation/controls.css' layer(foundation);
+@import '../styles/foundation/buttons.css' layer(foundation);
+@import '../styles/foundation/layout-reset.css' layer(foundation);
+/* Cold-start skeleton: static markup in the HTML entry, so it cannot come through a module */
+@import '../styles/skeleton.css' layer(foundation);
+
+/* Common: shared shells and primitives with more than one owner */
+@import '../styles/view-layout.css' layer(common);
+@import '../styles/header-module.css' layer(common);
+@import '@tba3/modules/styles/modal-backdrop.css' layer(common);
+@import '../styles/notice-callout.css' layer(common);
+@import '../styles/preview-media.css' layer(common);
+@import '@tba3/modules/styles/glossary-popup.css' layer(common);
+@import '@tba3/modules/styles/html-legend-panel.css' layer(common);
+@import '@tba3/modules/styles/stacked-bar.css' layer(common);
+@import '@tba3/modules/styles/table-host.css' layer(common);
+/* Export capture: restyles module shells, glossary terms and legend pills while exporting */
+@import '../styles/export-capture.css' layer(common);
+
+/* Tables: Tabulator/Quill in `vendor`, the shared overrides in `common`; each app's
+   table overrides live beside its table module in `modules` and win by layer */
+@import 'tabulator-tables/dist/css/tabulator.min.css' layer(vendor);
+@import 'quill/dist/quill.snow.css' layer(vendor);
+@import '@tba3/modules/styles/table-base.css' layer(common);
+@import '@tba3/modules/styles/table-header-layout.css' layer(common);
+/* Views: the shared welcome splash shell (EN + MA) */
+@import '../styles/welcome-splash.css' layer(views);

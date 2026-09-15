@@ -1,0 +1,33 @@
+/**
+ * EN item lollipop host while the chart is wider than its card.
+ *
+ * The renderer widens its SVG when the Teilaufgaben would fall below their minimum
+ * pitch (`MIN_ITEM_PITCH` in itemLollipopChart.js) and marks the host with
+ * `.item-lollipop--scroll`. This hands that overflow a horizontal scrollbar with a
+ * trailing-edge cue instead of letting the card clip it.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    .item-lollipop--scroll {
+        overflow-x: auto;
+        /* Two background layers paint a shadow only while there is more chart to
+           the right: the shadow is fixed to the box, the card-coloured cover scrolls
+           with the content and slides over it at the end. */
+        background:
+            linear-gradient(to left, var(--color-card-background) 40%, transparent) right / 2rem
+                100% no-repeat local,
+            linear-gradient(to left, var(--shadow-color), transparent) right / 1.25rem 100%
+                no-repeat scroll;
+    }
+
+    /* Let the renderer's computed width attribute win over the shared
+       `.chart-container svg { width: 100% }` clamp. */
+    .item-lollipop--scroll svg {
+        width: auto;
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,194 @@
+/**
+ * OVERVIEW VIEW STYLES (overviewViewModule) - SL Module
+ *
+ * View-owned layout and overview-local surfaces.
+ * Header and navigation cards are now managed by SlAppModule (shared)
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    /* ==========================================================================
+       Main view container
+       ========================================================================== */
+
+    .sl-overview-view {
+        --view-base-padding-md: 1rem;
+        overflow-y: auto;
+    }
+
+    /* ==========================================================================
+       Content area (charts/tables)
+       ========================================================================== */
+
+    .sl-overview-view > #overview-domain-table-wrapper,
+    .sl-overview-view > #overview-class-table-wrapper,
+    .sl-overview-view > #overview-subject-charts-wrapper,
+    .sl-overview-view > #overview-class-charts-wrapper {
+        display: none;
+    }
+
+    /* flex (not block): both wrappers are ContentModule hosts, and the shared card
+       shell's flex column is what sizes the header/body slots inside them. */
+    .sl-overview-view[data-display-mode='table'][data-view-mode='by_subjects']
+        > #overview-domain-table-wrapper,
+    .sl-overview-view[data-display-mode='table'][data-view-mode='by_classes']
+        > #overview-class-table-wrapper {
+        display: flex;
+    }
+
+    .sl-overview-view[data-display-mode='charts'][data-view-mode='by_subjects']
+        > #overview-subject-charts-wrapper,
+    .sl-overview-view[data-display-mode='charts'][data-view-mode='by_classes']
+        > #overview-class-charts-wrapper {
+        display: flex;
+    }
+
+    /* Table wrapper containers — auto-size to content, no internal scroll */
+    #overview-domain-table-wrapper,
+    #overview-class-table-wrapper {
+        height: auto;
+        overflow: visible;
+        flex: none;
+    }
+
+    /* The table module root wrapper (the wrapper element itself)
+        must also auto-size — the shared module rule sets flex:1 which
+       would otherwise constrain it to the wrapper height. */
+    /* Nested table-section cards (Schulübersicht + per-class cards) live inside
+       shared module content surfaces. Reset flex/overflow here so each card sizes
+       to its Tabulator content instead of scrolling. */
+    #overview-class-table-wrapper .table-section,
+    #overview-domain-table-wrapper .table-section {
+        flex: none;
+        height: auto;
+        overflow: visible;
+    }
+
+    /* ==========================================================================
+       Overview-local surfaces
+       ========================================================================== */
+
+    #overview-subject-charts-wrapper,
+    #overview-class-charts-wrapper {
+        flex: 1;
+        min-height: 0;
+        gap: var(--layout-gap);
+        overflow: hidden;
+    }
+
+    #overview-subject-charts-wrapper > .overview-kasten-card,
+    #overview-class-charts-wrapper > .overview-kasten-card {
+        flex: 1 1 0%;
+        min-width: 0;
+    }
+
+    .thumbnail-grid {
+        --thumbnail-row-count: 1;
+        flex: 3 1 0%;
+        min-height: 0;
+        min-width: 0;
+        height: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: repeat(var(--thumbnail-row-count), minmax(0, 1fr));
+        gap: var(--layout-gap);
+    }
+
+    .thumbnail-grid > .chart-thumbnail-card {
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .chart-thumbnail-card {
+        background: var(--color-card-background);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        align-items: center;
+        justify-content: center;
+        padding: var(--card-pad-loose);
+        text-align: center;
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-lg);
+        color: var(--text-color);
+    }
+
+    /* The fill above sits in `views` and would otherwise beat
+       `.interactive-card:hover` in `foundation`, which layer order ranks lower
+       whatever its specificity. Repeat the hover fill here. */
+    .chart-thumbnail-card.interactive-card:hover {
+        background: var(--interactive-hover-bg);
+    }
+
+    .chart-thumbnail-card__preview {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        opacity: 0.24;
+        pointer-events: none;
+        transition:
+            opacity var(--interactive-transition-duration) ease,
+            transform var(--interactive-transition-duration) ease;
+    }
+
+    .chart-thumbnail-card__preview::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        /* A scrim in the surface colour, so the preview fades into the card in
+           either scheme. */
+        background: linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--color-card-background) 92%, transparent) 0%,
+            color-mix(in srgb, var(--color-card-background) 60%, transparent) 38%,
+            color-mix(in srgb, var(--color-card-background) 82%, transparent) 100%
+        );
+    }
+
+    .chart-thumbnail-card__preview svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .chart-thumbnail-card__title {
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        /* A long subject name ("Selbstwirksamkeit") is wider than a half-width
+           thumbnail at 320px; it wraps inside the pill rather than clipping. */
+        overflow-wrap: anywhere;
+        padding: var(--layout-gap-relaxed) var(--card-pad);
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--color-card-background) 82%, transparent);
+        box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-card-background) 54%, transparent);
+    }
+
+    .chart-thumbnail-card:hover .chart-thumbnail-card__preview,
+    .chart-thumbnail-card:focus-visible .chart-thumbnail-card__preview {
+        opacity: 0.34;
+        transform: scale(1.02);
+    }
+
+    @media (max-width: 1280px) {
+        #overview-subject-charts-wrapper,
+        #overview-class-charts-wrapper {
+            flex-direction: column;
+        }
+
+        #overview-subject-charts-wrapper > .overview-kasten-card,
+        #overview-class-charts-wrapper > .overview-kasten-card {
+            min-width: 0;
+        }
+    }
+}

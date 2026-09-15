@@ -1,0 +1,34 @@
+/**
+ * MA item view layout
+ *
+ * Split-view grid and layout-mode visibility come from the shared
+ * .ma-split-view-content / .ma-chart-only-content machine
+ * (maLayoutViewBase.css); only item-local sizing lives here.
+ * The render placeholder is now the shared skeleton overlay
+ * (src/styles/skeleton.css).
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .ma-item-view .item-table-section {
+        gap: var(--layout-gap);
+    }
+
+    .item-view-content .lollipop-section {
+        display: none;
+    }
+
+    .item-view-content.layout-mode-table-only .lollipop-section {
+        flex: 0 0 auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item-view-content.layout-mode-table-only .lollipop-section:not(.collapsed) {
+        height: calc(30vh + 2.5rem);
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "header": {
+        "note": "Kopfzeile (Willkommen)",
+        "title": "Willkommen zu den VERA-Ergebnissen",
+        "subtitle": "Sie befinden sich in der Rolle der Schulleitung. Diese Seite bietet Ihnen zunächst einen Überblick der zentralen Ergebnisse über alle Klassen und Fächer des ausgewählten Jahrgangs."
+    },
+    "overview": {
+        "note": "Kompetenzstufenverteilung",
+        "title": "Kompetenzstufenverteilung über alle Klassen und Fächer im direkten Vergleich"
+    }
+}

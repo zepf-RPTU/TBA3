@@ -1,0 +1,42 @@
+/**
+ * MA student top bar
+ *
+ * Module-owned selector and info-table shell for the student view.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    .student-top-bar-container {
+        flex: 0 0 auto;
+    }
+
+    .student-top-bar-content {
+        --layout-stack-gap: var(--layout-gap);
+        padding: var(--layout-pad);
+    }
+
+    .student-top-bar-content .ma-student-selector {
+        flex: 0 0 auto;
+        align-self: flex-start;
+    }
+
+    .student-top-bar-info .tabulator {
+        height: auto;
+    }
+
+    .student-top-bar-info .tabulator-col-title {
+        text-align: center;
+    }
+
+    .student-top-bar-info {
+        align-self: stretch;
+        width: 100%;
+        min-width: 0;
+        border: none;
+        background: transparent;
+        border-radius: 0;
+    }
+}

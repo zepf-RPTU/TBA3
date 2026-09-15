@@ -1,0 +1,20 @@
+{
+    "note": "Aufgabenübersichtstabelle",
+    "title": "Tabellarische Übersicht aller Aufgaben und Teilaufgaben",
+    "subtitle": "<p>Die Tabelle bildet die wichtigsten Merkmale und Ergebnisse aller (ausgewählten) Aufgaben und Teilaufgaben ab. Nutzen Sie die Kopfzeile der Tabelle zum Filtern und Sortieren der Anzeige nach gewünschten Kriterien.</p>",
+    "tutorial": "<p>In dieser Tabelle finden Sie eine Übersicht aller Aufgaben sowie der zugehörigen Teilaufgaben inklusive einzelner Aufgabenmerkmale und den erreichten Lösungsraten in den Bereichen Hör- und Leseverstehen. Jede Teilaufgabe hat eine Schwierigkeit bzw. ein Niveau, welches an die GER-Stufen (Kompetenzstufen) angelehnt ist. Der Balken zeigt, wie viele Ihrer Schüler:innen eine Teilaufgabe gelöst, nicht gelöst oder nicht bearbeitet haben.</p><p>Nutzen Sie die zur Verfügung stehenden Filter und Sortiermöglichkeiten, wenn Sie eine gezielte Auswahl von Teilaufgaben treffen möchten. Das obige Schaubild mit den Lösungsraten der Teilaufgaben passt sich dabei Ihrer aktuellen Auswahl an. Sie können außerdem zu jeder der Teilaufgaben weitere Details erhalten, in dem Sie diese in der Tabelle bzw. im obigen Schaubild anklicken.</p>",
+    "interface": {
+        "best-five": {
+            "label": "Stärkste 5",
+            "tooltip": "Die fünf besten Aufgaben anzeigen."
+        },
+        "worst-five": {
+            "label": "Schwächste 5",
+            "tooltip": "Die fünf schwächsten Aufgaben anzeigen."
+        },
+        "incomplete": {
+            "label": "Hohe Nichtbearbeitung",
+            "tooltip": "Aufgaben anzeigen, die am häufigsten nicht bearbeitet wurden."
+        }
+    }
+}

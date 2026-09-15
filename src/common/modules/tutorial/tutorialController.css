@@ -1,0 +1,145 @@
+/**
+ * Guided walkthrough — TutorialController-owned surfaces.
+ *
+ * Owns only `.tutorial-tour-*` classes; the controller renders the same shell
+ * for every dashboard. Must not target shared ContentModule shell slots
+ * (structure-check rule 1). Reuses shared tokens from
+ * src/styles/foundation/variables.css and the shared `.btn` families.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    .tutorial-tour-overlay {
+        position: fixed;
+        inset: 0;
+        z-index: var(--z-modal);
+        /* Let clicks/hover reach the spotlighted element and the rest of the page;
+           only the callout card re-enables pointer events. Navigating away closes
+           the tour, so an interactive page underneath stays consistent. */
+        pointer-events: none;
+        /* Fades in and out over the same transition, so closing mirrors opening and
+           a close that lands mid-open reverses from where it is. */
+        visibility: hidden;
+        opacity: 0;
+        transition:
+            opacity 0.2s ease-out,
+            visibility 0s linear 0.2s;
+    }
+
+    .tutorial-tour-overlay.visible {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0s;
+    }
+
+    /* The overlay is built on first use; this is where that first open fades from. */
+    @starting-style {
+        .tutorial-tour-overlay.visible {
+            opacity: 0;
+        }
+    }
+
+    /* Spotlight ring: a huge box-shadow bleeds the backdrop dim across the whole
+       viewport except this element's rect, keeping the anchor visible + hoverable.
+       */
+    .tutorial-tour-ring {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-radius: var(--radius-md);
+        box-shadow: 0 0 0 9999px var(--overlay-backdrop);
+        pointer-events: none;
+    }
+
+    .tutorial-tour-overlay.is-ready .tutorial-tour-ring {
+        transition:
+            top 0.25s ease,
+            left 0.25s ease,
+            width 0.25s ease,
+            height 0.25s ease;
+    }
+
+    /* Callout card */
+    .tutorial-tour-card {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: min(360px, calc(100vw - 2 * var(--space-md)));
+        /* Long copy (the SL comparison card is ~2 200 characters) must not push the
+           Weiter/Fertig row below the fold: the card caps at the viewport and its
+           body scrolls instead. */
+        max-height: calc(100vh - 2 * var(--space-md));
+        box-sizing: border-box;
+        /* --layout-pad around --btn-radius buttons: 12px + 4px = the card's 16px. */
+        padding: var(--layout-pad);
+        background: var(--color-card-background);
+        border-radius: var(--radius-xl);
+        box-shadow: var(--shadow-lg);
+        pointer-events: auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+
+    .tutorial-tour-overlay.is-ready .tutorial-tour-card {
+        transition:
+            top 0.25s ease,
+            left 0.25s ease;
+    }
+
+    .tutorial-tour-card-title {
+        margin: 0;
+    }
+
+    .tutorial-tour-card-body {
+        font-size: var(--fs-base);
+        line-height: var(--lh-text);
+        max-width: 70ch;
+        color: var(--text-secondary);
+        min-height: 0;
+        overflow-y: auto;
+    }
+
+    .tutorial-tour-card-body p {
+        margin: 0;
+    }
+
+    .tutorial-tour-card-body p + p {
+        margin-top: var(--space-sm);
+    }
+
+    /* Progress dots */
+    .tutorial-tour-progress {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-xs);
+    }
+
+    .tutorial-tour-progress-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--color-border);
+    }
+
+    .tutorial-tour-progress-dot.is-active {
+        background: var(--primary-color);
+    }
+
+    /* Actions: Zurück on the left, Überspringen + Weiter grouped on the right */
+    .tutorial-tour-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        margin-top: var(--space-xs);
+    }
+
+    .tutorial-tour-actions .tutorial-tour-back {
+        margin-inline-end: auto;
+    }
+}

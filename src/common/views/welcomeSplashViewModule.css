@@ -1,0 +1,74 @@
+/**
+ * Welcome splash nav cards: the EN and MA skin of the shared NavCardModule cards
+ * (visual on the left, title and description beside it). The splash shell itself is
+ * src/styles/welcome-splash.css.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .welcome-splash .preview-item {
+        background: var(--light-gray);
+        padding: var(--card-pad-loose);
+        border-radius: var(--radius-md);
+        border: 2px solid transparent;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        grid-template-rows: auto auto;
+        column-gap: var(--space-lg);
+        row-gap: var(--control-gap);
+        align-items: start;
+        --interactive-hover-bg: var(--primary-color-light);
+    }
+
+    /* The fill and the transparent border above sit in `views` and would otherwise
+       beat `.interactive-card:hover` / `.hover-border:hover` in `foundation`, which
+       layer order ranks lower whatever its specificity. Repeat both hover states
+       here, scoped to the utility classes NavCardModule adds only to a live card so
+       a disabled one stays inert. */
+    .welcome-splash .preview-item.interactive-card:hover {
+        background: var(--interactive-hover-bg);
+    }
+
+    .welcome-splash .preview-item.hover-border:hover {
+        border-color: var(--interactive-hover-border-color);
+    }
+
+    .welcome-splash .preview-label {
+        font-size: var(--fs-lg);
+        font-weight: var(--fw-bold);
+        color: var(--text-color);
+        line-height: var(--lh-ui);
+    }
+
+    .welcome-splash .preview-item.interactive-card .preview-label {
+        color: var(--color-accent-text);
+    }
+
+    .welcome-splash .preview-description {
+        font-size: var(--fs-base);
+        color: var(--text-secondary);
+        line-height: var(--lh-text);
+        text-align: start;
+    }
+
+    /* One box for both visuals: a Material Symbols glyph or a competence-band thumbnail. */
+    .welcome-splash .preview-chart,
+    .welcome-splash .preview-icon {
+        --preview-display-size: 2.5rem;
+        width: 80px;
+        height: 80px;
+        background: var(--light-gray);
+        font-size: var(--preview-display-size);
+        border-inline-start: 4px solid var(--primary-color);
+        grid-row: 1 / 3;
+    }
+
+    /* A glyph sits inside its em box with side bearings; a band thumbnail fills its
+       box edge to edge, so it is inset to read at the same size as the icons. */
+    .welcome-splash .preview-chart {
+        padding: var(--space-md);
+    }
+}

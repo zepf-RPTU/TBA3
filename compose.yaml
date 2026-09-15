@@ -1,0 +1,12 @@
+# The public stack: nginx serving the built dashboards and their demo fixtures on
+# http://127.0.0.1:8080/. Needs nothing outside this repository.
+#
+#   docker compose up --build
+#
+# /api/ is proxied to a container named `api` that this file does not define, so it
+# answers 502 until an overlay adds one.
+services:
+    web:
+        build: .
+        ports:
+            - '127.0.0.1:8080:80'

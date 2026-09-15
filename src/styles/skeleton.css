@@ -1,0 +1,200 @@
+/**
+ * Skeleton Loading — shared placeholders for the app's blank render windows.
+ *
+ * Two surfaces, one visual language:
+ *
+ * - .app-skeleton  — static markup in each dashboard's HTML, covering the cold
+ *                    start (page load until the first view is revealed). Owned
+ *                    and removed by src/common/app/bootstrapDashboardApp.js.
+ * - .view-skeleton — built by src/common/app/viewSkeleton.js, covering the
+ *                    lazy view import and the view render window that
+ *                    view-layout.css otherwise leaves blank via
+ *                    [data-view-rendering="true"] { visibility: hidden; }.
+ *
+ * Anti-flash: both mount at opacity 0 behind a delayed fade-in, so renders
+ * that finish inside the delay never paint a placeholder at all. The global
+ * reduced-motion reset (foundation/interactive.css) collapses animation
+ * duration* but not *delay*, so the guard survives there too.
+ */
+
+@keyframes skeleton-appear {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes skeleton-sweep {
+    from {
+        background-position: 100% 0;
+    }
+
+    to {
+        background-position: -100% 0;
+    }
+}
+
+/* ==========================================================================
+   Shared placeholder block
+   ========================================================================== */
+
+.skeleton-card {
+    min-width: 0;
+    min-height: 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-background-secondary);
+    /* Highlight only — the flat base stays on background-color so removing the
+       image (reduced motion, below) leaves a plain block rather than a
+       half-drawn gradient. */
+    background-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--color-background-hover) 50%,
+        transparent 100%
+    );
+    background-repeat: no-repeat;
+    background-size: 200% 100%;
+    animation: skeleton-sweep 1.4s linear infinite;
+}
+
+/* ==========================================================================
+   View skeleton — absolutely positioned sibling of the active view container.
+   ========================================================================== */
+
+/**
+ * It cannot be a child of the view container: beginViewRender() runs before
+ * each view's own DOM build, which replaces the container's innerHTML. A
+ * normal flex sibling is no good either — during the render window the view
+ * container still occupies its full height (it is only visibility: hidden),
+ * so an in-flow placeholder would double the page height. viewSkeleton.js
+ * supplies `top` (and `height`, when the view already has one).
+ */
+
+.view-skeleton {
+    position: absolute;
+    inset-inline: 0;
+    z-index: var(--z-module-content);
+    display: grid;
+    gap: var(--layout-gap);
+    padding: var(--view-padding);
+    background-color: var(--light-gray);
+    pointer-events: none;
+    opacity: 0;
+    animation: skeleton-appear 0.2s ease 0.15s forwards;
+}
+
+.view-skeleton--stack {
+    grid-template-columns: 1fr;
+}
+
+/* Chart band over a content band — mirrors the class/item/longitudinal views.
+   */
+.view-skeleton--rows {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+}
+
+.view-skeleton--split {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Matches the narrow/wide/narrow proportions of the EN overview grid. */
+.view-skeleton--triple {
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.view-skeleton--grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Collapse to a single column at the same breakpoint the real view grids do. */
+@media (max-width: 1280px) {
+    .view-skeleton--rows,
+    .view-skeleton--split,
+    .view-skeleton--grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+    }
+
+    /* The EN overview stacks its wide centre band first, then the two side charts
+       side by side (enOverviewViewModule.css). */
+    .view-skeleton--triple {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    .view-skeleton--triple > :nth-child(2) {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+}
+
+/* ==========================================================================
+   App shell skeleton — cold start, before any view container exists
+   ========================================================================== */
+
+.app-skeleton {
+    position: fixed;
+    inset: 0;
+    /* One tier above the sidebar, not level with it: SidebarModule inserts the rail
+       before .main-content, i.e. *after* this element in the DOM, and at an equal
+       z-index the later sibling paints on top — the rail would then take clicks
+       while the app is still booting and cannot switch views yet. */
+    z-index: calc(var(--z-shell) + 1);
+    display: flex;
+    background-color: var(--light-gray);
+    opacity: 0;
+    animation: skeleton-appear 0.2s ease 0.15s forwards;
+}
+
+.app-skeleton-rail {
+    flex: none;
+    width: var(--sidebar-rail-width);
+    border-inline-end: 1px solid var(--color-border);
+    background-color: var(--color-card-background);
+}
+
+.app-skeleton-main {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    gap: var(--layout-gap);
+    padding: var(--view-padding);
+}
+
+.app-skeleton-status {
+    margin: 0;
+    font-size: var(--fs-base);
+    line-height: var(--lh-ui);
+    color: var(--text-secondary);
+}
+
+.app-skeleton-header {
+    flex: none;
+    height: 3rem;
+}
+
+.app-skeleton-body {
+    display: grid;
+    flex: 1;
+    min-height: 0;
+    gap: var(--layout-gap);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* ==========================================================================
+   Reduced motion — drop the sweep to a flat block.
+   ========================================================================== */
+
+/**
+ * The global reset in foundation/interactive.css already neutralises the
+ * animation's timing; clearing background-image here is what guarantees the
+ * result reads as a deliberate placeholder rather than a stalled gradient.
+ */
+
+@media (prefers-reduced-motion: reduce) {
+    .skeleton-card {
+        background-image: none;
+    }
+}

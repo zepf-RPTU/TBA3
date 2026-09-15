@@ -1,0 +1,48 @@
+/**
+ * Icons — the inline Material Symbols SVG that icons.js emits.
+ *
+ * One glyph box: 1em square, so an icon scales with the font-size of whatever
+ * it sits in, and painted in currentColor, so it follows the text colour and
+ * every theme. A host's buttons size their icon through `--btn-icon-size`
+ * (tba3: src/styles/foundation/buttons.css); anything else sets font-size on the
+ * icon or its parent. Reads no custom property, so it needs no fallbacks.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer foundation {
+    .icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+        vertical-align: -0.125em;
+        fill: currentColor;
+    }
+
+    /* Two-state icon. Both glyphs stay in the DOM on one grid cell and cross-fade —
+       opacity, scale and blur — instead of one path being swapped for the other in a
+       frame; `data-state` on the wrapper says which is shown, `data-swap` on each glyph
+       which state it belongs to. Toggle buttons (the batch-export tick) use it. */
+    .icon-swap {
+        display: inline-grid;
+        place-items: center;
+    }
+
+    .icon-swap > .icon {
+        grid-area: 1 / 1;
+        transition:
+            opacity 0.2s cubic-bezier(0.2, 0, 0, 1),
+            scale 0.2s cubic-bezier(0.2, 0, 0, 1),
+            filter 0.2s cubic-bezier(0.2, 0, 0, 1);
+    }
+
+    .icon-swap:not([data-state='on']) > [data-swap='on'],
+    .icon-swap[data-state='on'] > [data-swap='off'] {
+        opacity: 0;
+        scale: 0.25;
+        filter: blur(4px);
+    }
+}

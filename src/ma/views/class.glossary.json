@@ -1,0 +1,19 @@
+{
+    "header": {
+        "note": "Kopfzeile (Klassenübersicht)",
+        "title": "Klassenübersicht",
+        "subtitle": "Zentrale Merkmale und Ergebnisse aller Schüler:innen"
+    },
+    "pool-selector": {
+        "note": "Aufgabenpool-Auswahl im Untertitel der Klassentabelle",
+        "label": "Aufgabenpool:"
+    },
+    "pool-hint": {
+        "note": "Hinweis bei gewählter Leitidee; {{pool}} ist ihr Name, {{count}} die Zahl ihrer Aufgaben",
+        "body": "Leitidee „{{pool}}“: Lösungsquoten basieren auf {{count}} Aufgaben. Die Kompetenzstufe lässt sich für einzelne Leitideen nicht bestimmen."
+    },
+    "pool-hint-single-item": {
+        "note": "Wie pool-hint, für eine Leitidee mit genau einer Aufgabe",
+        "body": "Leitidee „{{pool}}“: Lösungsquoten basieren auf {{count}} Aufgabe. Die Kompetenzstufe lässt sich für einzelne Leitideen nicht bestimmen."
+    }
+}

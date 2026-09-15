@@ -1,0 +1,20 @@
+{
+  "name": "@tba3/module-base",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Framework-free base classes for titled content modules: lifecycle, child registration, resource cleanup and a card shell. No runtime dependencies.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./*": "./src/*"
+  },
+  "files": [
+    "index.js",
+    "src",
+    "README.md"
+  ]
+}

@@ -1,0 +1,2186 @@
+[
+  {
+    "id": "MV2310001",
+    "type": "item",
+    "name": "1.0",
+    "domain": {
+      "id": "zo",
+      "name": "Zahlen und Operationen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3333,
+          "frequency": 9
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.6667,
+          "frequency": 18
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1508401",
+    "type": "item",
+    "name": "2.0",
+    "domain": {
+      "id": "zo",
+      "name": "Zahlen und Operationen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4815,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5185,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1900001",
+    "type": "item",
+    "name": "3.0",
+    "domain": {
+      "id": "zo",
+      "name": "Zahlen und Operationen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5185,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4815,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2310401",
+    "type": "item",
+    "name": "4.0",
+    "domain": {
+      "id": "zo",
+      "name": "Zahlen und Operationen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2222,
+          "frequency": 6
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.7037,
+          "frequency": 19
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.0741,
+          "frequency": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1902101",
+    "type": "item",
+    "name": "5.0",
+    "domain": {
+      "id": "zo",
+      "name": "Zahlen und Operationen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2593,
+          "frequency": 7
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5926,
+          "frequency": 16
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.1481,
+          "frequency": 4
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1986701",
+    "type": "item",
+    "name": "14.0",
+    "domain": {
+      "id": "zo",
+      "name": "Zahlen und Operationen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4444,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2222,
+          "frequency": 6
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3333,
+          "frequency": 9
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2162701",
+    "type": "item",
+    "name": "6.0",
+    "domain": {
+      "id": "gm",
+      "name": "Größen und Messen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.8148,
+          "frequency": 22
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.1852,
+          "frequency": 5
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1162802",
+    "type": "item",
+    "name": "7.0",
+    "domain": {
+      "id": "gm",
+      "name": "Größen und Messen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.6667,
+          "frequency": 18
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3333,
+          "frequency": 9
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1661201",
+    "type": "item",
+    "name": "8.0",
+    "domain": {
+      "id": "gm",
+      "name": "Größen und Messen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2593,
+          "frequency": 7
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.7407,
+          "frequency": 20
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1162202",
+    "type": "item",
+    "name": "9.0",
+    "domain": {
+      "id": "gm",
+      "name": "Größen und Messen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2222,
+          "frequency": 6
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.6667,
+          "frequency": 18
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.1111,
+          "frequency": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1261001",
+    "type": "item",
+    "name": "10.0",
+    "domain": {
+      "id": "gm",
+      "name": "Größen und Messen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2222,
+          "frequency": 6
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3704,
+          "frequency": 10
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4074,
+          "frequency": 11
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1980401",
+    "type": "item",
+    "name": "11.0",
+    "domain": {
+      "id": "dh",
+      "name": "Daten, Häufigkeit und Wahrscheinlichkeit"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5556,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4444,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1884301",
+    "type": "item",
+    "name": "12.1",
+    "domain": {
+      "id": "dh",
+      "name": "Daten, Häufigkeit und Wahrscheinlichkeit"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2593,
+          "frequency": 7
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.6667,
+          "frequency": 18
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.0741,
+          "frequency": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1884302",
+    "type": "item",
+    "name": "12.2",
+    "domain": {
+      "id": "dh",
+      "name": "Daten, Häufigkeit und Wahrscheinlichkeit"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5556,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4074,
+          "frequency": 11
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.037,
+          "frequency": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2390202",
+    "type": "item",
+    "name": "13.0",
+    "domain": {
+      "id": "dh",
+      "name": "Daten, Häufigkeit und Wahrscheinlichkeit"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.1852,
+          "frequency": 5
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4074,
+          "frequency": 11
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4074,
+          "frequency": 11
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1544401",
+    "type": "item",
+    "name": "15.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.8519,
+          "frequency": 23
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.1481,
+          "frequency": 4
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2145701",
+    "type": "item",
+    "name": "16.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5185,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4815,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1541201",
+    "type": "item",
+    "name": "17.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2222,
+          "frequency": 6
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.7778,
+          "frequency": 21
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2150401",
+    "type": "item",
+    "name": "18.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3704,
+          "frequency": 10
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.6296,
+          "frequency": 17
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2352701",
+    "type": "item",
+    "name": "24.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.6667,
+          "frequency": 18
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3333,
+          "frequency": 9
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2350101",
+    "type": "item",
+    "name": "25.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.7778,
+          "frequency": 21
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2222,
+          "frequency": 6
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2353801",
+    "type": "item",
+    "name": "26.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5556,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4444,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2346102",
+    "type": "item",
+    "name": "27.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5556,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4444,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2340101",
+    "type": "item",
+    "name": "28.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4815,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5185,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2343201",
+    "type": "item",
+    "name": "29.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.1852,
+          "frequency": 5
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.8148,
+          "frequency": 22
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2350801",
+    "type": "item",
+    "name": "30.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3333,
+          "frequency": 9
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.6667,
+          "frequency": 18
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2344201",
+    "type": "item",
+    "name": "31.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4444,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5556,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2344701",
+    "type": "item",
+    "name": "32.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.1481,
+          "frequency": 4
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.8148,
+          "frequency": 22
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.037,
+          "frequency": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2352001",
+    "type": "item",
+    "name": "33.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.037,
+          "frequency": 1
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.9259,
+          "frequency": 25
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.037,
+          "frequency": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2342701",
+    "type": "item",
+    "name": "34.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2222,
+          "frequency": 6
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.7407,
+          "frequency": 20
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.037,
+          "frequency": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2350601",
+    "type": "item",
+    "name": "35.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.1481,
+          "frequency": 4
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5185,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3333,
+          "frequency": 9
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2354201",
+    "type": "item",
+    "name": "36.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3704,
+          "frequency": 10
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2963,
+          "frequency": 8
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3333,
+          "frequency": 9
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2352601",
+    "type": "item",
+    "name": "37.0",
+    "domain": {
+      "id": "ms",
+      "name": "Muster und Strukturen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2593,
+          "frequency": 7
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2593,
+          "frequency": 7
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4815,
+          "frequency": 13
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1731402",
+    "type": "item",
+    "name": "19.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.6296,
+          "frequency": 17
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3704,
+          "frequency": 10
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1820901",
+    "type": "item",
+    "name": "20.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.6667,
+          "frequency": 18
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3333,
+          "frequency": 9
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1730801",
+    "type": "item",
+    "name": "21.1",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3704,
+          "frequency": 10
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.6296,
+          "frequency": 17
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1730802",
+    "type": "item",
+    "name": "21.2",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5926,
+          "frequency": 16
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4074,
+          "frequency": 11
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2339901",
+    "type": "item",
+    "name": "22.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.037,
+          "frequency": 1
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.963,
+          "frequency": 26
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV1322901",
+    "type": "item",
+    "name": "23.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.1481,
+          "frequency": 4
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.8519,
+          "frequency": 23
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2339501",
+    "type": "item",
+    "name": "24.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5556,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4444,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2336802",
+    "type": "item",
+    "name": "25.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.7778,
+          "frequency": 21
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2222,
+          "frequency": 6
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2327702",
+    "type": "item",
+    "name": "26.1",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4815,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5185,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2327704",
+    "type": "item",
+    "name": "26.2",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5185,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4815,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2323801",
+    "type": "item",
+    "name": "27.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.5185,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.4815,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2327101",
+    "type": "item",
+    "name": "28.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.7037,
+          "frequency": 19
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2963,
+          "frequency": 8
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2332101",
+    "type": "item",
+    "name": "29.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2963,
+          "frequency": 8
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.7037,
+          "frequency": 19
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2329901",
+    "type": "item",
+    "name": "30.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2963,
+          "frequency": 8
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.7037,
+          "frequency": 19
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2330101",
+    "type": "item",
+    "name": "31.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.037,
+          "frequency": 1
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.8519,
+          "frequency": 23
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.1111,
+          "frequency": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2327201",
+    "type": "item",
+    "name": "32.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.1852,
+          "frequency": 5
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.6296,
+          "frequency": 17
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.1852,
+          "frequency": 5
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2331701",
+    "type": "item",
+    "name": "33.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0,
+          "frequency": 0
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.6296,
+          "frequency": 17
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3704,
+          "frequency": 10
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2333701",
+    "type": "item",
+    "name": "34.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.2593,
+          "frequency": 7
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3704,
+          "frequency": 10
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.3704,
+          "frequency": 10
+        }
+      }
+    ]
+  },
+  {
+    "id": "MV2329102",
+    "type": "item",
+    "name": "35.0",
+    "domain": {
+      "id": "rf",
+      "name": "Raum und Form"
+    },
+    "subject": {
+      "id": null,
+      "name": "Mathematik"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.7037,
+          "frequency": 19
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.1481,
+          "frequency": 4
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 27,
+          "mean": 0.1481,
+          "frequency": 4
+        }
+      }
+    ]
+  }
+]

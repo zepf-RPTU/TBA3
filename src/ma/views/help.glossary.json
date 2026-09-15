@@ -1,0 +1,68 @@
+{
+    "note": "Hilfe-Seite: Rücksprung, Platzhalter-Hinweis und die statischen Karten",
+    "header": {
+        "note": "Kopfzeile (Hilfe)",
+        "title": "Hilfe",
+        "subtitle": "Glossar, didaktische Hinweise und weiterführende Materialien."
+    },
+    "back-link": {
+        "note": "Rücksprung-Button; {{view}} ist der Name der zuvor gezeigten View",
+        "label": "Zurück zur vorherigen Ansicht: {{view}}"
+    },
+    "placeholder-notice": {
+        "body": "Dieser Teil der Rückmeldung ist vorerst nur ein Platzhalter und befindet sich in Bearbeitung."
+    },
+    "glossary": {
+        "title": "Glossar"
+    },
+    "didactic": {
+        "title": "Didaktische Hinweise",
+        "support-ideas": {
+            "title": "Förderideen",
+            "body": "<p>Förderideen sind konkrete Vorschläge und Ansätze zur individuellen Unterstützung von Schüler:innen basierend auf ihren Leistungsdaten.</p><p><strong>Ziele:</strong></p><ul><li>Gezielte Unterstützung bei Schwächen</li><li>Förderung von Stärken</li><li>Differenzierung im Unterricht</li></ul>"
+        },
+        "materials": {
+            "title": "Materialien",
+            "body": "<p>Materialien umfassen Arbeitsblätter, Übungsaufgaben, digitale Ressourcen und weitere Lehrmittel, die zur Förderung und zum Üben eingesetzt werden können.</p><p><strong>Einsatzbereiche:</strong> Binnendifferenzierung, Hausaufgaben, Zusatzübungen, Wiederholung.</p>"
+        },
+        "links": {
+            "title": "Links",
+            "body": "<p>Weiterführende Links zu externen Ressourcen, Plattformen und Materialien, die den Unterricht bereichern und zusätzliche Unterstützung bieten.</p><p><strong>Beispiele:</strong> Fachportale, digitale Lernplattformen, Fortbildungsangebote, Bildungsserver.</p>"
+        }
+    },
+    "faq": {
+        "title": "FAQ & Technische Hilfe",
+        "navigation": {
+            "title": "Navigation",
+            "body": "<p>Die Navigation erfolgt über die linke Seitenleiste. Hier können Sie zwischen verschiedenen Ansichten wechseln:</p><ul><li><strong>Willkommen:</strong> Startseite mit Überblick</li><li><strong>Übersicht:</strong> Kompetenzstufenverteilung und Lösungsquoten der Klasse</li><li><strong>Klasse:</strong> Klassenübersicht aller Schüler:innen</li><li><strong>Aufgaben:</strong> Analyse der Aufgabenlösungen</li><li><strong>Schüler:in:</strong> Ergebnisse einzelner Schüler:innen</li><li><strong>Bericht:</strong> Vorgemerkte Inhalte anordnen und als PDF speichern</li><li><strong>Hilfe:</strong> Diese Seite</li></ul>"
+        },
+        "symbols": {
+            "note": "Die Symbole selbst setzt die View vor jede Zeile",
+            "title": "Symbole",
+            "body": "<p>Erklärung wichtiger Symbole im Dashboard:</p>",
+            "home": {
+                "label": "Willkommen / Startseite"
+            },
+            "bar_chart": {
+                "label": "Übersicht / Statistiken"
+            },
+            "groups": {
+                "label": "Klasse"
+            },
+            "list_alt": {
+                "label": "Aufgaben"
+            },
+            "person": {
+                "label": "Schüler:in"
+            },
+            "download": {
+                "label": "Export / Download"
+            }
+        },
+        "questions": {
+            "note": "{{downloadIcon}} setzt die View als Export-Symbol ein",
+            "title": "Typische Fragen",
+            "body": "<p><strong>Wie interpretiere ich die Diagramme?</strong><br>Die Diagramme zeigen Leistungsverteilungen und -vergleiche. Höhere Balken bedeuten mehr Schüler:innen in dieser Kategorie.</p><p><strong>Kann ich Daten exportieren?</strong><br>Ja. Überall dort, wo ein Export-Symbol ({{downloadIcon}}) angezeigt wird, lassen sich Tabellen als CSV, JSON oder PDF und Diagramme als PDF, PNG oder JPG herunterladen – jeweils im aktuell angezeigten Zustand (Filter, Sortierung, ausgeblendete Spalten).</p><p><strong>Was bedeuten die Farben?</strong><br>Farben kennzeichnen unterschiedliche Leistungsniveaus oder Kategorien. Die Legende finden Sie jeweils bei den Diagrammen.</p>"
+        }
+    }
+}

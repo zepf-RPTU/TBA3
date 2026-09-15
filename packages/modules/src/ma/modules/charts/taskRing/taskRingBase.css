@@ -1,0 +1,218 @@
+/**
+ * Task ring charts (grid + focus): ring cells, SVG text, highlight states, focus text blocks.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    .task-ring-focus-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        min-height: 0;
+    }
+
+    .task-ring-focus-text-blocks {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: var(--layout-gap);
+        max-width: 800px;
+        min-width: 0;
+        font-size: var(--fs-base);
+    }
+
+    .task-ring-focus-svg {
+        overflow: visible;
+    }
+
+    .task-ring-opacity-transition {
+        transition: opacity 0.2s ease;
+    }
+
+    .task-ring-focus-text-block {
+        padding: var(--card-pad);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background-color: var(--color-card-background);
+    }
+
+    .task-ring-focus-text-block-title {
+        margin: 0 0 var(--layout-gap);
+        color: var(--text-color);
+        font-weight: var(--fw-bold);
+    }
+
+    .task-ring-focus-text-block-empty {
+        color: var(--text-muted);
+        font-style: italic;
+    }
+
+    .task-ring-focus-text-block-list {
+        margin: 0;
+        padding-inline-start: var(--list-indent);
+        color: var(--text-color);
+    }
+
+    .task-ring-focus-text-block-list-item {
+        margin-bottom: var(--control-gap);
+    }
+
+    .task-ring-focus-text-block-list-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .task-ring-focus-text-block-note {
+        margin: var(--layout-gap) 0 0;
+        color: var(--text-secondary);
+        font-style: italic;
+    }
+
+    /* Grid layout applied to the body of a task ring grid chart.
+       grid-template-columns/rows, align-content and the ring font size are all set
+       at runtime (computed ring sizes). The shared module body already scrolls; the
+       reserved gutter keeps the scrollbar that appears in wrap mode from resizing
+       the grid and feeding back into the ResizeObserver. It has to be reserved on
+       *both* edges: a single-edge gutter narrows the content box on one side only,
+       which would shift this centred grid off-centre by half the scrollbar. */
+    .task-ring-grid-body {
+        display: grid;
+        gap: var(--layout-gap);
+        justify-content: center;
+        align-content: center;
+        scrollbar-gutter: stable both-edges;
+        /* Takes the height the legend row leaves, and is the element that scrolls. */
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow-y: auto;
+    }
+
+    /* The host body as a column: legend row, then the grid. */
+    .task-ring-grid-host {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-height: 0;
+    }
+
+    /* One-row key to the ring's encodings, in the legend's caption voice. */
+    .task-ring-legend {
+        flex: 0 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--space-xs) var(--layout-gap-relaxed);
+        padding: 0 var(--layout-pad) var(--space-xs);
+        font-size: var(--fs-sm);
+        color: var(--text-secondary);
+    }
+
+    .task-ring-legend .niveaustufen-item {
+        gap: var(--space-xs);
+    }
+
+    .task-ring-legend-mark {
+        width: 1rem;
+        height: 1rem;
+        flex-shrink: 0;
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-semibold);
+    }
+
+    /* The niveau band's two halves: full where solved, pale where not. */
+    .task-ring-legend-swatch--niveau {
+        background: linear-gradient(
+            90deg,
+            currentColor 50%,
+            color-mix(in srgb, currentColor 35%, var(--color-card-background)) 50%
+        );
+    }
+
+    /* Ring text inherits its size from the ring cell (set at runtime), so that it
+       scales with the ring instead of being crushed by it. Declaring a font-size
+       here would override that. */
+
+    /* Task ring - per-ring SVG title (Leitidee name below each donut) */
+    .task-ring-svg-title {
+        text-anchor: middle;
+        font-weight: var(--fw-bold);
+        fill: var(--text-color);
+    }
+
+    .task-ring-niveau-label {
+        text-anchor: middle;
+        font-weight: var(--fw-bold);
+        pointer-events: none;
+    }
+
+    /* Task ring chart - individual items */
+    .task-ring-chart-item {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .task-ring-chart-item--selectable {
+        cursor: pointer;
+    }
+
+    /* Task Ring Chart SVG */
+    .task-ring-chart-svg {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+        overflow: visible;
+    }
+
+    .task-ring-center-text,
+    .task-ring-center-label {
+        text-anchor: middle;
+        fill: var(--text-color);
+    }
+
+    .task-ring-center-text {
+        font-weight: var(--fw-bold);
+    }
+
+    .task-ring-expected-tick-symbol {
+        font-weight: var(--fw-bold);
+        text-anchor: middle;
+        cursor: default;
+    }
+
+    .task-ring-student-icon {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        cursor: default;
+    }
+
+    /* The "Gesamt" ring in grid layout: set apart by a hairline, not a black frame. */
+    .task-ring-chart-item[data-chart-id='overall'] {
+        box-shadow: 0 0 0 1px var(--text-secondary);
+        outline-offset: 2px;
+        border-radius: var(--radius-md);
+    }
+
+    /* Base style for domain ring highlighting (hover and selection) */
+    .task-ring-chart-item.domain-ring-highlight {
+        outline-width: 2px;
+        outline-style: solid;
+        outline-offset: 2px;
+        border-radius: var(--radius-md);
+    }
+
+    /* Hover state - light gray */
+    .task-ring-chart-item.domain-ring-highlight.hover {
+        outline-color: var(--color-border);
+    }
+
+    /* Selected state: the selected-row contract — primary tint plus accent edge. */
+    .task-ring-chart-item.domain-ring-highlight.selected {
+        outline-color: var(--primary-color);
+        background-color: var(--primary-color-light);
+    }
+}

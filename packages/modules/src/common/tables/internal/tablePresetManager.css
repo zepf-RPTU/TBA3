@@ -1,0 +1,31 @@
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* ==========================================================================
+       Table preset buttons
+       ========================================================================== */
+
+    /* Default preset group */
+    .table-preset-container {
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .table-preset-container > .btn--text {
+        white-space: nowrap;
+        font-size: var(--fs-sm);
+        height: 100%;
+        --btn-padding-block: 0;
+    }
+
+    /* aria-disabled, not :disabled, so the tooltip still explains why. Mirrors
+       .btn:disabled; the fills stay variables so foundation keeps painting. */
+    .table-preset-container > .btn[aria-disabled='true'] {
+        opacity: var(--btn-disabled-opacity);
+        cursor: not-allowed;
+        --btn-hover-fill: var(--color-card-background, #fff);
+        --press-scale: 1;
+    }
+}

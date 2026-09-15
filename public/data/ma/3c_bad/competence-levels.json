@@ -1,0 +1,288 @@
+[
+    {
+        "id": "3c-mathe",
+        "type": "group",
+        "name": "3c",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": null,
+        "properties": [
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>V (Optimalstandard)</li><li>IV (Regelstandard plus)</li><li>III (Regelstandard)</li><li>II (Mindeststandard)</li><li>I (Unter Mindeststandard)</li></ul>"
+            },
+            {
+                "key": "standardRank:1",
+                "value": "1"
+            },
+            {
+                "key": "standardRank:2",
+                "value": "2"
+            },
+            {
+                "key": "standardRank:3",
+                "value": "3"
+            },
+            {
+                "key": "standardRank:4",
+                "value": "4"
+            },
+            {
+                "key": "standardRank:5",
+                "value": "5"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": 1,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>I</b> bedeutet dabei <b>Unter Mindeststandard</b> und beschreibt das Vorliegen <b>technischer Grundlagen</b> (Routineprozeduren auf Grundlage einfachen begrifflichen Wissens).</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.4815,
+                    "frequency": 13
+                }
+            },
+            {
+                "id": 2,
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>II</b> bedeutet dabei <b>Mindeststandard</b> und beschreibt <b>einfache Anwendungen von Grundlagenwissen</b> (Routineprozeduren in einem klar strukturierten Kontext).</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2593,
+                    "frequency": 7
+                }
+            },
+            {
+                "id": 3,
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>III</b> bedeutet dabei <b>Regelstandard</b> und beschreibt <b>Erkennen und Nutzen von Zusammenhängen in einem vertrauten (mathematischen und sachbezogenen) Kontext</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.1852,
+                    "frequency": 5
+                }
+            },
+            {
+                "id": 4,
+                "name": "Regelstandard plus",
+                "nameShort": "IV",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>IV</b> bedeutet dabei <b>Regelstandard plus</b> und beschreibt die <b>Modellierung komplexer Probleme unter selbstständiger Entwicklung geeigneter Strategien</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.037,
+                    "frequency": 1
+                }
+            },
+            {
+                "id": 5,
+                "name": "Optimalstandard",
+                "nameShort": "V",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>V</b> bedeutet dabei <b>Optimalstandard</b> und beschreibt <b>sicheres und flexibles Anwenden von begrifflichem Wissen und Prozeduren im curricularen Umfang</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.037,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "school",
+        "type": "school",
+        "name": "Schulschnitt",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": null,
+        "properties": [
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>V (Optimalstandard)</li><li>IV (Regelstandard plus)</li><li>III (Regelstandard)</li><li>II (Mindeststandard)</li><li>I (Unter Mindeststandard)</li></ul>"
+            },
+            {
+                "key": "standardRank:1",
+                "value": "1"
+            },
+            {
+                "key": "standardRank:2",
+                "value": "2"
+            },
+            {
+                "key": "standardRank:3",
+                "value": "3"
+            },
+            {
+                "key": "standardRank:4",
+                "value": "4"
+            },
+            {
+                "key": "standardRank:5",
+                "value": "5"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": 1,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>I</b> bedeutet dabei <b>Unter Mindeststandard</b> und beschreibt das Vorliegen <b>technischer Grundlagen</b> (Routineprozeduren auf Grundlage einfachen begrifflichen Wissens).</p>",
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.4133,
+                    "frequency": 31
+                }
+            },
+            {
+                "id": 2,
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>II</b> bedeutet dabei <b>Mindeststandard</b> und beschreibt <b>einfache Anwendungen von Grundlagenwissen</b> (Routineprozeduren in einem klar strukturierten Kontext).</p>",
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.2,
+                    "frequency": 15
+                }
+            },
+            {
+                "id": 3,
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>III</b> bedeutet dabei <b>Regelstandard</b> und beschreibt <b>Erkennen und Nutzen von Zusammenhängen in einem vertrauten (mathematischen und sachbezogenen) Kontext</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.2,
+                    "frequency": 15
+                }
+            },
+            {
+                "id": 4,
+                "name": "Regelstandard plus",
+                "nameShort": "IV",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>IV</b> bedeutet dabei <b>Regelstandard plus</b> und beschreibt die <b>Modellierung komplexer Probleme unter selbstständiger Entwicklung geeigneter Strategien</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.0933,
+                    "frequency": 7
+                }
+            },
+            {
+                "id": 5,
+                "name": "Optimalstandard",
+                "nameShort": "V",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>V</b> bedeutet dabei <b>Optimalstandard</b> und beschreibt <b>sicheres und flexibles Anwenden von begrifflichem Wissen und Prozeduren im curricularen Umfang</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.0933,
+                    "frequency": 7
+                }
+            }
+        ]
+    },
+    {
+        "id": "state",
+        "type": "state",
+        "name": "Landesschnitt",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": null,
+        "properties": [
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>V (Optimalstandard)</li><li>IV (Regelstandard plus)</li><li>III (Regelstandard)</li><li>II (Mindeststandard)</li><li>I (Unter Mindeststandard)</li></ul>"
+            },
+            {
+                "key": "standardRank:1",
+                "value": "1"
+            },
+            {
+                "key": "standardRank:2",
+                "value": "2"
+            },
+            {
+                "key": "standardRank:3",
+                "value": "3"
+            },
+            {
+                "key": "standardRank:4",
+                "value": "4"
+            },
+            {
+                "key": "standardRank:5",
+                "value": "5"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": 1,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>I</b> bedeutet dabei <b>Unter Mindeststandard</b> und beschreibt das Vorliegen <b>technischer Grundlagen</b> (Routineprozeduren auf Grundlage einfachen begrifflichen Wissens).</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.3,
+                    "frequency": 135
+                }
+            },
+            {
+                "id": 2,
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>II</b> bedeutet dabei <b>Mindeststandard</b> und beschreibt <b>einfache Anwendungen von Grundlagenwissen</b> (Routineprozeduren in einem klar strukturierten Kontext).</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.22,
+                    "frequency": 99
+                }
+            },
+            {
+                "id": 3,
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>III</b> bedeutet dabei <b>Regelstandard</b> und beschreibt <b>Erkennen und Nutzen von Zusammenhängen in einem vertrauten (mathematischen und sachbezogenen) Kontext</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.24,
+                    "frequency": 108
+                }
+            },
+            {
+                "id": 4,
+                "name": "Regelstandard plus",
+                "nameShort": "IV",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>IV</b> bedeutet dabei <b>Regelstandard plus</b> und beschreibt die <b>Modellierung komplexer Probleme unter selbstständiger Entwicklung geeigneter Strategien</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.14,
+                    "frequency": 63
+                }
+            },
+            {
+                "id": 5,
+                "name": "Optimalstandard",
+                "nameShort": "V",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>V</b> bedeutet dabei <b>Optimalstandard</b> und beschreibt <b>sicheres und flexibles Anwenden von begrifflichem Wissen und Prozeduren im curricularen Umfang</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.1,
+                    "frequency": 45
+                }
+            }
+        ]
+    }
+]

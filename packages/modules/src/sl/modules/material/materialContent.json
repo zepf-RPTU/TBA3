@@ -1,0 +1,49 @@
+{
+    "entries": {
+        "Mathe|Übersicht": {
+            "status": "implemented",
+            "pageKind": "subjectOverviewTemplate",
+            "subject": "Mathematik",
+            "type": "Übersicht",
+            "displayTitle": "Übersicht: Mathematik",
+            "subtitle": "Ihre Schule im Überblick:"
+        },
+        "Mathe|Ergebniszusammenfassung": {
+            "status": "implemented",
+            "pageKind": "subjectResultSummaryTemplate",
+            "subject": "Mathematik",
+            "type": "Ergebniszusammenfassung",
+            "displayTitle": "Ergebniszusammenfassung: Mathematik"
+        },
+        "Deutsch|Übersicht": {
+            "status": "implemented",
+            "pageKind": "subjectOverviewTemplate",
+            "subject": "Deutsch",
+            "type": "Übersicht",
+            "displayTitle": "Übersicht: Deutsch",
+            "subtitle": "Ihre Schule im Überblick:"
+        },
+        "Deutsch|Ergebniszusammenfassung": {
+            "status": "implemented",
+            "pageKind": "subjectResultSummaryTemplate",
+            "subject": "Deutsch",
+            "type": "Ergebniszusammenfassung",
+            "displayTitle": "Ergebniszusammenfassung: Deutsch"
+        },
+        "Englisch|Übersicht": {
+            "status": "implemented",
+            "pageKind": "subjectOverviewTemplate",
+            "subject": "Englisch",
+            "type": "Übersicht",
+            "displayTitle": "Übersicht: Englisch",
+            "subtitle": "Ihre Schule im Überblick:"
+        },
+        "Englisch|Ergebniszusammenfassung": {
+            "status": "implemented",
+            "pageKind": "subjectResultSummaryTemplate",
+            "subject": "Englisch",
+            "type": "Ergebniszusammenfassung",
+            "displayTitle": "Ergebniszusammenfassung: Englisch"
+        }
+    }
+}

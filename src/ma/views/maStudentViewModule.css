@@ -1,0 +1,38 @@
+/**
+ * MA student view layout
+ *
+ * Split-view grid and layout-mode visibility come from the shared
+ * .ma-split-view-content / .ma-chart-only-content machine
+ * (maLayoutViewBase.css); only the outer shell and the
+ * student view's narrow-viewport chart-only stacking live here.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .ma-student-view .student-view-shell {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: var(--layout-gap);
+        min-height: 0;
+    }
+
+    @media (max-width: 1280px) {
+        .ma-student-view .student-view-content.layout-mode-chart-only {
+            grid-template-rows: auto;
+            flex: none;
+        }
+
+        .ma-student-view .student-chart-only-content {
+            grid-template-columns: 1fr;
+        }
+
+        .ma-student-view .student-chart-only-content > .task-ring-chart-container,
+        .ma-student-view .student-chart-only-content > .task-ring-focus-container {
+            height: var(--stacked-card-height);
+        }
+    }
+}

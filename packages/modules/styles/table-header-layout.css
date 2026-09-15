@@ -1,0 +1,166 @@
+/**
+ * Table Header Layout — single-row column headers
+ *
+ * A Tabulator column header is one flex row: the title text, then its sort
+ * indicator directly beside it.
+ *
+ * This used to be a two-row grid, because row 2 held the column's header
+ * filter. Filtering moved to the header-action filter menu (see
+ * src/common/tables/internal/tableFilterMenu.js), which left row 2 holding nothing but a
+ * 6px sort arrow — ~15px of header height, on every table, for a triangle.
+ *
+ * Uses `display: contents` on .tabulator-col-title-holder so that its children
+ * (title + sorter) participate directly in the parent flex row. This is
+ * CSS-only — no DOM manipulation, robust against Tabulator re-renders.
+ *
+ * Horizontal placement of the title/sorter pair mirrors the column's cell
+ * alignment via the `header-align-*` class that TableModule#processColumns
+ * derives from `hozAlign`. Tabulator itself only aligns a header when the
+ * column defines `headerHozAlign`, which nothing in this codebase does.
+ *
+ * Specificity must match or exceed Tabulator's defaults (0-4-0 to 0-5-0).
+ */
+
+/* ==========================================================================
+   Core flex layout for column header content
+   ========================================================================== */
+
+/**
+ * Tabulator default: .tabulator .tabulator-header .tabulator-col
+ * .tabulator-col-content
+ *                  → specificity 0-4-0, sets padding:4px; position:relative
+ */
+
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content {
+    display: flex;
+    align-items: center;
+    gap: var(--control-gap);
+    height: 100%;
+}
+
+/*
+ * `display: contents` removes title-holder from the box model, promoting its
+ * children (.tabulator-col-title and .tabulator-col-sorter) to become direct
+ * flex children of .tabulator-col-content.
+ *
+ * Tabulator default: ...col-content .tabulator-col-title-holder
+ *                     → specificity 0-5-0, sets position:relative
+ */
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title-holder {
+    display: contents;
+}
+
+/*
+ * Title: fills the row so that its own text-align (set by the header-align-*
+ * rules below) places the text, and so the sort indicator is pushed to the
+ * column's right edge. Shrinks and wraps before the indicator does.
+ *
+ * The wrap is capped at --table-header-max-lines. Without a cap the header's
+ * height is an unbounded function of the narrowest column width, so one long
+ * title in a squeezed column can push every header several lines tall. The cap
+ * also bounds how far a stale height measurement can drift (see
+ * TableModule#observeContainerResize).
+ *
+ * `-webkit-line-clamp` needs the legacy `-webkit-box` display and its own
+ * `overflow: hidden`. The prefixed property is the one every current engine
+ * implements (Firefox included); the unprefixed `line-clamp` is deliberately
+ * omitted — it is not baseline yet and adding it only buys a lint warning.
+ * `display` only governs the title's *inner* layout — it stays a flex item of
+ * .tabulator-col-content, so `flex` above still applies. Clipping is safe here:
+ * glossary popups are appended to document.body (tooltipService), not nested
+ * inside the title.
+ *
+ * Tabulator default: ...col-content .tabulator-col-title
+ *   → specificity 0-5-0, sets white-space:nowrap; overflow:hidden;
+ *     text-overflow:ellipsis; width:100%
+ */
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title {
+    flex: 1 1 auto;
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: auto;
+    min-width: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--table-header-max-lines);
+    overflow: hidden;
+}
+
+/*
+ * Sort indicator: parked at the right end of the column, never shrinks, so the
+ * indicators form one predictable column-edge rail rather than drifting with
+ * each title's length.
+ *
+ * Tabulator default: ...col-content .tabulator-col-sorter
+ *   → specificity 0-5-0, sets position:absolute; right:4px; top:0; bottom:0
+ */
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-sorter {
+    flex: 0 0 auto;
+    position: static;
+    align-self: center;
+    padding: 0;
+}
+
+/*
+ * Remove the 25px padding-right that Tabulator adds to sortable column titles
+ * (intended to make room for the absolutely-positioned sort icon). The sorter
+ * is a flex sibling now and reserves its own width — this padding is dead
+ * space.
+ *
+ * Tabulator default: .tabulator .tabulator-header
+ * .tabulator-col.tabulator-sortable .tabulator-col-title
+ *   → specificity 0-5-0, sets padding-right:25px
+ */
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable .tabulator-col-title {
+    padding-inline-end: 0;
+}
+
+/* ==========================================================================
+   Header alignment — mirrors the column's cell alignment
+   ========================================================================== */
+
+/**
+ * Only the title text moves; the sort indicator stays at the column's right
+ * edge. Since the title fills the row, this is text-align, not justify-content.
+ */
+
+.tabulator .tabulator-header .tabulator-col.header-align-left .tabulator-col-content {
+    text-align: start;
+}
+
+.tabulator .tabulator-header .tabulator-col.header-align-center .tabulator-col-content {
+    text-align: center;
+}
+
+.tabulator .tabulator-header .tabulator-col.header-align-right .tabulator-col-content {
+    text-align: end;
+}
+
+/* ==========================================================================
+   Column groups — exclude from the title/sorter layout
+   ========================================================================== */
+
+/*
+ * Column group headers only have a title, no sorter.
+ * Keep them centered as a simple flex row (Tabulator default behavior).
+ * Use a slightly stronger tint to distinguish parent headers from leaf columns.
+ */
+.tabulator .tabulator-header .tabulator-col.tabulator-col-group {
+    background: var(--table-group-header-bg);
+    border-bottom: 2px solid var(--table-header-border-bottom);
+}
+
+.tabulator .tabulator-header .tabulator-col.tabulator-col-group > .tabulator-col-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tabulator
+    .tabulator-header
+    .tabulator-col.tabulator-col-group
+    > .tabulator-col-content
+    .tabulator-col-title-holder {
+    display: flex;
+}

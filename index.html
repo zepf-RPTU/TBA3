@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBA3 - Dashboard Auswahl</title>
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="src/chooser.css">
+</head>
+
+<body>
+    <div class="welcome-splash chooser">
+        <div class="welcome-container">
+            <header class="welcome-greeting">
+                <h3 class="chooser-title">Willkommen zur Ergebnisrückmeldung TBA3</h3>
+                <p>Wählen Sie das Dashboard, das Sie ansehen möchten. Die Rückmeldungen für Englisch 8 und
+                    Mathematik 3 richten sich an Lehrkräfte; die Schulleitungsansicht fasst die Ergebnisse
+                    klassenübergreifend zusammen.</p>
+                <p class="chooser-docs"><a href="docs/">Dokumentation (Wiki)</a></p>
+                <p class="chooser-credit">TBA3 - zepf</p>
+            </header>
+
+            <nav class="welcome-cards chooser-cards" aria-label="Dashboards">
+                <a href="en/" class="chooser-card interactive-card hover-border">
+                    <span class="chooser-card-icon preview-media" data-chooser-icon="menu_book"></span>
+                    <span class="chooser-card-label">Englisch 8</span>
+                    <span class="chooser-card-description">VERA 8 Englisch: Hören und Lesen auf den
+                        GER-Niveaus A1 bis C1.</span>
+                </a>
+
+                <a href="ma/" class="chooser-card interactive-card hover-border">
+                    <span class="chooser-card-icon preview-media" data-chooser-icon="bar_chart"></span>
+                    <span class="chooser-card-label">Mathe 3</span>
+                    <span class="chooser-card-description">VERA 3 Mathematik: Kompetenzstufen und
+                        Lösungsquoten der Klasse.</span>
+                </a>
+
+                <a href="sl/" class="chooser-card interactive-card hover-border">
+                    <span class="chooser-card-icon preview-media" data-chooser-icon="groups"></span>
+                    <span class="chooser-card-label">Schulleitung</span>
+                    <span class="chooser-card-description">Klassenübergreifende Auswertung für die
+                        Schulleitung.</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Repeated from WelcomeSplashViewModule: the chooser loads no glossary, and the
+             Freepik license behind the background requires the credit on every page that
+             shows it. -->
+        <div class="welcome-image-notice">
+            <span class="welcome-image-notice-label">Platzhalter</span>
+            <span class="welcome-image-notice-credit">Designed by <a href="https://www.freepik.com"
+                    target="_blank" rel="noopener noreferrer">vectorpocket / Freepik</a></span>
+        </div>
+    </div>
+
+    <script type="module">
+import { createIcon } from '@tba3/module-base';
+
+        for (const slot of document.querySelectorAll('[data-chooser-icon]')) {
+            slot.replaceChildren(createIcon(slot.dataset.chooserIcon));
+        }
+    </script>
+</body>
+
+</html>

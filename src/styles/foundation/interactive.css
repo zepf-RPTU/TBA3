@@ -1,0 +1,144 @@
+/**
+ * Interactive state utilities
+ *
+ * Composable utility classes for hover, focus, active, and disabled states.
+ * Use primitives individually or apply bundled presets.
+ */
+
+/* ==========================================================================
+   CSS custom properties (override per-component as needed)
+   ========================================================================== */
+
+:root {
+    --interactive-hover-bg: var(--color-background-muted);
+    --interactive-hover-border-color: var(--primary-color);
+    --interactive-hover-color: currentColor;
+    --interactive-disabled-opacity: 0.5;
+    --interactive-transition-duration: 0.2s;
+}
+
+/* ==========================================================================
+   Layer 1 — composable primitives
+   ========================================================================== */
+
+/* Base interactive element: pointer cursor + transition foundation */
+.interactive,
+.interactive-card,
+.interactive-subtle {
+    cursor: pointer;
+    transition:
+        background var(--interactive-transition-duration) ease,
+        border-color var(--interactive-transition-duration) ease,
+        box-shadow var(--interactive-transition-duration) ease,
+        transform var(--interactive-transition-duration) ease,
+        color var(--interactive-transition-duration) ease,
+        opacity var(--interactive-transition-duration) ease;
+}
+
+/* Border highlight on hover */
+.hover-border:hover {
+    border-color: var(--interactive-hover-border-color);
+}
+
+/* Text/icon color change on hover */
+.hover-color:hover {
+    color: var(--interactive-hover-color);
+}
+
+/* ==========================================================================
+   Native button elements
+   ========================================================================== */
+
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+/* Disabled-soft — visually muted but still receives events (e.g. for tooltips)
+   */
+.disabled-soft {
+    opacity: var(--interactive-disabled-opacity);
+    cursor: default;
+}
+
+/* Suppress hover/active effects on disabled elements */
+.disabled-soft:hover {
+    transform: none;
+    box-shadow: none;
+    background: unset;
+    border-color: unset;
+    color: unset;
+}
+
+/* ==========================================================================
+   Layer 2 — bundled presets
+   ========================================================================== */
+
+/**
+ * Combine primitives into common interactive patterns.
+ * Override --interactive-hover-bg or other vars per-component.
+ */
+
+/* Card preset: hover lifts + bg change + press feedback + focus ring */
+.interactive-card:hover {
+    background: var(--interactive-hover-bg);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.interactive-card:active {
+    transform: translateY(-2px) scale(var(--press-scale));
+}
+
+.interactive-card:focus-visible,
+.interactive-subtle:focus-visible {
+    outline-width: 0;
+    box-shadow: var(--shadow-focus);
+}
+
+/* A scroll container in the tab order (utils/scrollRegion.js). The ring is drawn
+   inward: a box-shadow outside the box would be clipped by the card it scrolls in. */
+.scroll-region:focus-visible {
+    outline: 3px solid var(--primary-color);
+    outline-offset: -3px;
+}
+
+/* Subtle preset: bg change + focus ring (no lift, no scale) */
+.interactive-subtle:hover {
+    background: var(--interactive-hover-bg);
+}
+
+/* ==========================================================================
+   Reduced motion
+   ========================================================================== */
+
+/**
+ * Honor the OS "reduce motion" setting for the CSS layer — the interactive
+ * transitions defined above, the .stacked-bar-segment transition, the .animated
+ * bar keyframes, and tooltip/overlay fades. D3 chart transitions are gated
+ * separately in JS (charts/motionPreference.js). Only active when the
+ * user has explicitly requested reduced motion.
+ */
+@media (prefers-reduced-motion: reduce) {
+    /* !important is required here and is a deliberate exception to
+       css/no-important: a universal reset (specificity 0,0,0) cannot otherwise
+       override component transition/animation declarations. This is the
+       standard reduced-motion idiom. */
+    /* eslint-disable css/no-important */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        /* The visibility toggles (modal backdrop, export toolbar, tour) delay the
+           `visibility` flip by their fade; with the fade gone the delay must go too. */
+        transition-delay: 0s !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* eslint-enable css/no-important */
+}

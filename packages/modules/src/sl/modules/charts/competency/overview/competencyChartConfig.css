@@ -1,0 +1,36 @@
+/**
+ * SL competency overview chart (welcomeViewModule).
+ *
+ * The renderer widens its SVG past the container when subjects × classes ×
+ * label width demand it — live test-group names (`D_E_08a_ABCD`) are drawn in
+ * full, never abbreviated into columns. This class hands that overflow a
+ * horizontal scrollbar instead of letting the card clip it.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    .sl-competency-overview-svg {
+        overflow-x: auto;
+        /* Scroll cue at the trailing edge: the scrollbar sits at the bottom of a
+           card that is a full screen tall, so it is off-screen when the chart is
+           first seen. Two background layers paint a shadow only while there is
+           more chart to the right — the shadow is fixed to the box, the card-
+           coloured cover scrolls with the content and slides over it at the end. */
+        background:
+            linear-gradient(to left, var(--color-card-background) 40%, transparent) right / 2rem
+                100% no-repeat local,
+            linear-gradient(to left, var(--shadow-color), transparent) right / 1.25rem 100%
+                no-repeat scroll;
+    }
+
+    /* Let the renderer's computed width attribute win over the shared
+       `.chart-container svg { width: 100% }` clamp — 100% would squeeze the
+       widened chart back into the card instead of letting it scroll. */
+    .sl-competency-overview-svg svg {
+        width: auto;
+        min-width: 100%;
+    }
+}

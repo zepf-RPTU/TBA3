@@ -1,0 +1,45 @@
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* ==========================================================================
+       SL group comparison control styles
+       ========================================================================== */
+
+    .group-comparison-controls {
+        --layout-stack-gap: var(--control-gap);
+        padding: var(--layout-gap-relaxed) var(--layout-pad) var(--layout-pad);
+        border-bottom: 1px solid var(--color-border);
+        background: var(--color-card-background);
+    }
+
+    .group-comparison-controls-row {
+        --layout-row-align: flex-end;
+        --layout-row-gap: var(--control-gap);
+        width: 100%;
+    }
+
+    .group-comparison-control {
+        flex: 1 1 var(--control-preferred-width, 11.25rem);
+        min-width: min(100%, var(--control-preferred-width, 11.25rem));
+        max-width: 100%;
+    }
+
+    .group-comparison-control-label {
+        color: var(--text-color);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Control tokens come from the shared .control-select--card preset
+       (common/controls/controls.css); only sizing/overflow is owner-local. */
+    .group-comparison-control-select {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

@@ -1,0 +1,358 @@
+/**
+ * Sidebar Navigation Styles - Shared across all subjects
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* Uses CSS variables from each subject's variables.css for theming */
+
+    .sidebar {
+        position: fixed;
+        inset-inline-start: 0;
+        top: 0;
+        height: 100vh;
+        width: var(--sidebar-rail-width);
+        background-color: var(--secondary-color);
+        color: white;
+        transition: width 0.3s ease;
+        z-index: var(--z-shell);
+        display: flex;
+        flex-direction: column;
+        box-shadow: var(--shadow-md);
+    }
+
+    /* The rail is a disclosure, not a highlight: hovering it is the only way the nav
+       labels, the wordmark and the settings section become readable. So each
+       reveal below exists three times over —
+         1. :hover, gated on a pointer that can hover;
+         2. :has(:focus-visible), ungated (a tablet with a paired keyboard tabs into
+            the rail and must see where it landed — this is deliberately outside the
+            gate, the opposite of the pairing in table-base.css);
+         3. .is-expanded, ungated, set by SidebarModule when the rail is tapped.
+       `:focus-visible`, not `:focus-within`: Chromium focuses a <button> on click, so
+       a plain `:focus-within` would leave the rail open after every nav click — and
+       silently undo the `is-expanded` removal SidebarModule does on that same click.
+       `.sidebar ~ .main-content` keeps its static rail-width offset throughout: the
+       expanded rail overlays the content rather than reflowing the dashboard on
+       every tap. */
+    @media (hover: hover) {
+        .sidebar:hover {
+            width: 250px;
+        }
+    }
+
+    .sidebar:has(:focus-visible),
+    .sidebar.is-expanded {
+        width: 250px;
+    }
+
+    .sidebar-header {
+        padding: var(--card-pad);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        min-height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color);
+    }
+
+    /* The wordmark. Not a heading: the page's <h1> is the view title in the header
+       module, and a second, invisible one above it broke the document outline. The
+       h1 token (variables.css) keeps the mark at the scale it always had. */
+    .sidebar-title {
+        margin: 0;
+        font-size: var(--fs-h1);
+        font-weight: var(--fw-bold);
+        letter-spacing: -0.025em;
+        line-height: var(--lh-ui);
+        color: white;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.3s ease 0.1s;
+    }
+
+    @media (hover: hover) {
+        .sidebar:hover .sidebar-title,
+        .sidebar:hover .sidebar-nav-text,
+        .sidebar:hover::after {
+            opacity: 1;
+        }
+    }
+
+    .sidebar:has(:focus-visible) .sidebar-title,
+    .sidebar:has(:focus-visible) .sidebar-nav-text,
+    .sidebar:has(:focus-visible)::after,
+    .sidebar.is-expanded .sidebar-title,
+    .sidebar.is-expanded .sidebar-nav-text,
+    .sidebar.is-expanded::after {
+        opacity: 1;
+    }
+
+    .sidebar-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .sidebar-nav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex: 1;
+    }
+
+    .sidebar-nav-item {
+        position: relative;
+    }
+
+    .sidebar-nav-button {
+        --btn-radius: 0;
+        --btn-fill: transparent;
+        --btn-hover-fill: rgba(255, 255, 255, 0.1);
+        --btn-active-fill: var(--color-accent-solid);
+        /* Fill comes from the tokens above: the .btn--text family paints --btn-fill
+           and the .btn state rules repaint it, all in the foundation layer, which a
+           background-color set here would beat regardless of specificity. */
+        border: none;
+        border-inline-start: 3px solid transparent;
+        color: white;
+        width: 100%;
+        padding: var(--card-pad);
+        text-align: start;
+        font-size: var(--fs-base);
+        justify-content: flex-start;
+        white-space: nowrap;
+    }
+
+    .sidebar-nav-button.is-active {
+        border-inline-start-color: var(--primary-hover);
+    }
+
+    .sidebar-nav-text {
+        opacity: 0;
+        transition: opacity 0.3s ease 0.1s;
+        font-size: var(--fs-base);
+    }
+
+    /* Bottom-pinned nav section (views with sidebarPinBottom: true) */
+    .sidebar-nav-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 4px;
+    }
+
+    /* Sidebar settings — KS color-theme picker */
+    .sidebar-settings {
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: var(--layout-gap) 0;
+    }
+
+    .sidebar-settings-title {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: var(--fs-sm);
+        padding: var(--layout-gap) var(--card-pad);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin: 0;
+        white-space: nowrap;
+        opacity: 0;
+        transition: opacity 0.3s ease 0.1s;
+    }
+
+    .sidebar-settings-options {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar-settings-option {
+        display: flex;
+        align-items: center;
+        gap: var(--layout-gap);
+        width: 100%;
+        border: none;
+        border-inline-start: 3px solid transparent;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        padding: var(--layout-gap-relaxed) var(--card-pad);
+        white-space: nowrap;
+        --interactive-hover-bg: rgba(255, 255, 255, 0.1);
+    }
+
+    /* The transparent fill above sits in `common` and would otherwise beat
+       `.interactive-subtle:hover` in `foundation`, which layer order ranks lower
+       whatever its specificity. Repeat the hover fill here. Declared before the
+       `.is-active` rule so the active row keeps its own fill on hover. */
+    .sidebar-settings-option:hover {
+        background-color: var(--interactive-hover-bg);
+    }
+
+    /* The nav buttons already clear the target from their own padding; the theme
+       rows sit a little under it. */
+    @media (pointer: coarse) {
+        .sidebar-nav-button,
+        .sidebar-settings-option {
+            min-height: var(--touch-target-min);
+        }
+    }
+
+    .sidebar-settings-option.is-active {
+        background-color: var(--color-accent-solid);
+        border-inline-start-color: var(--primary-hover);
+    }
+
+    /* The colour-scheme rows lead with a glyph where the KS rows lead with a swatch;
+       same footprint so the two pickers' labels align. */
+    .sidebar-settings-icon {
+        display: inline-flex;
+        flex: 0 0 auto;
+        width: 28px;
+        justify-content: center;
+        font-size: 1.125rem;
+        line-height: var(--lh-icon);
+    }
+
+    .sidebar-settings-text {
+        opacity: 0;
+        transition: opacity 0.3s ease 0.1s;
+        font-size: var(--fs-base);
+    }
+
+    @media (hover: hover) {
+        .sidebar:hover .sidebar-settings-title,
+        .sidebar:hover .sidebar-settings-text {
+            opacity: 1;
+        }
+    }
+
+    .sidebar:has(:focus-visible) .sidebar-settings-title,
+    .sidebar:has(:focus-visible) .sidebar-settings-text,
+    .sidebar.is-expanded .sidebar-settings-title,
+    .sidebar.is-expanded .sidebar-settings-text {
+        opacity: 1;
+    }
+
+    /* Static theme preview swatch — visible even in the collapsed icon rail.
+       Curated 3-color preview of each palette (mirrors competence-levels.css). */
+    .ks-theme-swatch {
+        display: inline-flex;
+        flex: 0 0 auto;
+        width: 28px;
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .ks-theme-swatch > span {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+    }
+
+    .ks-theme-swatch[data-theme='default'] > :nth-child(1) {
+        background: #d64550;
+    }
+
+    .ks-theme-swatch[data-theme='default'] > :nth-child(2) {
+        background: #2f9e44;
+    }
+
+    .ks-theme-swatch[data-theme='default'] > :nth-child(3) {
+        background: #3b5bd0;
+    }
+
+    .ks-theme-swatch[data-theme='grayscale'] > :nth-child(1) {
+        background: #cccccc;
+    }
+
+    .ks-theme-swatch[data-theme='grayscale'] > :nth-child(2) {
+        background: #808080;
+    }
+
+    .ks-theme-swatch[data-theme='grayscale'] > :nth-child(3) {
+        background: #333333;
+    }
+
+    .ks-theme-swatch[data-theme='colorblind'] > :nth-child(1) {
+        background: #d55e00;
+    }
+
+    .ks-theme-swatch[data-theme='colorblind'] > :nth-child(2) {
+        background: #009e73;
+    }
+
+    .ks-theme-swatch[data-theme='colorblind'] > :nth-child(3) {
+        background: #0072b2;
+    }
+
+    /* The dark ramps' low / mid / high stops (RAMP_STOPS.dark in colorRamp.js). */
+    html[data-color-scheme='dark'] .ks-theme-swatch[data-theme='default'] > :nth-child(1) {
+        background: #e8565f;
+    }
+
+    html[data-color-scheme='dark'] .ks-theme-swatch[data-theme='default'] > :nth-child(2) {
+        background: #3ca84e;
+    }
+
+    html[data-color-scheme='dark'] .ks-theme-swatch[data-theme='default'] > :nth-child(3) {
+        background: #5f85fe;
+    }
+
+    html[data-color-scheme='dark'] .ks-theme-swatch[data-theme='grayscale'] > :nth-child(1) {
+        background: #5c6270;
+    }
+
+    html[data-color-scheme='dark'] .ks-theme-swatch[data-theme='grayscale'] > :nth-child(2) {
+        background: #9fa4ae;
+    }
+
+    html[data-color-scheme='dark'] .ks-theme-swatch[data-theme='grayscale'] > :nth-child(3) {
+        background: #e6e8ec;
+    }
+
+    html[data-color-scheme='dark'] .ks-theme-swatch[data-theme='colorblind'] > :nth-child(3) {
+        background: #1a7fc0;
+    }
+
+    /* Adjust main content when the injected sidebar precedes it in body */
+    .sidebar ~ .main-content {
+        margin-inline-start: var(--sidebar-rail-width);
+        width: calc(100% - var(--sidebar-rail-width));
+    }
+
+    /* Optional: Add a subtle shadow when sidebar is expanded */
+    .sidebar::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -10px;
+        width: 10px;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    /* Scrollbar styling for sidebar */
+    .sidebar-content::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .sidebar-content::-webkit-scrollbar-track {
+        background: rgba(255, 255, 255, 0.05);
+    }
+
+    .sidebar-content::-webkit-scrollbar-thumb {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: var(--radius-sm);
+    }
+
+    .sidebar-content::-webkit-scrollbar-thumb:hover {
+        background: rgba(255, 255, 255, 0.3);
+    }
+}

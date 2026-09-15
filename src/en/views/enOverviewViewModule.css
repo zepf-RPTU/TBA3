@@ -1,0 +1,50 @@
+/**
+ * EN OVERVIEW VIEW STYLES (overviewViewManager)
+ *
+ * Layout: Scatterplot centered with charts on sides (header now in shared
+ * container)
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    /* ==========================================================================
+       Container - grid layout
+       ========================================================================== */
+
+    .en-overview-view {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    /* Section placement is handled by owner-local aliases on the three grid
+       children. Card styling comes from the shared module shell. */
+
+    /* Stacked: the scatterplot is the view's primary chart, so it leads; the two
+       GER bars share the second band. Each band stops short of a full screen
+       (--stacked-card-height) so the next band's header peeks past the fold. */
+    @media (max-width: 1280px) {
+        .en-overview-view {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: var(--stacked-card-height) var(--stacked-card-height);
+        }
+
+        .en-overview-view > .en-overview-center {
+            grid-column: 1 / -1;
+            grid-row: 1;
+        }
+
+        .en-overview-view > .en-overview-left {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .en-overview-view > .en-overview-right {
+            grid-column: 2;
+            grid-row: 2;
+        }
+    }
+}

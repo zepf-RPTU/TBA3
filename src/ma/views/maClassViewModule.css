@@ -1,0 +1,71 @@
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    /* ==========================================================================
+       MA class view layout
+       ========================================================================== */
+
+    .ma-class-view {
+        --view-base-padding-lg: var(--layout-pad);
+        --view-base-padding-md: var(--space-sm);
+    }
+
+    /* ==========================================================================
+       Task-pool selector ("Aufgabenpool" dropdown) + subset hint
+       ========================================================================== */
+
+    /**
+     * Rendered into the class table module's subtitle slot, so it only needs to lay
+     * out its own children — the shared shell owns the surrounding padding/borders.
+     */
+
+    .ma-class-pool {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        column-gap: var(--space-md);
+        row-gap: var(--space-xs);
+    }
+
+    .ma-class-pool-dropdown {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--space-sm);
+        min-width: 0;
+    }
+
+    /* The native select sizes to its widest option; in a narrow card it clips its
+       label rather than overflowing the card. */
+    .ma-class-pool-dropdown select {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .ma-class-pool-label {
+        font-weight: var(--fw-bold);
+    }
+
+    /* Sits to the right of the control, and only drops to its own line when the
+       control row leaves it too little room. */
+    .ma-class-pool-hint {
+        margin: 0;
+        flex: 1 1 32ch;
+        opacity: 0.85;
+    }
+
+    /* Wrapper the class view puts around the KS bar host. */
+    .ma-class-view .ks-bar-wrapper {
+        flex: 0 0 auto;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* One band of bar plus its percent ruler, not a viewport-relative banner. */
+    .ma-class-view .ks-bar-wrapper:not(.collapsed) {
+        height: calc(7.5rem + 2.5rem);
+    }
+}

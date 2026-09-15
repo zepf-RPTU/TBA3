@@ -1,0 +1,79 @@
+{
+  "name": "@tba3/modules",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Die konkreten VERA-Module: alle 17 Diagramm-Descriptoren, die Tabellenschicht mit ihren zehn konkreten Tabellen und das Vokabular, das sie sprechen - Kompetenzstufen, Glossar und die datengetriebene Farbpalette. Ohne eigene Laufzeitabhängigkeiten.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "*.css",
+    "src/common/tables/tabulatorBuild.js"
+  ],
+  "dependencies": {
+    "@tba3/module-base": "*"
+  },
+  "peerDependencies": {
+    "d3": "^7.9.0",
+    "tabulator-tables": "^6.3.1"
+  },
+  "peerDependenciesMeta": {
+    "d3": {
+      "optional": true
+    },
+    "tabulator-tables": {
+      "optional": true
+    }
+  },
+  "exports": {
+    "./domain": "./src/common/domain/index.js",
+    "./en-domain": "./src/en/index.js",
+    "./sl-domain": "./src/sl/index.js",
+    "./glossary": "./src/common/glossary/index.js",
+    "./theme": "./src/common/services/theme.js",
+    "./tooltips": "./src/common/services/tooltips.js",
+    "./charts": "./src/common/charts/index.js",
+    "./tables": "./src/common/tables/index.js",
+    "./glossary/en": "./src/en/enGlossaryFragments.js",
+    "./glossary/ma": "./src/ma/maGlossaryFragments.js",
+    "./glossary/sl": "./src/sl/slGlossaryFragments.js",
+    "./charts/item-lollipop": "./src/en/modules/charts/itemLollipop/itemLollipopConfig.js",
+    "./charts/en-ks-distribution": "./src/en/modules/charts/ksDistribution/enKsDistributionConfig.js",
+    "./charts/scatterplot": "./src/en/modules/charts/scatterplot/index.js",
+    "./charts/style": "./src/en/modules/charts/style/styleChartConfig.js",
+    "./charts/item-success-lollipop": "./src/ma/modules/charts/itemSuccessLollipop/itemSuccessLollipopConfig.js",
+    "./charts/ks-bar": "./src/ma/modules/charts/ksBar/simpleKsBarConfig.js",
+    "./charts/ma-ks-distribution": "./src/ma/modules/charts/ksDistribution/maKsDistributionConfig.js",
+    "./charts/task-ring-focus": "./src/ma/modules/charts/taskRing/taskRingFocusConfig.js",
+    "./charts/task-ring-grid": "./src/ma/modules/charts/taskRing/index.js",
+    "./charts/class-deviation": "./src/sl/modules/charts/classDeviation/index.js",
+    "./charts/competency-detail": "./src/sl/modules/charts/competency/detail/competencyDetailSectionConfig.js",
+    "./charts/competency-overview": "./src/sl/modules/charts/competency/overview/competencyChartConfig.js",
+    "./charts/group-comparison": "./src/sl/modules/charts/groupComparison/groupComparisonConfig.js",
+    "./charts/longitudinal": "./src/sl/modules/charts/longitudinal/index.js",
+    "./charts/longitudinal-ks-share": "./src/sl/modules/charts/longitudinal/longitudinalKsShareConfig.js",
+    "./charts/longitudinal-self-efficacy": "./src/sl/modules/charts/longitudinal/selfEfficacyLongConfig.js",
+    "./charts/longitudinal-teaching-quality": "./src/sl/modules/charts/longitudinal/teachingQualityConfig.js",
+    "./charts/parallel-coordinates": "./src/sl/modules/charts/longitudinal/parallelCoordinatesChart.js",
+    "./charts/self-efficacy": "./src/sl/modules/charts/selfEfficacy/selfEfficacyConfig.js",
+    "./en-item-detail": "./src/en/modules/enItemDetail/enItemDetailModule.js",
+    "./info-box": "./src/sl/modules/infoBox/index.js",
+    "./material-selection": "./src/sl/modules/material/materialSelectionModule.js",
+    "./tables/en-class": "./src/en/modules/tables/enClassTableModule.js",
+    "./tables/en-item": "./src/en/modules/tables/enItemTableModule.js",
+    "./tables/en-student-data": "./src/en/modules/tables/enStudentDataTableModule.js",
+    "./tables/en-student-info": "./src/en/modules/tables/enStudentInfoTableModule.js",
+    "./tables/ma-class": "./src/ma/modules/tables/maClassTableModule.js",
+    "./tables/ma-item": "./src/ma/modules/tables/maItemTableModule.js",
+    "./tables/ma-student-data": "./src/ma/modules/tables/maStudentDataTableModule.js",
+    "./tables/ma-student-info": "./src/ma/modules/tables/maStudentInfoTableModule.js",
+    "./tables/sl-class": "./src/sl/modules/tables/slClassTableModule.js",
+    "./tables/sl-domain": "./src/sl/modules/tables/slDomainTableModule.js",
+    "./styles/*": "./styles/*",
+    "./*": "./src/*"
+  },
+  "files": [
+    "src",
+    "styles",
+    "README.md"
+  ]
+}

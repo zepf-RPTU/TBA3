@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "noEmit": true,
+        "target": "ES2022",
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "lib": ["ES2022", "DOM"],
+        "strict": false,
+        "strictNullChecks": true,
+        "skipLibCheck": true
+    },
+    "include": [
+        "../src/common/**/*.js",
+        "../src/en/**/*.js",
+        "../src/ma/**/*.js",
+        "../src/sl/**/*.js",
+        "../packages/*/index.js",
+        "../packages/*/src/**/*.js",
+        "global.d.ts"
+    ]
+}

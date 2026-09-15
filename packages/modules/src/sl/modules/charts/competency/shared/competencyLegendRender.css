@@ -1,0 +1,53 @@
+/**
+ * SL competency legend: two-column class and KS pill grids, swatch dots. Generic panel and
+ * pill styles live in @tba3/modules/styles/html-legend-panel.css.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* 2-column layout for class legend pills (Klassen) */
+    .legend-pill-group.class-legend-pills {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-xs);
+    }
+
+    /* Header pill ("Klassen") spans both columns */
+    .legend-pill-group.class-legend-pills > .legend-pill:first-child {
+        grid-column: span 2;
+    }
+
+    /* Adjust child pill styling for grid context */
+    .legend-pill-group.class-legend-pills > .legend-pill.child {
+        margin-inline-start: 0;
+        width: 100%;
+    }
+
+    /* 2-column layout for KS toggle pills (Kompetenzstufen) */
+    .legend-pill-group.ks-legend-pills {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--space-xs);
+    }
+
+    /* KS pills use flex so the swatch dot sits inline with the label */
+    .ks-legend-pills .legend-pill {
+        display: flex;
+        align-items: center;
+        gap: 0.375rem;
+    }
+
+    /* Swatch dot inside each KS pill */
+    .legend-pill-swatch {
+        flex-shrink: 0;
+        pointer-events: none;
+    }
+
+    /* Dim swatch when the pill is toggled off */
+    .legend-pill.is-inactive .legend-pill-swatch {
+        opacity: 0.35;
+    }
+}

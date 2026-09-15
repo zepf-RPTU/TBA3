@@ -1,0 +1,70 @@
+{
+    "$schema": "./node_modules/oxlint/configuration_schema.json",
+    "plugins": [],
+    "jsPlugins": [
+        {
+            "name": "jsdoc-eslint",
+            "specifier": "eslint-plugin-jsdoc"
+        }
+    ],
+    "categories": {
+        "correctness": "error"
+    },
+    "env": {
+        "browser": true,
+        "es2024": true
+    },
+    "rules": {
+        "no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^_"
+            }
+        ]
+    },
+    "overrides": [
+        {
+            "files": ["config/**/*.{js,mjs}", "tools/**/*.mjs", "tests/**/*.js", "vite.config.js"],
+            "env": {
+                "node": true
+            }
+        },
+        {
+            "files": ["src/**/*.js", "packages/*/src/**/*.js"],
+            "rules": {
+                "jsdoc-eslint/check-access": "error",
+                "jsdoc-eslint/check-alignment": "error",
+                "jsdoc-eslint/check-param-names": "error",
+                "jsdoc-eslint/check-property-names": "error",
+                "jsdoc-eslint/check-tag-names": "error",
+                "jsdoc-eslint/check-types": "error",
+                "jsdoc-eslint/check-values": "error",
+                "jsdoc-eslint/empty-tags": "error",
+                "jsdoc-eslint/escape-inline-tags": "error",
+                "jsdoc-eslint/implements-on-classes": "error",
+                "jsdoc-eslint/multiline-blocks": "error",
+                "jsdoc-eslint/require-jsdoc": "error",
+                "jsdoc-eslint/require-next-type": "error",
+                "jsdoc-eslint/require-param": "error",
+                "jsdoc-eslint/require-param-description": "error",
+                "jsdoc-eslint/require-param-name": "error",
+                "jsdoc-eslint/require-param-type": "error",
+                "jsdoc-eslint/require-property": "error",
+                "jsdoc-eslint/require-property-description": "error",
+                "jsdoc-eslint/require-property-name": "error",
+                "jsdoc-eslint/require-property-type": "error",
+                "jsdoc-eslint/require-returns": "error",
+                "jsdoc-eslint/require-returns-check": "error",
+                "jsdoc-eslint/require-returns-description": "error",
+                "jsdoc-eslint/require-returns-type": "error",
+                "jsdoc-eslint/require-throws-type": "error",
+                "jsdoc-eslint/require-yields": "error",
+                "jsdoc-eslint/require-yields-check": "error",
+                "jsdoc-eslint/require-yields-type": "error",
+                "jsdoc-eslint/tag-lines": "error",
+                "jsdoc-eslint/ts-no-empty-object-type": "error",
+                "jsdoc-eslint/valid-types": "error"
+            }
+        }
+    ]
+}

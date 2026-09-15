@@ -1,0 +1,29 @@
+{
+    "note": "Seitenleisten-Navigation und Navigationskarten der Startseite",
+    "title": "Navigation",
+    "tutorial": "<p>Wählen Sie eine der folgenden Ansichten:</p><ul><li><b>Übersicht: Die Gesamtergebnisse auf einen Blick.</b> Die Verteilung der Klasse auf die GER-Stufen im Hör- und Leseverstehen und alle Schüler:innen in einem Streudiagramm.</li><li><b>Klasse: Die Klasse bzw. Lerngruppe im Detail.</b> Eine Tabelle aller Schüler:innen, die Sie durchsuchen, filtern und sortieren können, dazu die Lösungsquoten der Klasse nach Hör- und Lesestilen.</li><li><b>Aufgaben: Ergebnisse einzelner Aufgaben und Teilaufgaben.</b> Die Lösungshäufigkeiten aller Teilaufgaben im Hör- und Leseverstehen im Vergleich; zu einer gewählten Aufgabe sehen Sie ihre Merkmale, das Aufgabenmaterial und welche Schüler:innen sie gelöst haben.</li><li><b>Schüler:in: Die Ergebnisse einzelner Schüler:innen.</b> Merkmale, Lösungsquoten nach Stilen und die Lösungen aller Aufgaben einer ausgewählten Schüler:in.</li></ul>",
+    "element_texts": {
+        "nav-welcome": {
+            "title": "Willkommen"
+        },
+        "nav-overview": {
+            "title": "Übersicht",
+            "description": "Sich einen Überblick über die GER-Stufen der Klasse im Hör- und Leseverstehen verschaffen."
+        },
+        "nav-class": {
+            "title": "Klasse",
+            "description": "Die Ergebnisse aller Schüler:innen in einer Tabelle durchsuchen, filtern und vergleichen."
+        },
+        "nav-item": {
+            "title": "Aufgaben",
+            "description": "Die Lösungshäufigkeiten der Aufgaben vergleichen und einzelne Aufgaben im Detail ansehen."
+        },
+        "nav-student": {
+            "title": "Schüler:in",
+            "description": "Die Ergebnisse einzelner Schüler:innen nach Stilen und Aufgaben einsehen."
+        },
+        "nav-report": {
+            "title": "Bericht"
+        }
+    }
+}

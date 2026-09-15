@@ -1,0 +1,16 @@
+/**
+ * Comparison view layout
+ *
+ * Row/card layout comes from the shared .sl-charts-row classes
+ * (src/sl/charts-row.css); only view-local rules live here.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .sl-comparison-view .comparison-section {
+        flex: 1;
+    }
+}

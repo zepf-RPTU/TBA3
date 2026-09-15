@@ -1,0 +1,11 @@
+.git
+.github
+.claude
+.idea
+.vscode
+node_modules
+dist
+coverage
+docs
+tests
+*.md

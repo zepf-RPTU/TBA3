@@ -1,0 +1,89 @@
+/**
+ * Common Progress Bar Styles
+ *
+ * Shared styles for the Verteilung / progress-bar column used in MA, EN, and SL
+ * item tables. This file must be loaded AFTER tabulator.min.css in each HTML
+ * entry point so that the higher-specificity `.bar-stack .bar-*` selectors
+ * correctly override Tabulator's default cell styling.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* Container that Tabulator renders the formatter result into */
+    .percentage-bar-container {
+        position: relative;
+        height: 18px;
+        width: 100%;
+        margin: 3px 0;
+        background-color: var(--percentage-bar-track, rgba(0, 0, 0, 0.1));
+        border-radius: var(--radius-sm);
+        /* The segments are plain flex children; without this they paint square
+           corners over the rounded track. */
+        overflow: hidden;
+    }
+
+    /* Track and benchmark line are drawn against the surface, so they flip with it. */
+    html[data-color-scheme='dark'] .percentage-bar-container {
+        --percentage-bar-track: rgba(255, 255, 255, 0.1);
+        --percentage-bar-benchmark: #fff;
+    }
+
+    /* Flex row that fills the container */
+    .bar-stack {
+        display: flex;
+        height: 100%;
+        width: 100%;
+    }
+
+    /* Higher-specificity selectors so Tabulator defaults cannot override these */
+    .bar-stack .bar-correct,
+    .bar-stack .bar-incorrect,
+    .bar-stack .bar-not-attempted {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--fs-sm);
+        font-weight: var(--fw-bold);
+        color: white;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        height: 100%;
+        flex-shrink: 0;
+    }
+
+    .bar-stack .bar-correct {
+        background-color: var(--result-correct);
+    }
+
+    .bar-stack .bar-incorrect {
+        background-color: var(--result-incorrect);
+    }
+
+    .bar-stack .bar-not-attempted {
+        background-color: var(--result-not-attempted);
+    }
+
+    /* On the dark scheme the grayscale theme re-lights its steps (competence-levels.css):
+       richtig and falsch land on the bright end, where white ink stops reading. The same
+       near-black dark band ink uses. */
+    html[data-color-scheme='dark'][data-ks-theme='grayscale'] .bar-stack .bar-correct,
+    html[data-color-scheme='dark'][data-ks-theme='grayscale'] .bar-stack .bar-incorrect {
+        color: #111827;
+    }
+
+    /* Reference line marking a benchmark value (e.g. Pilotierung expected solution
+       rate): black on the light surface, white on the dark one. Positioned via inline
+       `left` as a percentage of bar width. */
+    .percentage-bar-container .bar-benchmark-marker {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        margin-inline-start: -1px;
+        background-color: var(--percentage-bar-benchmark, #000);
+        z-index: 2;
+    }
+}

@@ -1,0 +1,2900 @@
+[
+  {
+    "id": "EL68301",
+    "type": "item",
+    "name": "1.1",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.9231,
+          "frequency": 24
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.0769,
+          "frequency": 2
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL68302",
+    "type": "item",
+    "name": "1.2",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5385,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4615,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL68303",
+    "type": "item",
+    "name": "1.3",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6538,
+          "frequency": 17
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3462,
+          "frequency": 9
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL68304",
+    "type": "item",
+    "name": "1.4",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.8077,
+          "frequency": 21
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1923,
+          "frequency": 5
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL78901",
+    "type": "item",
+    "name": "2.1",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.7692,
+          "frequency": 20
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2308,
+          "frequency": 6
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL78902",
+    "type": "item",
+    "name": "2.2",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6923,
+          "frequency": 18
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3077,
+          "frequency": 8
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL78903",
+    "type": "item",
+    "name": "2.3",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.8077,
+          "frequency": 21
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1923,
+          "frequency": 5
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL78904",
+    "type": "item",
+    "name": "2.4",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL78905",
+    "type": "item",
+    "name": "2.5",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL72501",
+    "type": "item",
+    "name": "3.0",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6923,
+          "frequency": 18
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3077,
+          "frequency": 8
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL75201",
+    "type": "item",
+    "name": "4.1",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.7308,
+          "frequency": 19
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2692,
+          "frequency": 7
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL75202",
+    "type": "item",
+    "name": "4.2",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.7308,
+          "frequency": 19
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2692,
+          "frequency": 7
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL75203",
+    "type": "item",
+    "name": "4.3",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5769,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4231,
+          "frequency": 11
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL75204",
+    "type": "item",
+    "name": "4.4",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5385,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4615,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL709v201",
+    "type": "item",
+    "name": "5.0",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5385,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4615,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL74801",
+    "type": "item",
+    "name": "11.0",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5385,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4615,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL79001",
+    "type": "item",
+    "name": "12.1",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4231,
+          "frequency": 11
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5769,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL79002",
+    "type": "item",
+    "name": "12.2",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6154,
+          "frequency": 16
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3846,
+          "frequency": 10
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL79003",
+    "type": "item",
+    "name": "12.3",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6538,
+          "frequency": 17
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3462,
+          "frequency": 9
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL79004",
+    "type": "item",
+    "name": "12.4",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3846,
+          "frequency": 10
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6154,
+          "frequency": 16
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL79005",
+    "type": "item",
+    "name": "12.5",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4615,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.0385,
+          "frequency": 1
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL79006",
+    "type": "item",
+    "name": "12.6",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4615,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5385,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL723v201",
+    "type": "item",
+    "name": "13.1",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL723v202",
+    "type": "item",
+    "name": "13.2",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4615,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5385,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL723v203",
+    "type": "item",
+    "name": "13.3",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4231,
+          "frequency": 11
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5769,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL723v204",
+    "type": "item",
+    "name": "13.4",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3846,
+          "frequency": 10
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3846,
+          "frequency": 10
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2308,
+          "frequency": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL723v205",
+    "type": "item",
+    "name": "13.5",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5385,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2692,
+          "frequency": 7
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1923,
+          "frequency": 5
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL723v206",
+    "type": "item",
+    "name": "13.6",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1923,
+          "frequency": 5
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2692,
+          "frequency": 7
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5385,
+          "frequency": 14
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL723v207",
+    "type": "item",
+    "name": "13.7",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5769,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1538,
+          "frequency": 4
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2692,
+          "frequency": 7
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL78401",
+    "type": "item",
+    "name": "14.1",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4615,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5385,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL78402",
+    "type": "item",
+    "name": "14.2",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.8846,
+          "frequency": 23
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1154,
+          "frequency": 3
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "EL78403",
+    "type": "item",
+    "name": "14.3",
+    "domain": {
+      "id": "ho",
+      "name": "Hörverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6538,
+          "frequency": 17
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3462,
+          "frequency": 9
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER70601",
+    "type": "item",
+    "name": "6.1",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER70602",
+    "type": "item",
+    "name": "6.2",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6538,
+          "frequency": 17
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3462,
+          "frequency": 9
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER70603",
+    "type": "item",
+    "name": "6.3",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6154,
+          "frequency": 16
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3846,
+          "frequency": 10
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER70604",
+    "type": "item",
+    "name": "6.4",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6538,
+          "frequency": 17
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3462,
+          "frequency": 9
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER72101",
+    "type": "item",
+    "name": "7.1",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5769,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4231,
+          "frequency": 11
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER72102",
+    "type": "item",
+    "name": "7.2",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6923,
+          "frequency": 18
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3077,
+          "frequency": 8
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER72103",
+    "type": "item",
+    "name": "7.3",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER72104",
+    "type": "item",
+    "name": "7.4",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4615,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5385,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER73801",
+    "type": "item",
+    "name": "8.1",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.8462,
+          "frequency": 22
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1538,
+          "frequency": 4
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER73802",
+    "type": "item",
+    "name": "8.2",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.8846,
+          "frequency": 23
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1154,
+          "frequency": 3
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER73803",
+    "type": "item",
+    "name": "8.3",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4615,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5385,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER73804",
+    "type": "item",
+    "name": "8.4",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6538,
+          "frequency": 17
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3462,
+          "frequency": 9
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER73805",
+    "type": "item",
+    "name": "8.5",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.7692,
+          "frequency": 20
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2308,
+          "frequency": 6
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER73806",
+    "type": "item",
+    "name": "8.6",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.8846,
+          "frequency": 23
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1154,
+          "frequency": 3
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER73807",
+    "type": "item",
+    "name": "8.7",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6154,
+          "frequency": 16
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3846,
+          "frequency": 10
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER72701",
+    "type": "item",
+    "name": "9.0",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5769,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4231,
+          "frequency": 11
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER71301",
+    "type": "item",
+    "name": "10.1",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.8462,
+          "frequency": 22
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1538,
+          "frequency": 4
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER71302",
+    "type": "item",
+    "name": "10.2",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.7692,
+          "frequency": 20
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2308,
+          "frequency": 6
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER71303",
+    "type": "item",
+    "name": "10.3",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.9231,
+          "frequency": 24
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.0769,
+          "frequency": 2
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER71304",
+    "type": "item",
+    "name": "10.4",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.8462,
+          "frequency": 22
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1538,
+          "frequency": 4
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER72601",
+    "type": "item",
+    "name": "15.0",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6538,
+          "frequency": 17
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3462,
+          "frequency": 9
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER69001",
+    "type": "item",
+    "name": "16.1",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1923,
+          "frequency": 5
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.8077,
+          "frequency": 21
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER69002",
+    "type": "item",
+    "name": "16.2",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER69003",
+    "type": "item",
+    "name": "16.3",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3462,
+          "frequency": 9
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5769,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.0769,
+          "frequency": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER69004",
+    "type": "item",
+    "name": "16.4",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2692,
+          "frequency": 7
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6538,
+          "frequency": 17
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.0769,
+          "frequency": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER69005",
+    "type": "item",
+    "name": "16.5",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2692,
+          "frequency": 7
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5769,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1538,
+          "frequency": 4
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER71201",
+    "type": "item",
+    "name": "17.1",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.7692,
+          "frequency": 20
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1538,
+          "frequency": 4
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.0769,
+          "frequency": 2
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER71202",
+    "type": "item",
+    "name": "17.2",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5769,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2308,
+          "frequency": 6
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1923,
+          "frequency": 5
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER71203",
+    "type": "item",
+    "name": "17.3",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.7692,
+          "frequency": 20
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1154,
+          "frequency": 3
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1154,
+          "frequency": 3
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER71204",
+    "type": "item",
+    "name": "17.4",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4615,
+          "frequency": 12
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2692,
+          "frequency": 7
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2692,
+          "frequency": 7
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER71205",
+    "type": "item",
+    "name": "17.5",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.6538,
+          "frequency": 17
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1154,
+          "frequency": 3
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2308,
+          "frequency": 6
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER67401",
+    "type": "item",
+    "name": "18.0",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.3846,
+          "frequency": 10
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1923,
+          "frequency": 5
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4231,
+          "frequency": 11
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER484r01",
+    "type": "item",
+    "name": "19.0",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5385,
+          "frequency": 14
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.0385,
+          "frequency": 1
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4231,
+          "frequency": 11
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER72801",
+    "type": "item",
+    "name": "20.1",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5769,
+          "frequency": 15
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.4231,
+          "frequency": 11
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER72802",
+    "type": "item",
+    "name": "20.2",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.5,
+          "frequency": 13
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER72803",
+    "type": "item",
+    "name": "20.3",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.7692,
+          "frequency": 20
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.2308,
+          "frequency": 6
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  },
+  {
+    "id": "ER72804",
+    "type": "item",
+    "name": "20.4",
+    "domain": {
+      "id": "le",
+      "name": "Leseverstehen"
+    },
+    "subject": {
+      "id": null,
+      "name": "Englisch"
+    },
+    "aggregations": [
+      {
+        "type": "Ergebnis",
+        "value": "Richtig",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.8077,
+          "frequency": 21
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Falsch",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0.1923,
+          "frequency": 5
+        }
+      },
+      {
+        "type": "Ergebnis",
+        "value": "Unbearbeitet",
+        "descriptiveStatistics": {
+          "total": 26,
+          "mean": 0,
+          "frequency": 0
+        }
+      }
+    ]
+  }
+]

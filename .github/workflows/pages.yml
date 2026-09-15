@@ -1,0 +1,50 @@
+# Publishes the dashboards and the wiki to GitHub Pages. dist/ is gitignored, so the
+# artifact is built here and never committed. Pages serves a project page from
+# /<repo>/, hence TBA3_BASE (vite.config.js, docs/.vitepress/config.mjs).
+#
+# Only the demo fixtures work on Pages: there is no /api/ behind it, so `?scope=`
+# datasets need a locally running API.
+name: pages
+
+on:
+    push:
+        branches: [main]
+    workflow_dispatch:
+
+permissions:
+    contents: read
+    pages: write
+    id-token: write
+
+# Queue, never cancel: a deploy cancelled midway can leave Pages half-updated.
+concurrency:
+    group: pages
+    cancel-in-progress: false
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v7
+            - uses: actions/setup-node@v7
+              with:
+                  node-version: 22
+                  cache: npm
+            - run: npm ci --ignore-scripts
+            # This order: Vite empties dist/ first, VitePress then writes dist/docs/.
+            - run: npm run build && npm run docs:build
+              env:
+                  TBA3_BASE: /${{ github.event.repository.name }}/
+            - uses: actions/upload-pages-artifact@v5
+              with:
+                  path: dist
+
+    deploy:
+        needs: build
+        runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        steps:
+            - id: deployment
+              uses: actions/deploy-pages@v5

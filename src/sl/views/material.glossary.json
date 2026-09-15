@@ -1,0 +1,45 @@
+{
+    "header": {
+        "note": "Kopfzeile (Material)",
+        "title": "Materialien zur Weiterarbeit",
+        "subtitle": "Vorlagen zur Anwendung der Ergebnisse im Kontext der Schul- und Unterrichtsentwicklung",
+        "interface": {
+            "overview": {
+                "label": "Übersicht",
+                "tooltip": "Material, um sich einen Überblick zu verschaffen."
+            },
+            "summary": {
+                "label": "Ergebniszusammenfassung",
+                "tooltip": "Pointierte Zusammenfassungen und Interpretationen der Ergebnisse."
+            },
+            "data-view": {
+                "label": "Datensicht",
+                "tooltip": "Detaillierte Datensichten und tabellarische Auswertungen der Ergebnisse."
+            },
+            "questions": {
+                "label": "Leitfragen",
+                "tooltip": "Fragestellungen zum Anstoß der Weiterarbeit mit den Ergebnissen."
+            },
+            "general": {
+                "label": "Gesamt",
+                "tooltip": "Material für den fächerübergreifenden Einsatz."
+            },
+            "de": {
+                "label": "Deutsch",
+                "tooltip": "Material für den Einsatz im Fach Deutsch."
+            },
+            "en": {
+                "label": "Englisch",
+                "tooltip": "Material für den Einsatz im Fach Englisch."
+            },
+            "ma": {
+                "label": "Mathe",
+                "tooltip": "Material für den Einsatz im Fach Mathematik."
+            }
+        }
+    },
+    "material": {
+        "note": "Materialauswahl",
+        "title": "Materialauswahl"
+    }
+}

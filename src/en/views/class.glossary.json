@@ -1,0 +1,19 @@
+{
+    "header": {
+        "note": "Kopfzeile (Klassenübersicht)",
+        "title": "Klassenübersicht",
+        "subtitle": "Zentrale Merkmale und Ergebnisse aller Schüler:innen",
+        "tutorial": "<p>Ergebnisse können nach <b>Hör- und Leseverstehen</b> untergliedert werden. Sie können die angezeigten Ergebnisse auf einen der Bereiche beschränken. Außerdem werden in allen Darstellungen der Ergebnisse Schuldurchschnitt, Landesdurchschnitt oder auch andere Vergleichswerte mit angezeigt. Sie können diese über die Schaltfläche jederzeit aus- oder wieder einblenden. Ein Vergleich mit anderen Gruppen kann helfen, die Ergebnisse besser einzuordnen.</p>"
+    },
+    "filter": {
+        "note": "Schaltfläche zur Scatterplot-Suche",
+        "tutorial": "<p>Sie können das Streudiagramm aus der Übersichtsseite verwenden, um Schüler:innen zu markieren, die Auswahl bestätigen und automatisch auf die Tabelle sowie die zugehörigen Schaubilder übertragen. Mithilfe der roten X-Schaltfläche können Sie eine getätigte Auswahl jederzeit zurücksetzen.</p>",
+        "title": "Visuelle Suche mit Streudiagramm"
+    },
+    "lollipop": {
+        "note": "Stile im Klassendurchschnitt nach Hör- und Leseverstehen",
+        "title": "Durchschnittliche Lösungsquoten der Klasse nach Stilen im Hör- und Leseverstehen",
+        "subtitle": "<p>Sie sehen die durchschnittliche Lösungsraten der Klasse (der Auswahl), unterteilt nach den Hör- bzw. Lesestilen, welchen die jeweiligen Teilaufgaben zugeordnet werden können.</p>",
+        "tutorial": "<p>Die Teilaufgaben können bestimmten Hör- bzw. Lese-Stilen zugeordnet werden. Es werden die Stile <b>'selektiv'</b>, <b>'detailliert'</b> und <b>'global'</b> unterschieden. Die Balken zeigen, wie viel Prozent aller Aufgaben, die einem bestimmten Stil zugeordnet werden können, im Mittel gelöst wurden. Sie können sich dadurch einen Eindruck verschaffen, welche Stile von den ausgewählten Schüler:innen bzw. der Klasse zuverlässig oder aber weniger zuverlässig angewandt werden.</p>"
+    }
+}

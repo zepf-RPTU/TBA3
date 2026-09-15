@@ -1,0 +1,59 @@
+/**
+ * Modal Backdrop — shared full-screen backdrop shell for the modal overlays
+ * (SL detail overlay, item preview overlay, EN scatterplot filter). Visibility is
+ * toggled by adding/removing .visible on the same element; consumers keep an
+ * owner-local class alongside for JS hooks and content layout.
+ *
+ * Shown and hidden with `visibility` + `opacity`, not `display`: a transition can
+ * be interrupted and reversed mid-way, a display toggle cannot, and a full-screen
+ * surface that snaps in is jarring on every open. The `visibility` transition has
+ * no duration, only a delay on the way out, so the backdrop stops taking pointer
+ * events the instant the fade ends and never before the fade begins. The panel
+ * (every direct child — the close button rides along) rests 4px below while
+ * hidden, so it rises 4px on open and sinks 4px on close; an overlay built on
+ * first use starts its first open 8px down (the @starting-style below — which
+ * applies only to a first paint, not to a later class change).
+ */
+
+.modal-backdrop {
+    --modal-transition-duration: 0.2s;
+    --modal-transition-easing: cubic-bezier(0.2, 0, 0, 1);
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-modal);
+    display: flex;
+    background: var(--overlay-backdrop);
+    visibility: hidden;
+    opacity: 0;
+    transition:
+        opacity var(--modal-transition-duration) var(--modal-transition-easing),
+        visibility 0s linear var(--modal-transition-duration);
+}
+
+.modal-backdrop.visible {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.modal-backdrop > * {
+    translate: 0 4px;
+    transition: translate var(--modal-transition-duration) var(--modal-transition-easing);
+}
+
+.modal-backdrop.visible > * {
+    translate: 0 0;
+}
+
+/* Where the first open starts from: the SL detail and item preview overlays are
+   built on first use, so without this their first show has no earlier style to
+   transition from and simply appears. */
+@starting-style {
+    .modal-backdrop.visible {
+        opacity: 0;
+    }
+
+    .modal-backdrop.visible > * {
+        translate: 0 8px;
+    }
+}

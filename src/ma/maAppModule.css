@@ -1,0 +1,24 @@
+/**
+ * MA app shell — the table rules every MA view shares.
+ *
+ * They live on the app module, not on a table module: MA's class, item and student
+ * views all render Tabulator tables, so a unit sheet beside one of them would only
+ * reach the page once that view's chunk had loaded.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* Properties that differ from @tba3/modules/styles/table-base.css. MA keeps only split-view
+       layout constraints here; shared table visuals belong in table-base.css. */
+    .tabulator {
+        width: 100%;
+        max-width: 100%;
+        --tabulator-border: 1px solid var(--color-border);
+        /* Sits --card-pad inside a --radius-md card: the inner radius has to be the
+           smaller one, or the nested corners read as pinched. */
+        border-radius: var(--radius-sm);
+    }
+}

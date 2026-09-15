@@ -1,0 +1,93 @@
+/**
+ * EN STUDENT VIEW LAYOUT (studentViewManager)
+ *
+ * Layout: Content grid with header now in shared container
+ * Content Grid Layout (1fr 1fr):
+ * T │ S
+ * T │ I
+ * T = Student Table (left column)
+ * S = Spider Chart (right column, top)
+ * I = Item Detail Module (right column, bottom)
+ * Component-specific styles moved to module CSS files
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    /* ==========================================================================
+       Left column - student tables
+       ========================================================================== */
+
+    /* Student info/data table sizing → shared in table-host.css
+       through the shared info/data table split layout. */
+
+    .en-student-view .content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(0, 1fr);
+        flex: 1;
+        gap: var(--layout-gap);
+        min-height: 0;
+    }
+
+    .en-student-view .content-grid > .left-column,
+    .en-student-view .content-grid > .right-column {
+        gap: var(--layout-gap);
+        min-height: 0;
+    }
+
+    .en-student-view .content-grid > .left-column {
+        grid-column: 1 / 2;
+    }
+
+    .en-student-view .content-grid > .right-column {
+        grid-column: 2 / 3;
+    }
+
+    /* ==========================================================================
+       Right column - charts & detail section
+       ========================================================================== */
+
+    /* Spider Chart section: Right column, top (up to half, square aspect ratio) */
+    .en-student-view .right-column > .chart-section {
+        flex: 1;
+        min-height: 0;
+        aspect-ratio: 1;
+    }
+
+    /* Item Detail section: Right column, bottom (fills remaining space) */
+
+    .en-student-view .right-column > .detail-section {
+        flex: 1;
+    }
+
+    @media (max-width: 1280px) {
+        .en-student-view .content-grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            flex: none;
+        }
+
+        .en-student-view .content-grid > .left-column {
+            grid-column: auto;
+            height: var(--stacked-card-height);
+        }
+
+        .en-student-view .content-grid > .right-column {
+            grid-column: auto;
+        }
+
+        .en-student-view .right-column > .chart-section {
+            aspect-ratio: unset;
+            height: var(--stacked-card-height);
+            flex: none;
+        }
+
+        .en-student-view .right-column > .detail-section {
+            flex: none;
+            height: var(--stacked-card-height);
+        }
+    }
+}

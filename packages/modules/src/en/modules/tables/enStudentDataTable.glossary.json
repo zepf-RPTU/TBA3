@@ -1,0 +1,15 @@
+{
+    "note": "Aufgabenübersichtstabelle Einzelschüler:in",
+    "title": "Aufgaben des/der Schüler:in im Detail",
+    "tutorial": "<p>Diese Tabelle zeigt, welche Items der/die ausgewählte Schüler:in richtig gelöst, nicht bearbeitet oder falsch gelöst hat. Jedes Item gehört dabei zu einer übergeordneten Aufgabe, welche auf demselben Text bzw. derselben Audiospur basiert. Sie können zunächst alle Items betrachten, oder aber die Auswahl auf Hör- bzw. Leseverstehen beschränken.</p><p>Jedes Item lässt sich außerdem einem bestimmten Bearbeitungsstil zuordnen. Die Spalte 'Modul' gibt an, welchem Teil des Testhefts die Aufgabe zugeordnet werden kann.</p><p>Wenn Sie eine Aufgabe auswählen, erhalten Sie im nebenstehenden Kasten detailliertere Informationen.</p>",
+    "interface": {
+        "below-ks": {
+            "label": "Unter KS",
+            "tooltip": "Nicht gelöste Items unterhalb der erreichten Kompetenzstufe anzeigen (vorübergehend deaktiviert)."
+        },
+        "above-ks": {
+            "label": "Über KS",
+            "tooltip": "Gelöste Items oberhalb der erreichten Kompetenzstufe anzeigen (vorübergehend deaktiviert)."
+        }
+    }
+}

@@ -1,0 +1,43 @@
+/**
+ * EN app shell — the table rules every EN view shares.
+ *
+ * They live on the app module, not on a table module: the cell padding applies to
+ * every Tabulator EN renders, and `.en-styles-cell` is emitted by both the item and
+ * the student data table. A unit sheet beside either one would only reach the page
+ * once that view's chunk had loaded.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* ==========================================================================
+       EN cell padding — first/last child extra padding
+       ========================================================================== */
+
+    .tabulator .tabulator-cell:first-child {
+        padding-inline-start: var(--space-md);
+    }
+
+    .tabulator .tabulator-cell:last-child {
+        padding-inline-end: var(--space-md);
+    }
+
+    @media (max-width: 768px) {
+        .tabulator .tabulator-header .tabulator-col {
+            padding: var(--layout-gap-relaxed) var(--space-sm);
+        }
+    }
+
+    /* ==========================================================================
+       EN styles cell — item table and student data table
+       ========================================================================== */
+
+    .en-styles-cell {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: calc(var(--control-gap) / 2);
+    }
+}

@@ -1,0 +1,480 @@
+[
+    {
+        "id": "8b-englisch",
+        "type": "group",
+        "name": "8b",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": null,
+        "properties": [
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=32;itemCount=32;A1=0-5;A2=6-13;B1=14-23;B2=24-29;C1=30-32"
+            },
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>C1 (C1)</li><li>B2 (B2)</li><li>B1 (B1)</li><li>A2 (A2)</li><li>A1 (A1)</li></ul>"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": 1,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>A1</b> bedeutet dabei <b>A1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen.</li><li>Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf diese Fragen Antworten geben.</li><li>Kann sich auf einfache Art verständigen, wenn die Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen</li></ul><br>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 26,
+                    "mean": 0.0769,
+                    "frequency": 2
+                }
+            },
+            {
+                "id": 2,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>A2</b> bedeutet dabei <b>A2</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung)</li><li>Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht</li><li>Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben</li></ul><br>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 26,
+                    "mean": 0.1923,
+                    "frequency": 5
+                }
+            },
+            {
+                "id": 3,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>B1</b> bedeutet dabei <b>B1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann die Hauptpunkte verstehen, wenn klare Standardsprache gesprochen wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht</li><li>Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet.</li><li>Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern</li><li>Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.</li></ul><br>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 26,
+                    "mean": 0.4615,
+                    "frequency": 12
+                }
+            },
+            {
+                "id": 4,
+                "name": "B2",
+                "nameShort": "B2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>B2</b> bedeutet dabei <b>B2</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Fachgebiet auch Fachdiskussionen.</li><li>Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten möglich ist.</li><li>Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben</li></ul><br>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 26,
+                    "mean": 0.1538,
+                    "frequency": 4
+                }
+            },
+            {
+                "id": 5,
+                "name": "C1",
+                "nameShort": "C1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>C1</b> bedeutet dabei <b>C1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutung erfassen.</li><li>Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen</li><li>Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen.</li><li>Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zu Textverknüpfung angemessen verwenden</li></ul><br>(kompetente Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 26,
+                    "mean": 0.1154,
+                    "frequency": 3
+                }
+            }
+        ]
+    },
+    {
+        "id": "8b-englisch",
+        "type": "group",
+        "name": "8b",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": null,
+        "properties": [
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=37;itemCount=37;A1=0-9;A2=10-19;B1=20-28;B2=29-34;C1=35-37"
+            },
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>C1 (C1)</li><li>B2 (B2)</li><li>B1 (B1)</li><li>A2 (A2)</li><li>A1 (A1)</li></ul>"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": 1,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>A1</b> bedeutet dabei <b>A1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen.</li><li>Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf diese Fragen Antworten geben.</li><li>Kann sich auf einfache Art verständigen, wenn die Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen</li></ul><br>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 26,
+                    "mean": 0.1154,
+                    "frequency": 3
+                }
+            },
+            {
+                "id": 2,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>A2</b> bedeutet dabei <b>A2</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung)</li><li>Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht</li><li>Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben</li></ul><br>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 26,
+                    "mean": 0.2308,
+                    "frequency": 6
+                }
+            },
+            {
+                "id": 3,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>B1</b> bedeutet dabei <b>B1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann die Hauptpunkte verstehen, wenn klare Standardsprache gesprochen wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht</li><li>Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet.</li><li>Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern</li><li>Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.</li></ul><br>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 26,
+                    "mean": 0.3077,
+                    "frequency": 8
+                }
+            },
+            {
+                "id": 4,
+                "name": "B2",
+                "nameShort": "B2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>B2</b> bedeutet dabei <b>B2</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Fachgebiet auch Fachdiskussionen.</li><li>Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten möglich ist.</li><li>Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben</li></ul><br>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 26,
+                    "mean": 0.1923,
+                    "frequency": 5
+                }
+            },
+            {
+                "id": 5,
+                "name": "C1",
+                "nameShort": "C1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>C1</b> bedeutet dabei <b>C1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutung erfassen.</li><li>Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen</li><li>Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen.</li><li>Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zu Textverknüpfung angemessen verwenden</li></ul><br>(kompetente Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 26,
+                    "mean": 0.1538,
+                    "frequency": 4
+                }
+            }
+        ]
+    },
+    {
+        "id": "school",
+        "type": "school",
+        "name": "Schulschnitt",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": null,
+        "properties": [
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>C1 (C1)</li><li>B2 (B2)</li><li>B1 (B1)</li><li>A2 (A2)</li><li>A1 (A1)</li></ul>"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": 1,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>A1</b> bedeutet dabei <b>A1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen.</li><li>Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf diese Fragen Antworten geben.</li><li>Kann sich auf einfache Art verständigen, wenn die Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen</li></ul><br>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 76,
+                    "mean": 0.1974,
+                    "frequency": 15
+                }
+            },
+            {
+                "id": 2,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>A2</b> bedeutet dabei <b>A2</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung)</li><li>Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht</li><li>Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben</li></ul><br>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 76,
+                    "mean": 0.3947,
+                    "frequency": 30
+                }
+            },
+            {
+                "id": 3,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>B1</b> bedeutet dabei <b>B1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann die Hauptpunkte verstehen, wenn klare Standardsprache gesprochen wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht</li><li>Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet.</li><li>Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern</li><li>Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.</li></ul><br>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 76,
+                    "mean": 0.25,
+                    "frequency": 19
+                }
+            },
+            {
+                "id": 4,
+                "name": "B2",
+                "nameShort": "B2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>B2</b> bedeutet dabei <b>B2</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Fachgebiet auch Fachdiskussionen.</li><li>Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten möglich ist.</li><li>Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben</li></ul><br>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 76,
+                    "mean": 0.1053,
+                    "frequency": 8
+                }
+            },
+            {
+                "id": 5,
+                "name": "C1",
+                "nameShort": "C1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>C1</b> bedeutet dabei <b>C1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutung erfassen.</li><li>Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen</li><li>Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen.</li><li>Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zu Textverknüpfung angemessen verwenden</li></ul><br>(kompetente Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 76,
+                    "mean": 0.0526,
+                    "frequency": 4
+                }
+            }
+        ]
+    },
+    {
+        "id": "school",
+        "type": "school",
+        "name": "Schulschnitt",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": null,
+        "properties": [
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>C1 (C1)</li><li>B2 (B2)</li><li>B1 (B1)</li><li>A2 (A2)</li><li>A1 (A1)</li></ul>"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": 1,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>A1</b> bedeutet dabei <b>A1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen.</li><li>Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf diese Fragen Antworten geben.</li><li>Kann sich auf einfache Art verständigen, wenn die Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen</li></ul><br>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 74,
+                    "mean": 0.2162,
+                    "frequency": 16
+                }
+            },
+            {
+                "id": 2,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>A2</b> bedeutet dabei <b>A2</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung)</li><li>Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht</li><li>Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben</li></ul><br>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 74,
+                    "mean": 0.2838,
+                    "frequency": 21
+                }
+            },
+            {
+                "id": 3,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>B1</b> bedeutet dabei <b>B1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann die Hauptpunkte verstehen, wenn klare Standardsprache gesprochen wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht</li><li>Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet.</li><li>Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern</li><li>Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.</li></ul><br>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 74,
+                    "mean": 0.3649,
+                    "frequency": 27
+                }
+            },
+            {
+                "id": 4,
+                "name": "B2",
+                "nameShort": "B2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>B2</b> bedeutet dabei <b>B2</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Fachgebiet auch Fachdiskussionen.</li><li>Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten möglich ist.</li><li>Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben</li></ul><br>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 74,
+                    "mean": 0.0946,
+                    "frequency": 7
+                }
+            },
+            {
+                "id": 5,
+                "name": "C1",
+                "nameShort": "C1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>C1</b> bedeutet dabei <b>C1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutung erfassen.</li><li>Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen</li><li>Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen.</li><li>Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zu Textverknüpfung angemessen verwenden</li></ul><br>(kompetente Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 74,
+                    "mean": 0.0405,
+                    "frequency": 3
+                }
+            }
+        ]
+    },
+    {
+        "id": "state",
+        "type": "state",
+        "name": "Landesschnitt",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": null,
+        "properties": [
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>C1 (C1)</li><li>B2 (B2)</li><li>B1 (B1)</li><li>A2 (A2)</li><li>A1 (A1)</li></ul>"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": 1,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>A1</b> bedeutet dabei <b>A1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen.</li><li>Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf diese Fragen Antworten geben.</li><li>Kann sich auf einfache Art verständigen, wenn die Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen</li></ul><br>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.28,
+                    "frequency": 126
+                }
+            },
+            {
+                "id": 2,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>A2</b> bedeutet dabei <b>A2</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung)</li><li>Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht</li><li>Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben</li></ul><br>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.2511,
+                    "frequency": 113
+                }
+            },
+            {
+                "id": 3,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>B1</b> bedeutet dabei <b>B1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann die Hauptpunkte verstehen, wenn klare Standardsprache gesprochen wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht</li><li>Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet.</li><li>Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern</li><li>Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.</li></ul><br>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.3489,
+                    "frequency": 157
+                }
+            },
+            {
+                "id": 4,
+                "name": "B2",
+                "nameShort": "B2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>B2</b> bedeutet dabei <b>B2</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Fachgebiet auch Fachdiskussionen.</li><li>Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten möglich ist.</li><li>Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben</li></ul><br>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.0911,
+                    "frequency": 41
+                }
+            },
+            {
+                "id": 5,
+                "name": "C1",
+                "nameShort": "C1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>C1</b> bedeutet dabei <b>C1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutung erfassen.</li><li>Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen</li><li>Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen.</li><li>Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zu Textverknüpfung angemessen verwenden</li></ul><br>(kompetente Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.0289,
+                    "frequency": 13
+                }
+            }
+        ]
+    },
+    {
+        "id": "state",
+        "type": "state",
+        "name": "Landesschnitt",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": null,
+        "properties": [
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>C1 (C1)</li><li>B2 (B2)</li><li>B1 (B1)</li><li>A2 (A2)</li><li>A1 (A1)</li></ul>"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": 1,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>A1</b> bedeutet dabei <b>A1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen.</li><li>Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf diese Fragen Antworten geben.</li><li>Kann sich auf einfache Art verständigen, wenn die Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen</li></ul><br>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 451,
+                    "mean": 0.1996,
+                    "frequency": 90
+                }
+            },
+            {
+                "id": 2,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>A2</b> bedeutet dabei <b>A2</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung)</li><li>Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht</li><li>Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben</li></ul><br>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 451,
+                    "mean": 0.3993,
+                    "frequency": 180
+                }
+            },
+            {
+                "id": 3,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>B1</b> bedeutet dabei <b>B1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann die Hauptpunkte verstehen, wenn klare Standardsprache gesprochen wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht</li><li>Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet.</li><li>Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern</li><li>Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.</li></ul><br>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 451,
+                    "mean": 0.2506,
+                    "frequency": 113
+                }
+            },
+            {
+                "id": 4,
+                "name": "B2",
+                "nameShort": "B2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>B2</b> bedeutet dabei <b>B2</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Fachgebiet auch Fachdiskussionen.</li><li>Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten möglich ist.</li><li>Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben</li></ul><br>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 451,
+                    "mean": 0.1109,
+                    "frequency": 50
+                }
+            },
+            {
+                "id": 5,
+                "name": "C1",
+                "nameShort": "C1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER). <b>C1</b> bedeutet dabei <b>C1</b>.</p><p>Für diese SuS gilt gemäß Globalskala des GER: <ul><li>Kann breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutung erfassen.</li><li>Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen</li><li>Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen.</li><li>Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zu Textverknüpfung angemessen verwenden</li></ul><br>(kompetente Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 451,
+                    "mean": 0.0399,
+                    "frequency": 18
+                }
+            }
+        ]
+    }
+]

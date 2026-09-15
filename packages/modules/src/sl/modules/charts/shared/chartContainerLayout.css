@@ -1,0 +1,13 @@
+/**
+ * SL chart-with-legend layout: SL-wide legend panel typography.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    body.sl-app .chart-legend-panel {
+        font-size: var(--fs-sm);
+    }
+}

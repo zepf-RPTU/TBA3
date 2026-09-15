@@ -1,0 +1,19 @@
+{
+    "note": "Aufgabenübersichtstabelle",
+    "title": "Aufgabenübersicht",
+    "tutorial": "<p>Die Tabelle listet alle Aufgaben Ihres Testhefts mit Leitidee, Aufgabenniveau und dem Ergebnis der Klasse. Der Verteilungsbalken zeigt, welcher Anteil der Klasse eine Aufgabe richtig gelöst, falsch gelöst oder nicht bearbeitet hat; die Markierung im Balken und die Spalte „Pilotierung“ zeigen, welche Lösungsquote nach der Pilotierung zu erwarten war. Über die Aufgabennummer öffnen Sie eine Vorschau der Aufgabe.</p><p>Vermutlich interessieren Sie nicht alle Aufgaben gleichermaßen. Schränken Sie die Auswahl mit den Filtern in den Spaltenköpfen oder mit Schaltflächen wie „Schwächste 5“ ein: Welche Aufgaben haben der Klasse die größten Schwierigkeiten bereitet – und war bei ihrem Niveau überhaupt etwas anderes zu erwarten? Oder gibt es eigentlich leichte Aufgaben, die dennoch nicht flächendeckend gelöst wurden?</p>",
+    "interface": {
+        "best-five": {
+            "label": "Stärkste 5",
+            "tooltip": "Die fünf besten Aufgaben anzeigen."
+        },
+        "worst-five": {
+            "label": "Schwächste 5",
+            "tooltip": "Die fünf schwächsten Aufgaben anzeigen."
+        },
+        "incomplete": {
+            "label": "Hohe Nichtbearbeitung",
+            "tooltip": "Aufgaben anzeigen, die am häufigsten nicht bearbeitet wurden."
+        }
+    }
+}

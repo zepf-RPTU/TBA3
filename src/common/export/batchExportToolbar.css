@@ -1,0 +1,113 @@
+/**
+ * Batch Export Toolbar Styles
+ * Fixed bottom toolbar for batch export controls
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* ==========================================================================
+       Toolbar container
+       ========================================================================== */
+
+    .batch-export-toolbar {
+        position: fixed;
+        bottom: 0;
+        /* Beside the sidebar rail, not under it: both sit at --z-shell and the
+           later sibling would paint over the rail's theme picker. */
+        inset-inline: var(--sidebar-rail-width) 0;
+        background: var(--color-card-background);
+        border-top: 2px solid var(--export-success-color);
+        box-shadow: var(--shadow-md);
+        padding: var(--space-md) var(--space-lg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: var(--z-shell);
+        /* A transition, not a keyframe: clearing the last selection while the bar is
+           still rising must reverse it from where it is. The bar rests 8px below its
+           place while hidden and fades as it rises; `visibility` flips only after the
+           fade so the hidden bar takes no clicks. */
+        visibility: hidden;
+        opacity: 0;
+        translate: 0 8px;
+        transition:
+            translate 0.25s ease-out,
+            opacity 0.25s ease-out,
+            visibility 0s linear 0.25s;
+    }
+
+    .batch-export-toolbar.visible {
+        visibility: visible;
+        opacity: 1;
+        translate: 0 0;
+        transition-delay: 0s;
+    }
+
+    /* ==========================================================================
+       Toolbar content
+       ========================================================================== */
+
+    .toolbar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .selection-info {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        color: var(--export-success-color);
+    }
+
+    .selection-info .icon {
+        font-size: var(--fs-lg);
+    }
+
+    .selection-count {
+        font-size: var(--fs-base);
+    }
+
+    .toolbar-actions {
+        gap: var(--space-md);
+    }
+
+    /* ==========================================================================
+       Responsive design
+       ========================================================================== */
+
+    @media (max-width: 768px) {
+        .batch-export-toolbar {
+            padding: var(--space-sm);
+        }
+
+        .toolbar-content {
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+
+        .selection-info,
+        .toolbar-actions {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .toolbar-actions > .btn {
+            flex: 1;
+        }
+    }
+
+    /* ==========================================================================
+       Print styles
+       ========================================================================== */
+
+    @media print {
+        html .batch-export-toolbar {
+            display: none;
+        }
+    }
+}

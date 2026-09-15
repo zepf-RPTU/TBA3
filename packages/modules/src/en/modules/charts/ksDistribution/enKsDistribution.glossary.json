@@ -1,0 +1,12 @@
+{
+    "h": {
+        "note": "GER-Stufen-Verteilung (Hörverstehen)",
+        "tutorial": "<p>Dieses Diagramm zeigt die <b>Verteilung der GER-Kompetenzstufen</b> in Ihrer Klasse für den Bereich <b>Hörverstehen</b>.</p><p><b>GER-Stufen:</b></p><ul><li><b>A1/A2:</b> Elementare Sprachverwendung</li><li><b>B1/B2:</b> Selbstständige Sprachverwendung</li><li><b>C1:</b> Kompetente Sprachverwendung</li></ul><p><b>Darstellung:</b> Die Balken zeigen, wie viele Schüler:innen die jeweilige GER-Stufe im Bereich 'Hörverstehen' erreicht haben. Je höher der Balken, desto mehr Schüler:innen befinden sich auf dieser Stufe.</p><p>Beim Zuschalten von Vergleichsgruppen werden diese entsprechend durch zusätzliche Balken dargestellt.</p>",
+        "title": "GER-Verteilung: Hörverstehen"
+    },
+    "l": {
+        "note": "GER-Stufen-Verteilung (Leseverstehen)",
+        "tutorial": "<p>Dieses Diagramm zeigt die <b>Verteilung der GER-Kompetenzstufen</b> in Ihrer Klasse für den Bereich <b>Leseverstehen</b>.</p><p><b>GER-Stufen:</b></p><ul><li><b>A1/A2:</b> Elementare Sprachverwendung</li><li><b>B1/B2:</b> Selbstständige Sprachverwendung</li><li><b>C1:</b> Kompetente Sprachverwendung</li></ul><p><b>Darstellung:</b> Die Balken zeigen, wie viele Schüler:innen die jeweilige GER-Stufe im Bereich 'Leseverstehen' erreicht haben. Je höher der Balken, desto mehr Schüler:innen befinden sich auf dieser Stufe.</p><p>Beim Zuschalten von Vergleichsgruppen werden diese entsprechend durch zusätzliche Balken dargestellt.</p>",
+        "title": "GER-Verteilung: Leseverstehen"
+    }
+}

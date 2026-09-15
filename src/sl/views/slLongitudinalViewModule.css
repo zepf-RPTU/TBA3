@@ -1,0 +1,75 @@
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    /**
+     * Longitudinal view (03) styles
+     *
+     * All rules for this view consolidated here — no external @import.
+     * Generic card styles and shared content-module structure come from
+     * @tba3/module-base/modules/contentModule.css. Only longitudinal-specific overrides
+     * live here, keyed on the unique class .longitudinal-charts-row to avoid any
+     * collision with other views that use a .charts-row class.
+     */
+
+    /* ==========================================================================
+       View container
+       ========================================================================== */
+
+    .sl-longitudinal-view {
+        --view-base-padding-md: 0.75rem;
+    }
+
+    /* ==========================================================================
+       Charts row
+       ========================================================================== */
+
+    /**
+     * The shell comes from the shared .sl-charts-row class
+     * (src/sl/charts-row.css); the equal-width cards and boxplot-mode
+     * weighting below are longitudinal-specific.
+     */
+
+    /* Each chart card — override content-module.css flex:1 for equal widths */
+    .longitudinal-charts-row > .longitudinal-chart-card {
+        flex: 1 1 0%;
+        min-width: 0;
+    }
+
+    /* Longitudinal chart surfaces need a usable floor inside the shared chart host.
+       */
+    .longitudinal-chart-body {
+        min-height: 200px;
+    }
+
+    /* Chart SVGs fill the feature-local chart surface. */
+    .longitudinal-chart-body svg {
+        width: 100%;
+        height: 100%;
+        max-height: 100%;
+    }
+
+    /* ==========================================================================
+       Boxplot mode — teaching-quality card takes 2× width
+       ========================================================================== */
+
+    .longitudinal-charts-row--boxplot-mode > .longitudinal-chart-card:first-child {
+        flex: 2;
+    }
+
+    .longitudinal-charts-row--boxplot-mode > .longitudinal-chart-card:not(:first-child) {
+        flex: 1;
+    }
+
+    @media (max-width: 1280px) {
+        .longitudinal-charts-row > .longitudinal-chart-card {
+            flex: none;
+            height: var(--stacked-card-height-vh);
+        }
+
+        .longitudinal-charts-row--boxplot-mode > .longitudinal-chart-card:first-child {
+            flex: none;
+        }
+    }
+}

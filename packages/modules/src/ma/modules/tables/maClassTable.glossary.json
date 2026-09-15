@@ -1,0 +1,31 @@
+{
+    "note": "Klassenübersichtstabelle",
+    "title": "Klassenübersicht",
+    "tutorial": "<p>Die Tabelle zeigt alle Schüler:innen Ihrer Klasse mit zentralen Merkmalen, der Zahl richtig gelöster Aufgaben, einem Verteilungsbalken (richtig, nicht bearbeitet, falsch) und der erreichten Kompetenzstufe. Über die ID gelangen Sie zu den Einzelergebnissen einer Person. Wo die Auswahl „Aufgabenpool“ angeboten wird, beschränken Sie die Ergebnisse damit auf eine Leitidee; die Kompetenzstufe entfällt dann, weil sie nur für das ganze Testheft bestimmt wird.</p><p>Es kann sinnvoll sein, sich zunächst auf bestimmte Schüler:innen zu konzentrieren: Wer braucht die meiste Unterstützung? Wer zeigt hervorragende Leistungen und ist bereit für größere Herausforderungen? Wer hat die nächsthöhere Kompetenzstufe nur knapp verfehlt? Nutzen Sie dafür die Filter in den Spaltenköpfen oder Schaltflächen wie „Schwächste 5“ und „1 Punkt unter Schwellenwert“.</p>",
+    "interface": {
+        "best-five": {
+            "label": "Stärkste 5",
+            "tooltip": "Die fünf besten Schüler:innen anzeigen."
+        },
+        "worst-five": {
+            "label": "Schwächste 5",
+            "tooltip": "Die fünf schwächsten Schüler:innen anzeigen."
+        },
+        "one-above": {
+            "label": "1 Punkt über Schwellenwert",
+            "tooltip": "Schüler:innen anzeigen, die knapp oberhalb einer Kompetenzschwelle liegen."
+        },
+        "one-below": {
+            "label": "1 Punkt unter Schwellenwert",
+            "tooltip": "Schüler:innen anzeigen, die knapp unterhalb einer Kompetenzschwelle liegen."
+        },
+        "student-link": {
+            "note": "ID-Link einer Zeile; {{name}} ist Vor- und Nachname",
+            "tooltip": "Einzelergebnisse von {{name}}"
+        },
+        "student-link-unnamed": {
+            "note": "ID-Link einer Zeile ohne Vor- oder Nachname",
+            "tooltip": "Einzelergebnisse anzeigen"
+        }
+    }
+}

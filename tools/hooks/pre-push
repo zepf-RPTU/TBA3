@@ -1,0 +1,29 @@
+#!/bin/sh
+#
+# Pre-push gate: run the same checks a reviewer would.
+#
+# Lives in the tree rather than in .git/hooks because .git/hooks is not version
+# controlled. Activate once per clone:
+#
+#     git config core.hooksPath tools/hooks
+#
+# Deliberately does NOT run `npm run test:e2e`. The e2e project needs Google Chrome
+# and takes minutes; a push gate that slow gets bypassed, and a gate
+# that gets bypassed is not a gate. Run it manually before a release or a UI change.
+#
+# Bypass for a genuine emergency with `git push --no-verify`.
+
+set -e
+
+repo_root=$(git rev-parse --show-toplevel)
+cd "$repo_root"
+
+if [ ! -d node_modules ]; then
+    echo "pre-push: node_modules/ is absent — running the dependency-free structure check only."
+    echo "pre-push: run 'npm install' to get the full gate (lint + unit tests + typecheck)."
+    node tools/check-structure.mjs
+    exit $?
+fi
+
+echo "pre-push: running 'npm run check' (structure + lint + unit tests + typecheck)..."
+npm run check

@@ -1,0 +1,30 @@
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    /* ==========================================================================
+       OVERVIEW VIEW STYLES (MaOverviewViewModule)
+       ========================================================================== */
+
+    /* Charts Section - fills remaining height */
+    .ma-overview-view .overview-charts-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex: 1;
+        gap: var(--layout-gap);
+        min-height: 0;
+    }
+
+    @media (max-width: 1280px) {
+        .ma-overview-view .overview-charts-section {
+            grid-template-columns: 1fr;
+            flex: none;
+        }
+
+        .ma-overview-view .overview-ks-chart-container,
+        .ma-overview-view .overview-task-ring-chart-container {
+            height: var(--stacked-card-height);
+        }
+    }
+}

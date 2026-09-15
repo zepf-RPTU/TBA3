@@ -1,0 +1,43 @@
+# Default ignored files
+/shelf/
+/.idea/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+
+.vscode/
+
+/.idea/
+
+coverage/
+
+# Only the workflows and dependabot are tracked; editor/agent instructions stay local.
+.github/*
+!.github/workflows/
+!.github/dependabot.yml
+.claude/
+CLAUDE.md
+
+# Local secrets, OS litter
+.env*
+.DS_Store
+
+# Node/npm
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+.npm/
+
+# ESLint
+.eslintcache
+
+# Claude temporary files
+tmpclaude-*
+
+dist/
+
+# Vitest e2e reporter output
+test-results/

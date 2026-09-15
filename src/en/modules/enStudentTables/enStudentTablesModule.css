@@ -1,0 +1,24 @@
+/**
+ * Student view module styles
+ *
+ * Header selector and delegated table controls for EnStudentTablesModule
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    .en-student-view-selector-slot {
+        --layout-row-gap: 0;
+    }
+
+    .en-student-view-header-controls {
+        --layout-row-gap: var(--layout-gap);
+    }
+
+    .en-student-view-selector {
+        gap: var(--control-gap);
+        flex: 0 0 auto;
+    }
+}

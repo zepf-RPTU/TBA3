@@ -1,0 +1,88 @@
+/**
+ * Common Layout Reset — shared by all subjects (EN, MA, SL)
+ */
+
+/* Box sizing: use border-box globally so width/height include border and
+   padding.
+
+   `overflow: clip` (not `hidden`): a `hidden` viewport paints no scrollbars but
+   is still scrollable programmatically, so a scrollIntoView() could strand the
+   shell scrolled with no scrollbar to recover. `clip` makes
+   scrollIntoView/scrollTo and the browser's scroll restoration no-ops against
+   the viewport. */
+html {
+    box-sizing: border-box;
+    height: 100%;
+    overflow: clip;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Prose: no orphan on the last line. Headings balance in typography.css. */
+p,
+li {
+    /* eslint-disable-next-line css/use-baseline -- progressive enhancement: a browser without `pretty` wraps as before */
+    text-wrap: pretty;
+}
+
+/* position: relative makes body the containing block for the popups the tooltip
+   service appends to it (.tooltip, .glossary-popup); with overflow: clip they
+   can no longer extend the page past the viewport. Does not affect `position:
+   fixed` descendants (sidebar, notes drawer, app skeleton, tour card). */
+body {
+    font-family: var(--font-family-main);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+    position: relative;
+    overflow: clip;
+}
+
+/* Skip link — the first focusable element on every dashboard page (entry HTML),
+   so a keyboard user can bypass the rail. Off-screen until focused. It has to clear
+   both the sidebar's z-shell tier and the cold-start skeleton one above it
+   (skeleton.css) — during boot the link is the page's only focusable element, and at
+   the skeleton's tier the later sibling would paint over it. */
+.skip-link {
+    position: fixed;
+    top: var(--space-sm);
+    inset-inline-start: var(--space-sm);
+    z-index: calc(var(--z-shell) + 2);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    background: var(--color-accent-solid);
+    color: var(--text-on-primary);
+    text-decoration: none;
+    transform: translateY(calc(-100% - var(--space-md)));
+}
+
+.skip-link:focus-visible {
+    transform: none;
+    outline-width: 0;
+    box-shadow:
+        var(--shadow-focus),
+        0 0 0 5px var(--color-background);
+}
+
+/* Shared main-content shell. The sidebar sibling rule in modules/sidebar.css is
+    authoritative for the sidebar offset, so all three apps compute the same
+    main-content box. position: relative makes this the offsetParent for the
+    absolutely positioned .view-skeleton overlay (modules/skeleton.css); flow
+    layout is unaffected. */
+.main-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+    position: relative;
+}

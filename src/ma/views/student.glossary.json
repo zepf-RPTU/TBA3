@@ -1,0 +1,19 @@
+{
+    "header": {
+        "note": "Kopfzeile (Einzelschüler)",
+        "title": "Ergebnisse einzelner Schüler:innen",
+        "subtitle": "Merkmale und Aufgabenlösungen, gruppiert nach Leitideen."
+    },
+    "student-row": {
+        "note": "Einzelschülertabelle",
+        "title": "Schüler:in im Detail"
+    },
+    "item-donuts": {
+        "note": "Donut-Charts der Lösungsquoten im Klassendurchschnitt gruppiert nach Leitideen.",
+        "title": "Lösungsquoten nach Leitideen (Schüler:in im Klassenvergleich)",
+        "tutorial": "<p>Für jede Leitidee und für alle Aufgaben zusammen zeigt ein Ring die mittlere Lösungsquote der Klasse. Der Strich markiert das Ergebnis der ausgewählten Person, die Ø-Markierung die nach der Pilotierung erwartete Lösungsquote. Der innere Ring, den Sie über die Schaltfläche ein- und ausblenden, zeigt, wie sich die Aufgaben einer Leitidee auf die Aufgabenniveaus verteilen.</p><p>So sehen Sie auf einen Blick, ob sich die Leistungen gleichmäßig verteilen oder ob es inhaltlich klar abgrenzbare Stärken und Schwächen gibt. VERA ist nicht für die Individualdiagnostik konzipiert; die Ergebnisse können aber Anstoß für weitere diagnostische Schritte sein.</p>"
+    },
+    "task-ring-focus": {
+        "note": "Details zur ausgewählten Leitidee"
+    }
+}

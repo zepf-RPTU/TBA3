@@ -1,0 +1,1065 @@
+﻿[
+    {
+        "id": "92bcef86",
+        "type": "student",
+        "name": "gross baum.85",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "trait",
+                "label": "nicht-dominant deutsch",
+                "value": "nd"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "gross"
+            },
+            {
+                "key": "lastName",
+                "value": "baum.85"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "2efb14f0",
+        "type": "student",
+        "name": "dunkel pflaume.35",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "dunkel"
+            },
+            {
+                "key": "lastName",
+                "value": "pflaume.35"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Optimalstandard",
+                "nameShort": "V",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "c036347b",
+        "type": "student",
+        "name": "leise wald.96",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "leise"
+            },
+            {
+                "key": "lastName",
+                "value": "wald.96"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "a4df0239",
+        "type": "student",
+        "name": "laut berg.89",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "laut"
+            },
+            {
+                "key": "lastName",
+                "value": "berg.89"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "8d340339",
+        "type": "student",
+        "name": "schnell wiese.13",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "schnell"
+            },
+            {
+                "key": "lastName",
+                "value": "wiese.13"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "1f118998",
+        "type": "student",
+        "name": "warm sonne.84",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "warm"
+            },
+            {
+                "key": "lastName",
+                "value": "sonne.84"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "40d87221",
+        "type": "student",
+        "name": "hoch wald.84",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "hoch"
+            },
+            {
+                "key": "lastName",
+                "value": "wald.84"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "92f3bbff",
+        "type": "student",
+        "name": "rund baum.44",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "rund"
+            },
+            {
+                "key": "lastName",
+                "value": "baum.44"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "e813c9b1",
+        "type": "student",
+        "name": "schmal baum.53",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "schmal"
+            },
+            {
+                "key": "lastName",
+                "value": "baum.53"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "1b6a8a9b",
+        "type": "student",
+        "name": "hell traube.70",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "trait",
+                "label": "Klassenwiederholung",
+                "value": "kw"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "hell"
+            },
+            {
+                "key": "lastName",
+                "value": "traube.70"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "e0710448",
+        "type": "student",
+        "name": "jung wiese.62",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "jung"
+            },
+            {
+                "key": "lastName",
+                "value": "wiese.62"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "8edeb5e2",
+        "type": "student",
+        "name": "rund stern.68",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "rund"
+            },
+            {
+                "key": "lastName",
+                "value": "stern.68"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "027a34a5",
+        "type": "student",
+        "name": "alt pflaume.62",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "alt"
+            },
+            {
+                "key": "lastName",
+                "value": "pflaume.62"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "3096181b",
+        "type": "student",
+        "name": "klein himbeere.24",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "klein"
+            },
+            {
+                "key": "lastName",
+                "value": "himbeere.24"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "246aa1f5",
+        "type": "student",
+        "name": "gross apfel.42",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "diverse"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "gross"
+            },
+            {
+                "key": "lastName",
+                "value": "apfel.42"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "1864babe",
+        "type": "student",
+        "name": "leise wolke.51",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "leise"
+            },
+            {
+                "key": "lastName",
+                "value": "wolke.51"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "43e3ba7f",
+        "type": "student",
+        "name": "schnell wolke.43",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "schnell"
+            },
+            {
+                "key": "lastName",
+                "value": "wolke.43"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "a65aa66b",
+        "type": "student",
+        "name": "kalt orange.75",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "orange.75"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "a93000da",
+        "type": "student",
+        "name": "hell kirsche.79",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "hell"
+            },
+            {
+                "key": "lastName",
+                "value": "kirsche.79"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "13a1d341",
+        "type": "student",
+        "name": "hoch blume.31",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "hoch"
+            },
+            {
+                "key": "lastName",
+                "value": "blume.31"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "d925c15a",
+        "type": "student",
+        "name": "gross himbeere.74",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "gross"
+            },
+            {
+                "key": "lastName",
+                "value": "himbeere.74"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Regelstandard plus",
+                "nameShort": "IV",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "1eb0a130",
+        "type": "student",
+        "name": "kalt sonne.42",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "sonne.42"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "84236f25",
+        "type": "student",
+        "name": "jung birne.23",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "jung"
+            },
+            {
+                "key": "lastName",
+                "value": "birne.23"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "97b1ed5f",
+        "type": "student",
+        "name": "langsam stern.74",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "langsam"
+            },
+            {
+                "key": "lastName",
+                "value": "stern.74"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "7ec68b46",
+        "type": "student",
+        "name": "gross zitrone.55",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "gross"
+            },
+            {
+                "key": "lastName",
+                "value": "zitrone.55"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "27de6a25",
+        "type": "student",
+        "name": "laut mond.75",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "laut"
+            },
+            {
+                "key": "lastName",
+                "value": "mond.75"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "2d5932d3",
+        "type": "student",
+        "name": "tief zitrone.96",
+        "domain": null,
+        "subject": {
+            "id": null,
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "tief"
+            },
+            {
+                "key": "lastName",
+                "value": "zitrone.96"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1.0,
+                    "frequency": 1
+                }
+            }
+        ]
+    }
+]

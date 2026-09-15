@@ -1,0 +1,467 @@
+/**
+ * Shared Tabulator Table Base Styles
+ *
+ * Provides the common Tabulator overrides used across all modules (EN, MA, SL).
+ *
+ * The table is a quiet one: rows are separated by a hairline only (no zebra), the
+ * header is a neutral surface in secondary ink, selection is the primary tint plus an
+ * accent bar, and every arrow Tabulator draws with borders is replaced by a Material
+ * glyph (src/common/tables/internal/tabulatorIcons.js puts the glyphs in; this sheet
+ * turns the border paint off and picks the glyph per state).
+ *
+ * Themed via CSS custom properties set in foundation/variables.css (SL overrides a few):
+ *
+ *   --table-header-bg               Header background (neutral surface)
+ *   --table-header-text             Header text color (secondary ink)
+ *   --table-header-hover-bg         Column hover highlight in header
+ *   --table-header-border-bottom    Header bottom separator
+ *   --table-group-header-bg         Column group header background
+ *   --table-col-title-padding       Padding for column titles
+ *   --table-cell-padding            Cell padding
+ *   --table-resize-handle-bg        Column resize handle color (hover only)
+ *   --table-row-bg, --table-row-hover-bg, --table-row-selected-bg,
+ *   --table-row-selected-hover-bg
+ *   --table-text, --table-text-secondary, --table-text-muted,
+ *   --table-text-placeholder
+ */
+
+/* ==========================================================================
+   Base table reset
+   ========================================================================== */
+
+.tabulator {
+    position: relative;
+    border: var(--tabulator-border, none);
+    background-color: var(--tabulator-background, var(--color-background));
+    font-family: var(--font-family-main);
+    font-size: var(--fs-sm);
+    color: var(--table-text);
+    border-radius: var(--radius-md);
+    --tabulator-background: var(--color-background);
+    --tabulator-border: none;
+    --tabulator-header-hover-bg: var(--table-header-hover-bg);
+    --tabulator-header-shadow: none;
+    --tabulator-header-col-border-right: none;
+    --tabulator-header-title-color: var(--table-header-text);
+    --tabulator-header-title-padding: var(--table-col-title-padding);
+    --tabulator-row-hover-bg: var(--table-row-hover-bg);
+    --tabulator-row-selected-bg: var(--table-row-selected-bg);
+    --tabulator-row-selected-hover-bg: var(--table-row-selected-hover-bg);
+    --tabulator-row-selected-accent: var(--primary-color);
+    --tabulator-cell-border-right: none;
+    --tabulator-resize-handle-hover-bg: var(--table-resize-handle-bg);
+    --tabulator-data-tree-control-hover-bg: color-mix(
+        in srgb,
+        var(--primary-color) 10%,
+        transparent
+    );
+    --tabulator-data-tree-control-color: var(--primary-hover, #2563eb);
+    --tabulator-domain-group-bg: transparent;
+    --tabulator-domain-group-color: var(--table-text-secondary);
+    --tabulator-domain-group-arrow-color: var(--tabulator-domain-group-color);
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.tabulator .tabulator-header {
+    background: var(--table-header-bg);
+    border: none;
+    border-bottom: 1px solid var(--table-header-border-bottom);
+    font-weight: var(--fw-semibold);
+    color: var(--table-header-text);
+    box-shadow: var(--tabulator-header-shadow);
+}
+
+.tabulator .tabulator-header .tabulator-col {
+    background: transparent;
+    border-inline-end: var(--tabulator-header-col-border-right);
+    /* Horizontal value matches --table-cell-padding so header text lines up
+       with the cell text below it, and so narrow columns spend their width on
+       the title instead of on chrome. */
+    padding: 0.5em 0.5rem;
+    transition: background-color 0.2s ease;
+}
+
+.tabulator .tabulator-header .tabulator-col:last-child {
+    border-inline-end: none;
+}
+
+.tabulator .tabulator-header .tabulator-col:hover,
+.tabulator .tabulator-header .tabulator-col:focus-within {
+    background-color: var(--tabulator-header-hover-bg);
+}
+
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content {
+    padding: 0;
+}
+
+.tabulator .tabulator-header .tabulator-col .tabulator-col-title {
+    font-weight: var(--fw-semibold);
+    color: var(--tabulator-header-title-color);
+    white-space: normal;
+    padding: var(--tabulator-header-title-padding);
+}
+
+/* ==========================================================================
+   Domain table group headers
+   ========================================================================== */
+
+.domain-table .tabulator-group {
+    background: var(--tabulator-domain-group-bg);
+    color: var(--tabulator-domain-group-color);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-base);
+    border-bottom: none;
+}
+
+/* The label is the `<span role="gridcell">` slDomainTableModule.js returns, and
+   Tabulator's sheet paints any span in a group row red (its item-count style). */
+.domain-table .tabulator-group > span {
+    color: inherit;
+    margin-inline-start: 0;
+}
+
+/* ==========================================================================
+   Glyphs in Tabulator's arrow boxes (see internal/tabulatorIcons.js)
+   ========================================================================== */
+
+/* The box keeps its click handler; only its border paint goes. */
+.tabulator .tabulator-arrow,
+html .domain-table .tabulator-group .tabulator-arrow {
+    width: auto;
+    height: auto;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.tabulator .tabulator-glyph {
+    display: block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Sort indicator
+   ========================================================================== */
+
+/* Three glyphs sit in every sorter; aria-sort decides which one shows. */
+.tabulator .tabulator-header .tabulator-col-sorter {
+    color: var(--table-text-muted);
+}
+
+.tabulator .tabulator-header .tabulator-col-sorter .tabulator-glyph {
+    display: none;
+}
+
+.tabulator .tabulator-header .tabulator-col[aria-sort='none'] .tabulator-glyph--unsorted,
+.tabulator .tabulator-header .tabulator-col[aria-sort='ascending'] .tabulator-glyph--asc,
+.tabulator .tabulator-header .tabulator-col[aria-sort='descending'] .tabulator-glyph--desc {
+    display: block;
+}
+
+.tabulator .tabulator-header .tabulator-col[aria-sort='ascending'] .tabulator-col-sorter,
+.tabulator .tabulator-header .tabulator-col[aria-sort='descending'] .tabulator-col-sorter {
+    color: var(--color-accent-text);
+}
+
+/*
+ * An unsorted column's indicator stays quiet so a wide table does not read as a
+ * strip of arrows; it comes to full strength once the column is sorted, hovered
+ * or focused. Opacity (not display/visibility) keeps the sorter's width
+ * reserved, so titles never reflow on hover.
+ *
+ * Gated on a hovering pointer (as Tabulator gates its own header hover styles):
+ * a touch device can neither hover nor focus a header cell, so dimming there
+ * would leave the sort affordance permanently faded with no way to reveal it.
+ */
+@media (hover: hover) and (pointer: fine) {
+    .tabulator .tabulator-header .tabulator-col[aria-sort='none'] .tabulator-col-sorter {
+        opacity: 0.4;
+        transition: opacity 0.2s ease;
+    }
+
+    .tabulator .tabulator-header .tabulator-col[aria-sort='none']:hover .tabulator-col-sorter,
+    .tabulator
+        .tabulator-header
+        .tabulator-col[aria-sort='none']:focus-within
+        .tabulator-col-sorter {
+        opacity: 1;
+    }
+}
+
+/* The whole header cell sorts, so the title's block padding *is* the hit area.
+   Only the block axis is raised: the inline padding is per-app (SL sets its own)
+   and the column widths are already the user's. */
+@media (pointer: coarse) {
+    .tabulator .tabulator-header .tabulator-col .tabulator-col-title {
+        padding-block: var(--layout-gap-relaxed);
+    }
+}
+
+/* ==========================================================================
+   Group-row toggle
+   ========================================================================== */
+
+html .domain-table .tabulator-group .tabulator-arrow {
+    color: var(--tabulator-domain-group-arrow-color);
+    margin-inline-end: var(--space-sm);
+    flex-shrink: 0;
+}
+
+/* One chevron, turned: the open state is a rotation, not a second shape, so the
+   toggle reads as the same control in both states. */
+.tabulator .tabulator-group .tabulator-glyph,
+.tabulator .tabulator-data-tree-control .tabulator-glyph {
+    transition: rotate 0.15s ease-out;
+}
+
+.tabulator .tabulator-group.tabulator-group-visible .tabulator-glyph {
+    rotate: 90deg;
+}
+
+/* ==========================================================================
+   Table body
+   ========================================================================== */
+
+.tabulator .tabulator-tableholder {
+    background: var(--color-background);
+}
+
+.tabulator .tabulator-table {
+    background: transparent;
+}
+
+/* ==========================================================================
+   Rows
+   ========================================================================== */
+
+/* Hairline only: a zebra on top of dividers and a hover state was three separators
+   competing for the same job. */
+.tabulator .tabulator-row {
+    background: var(--table-row-bg);
+    border-bottom: 1px solid var(--color-border-light);
+    transition: background-color 0.15s ease;
+}
+
+/* Row selection */
+.tabulator .tabulator-row.tabulator-selectable:hover,
+.tabulator .tabulator-row.tabulator-selectable:focus-within {
+    background-color: var(--tabulator-row-hover-bg);
+}
+
+.tabulator .tabulator-row.tabulator-selected {
+    background-color: var(--tabulator-row-selected-bg);
+    box-shadow: inset 3px 0 0 var(--tabulator-row-selected-accent);
+}
+
+.tabulator .tabulator-row.tabulator-selected:hover,
+.tabulator .tabulator-row.tabulator-selected:focus-within {
+    background-color: var(--tabulator-row-selected-hover-bg);
+}
+
+/* ==========================================================================
+   Cells
+   ========================================================================== */
+
+.tabulator .tabulator-cell {
+    border-inline-end: var(--tabulator-cell-border-right);
+    padding: var(--table-cell-padding);
+    vertical-align: middle;
+    font-size: var(--fs-sm);
+    color: var(--table-text-secondary);
+    /* Equal-width digits: a sort, filter or dataset switch must not reflow a column. */
+    font-variant-numeric: tabular-nums;
+}
+
+.tabulator .tabulator-cell.cell-wrap-text {
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+
+/* The glossary's dotted underline stays as the help affordance, but in a column of
+   them it recedes to the muted ink rather than repeating the text colour. */
+.tabulator .tabulator-cell .glossary-term {
+    border-bottom-color: var(--table-text-muted);
+}
+
+/* ==========================================================================
+   PLACEHOLDER (empty table)
+   ========================================================================== */
+
+.tabulator .tabulator-placeholder {
+    background: var(--color-background-secondary);
+    color: var(--table-text-placeholder);
+    font-style: italic;
+    padding: 4em 2em;
+    text-align: center;
+    font-size: var(--fs-lg);
+}
+
+/* The Pilotierung difference beside a Lösungsquote (progressBarColumn.js): text,
+   so it takes the text-grade result tokens rather than the bar fills. The sign in
+   the text is the cue; the colour only echoes it. */
+.tabulator .tabulator-cell .result-diff--up {
+    color: var(--result-correct-text);
+}
+
+.tabulator .tabulator-cell .result-diff--down {
+    color: var(--result-incorrect-text);
+}
+
+/* ==========================================================================
+   Column resize handles
+   ========================================================================== */
+
+.tabulator .tabulator-col-resize-handle {
+    background: transparent;
+    width: 2px;
+}
+
+.tabulator .tabulator-col-resize-handle:hover {
+    background: var(--tabulator-resize-handle-hover-bg);
+    width: 3px;
+}
+
+/* ==========================================================================
+   Data tree controls
+   ========================================================================== */
+
+.tabulator .tabulator-data-tree-control {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    margin-inline-end: var(--space-xs);
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease;
+}
+
+/* Hit area: 18px is the visible control, 40px wide by the row's height is the
+   target (same reasoning as .item-preview-trigger — the next row's control is
+   one row away, so the target does not grow past the cell padding). */
+.tabulator .tabulator-data-tree-control::after {
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--space-xs));
+    bottom: calc(-1 * var(--space-xs));
+    left: 50%;
+    width: max(100%, 40px);
+    translate: -50% 0;
+}
+
+@media (pointer: coarse) {
+    .tabulator .tabulator-data-tree-control::after {
+        width: max(100%, var(--touch-target-min));
+    }
+}
+
+.tabulator .tabulator-data-tree-control:hover,
+.tabulator .tabulator-data-tree-control:focus-visible {
+    background-color: var(--tabulator-data-tree-control-hover-bg);
+}
+
+/* Tabulator's own plus/minus boxes give way to the chevron
+   (internal/tabulatorIcons.js); the collapse box marks the open state. */
+.tabulator .tabulator-data-tree-control {
+    border: none;
+    background: transparent;
+    color: var(--tabulator-data-tree-control-color);
+}
+
+.tabulator .tabulator-data-tree-control .tabulator-data-tree-control-collapse,
+.tabulator .tabulator-data-tree-control .tabulator-data-tree-control-expand {
+    display: none;
+}
+
+.tabulator
+    .tabulator-data-tree-control:has(.tabulator-data-tree-control-collapse)
+    .tabulator-glyph {
+    rotate: 90deg;
+}
+
+/* ==========================================================================
+   Scrollbars
+   ========================================================================== */
+
+.tabulator .tabulator-tableholder::-webkit-scrollbar {
+    width: var(--space-sm);
+    height: var(--space-sm);
+}
+
+.tabulator .tabulator-tableholder::-webkit-scrollbar-track {
+    background: var(--color-background-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.tabulator .tabulator-tableholder::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+    border-radius: var(--radius-sm);
+}
+
+.tabulator .tabulator-tableholder::-webkit-scrollbar-thumb:hover {
+    background: var(--table-text-muted);
+}
+
+/* ==========================================================================
+   SHARED COMPONENT CLASSES — used by EN + MA cell formatters
+   ========================================================================== */
+
+/* Result icons */
+.result-icon-correct {
+    color: var(--result-correct);
+}
+
+.result-icon-incorrect {
+    color: var(--result-incorrect);
+}
+
+.result-icon-not-attempted {
+    color: var(--result-not-attempted);
+}
+
+/* Student ID link */
+.student-id-link {
+    color: var(--color-accent-text);
+    text-decoration: underline;
+    --interactive-hover-color: var(--primary-hover);
+}
+
+/* The `color` above sits in the `common` layer and would otherwise beat
+   `.hover-color:hover` in `foundation`, which layer order ranks lower whatever its
+   specificity. Repeat the hover here so the link still reacts. */
+.student-id-link:hover {
+    color: var(--interactive-hover-color);
+}
+
+/* Traits container */
+.traits-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--control-gap) / 2);
+    height: 100%;
+    min-height: var(--table-row-content-min);
+    width: 100%;
+}
+
+.traits-container .trait-empty {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+    color: var(--text-muted);
+}
+
+.traits-container .trait-item {
+    cursor: help;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+}

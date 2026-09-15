@@ -1,0 +1,11 @@
+{
+    "header": {
+        "note": "Kopfzeile (Übersicht)",
+        "title": "Übersicht",
+        "subtitle": "Kompetenzstufenverteilung & Lösungsquoten der Klasse"
+    },
+    "simple-task-rings": {
+        "note": "Donut-Charts der Lösungsquoten im Klassendurchschnitt gruppiert nach Leitideen.",
+        "title": "Mittlere Lösungsquoten der Klasse nach Leitideen"
+    }
+}

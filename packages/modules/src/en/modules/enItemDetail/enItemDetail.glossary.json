@@ -1,0 +1,13 @@
+{
+    "messages": {
+        "none-solved": "Keine {{Lernende}} haben diese Aufgabe richtig gelöst.",
+        "all-solved": "Alle {{Lernende}} haben diese Aufgabe gelöst.",
+        "no-student-data": "Keine Daten zu {{Lernende}} für diese Aufgabe."
+    },
+    "detail-tabs": {
+        "label": "Aufgaben"
+    },
+    "group-toggle": {
+        "label": "Angezeigte Gruppe"
+    }
+}

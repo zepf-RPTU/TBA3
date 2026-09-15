@@ -1,0 +1,74 @@
+/**
+ * Table Filter Menu — header-action dropdown that replaced the per-column
+ * Tabulator header filters (src/common/tables/internal/tableFilterMenu.js).
+ *
+ * The panel reuses the shared dropdown shell
+ * (module-base's headerActionDropdown.css) for the overlay and the shared
+ * control taxonomy (src/styles/foundation/controls.css) for the field/label
+ * layout. Only the row padding, the input surface (the shared taxonomy covers
+ * selects, not text inputs) and the active-filter badge live here.
+ *
+ * The panel has no reset row: clearing every filter at once is the preset Reset
+ * button's job (src/common/tables/internal/tablePresetManager.css).
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* ==========================================================================
+       TRIGGER BUTTON — active-filter badge
+       ========================================================================== */
+
+    [data-header-action-button='table-filters'] {
+        position: relative;
+    }
+
+    .table-filter-badge {
+        position: absolute;
+        top: 0;
+        inset-inline-end: 0;
+        min-width: 1.1em;
+        padding: 0 0.25em;
+        border-radius: var(--radius-lg);
+        background: var(--color-accent-solid);
+        color: var(--color-background);
+        font-size: var(--fs-sm);
+        line-height: var(--lh-icon);
+        text-align: center;
+        pointer-events: none;
+    }
+
+    /* ==========================================================================
+       Panel
+       ========================================================================== */
+
+    .table-filter-panel {
+        min-width: 220px;
+        padding: var(--space-xs) 0;
+    }
+
+    .table-filter-field {
+        padding: var(--space-xs) var(--space-md);
+    }
+
+    /* Text inputs and selects share the surface of the shared .control-select. */
+    .table-filter-field-control {
+        width: 100%;
+        min-width: 0;
+        padding: var(--control-padding);
+        font: inherit;
+        line-height: var(--lh-ui);
+        border: 1px solid var(--color-border);
+        border-radius: var(--control-radius);
+        background: var(--control-bg);
+        color: var(--control-color);
+    }
+
+    .table-filter-field-control:focus-visible {
+        outline-width: 0;
+        border-color: var(--control-focus-border, var(--control-hover-border));
+        box-shadow: var(--shadow-focus);
+    }
+}

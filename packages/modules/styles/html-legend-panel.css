@@ -1,0 +1,168 @@
+/**
+ * Shared HTML legend panel and pill controls.
+ */
+
+.chart-with-legend-panel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--layout-gap-relaxed);
+}
+
+.chart-svg-area {
+    flex: 999 1 32rem;
+    min-width: 0;
+}
+
+.chart-legend-panel {
+    /* Sized by its longest chip, capped: a chip never wraps mid-word, so the panel
+       grows to the label instead of the label breaking to the panel. */
+    flex: 0 1 auto;
+    width: max-content;
+    min-width: min(11rem, 100%);
+    max-width: min(100%, 16rem);
+    padding: var(--layout-pad);
+    display: flex;
+    flex-direction: column;
+    gap: var(--layout-gap-relaxed);
+    overflow-y: auto;
+    font-size: var(--fs-base);
+    color: var(--text-color);
+}
+
+.legend-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--control-gap);
+    min-width: 0;
+}
+
+/* The table header's voice: small, semibold, secondary ink — a caption, not a shout. */
+.legend-section-title {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    color: var(--text-secondary);
+}
+
+.legend-section-title--clickable {
+    --interactive-hover-color: var(--primary-color, #3b82f6);
+}
+
+/* The `color` above sits in the `common` layer and would otherwise beat
+   `.hover-color:hover` in `foundation`, which layer order ranks lower whatever its
+   specificity. Repeat the hover here so the clickable title still reacts. */
+.legend-section-title--clickable:hover {
+    color: var(--interactive-hover-color);
+}
+
+.legend-pill-group {
+    gap: var(--space-xs);
+    flex-direction: column;
+}
+
+/* The quiet chip: structure is a hairline, state is a tint. The swatch is the only
+   colour a chip carries; "on" is the selected-row contract (primary tint plus an
+   accent edge), "off" a dashed hairline in secondary ink. Text never wraps inside
+   a word — the panel grows to the chip (see .chart-legend-panel). */
+.legend-pill {
+    --btn-fill: var(--color-card-background, #fff);
+    --btn-hover-fill: var(--color-background-hover);
+    --btn-active-fill: var(--primary-color-light);
+    --btn-disabled-opacity: 0.4;
+    /* No background-color here: the .btn--text family paints --btn-fill and the
+       .btn state rules (hover, is-active) repaint it — in the foundation layer,
+       which a value set here would beat regardless of specificity. */
+    border: 1px solid var(--color-border);
+    color: var(--text-color);
+    font-weight: var(--fw-semibold);
+    border-radius: var(--radius-md);
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    /* A pill is a flex box (.btn--text), where text-align does nothing; start the
+       content at the leading edge so a label past the panel cap overflows at the
+       end instead of spilling over the accent edge. */
+    justify-content: flex-start;
+    line-height: var(--lh-ui);
+}
+
+.legend-pill.is-inactive {
+    background-color: transparent;
+    border-style: dashed;
+    color: var(--text-secondary);
+}
+
+/* Same layer trap as the section title: the transparent fill above is in `common`
+   and outranks `.btn:not(:disabled):hover` in `foundation`, so repeat the hover
+   fill here — an inactive pill must still show it can be switched back on. */
+.legend-pill.is-inactive:not(:disabled):hover {
+    background-color: var(--btn-hover-fill);
+}
+
+.legend-pill:is(.is-active, .is-selected) {
+    /* background-color handled by shared .btn.is-active rule via --btn-active-fill */
+    border-color: color-mix(in srgb, var(--primary-color) 40%, var(--color-border));
+    box-shadow: inset 3px 0 0 var(--primary-color);
+}
+
+.legend-pill.child {
+    margin-inline-start: var(--layout-gap);
+    width: calc(100% - var(--layout-gap));
+}
+
+@media (max-width: 1024px) {
+    .chart-with-legend-panel {
+        gap: var(--layout-gap);
+    }
+
+    /* `flex-basis: 100%`, not only `width`: the basis above (11rem) would keep the
+       panel beside a chart that can shrink, and the chart would scroll instead. */
+    .chart-legend-panel {
+        flex-basis: 100%;
+        width: 100%;
+        max-width: none;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow-y: visible;
+        gap: var(--layout-gap);
+    }
+
+    .legend-section {
+        flex: 1 1 14rem;
+    }
+
+    .legend-pill-group {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .legend-pill,
+    .legend-pill.child {
+        width: auto;
+    }
+}
+
+/* Niveaustufen list (htmlLegendPanel renderNiveaustufenList) */
+
+.niveaustufen-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--control-gap);
+}
+
+.niveaustufen-item {
+    display: flex;
+    align-items: center;
+    gap: var(--layout-gap);
+    color: var(--text-color, #333);
+}
+
+.niveaustufen-swatch {
+    display: inline-block;
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--color-border, #e2e8f0);
+    flex-shrink: 0;
+}

@@ -1,0 +1,259 @@
+/**
+ * Header Module CSS
+ *
+ * The one view-header layout, shared by EN, MA and SL (no per-app variants):
+ *
+ *   [ title ]                   [ controls ]        [ notes | info ]
+ *   left, grid column 1         centered, col 2     right end, col 3
+ *   [ subtitle ....................................................]
+ *   row 2, spanning all three columns
+ *
+ * The header container IS the grid. Columns 1 and 3 are equal fractions, so the
+ * control cluster stays centered on the header no matter how wide the title
+ * grows or how many action buttons a view shows. That symmetry caps column 1 at
+ * roughly a third of the header, which is too narrow for the long SL subtitles
+ * — so the subtitle gets its own full-width row instead of sharing the title
+ * column. Views without a subtitle render no second row at all. Every child
+ * pins its own `grid-row`/`grid-column`, so DOM order does not drive placement.
+ * Apps must not re-declare this layout.
+ *
+ * At and below 1280px the symmetry is what breaks the header: the actions column
+ * holds two icon buttons yet is as wide as the title column, so an SL title wraps
+ * to five lines at 1024px and at 320px the cluster paints over the title. The
+ * narrow tier (bottom of this file) drops to two columns and moves the controls
+ * to their own row:
+ *
+ *   [ title ]                                          [ notes | info ]
+ *   [ controls ................................................ ]
+ *   [ subtitle ................................................ ]
+ */
+
+/* ==========================================================================
+   Base header module styles
+   ========================================================================== */
+
+.header-module {
+    width: 100%;
+    background-color: var(--color-card-background);
+    border: 1px solid var(--color-border);
+    border-radius: 0;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    column-gap: var(--space-lg);
+    row-gap: var(--space-xs);
+    min-height: var(--header-min-height);
+    padding: var(--header-padding);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.header-module-control-list {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: var(--header-control-gap);
+}
+
+.header-module-control-list > * {
+    flex: 0 0 auto;
+}
+
+.header-module-actions {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--header-action-gap);
+    position: relative;
+    z-index: calc(var(--z-overlay) + 1);
+}
+
+.header-module-actions > * {
+    flex: 0 0 auto;
+}
+
+/* Normalize action button styling: remove shadows and square corners
+   to match segmented group button appearance */
+.header-module-actions .btn--icon {
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.header-module-control-list:empty,
+.header-module-actions:empty {
+    display: none;
+}
+
+/* Header Module Components */
+.header-module-title {
+    grid-column: 1;
+    grid-row: 1;
+    color: var(--text-color);
+    font-weight: var(--fw-bold);
+    margin: 0;
+    min-width: 0;
+    max-width: 100%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-module-title h1 {
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    margin: 0;
+    min-width: 0;
+    /* A one-word title ("Schüler:innenansicht") is wider than the title column at
+       320px: hyphenate it (the page is lang="de"), and where no hyphenation point
+       exists break anywhere rather than push the header past the page. */
+    hyphens: auto;
+    overflow-wrap: anywhere;
+    /* The h2 step of the heading scale (variables.css): the title moved from h2
+       to h1 for the document outline, not to grow — at the h1 step the header
+       would gain 5px and shift every view. */
+    font-size: var(--fs-h2);
+}
+
+/* Icon placed inside a header title h1 (created by HeaderModule._doRender) */
+.header-module-title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.header-module-subtitle {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    margin: 0;
+    font-size: var(--fs-base);
+    color: var(--text-secondary);
+    line-height: var(--lh-ui);
+}
+
+.header-module-mode-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+}
+
+.header-module-button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--control-gap);
+    min-width: 0;
+}
+
+.button-group-row {
+    min-width: 0;
+}
+
+.header-module-control-list .mode-switch-buttons,
+.header-module-control-list .button-group-row {
+    flex-wrap: nowrap;
+}
+
+.header-module-control-list .mode-button,
+.header-module-control-list .button-group-row .btn--text {
+    white-space: nowrap;
+}
+
+/* Selects in the header — one look for header selects and the student selectors.
+   `header-module-select` is the container class for `type: 'select'` controls;
+   `header-module-student-select` is the select class the student-view selectors
+   (MA top bar, EN student tables) pass to StudentSelectorModule. */
+.header-module-select {
+    justify-content: center;
+    min-width: 0;
+}
+
+/* No max-width here: a native <select> sizes to its widest option and clips —
+   never ellipsizes — when a cap falls below that, so any cap silently truncates
+   the collapsed box's label. The min-width keeps short-option selects from
+   collapsing; the header grid bounds the wide end. */
+.header-module-select .control-select,
+.header-module-student-select {
+    min-width: var(--header-select-min-width, 11rem);
+    --control-padding: 0.4rem;
+    --control-radius: var(--radius-sm);
+    --control-bg: var(--color-card-background);
+    --control-color: var(--text-color);
+    --control-hover-bg: var(--color-card-background);
+    --control-hover-border: var(--primary-color);
+    --control-focus-border: var(--primary-color);
+}
+
+/* For selects whose option labels are long enough that the default width would
+   make the collapsed box jump on selection (SL longitudinal Domäne). */
+.header-module-select--wide {
+    --header-select-min-width: 15.5rem;
+}
+
+/* Narrow tier: two columns, controls on their own row (see the file comment).
+   The title keeps the whole first column, the actions shrink to their content. */
+@media (max-width: 1280px) {
+    .header-module {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .header-module-actions {
+        grid-column: 2;
+    }
+
+    .header-module-control-list {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .header-module-subtitle {
+        grid-row: 3;
+    }
+}
+
+/* Reflow tier (WCAG 1.4.10): a control that cannot shrink pushes past a 320px
+   viewport with no scrollbar to reach it. */
+@media (max-width: 768px) {
+    /* `flex: 0 0 auto` (above) sizes each control to its max-content width, so a
+       group wider than the row overflows instead of wrapping inside. Let the
+       items shrink to the row; the groups then wrap within it. */
+    .header-module-control-list > * {
+        flex: 0 1 auto;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    /* The groups inside must wrap too: a three-button segmented group is wider
+       than the row at 320px, and a group that cannot wrap is what still gets
+       clipped once the cluster does. */
+    .header-module-control-list .mode-switch-buttons,
+    .header-module-control-list .button-group-row {
+        flex-wrap: wrap;
+    }
+
+    /* A select keeps its floor only while the row can hold it; below that it
+       takes the row and clips its label rather than pushing past the page. */
+    .header-module-select {
+        flex-wrap: wrap;
+    }
+
+    .header-module-select .control-select,
+    .header-module-student-select {
+        flex: 1 1 auto;
+        min-width: min(var(--header-select-min-width, 11rem), 100%);
+        max-width: 100%;
+    }
+}

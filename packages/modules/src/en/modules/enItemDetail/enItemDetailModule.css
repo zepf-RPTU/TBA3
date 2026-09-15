@@ -1,0 +1,164 @@
+/**
+ * Item detail module styles
+ *
+ * Reusable component for displaying detailed item information
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* Item Detail Panel Styles */
+    .item-detail-panel {
+        --layout-stack-gap: 0;
+        height: 100%;
+        background: var(--color-card-background);
+    }
+
+    /* Per-item tab strip — one tab per selected item, rendered into the module's
+       shared subtitle slot (which supplies the padding/border chrome). The tab
+       pattern itself comes from the shared .tab-strip classes
+       (module-base's tabStrip.css); .item-detail-tab(s) remain as JS hooks. */
+
+    .item-detail-content {
+        flex: 1;
+        padding: var(--card-pad-loose);
+        overflow-y: auto;
+        font-size: var(--fs-sm);
+    }
+
+    .item-detail-content .notice-callout {
+        margin-bottom: var(--space-lg);
+    }
+
+    .item-detail-content .empty-message {
+        color: var(--text-secondary);
+        font-style: italic;
+        text-align: center;
+        margin-top: var(--content-panel-padding);
+    }
+
+    /* Detail sections */
+    .detail-section {
+        margin-bottom: var(--space-md);
+    }
+
+    .detail-section:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Detail rows */
+    .detail-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--space-xs) 0;
+        border-bottom: 1px solid var(--color-border-light, var(--color-border));
+    }
+
+    .detail-row:last-child {
+        border-bottom: none;
+    }
+
+    .detail-label {
+        color: var(--text-secondary);
+        flex: 0 0 50%;
+    }
+
+    .detail-value {
+        color: var(--text-color);
+        text-align: end;
+        flex: 1;
+    }
+
+    .detail-value.highlight {
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-base);
+        color: var(--primary-color);
+    }
+
+    .detail-value.success {
+        color: var(--success-color);
+        font-weight: var(--fw-bold);
+    }
+
+    .detail-value.error {
+        color: var(--error-color);
+        font-weight: var(--fw-bold);
+    }
+
+    /* Student group toggle — shared segmented button group, compacted for the
+       narrow detail panel (the .btn--text defaults are sized for toolbars). */
+    .item-detail-group-toggle {
+        margin-bottom: var(--space-sm);
+    }
+
+    .item-detail-group-button {
+        --btn-padding-block: var(--space-xs);
+        --btn-padding-inline: var(--space-sm);
+        font-family: inherit;
+        font-size: var(--fs-sm);
+        color: var(--text-secondary);
+    }
+
+    .item-detail-group-button.is-active {
+        color: var(--text-color);
+        font-weight: var(--fw-bold);
+    }
+
+    /* Student grid — two columns already in the narrow side panel (~270px of track
+       for names that measure well under 8rem), more as the panel widens. max-width
+       keeps names scannable instead of stretching the grid into many thin columns
+       in the full-width layout tier. */
+    .detail-student-grid {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+        gap: var(--space-xs);
+        max-width: 42rem;
+    }
+
+    .detail-student-name {
+        display: flex;
+        align-items: baseline;
+        gap: var(--space-xs);
+        width: 100%;
+        padding: var(--space-xs) var(--space-sm);
+        border: 1px solid var(--color-border-light, var(--color-border));
+        border-radius: var(--radius-sm);
+        background: transparent;
+        color: var(--text-color);
+        font-family: inherit;
+        font-size: var(--fs-sm);
+        text-align: start;
+    }
+
+    /* The transparent fill above sits in `modules` and would otherwise beat
+       `.interactive-subtle:hover` in `foundation`, which layer order ranks lower
+       whatever its specificity. Repeat the hover fill here. */
+    .detail-student-name:hover {
+        background: var(--interactive-hover-bg);
+    }
+
+    /* Students who did not attempt the item: muted + dashed border + a * marker, so
+       a skipped item stays distinguishable from a wrong answer without colour
+       alone. */
+    .detail-student-name.is-not-attempted {
+        border-style: dashed;
+        color: var(--text-secondary);
+    }
+
+    .detail-student-name-flag {
+        margin-inline-start: auto;
+        color: var(--text-secondary);
+    }
+
+    .detail-student-legend {
+        margin: var(--space-xs) 0 0;
+        color: var(--text-secondary);
+        font-size: var(--fs-sm);
+    }
+}

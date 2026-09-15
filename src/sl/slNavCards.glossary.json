@@ -1,0 +1,39 @@
+{
+    "note": "Navigationsübersicht",
+    "title": "Navigation",
+    "element_texts": {
+        "nav-summary": {
+            "title": "Überblick",
+            "description": "Schul- und Klassenleistung je Fach auf einen Blick",
+            "tooltip": "Wählen Sie diese Ansicht, wenn Sie je Fach eine einzelne Kennzahl Ihrer Schule und die Abweichung der einzelnen Klassen sehen möchten."
+        },
+        "nav-welcome": {
+            "title": "Willkommen (alternativ)",
+            "description": "Startansicht mit zentralen Ergebnissen",
+            "tooltip": "Wählen Sie diese Ansicht, wenn Sie zunächst einen großflächigen Überblick über die vollständige Kompetenzstufenverteilung möchten."
+        },
+        "nav-overview": {
+            "title": "Übersicht",
+            "description": "Detaillierte Analyse nach Fächern und Klassen",
+            "tooltip": "Diese Ansicht bietet Ihnen die Möglichkeit, einzelne Fächer oder Klassen im Detail zu betrachten."
+        },
+        "nav-comparison": {
+            "title": "Vergleich",
+            "description": "Ergebnisse verschiedener Gruppen vergleichen",
+            "tooltip": "Mithilfe dieser Ansicht können Sie verschiedene Gruppen und deren Ergebnisse direkt gegenüberstellen."
+        },
+        "nav-longitudinal": {
+            "title": "Entwicklung",
+            "description": "Verlauf der Ergebnisse über mehrere Jahre",
+            "tooltip": "In dieser Ansicht erhalten Sie einen Überblick über die Ergebnisse der Testung im Kontext der letzten Jahre."
+        },
+        "nav-material": {
+            "title": "Material",
+            "description": "Vorlagen und Muster zur Weiterarbeit",
+            "tooltip": "Diese Ansicht bietet eine Sammlung von Materialien und Vorlagen, die bei der direkten Weiterarbeit unterstützen können."
+        },
+        "nav-report": {
+            "title": "Bericht"
+        }
+    }
+}

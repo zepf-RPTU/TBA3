@@ -1,0 +1,138 @@
+/**
+ * Unified Tooltip Styles
+ * 
+ * Standardized tooltip styles for all charts, tables, and UI elements.
+ * Uses CSS variables for easy customization per app.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* ==========================================================================
+       CSS variables
+       ========================================================================== */
+
+    :root {
+        /* Background and colors */
+        --tooltip-bg: rgba(0, 0, 0, 0.85);
+        --tooltip-color: var(--text-on-primary);
+        --tooltip-border-radius: var(--radius-md);
+        --tooltip-shadow: var(--shadow-lg);
+
+        /* Spacing */
+        --tooltip-padding: var(--notice-padding);
+
+        /* Typography */
+        --tooltip-font-size: var(--fs-sm);
+        --tooltip-line-height: var(--lh-text);
+
+        /* Layout */
+        --tooltip-z-index: var(--z-floating);
+        --tooltip-max-width: 300px;
+        --tooltip-anchored-gap: var(--layout-gap-relaxed);
+
+        /* Animation */
+        --tooltip-transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+    }
+
+    /* ==========================================================================
+       Base tooltip
+       ========================================================================== */
+
+    /* top/left default to the origin rather than `auto`: an `auto` inset resolves
+       to the static position at the bottom of the body flow, and since these are
+       hidden with `visibility` (not `display`) that would add the tooltip's height
+       to the page. The service always positions the tooltip before showing it. */
+    .tooltip {
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        background: var(--tooltip-bg);
+        color: var(--tooltip-color);
+        padding: var(--tooltip-padding);
+        border-radius: var(--tooltip-border-radius);
+        font-size: var(--tooltip-font-size);
+        pointer-events: none;
+        z-index: var(--tooltip-z-index);
+        max-width: var(--tooltip-max-width);
+        word-wrap: break-word;
+        box-shadow: var(--tooltip-shadow);
+        line-height: var(--tooltip-line-height);
+        transition: var(--tooltip-transition);
+    }
+
+    /* Visible state */
+    .tooltip.visible {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    /* Interactive tooltips receive pointer events when visible,
+       allowing the user to hover into the tooltip itself. */
+    .tooltip.interactive.visible {
+        pointer-events: auto;
+    }
+
+    .tooltip[data-placement='below']::before,
+    .tooltip[data-placement='above']::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        inset-inline-end: 0;
+        height: calc(var(--tooltip-anchored-gap) + 2px);
+    }
+
+    .tooltip[data-placement='below']::before {
+        bottom: 100%;
+    }
+
+    .tooltip[data-placement='above']::before {
+        top: 100%;
+    }
+
+    /* ==========================================================================
+       Tooltip content elements
+       ========================================================================== */
+
+    /* Title */
+    .tooltip-title {
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-base);
+        margin-bottom: var(--layout-gap);
+        padding-bottom: var(--layout-gap-relaxed);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    /* Subtitle/category */
+    .tooltip-subtitle {
+        opacity: 0.9;
+        margin-bottom: var(--layout-gap-relaxed);
+    }
+
+    /* Data rows */
+    .tooltip-row {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--layout-gap-relaxed);
+    }
+
+    .tooltip-row .label {
+        opacity: 0.9;
+    }
+
+    .tooltip-row .value {
+        font-weight: var(--fw-bold);
+        font-variant-numeric: tabular-nums;
+    }
+
+    /* Section divider */
+    .tooltip-divider {
+        margin-top: var(--layout-gap-relaxed);
+        padding-top: var(--layout-gap-relaxed);
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+}

@@ -1,0 +1,190 @@
+/**
+ * Content Module — shared shell and content slots for ContentModule-owned
+ * cards.
+ *
+ *  .module-container  — ContentModule host card shell
+ *  .content-module-*  — header / subtitle / body slots
+ *
+ * Every custom property this sheet reads carries a fallback, so a host that defines
+ * none of them still gets a legible card: a white surface, a light border, readable
+ * type. A host that has a design system overrides the properties — in tba3 that is
+ * src/styles/foundation/variables.css, which also supplies the dark palette. The
+ * fallbacks are the light values on purpose; they are a floor, not a theme.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* ==========================================================================
+       Card shell
+       ========================================================================== */
+
+    .module-container {
+        --content-module-header-pad-block: 0.35rem;
+        --content-module-header-pad-inline: 0.85rem;
+        --content-module-header-pad: var(--content-module-header-pad-block)
+            var(--content-module-header-pad-inline);
+        --content-module-subtitle-pad: 0.4rem var(--content-module-header-pad-inline);
+        background: var(--color-card-background, #ffffff);
+        border: 1px solid var(--color-border, #e2e8f0);
+        border-radius: var(--radius-md, 8px);
+        overflow: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        flex: 1;
+    }
+
+    /* ==========================================================================
+       Content slots (ContentModule subclasses)
+       ========================================================================== */
+
+    /* Header — title bar with optional chevron for collapsible modules. Title left,
+       actions right (via the actions slot's margin-left: auto) — the same rule the
+       shared view header follows, regardless of whether actions are present. */
+    .content-module-header {
+        display: flex;
+        /* The action cluster (table presets, export buttons) is wider than a
+           narrow card; it drops under the title instead of clipping. */
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--layout-gap, 0.5rem);
+        padding: var(--content-module-header-pad);
+        border-bottom: 1px solid var(--color-border, #e2e8f0);
+        flex-shrink: 0;
+        position: relative;
+        z-index: var(--z-module-content, 10);
+        overflow: visible;
+    }
+
+    .content-module-header.collapsible {
+        --interactive-hover-bg: var(--light-gray, #f0f0f0);
+    }
+
+    /* Title — the h2 inside the header, sized below the page's h2 scale so the
+       card keeps its proportions. */
+    .content-module-title {
+        margin: 0;
+        flex: 1 1 auto;
+        min-width: 0;
+        font-size: var(--fs-module-title, 1.45rem);
+    }
+
+    /* Chevron icon for collapsible modules */
+    .content-module-chevron {
+        font-size: var(--fs-lg, 1.25rem);
+        color: var(--text-muted, #767676);
+        transition: transform 0.25s ease;
+        flex-shrink: 0;
+    }
+
+    .content-module-chevron.expanded {
+        transform: rotate(90deg);
+    }
+
+    /* Subtitle — optional rich-text area below header */
+    .content-module-subtitle {
+        padding: var(--content-module-subtitle-pad);
+        font-size: var(--fs-sm, max(0.8125rem, 12px));
+        line-height: var(--lh-text, 1.5);
+        color: var(--text-secondary, #595959);
+        border-bottom: 1px solid var(--color-border, #e2e8f0);
+        flex-shrink: 0;
+    }
+
+    .content-module-subtitle:empty {
+        display: none;
+    }
+
+    /* Header actions — layout plus shared compact-action token defaults */
+    .content-module-header-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--layout-gap, 0.5rem);
+        margin-inline-start: auto;
+    }
+
+    /* Segmented groups placed in the header action bar must match the fixed height
+       of icon buttons so mixed rows align. The group reads the same token its icon
+       children do, and buttons.css raises it on both under a coarse pointer — the
+       group is not a `.btn--icon`, so it has to be named there explicitly or the
+       44px buttons would overflow a frame still pinned at 2rem. */
+    .content-module-header-actions .btn-group--segmented {
+        height: var(--btn-height-toolbar, 2rem);
+        flex-wrap: nowrap;
+    }
+
+    /* Reflow tier: the action cluster itself wraps once it is wider than the card,
+       and a labelled preset group (Reset / Stärkste 5 / …) wraps inside it. The
+       fixed toolbar height is released so a wrapped group can grow. */
+    @media (max-width: 768px) {
+        .content-module-header-actions {
+            flex-wrap: wrap;
+            min-width: 0;
+            max-width: 100%;
+        }
+
+        /* The groups are sized to their content (`flex: 0 0 auto`); let them shrink
+           to the row so a labelled group wraps inside instead of overflowing it. */
+        .content-module-header-actions > * {
+            flex: 0 1 auto;
+            min-width: 0;
+            max-width: 100%;
+        }
+
+        .content-module-header-actions .btn-group--segmented:not(:has(> .btn--icon)) {
+            height: auto;
+            flex-wrap: wrap;
+        }
+    }
+
+    /* Module-owned export controls stay in the header action slot but need their
+       own wrapper for ordering and lifecycle lookup by exportService.js. */
+    .module-export-button-wrapper {
+        position: relative;
+        order: 999;
+    }
+
+    @media print {
+        .content-module-header-actions {
+            display: none;
+        }
+
+        .module-export-button-wrapper {
+            display: none;
+        }
+    }
+
+    /* Body — the actual content area (chart, detail panel, nav cards, etc.) */
+    .content-module-body {
+        flex: 1;
+        min-height: 0;
+        overflow: auto;
+        padding: var(--layout-pad, 0.75rem);
+    }
+
+    /* Prevent inline-baseline whitespace below SVGs inside the body */
+    .content-module-body svg {
+        display: block;
+    }
+
+    /* ==========================================================================
+       Collapsed state
+       ========================================================================== */
+
+    .module-container.collapsed .content-module-subtitle,
+    .module-container.collapsed .content-module-body {
+        display: none;
+    }
+
+    .module-container.collapsed .content-module-header-actions {
+        display: none;
+    }
+
+    .module-container.collapsed .content-module-header {
+        border-bottom: none;
+    }
+}

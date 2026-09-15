@@ -1,0 +1,24 @@
+{
+    "header": {
+        "note": "Kopfzeile (Einzelschüler)",
+        "title": "Schüler:innenansicht",
+        "subtitle": "Merkmale, Lösungsquoten nach Stilen und Aufgabenlösungen einzelner Schüler:innen",
+        "tutorial": "<p>Hier betrachten Sie die Ergebnisse einzelner Schüler:innen. Ergebnisse können nach <b>Hör- und Leseverstehen</b> untergliedert werden. In allen Darstellungen der Ergebnisse werden Schuldurchschnitt, Landesdurchschnitt oder auch andere Vergleichswerte mit angezeigt. Sie können diese über die Schaltfläche jederzeit aus- oder wieder einblenden. Ein Vergleich mit anderen Gruppen kann helfen, die Ergebnisse besser einzuordnen.</p>"
+    },
+    "student-row": {
+        "note": "Einzelschülertabelle",
+        "title": "Schüler:in im Detail",
+        "tutorial": "<p>Diese Zeile enthält die wichtigsten Merkmale eines Schülers bzw. einer Schülerin auf einen Blick.</p>"
+    },
+    "spider-lollipop": {
+        "note": "Lösungsquote der Items nach Stil",
+        "title": "Individuelle Lösungsquoten nach Stilen",
+        "tutorial": "<p>In diesem Schaubild werden alle Items jeweils einem der drei Bearbeitungsstile (global, detailliert, selektiv) zugeordnet und anschließend zusammengefasst. Die Darstellung variiert je nachdem, ob Sie Hör- und Leseverstehen gemeinsam oder separat anzeigen lassen.</p><p>Das Schaubild beschreibt dabei, wie viel Prozent der Items des jeweiligen Stils gelöst wurden. Die Größe der Fläche (Gesamtansicht) bzw. die Länge des Balkens (getrennte Ansicht) ist umso größer, je besser der/die Schüler:in den Stil beherrscht.</p><p>Zusätzlich können Sie über die obige Menüleiste weitere Vergleichswerte einblenden lassen.</p>"
+    },
+    "item-details": {
+        "note": "Details der ausgewählten Aufgabe",
+        "title": "Aufgabendetails",
+        "body": "Wählen Sie eine Aufgabe aus der Tabelle aus.",
+        "tutorial": "<p>Wenn Sie in der linken Tabelle eines der Items auswählen, erhalten Sie hier detailliertere Informationen, u.a. Beschreibungen der Aufgabeninhalte, Details zu den individuellen Ergebnissen, Vergleichs- bzw. Erwartungswerte aus der Pilotierung der Aufgabe sowie verknüpfte Aufgaben und Materialien.</p>"
+    }
+}

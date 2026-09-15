@@ -1,0 +1,18 @@
+{
+    "note": "Details zur ausgewählten Leitidee",
+    "notable-items": {
+        "title": "Auffällige Aufgaben:",
+        "body": "Aufgaben mit unterdurchschnittlicher Lösungsquote"
+    },
+    "competencies": {
+        "title": "Leitideen und Fähigkeiten (Kompetenzen):"
+    },
+    "placeholder-notice": {
+        "body": "Dieser Teil der Rückmeldung ist vorerst nur ein Platzhalter und befindet sich in Bearbeitung."
+    },
+    "messages": {
+        "no-notable-items": "Keine auffälligen Aufgaben gefunden",
+        "no-competency-data": "Keine Kompetenzdaten verfügbar",
+        "no-domains": "Keine Leitideen verfügbar"
+    }
+}

@@ -1,0 +1,56 @@
+/**
+ * SL CHARTS ROW — shared "cards in a row" view layout.
+ *
+ * Stays beside the SL entry sheet rather than beside a unit because three views share
+ * it; src/sl/main.css imports it into the `views` layer.
+ *
+ * Used by the welcome (00), comparison (02) and longitudinal (03) views:
+ * a flex row of module cards that stacks into full-height cards below 1280px.
+ *
+ * .sl-charts-row              — row shell
+ * .sl-charts-row-card         — card floor height
+ * .sl-charts-row-card--chart  — wide chart card (welcome/comparison: 3/4 width)
+ * .sl-charts-row-card--text   — narrow text card (1/4 width)
+ *
+ * The longitudinal view reuses only the row shell; its equal-width cards and
+ * boxplot-mode weighting stay in src/sl/views/slLongitudinalViewModule.css. Owner-local
+ * classes (welcome-*, comparison-*) remain on the elements as JS hooks.
+ */
+
+.sl-charts-row {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    gap: var(--layout-gap);
+}
+
+.sl-charts-row > .sl-charts-row-card {
+    min-height: 300px;
+}
+
+.sl-charts-row > .sl-charts-row-card--chart {
+    flex: 3 1 0%;
+    min-width: 0;
+}
+
+.sl-charts-row > .sl-charts-row-card--text {
+    flex: 1 1 0%;
+    min-width: 250px;
+}
+
+@media (max-width: 1280px) {
+    .sl-charts-row {
+        flex-direction: column;
+        flex: none;
+    }
+
+    .sl-charts-row > .sl-charts-row-card--text {
+        min-width: 0;
+        flex: none;
+    }
+
+    .sl-charts-row > .sl-charts-row-card--chart {
+        flex: none;
+        height: var(--stacked-card-height-vh);
+    }
+}

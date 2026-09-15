@@ -1,0 +1,12 @@
+{
+    "header": {
+        "note": "Kopfzeile (Willkommen)",
+        "title": "Mathematik VERA-3",
+        "subtitle": "Willkommen im Ergebnisrückmeldesystem."
+    },
+    "greeting": {
+        "note": "Begrüßung-Text",
+        "title": "Willkommen zur Ergebnisrückmeldung von VERA-3 im Fach Mathematik",
+        "body": "<p>Die nachfolgenden Seiten stellen die Ergebnisse Ihrer Klasse mit unterschiedlichen Schwerpunkten und aus unterschiedlichen Perspektiven dar. Sie können gezielt anhand der skizzierten Fragestellungen einzelne Seiten ansteuern oder die Rückmeldung von Anfang bis Ende durchschauen. Zur Navigation stehen Ihnen die Karten unten und die Seitenleiste am linken Rand zur Verfügung; welche Klasse angezeigt wird, stellen Sie oben in der Kopfzeile ein. Dabei gibt es keinen richtigen oder falschen Weg – wählen Sie die Inhalte, die Sie interessieren!</p><p>Fachbegriffe, didaktische Hinweise und Antworten auf typische Fragen finden Sie unter <b>Hilfe</b> am Ende der Seitenleiste. Tabellen und Schaubilder können Sie einzeln herunterladen oder für den <b>Bericht</b> vormerken, dort anordnen und als PDF speichern; über das Notizen-Symbol in der Kopfzeile halten Sie eigene Beobachtungen fest. Viel Spaß!</p>"
+    }
+}

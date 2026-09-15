@@ -1,0 +1,24 @@
+{
+    "note": "Donut-Charts der Lösungsquoten im Klassendurchschnitt gruppiert nach Leitideen.",
+    "title": "Mittlere Lösungsquoten der Klasse nach Leitideen",
+    "inner-ring-toggle": {
+        "label": "Inneren Ring ein-/ausblenden"
+    },
+    "legend": {
+        "solved": "gelöst",
+        "unsolved": "nicht gelöst",
+        "expected": "Ø erwartete Lösungsquote",
+        "niveau": "Aufgabenniveau: voll gelöst, blass nicht gelöst"
+    },
+    "tooltips": {
+        "note": "Tooltips der Striche jedes Aufgabenrings, im Raster wie im Fokus-Chart; {{correct}} und {{total}} sind Zahlen",
+        "success-rate": "Lösungsrate",
+        "solved": "Gelöst",
+        "solved-of": "{{correct}} von {{total}}",
+        "selected-students": "Ausgewählte Schüler:innen",
+        "expected-title": "Erwartete Lösungsquote",
+        "expected-value": "Wert",
+        "expected-basis": "Basis",
+        "expected-basis-value": "Pilotstudien"
+    }
+}

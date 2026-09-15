@@ -1,0 +1,43 @@
+/**
+ * Tab strip — the horizontal tab pattern whose ARIA half is tabStrip.js.
+ *
+ * Scrolls horizontally instead of wrapping when there are more tabs than fit. Consumers
+ * (the notes drawer, the EN item detail) keep an owner-local class alongside these for JS
+ * hooks and local deltas; the selected tab is the one carrying aria-selected="true", so
+ * selection has one source of truth. Every custom property carries a fallback (tba3's light
+ * values), so a host with no design system still gets a legible strip.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    .tab-strip {
+        display: flex;
+        gap: 2px;
+        overflow-x: auto;
+    }
+
+    .tab-strip-tab {
+        flex: 0 0 auto;
+        padding: var(--space-sm, 0.5rem);
+        font-size: var(--fs-sm, max(0.8125rem, 12px));
+        color: var(--text-secondary, #666);
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid transparent;
+        cursor: pointer;
+        white-space: nowrap;
+    }
+
+    .tab-strip-tab:hover {
+        color: var(--text-color, #333);
+    }
+
+    .tab-strip-tab[aria-selected='true'] {
+        color: var(--color-accent-text, #1d4ed8);
+        border-bottom-color: var(--primary-color, #3b82f6);
+        font-weight: var(--fw-bold, 700);
+    }
+}

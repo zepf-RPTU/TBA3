@@ -1,0 +1,14 @@
+{
+    "header": {
+        "note": "Kopfzeile (Aufgabenübersicht)",
+        "title": "Aufgabenübersicht",
+        "subtitle": "Aufgabenmerkmale und zentrale Ergebnisse aller Teilaufgaben",
+        "tutorial": "<p>Ergebnisse können nach <b>Hör- und Leseverstehen</b> untergliedert werden. Sie können die angezeigten Ergebnisse auf einen der Bereiche beschränken. Außerdem werden in allen Darstellungen der Ergebnisse Schuldurchschnitt, Landesdurchschnitt oder auch andere Vergleichswerte mit angezeigt. Sie können diese über die Schaltfläche jederzeit aus- oder wieder einblenden. Ein Vergleich mit anderen Gruppen kann helfen, die Ergebnisse besser einzuordnen.</p>"
+    },
+    "item-details": {
+        "note": "Aufgabendetails zur ausgewählten Teilaufgabe",
+        "title": "Aufgabendetails",
+        "body": "Wählen Sie eine Aufgabe aus der Tabelle aus.",
+        "tutorial": "<p>Zu jeder Teilaufgabe des Testheftes stehen eine Reihe von Zusatzinformationen zur Verfügung. Aufgaben des Leseverstehens basieren meist auf einem übergeordneten Text, während das Hörverstehen durch Tonspuren ergänzt wird. Wenn Sie eine der Teilaufgaben auswählen, erhalten Sie umfassenden Einblick in das zugrundeliegende Material sowie einzelne didaktische Informationen und Merkmale der Aufgaben. Dies kann dabei helfen, den numerischen Ergebnissen der Testung einen inhaltlichen Bezug zu geben und ggf. Erkenntnisse oder Erklärungen über spezifische sprachliche Kompetenzen zu erlangen.</p>"
+    }
+}

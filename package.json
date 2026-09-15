@@ -1,0 +1,80 @@
+{
+  "name": "tba3",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Dashboard-Suite zur Auswertung von VERA-Daten (Englisch 8, Mathe 3, Schulleitung) - Vanilla-JS-ES-Module, gebaut mit Vite.",
+  "homepage": "https://zepf-rptu.github.io/TBA3/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zepf-RPTU/TBA3.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zepf-RPTU/TBA3/issues"
+  },
+  "license": "MIT",
+  "author": "Kai Mannweiler",
+  "type": "module",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "prepare": "git config core.hooksPath tools/hooks",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "test": "node tools/run-vitest.mjs run --config config/vitest.config.mjs",
+    "test:watch": "node tools/run-vitest.mjs --config config/vitest.config.mjs",
+    "test:coverage": "node tools/run-vitest.mjs run --config config/vitest.config.mjs --coverage",
+    "test:e2e": "node tools/run-vitest.mjs run --config config/vitest.e2e.config.mjs",
+    "lint": "npm run lint:js && npm run lint:css",
+    "lint:js": "oxlint src packages config tools tests docs/.vitepress vite.config.js",
+    "lint:css": "eslint --config config/eslint.config.mjs \"src/**/*.css\" \"packages/*/src/**/*.css\" \"packages/*/styles/**/*.css\"",
+    "fmt": "oxfmt && prettier --write \"**/*.{css,json}\"",
+    "fmt:check": "oxfmt --check && prettier --check \"**/*.{css,json}\"",
+    "check:structure": "node tools/check-structure.mjs",
+    "check:fixtures": "node tools/gen-sl-history-fixture.mjs --check",
+    "check:docs-index": "node tools/docs-sidebar.mjs --check",
+    "check:docs-hierarchy": "node tools/docs-hierarchy.mjs --check",
+    "typecheck": "tsc -p config/tsconfig.typecheck.json",
+    "check": "npm run check:structure && npm run check:unused && npm run check:fixtures && npm run check:docs-index && npm run check:docs-hierarchy && npm run lint && npm run fmt:check && npm test && npm run typecheck && npm run build && npm run docs:build",
+    "check:unused": "knip --exports --dependencies"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@eslint/css": "^0.8.1",
+    "@types/d3": "^7.4.3",
+    "@vitest/browser-playwright": "^5.0.0",
+    "@vitest/coverage-v8": "^5.0.0",
+    "axe-core": "^4.13.0",
+    "eslint": "^9.27.0",
+    "eslint-plugin-jsdoc": "^63.3.3",
+    "knip": "^6.34.0",
+    "oxfmt": "^0.66.0",
+    "oxlint": "^1.81.0",
+    "playwright": "1.62.1",
+    "prettier": "^3.9.6",
+    "typescript": "^6.0.3",
+    "vite": "^8.2.2",
+    "vitepress": "^1.6.4",
+    "vitest": "^5.0.0"
+  },
+  "overrides": {
+    "@eslint/css-tree": "3.6.9",
+    "playwright-core": "$playwright"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "dependencies": {
+    "@tba3/module-base": "*",
+    "@tba3/modules": "*",
+    "d3": "^7.9.0",
+    "html-to-image": "^1.11.13",
+    "jspdf": "^4.2.1",
+    "quill": "^2.0.3",
+    "tabulator-tables": "^6.3.1"
+  }
+}

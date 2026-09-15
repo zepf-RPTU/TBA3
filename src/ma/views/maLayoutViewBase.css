@@ -1,0 +1,110 @@
+/**
+ * MA split-view layout modes
+ *
+ * Shared grid/visibility machine for the task-ring split views (item 03 and
+ * student 04). maLayoutViewBase._renderTaskRingSplitView puts these classes on
+ * the content container (.ma-split-view-content) and the chart-only panel
+ * (.ma-chart-only-content); the owner-local *-view-content /
+ * -chart-only-content classes stay on the same elements as JS hooks and for
+ * view-specific deltas in views/item.css and views/student.css.
+ * The layout-mode-{both,table-only,chart-only} class is toggled by
+ * maLayoutViewBase._updateLayoutMode.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .ma-split-view-content {
+        display: grid;
+        flex: 1;
+        gap: var(--layout-gap);
+        min-height: 0;
+        min-width: 0;
+    }
+
+    .ma-split-view-content > .left-column,
+    .ma-split-view-content > .right-column {
+        min-height: 0;
+    }
+
+    .ma-split-view-content > .left-column {
+        grid-column: 1 / 2;
+    }
+
+    .ma-split-view-content > .right-column {
+        grid-column: 2 / 3;
+    }
+
+    .ma-split-view-content.layout-mode-both {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ma-split-view-content.layout-mode-both > .left-column,
+    .ma-split-view-content.layout-mode-both > .right-column {
+        display: flex;
+    }
+
+    .ma-split-view-content.layout-mode-table-only {
+        grid-template-columns: 1fr;
+    }
+
+    .ma-split-view-content.layout-mode-table-only > .left-column {
+        display: flex;
+    }
+
+    .ma-split-view-content.layout-mode-table-only > .right-column,
+    .ma-split-view-content.layout-mode-chart-only > .left-column,
+    .ma-split-view-content.layout-mode-chart-only > .right-column {
+        display: none;
+    }
+
+    .ma-split-view-content.layout-mode-chart-only {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: minmax(0, 1fr);
+    }
+
+    /* Chart-only panel — task-ring grid (left, 13/20) + focus chart (right, 7/20)
+       */
+    .ma-chart-only-content {
+        display: none;
+        gap: var(--layout-gap);
+        grid-template-columns: minmax(0, 13fr) minmax(0, 7fr);
+        grid-template-rows: minmax(0, 1fr);
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .ma-split-view-content.layout-mode-chart-only > .ma-chart-only-content {
+        display: grid;
+    }
+
+    .ma-chart-only-content > .task-ring-chart-container,
+    .ma-chart-only-content > .task-ring-focus-container {
+        display: flex;
+        flex-direction: column;
+        min-width: 0;
+        min-height: 0;
+    }
+
+    @media (max-width: 1280px) {
+        .ma-split-view-content.layout-mode-both {
+            grid-template-columns: 1fr;
+            flex: none;
+        }
+
+        .ma-split-view-content.layout-mode-both > .left-column,
+        .ma-split-view-content.layout-mode-both > .right-column {
+            grid-column: auto;
+            height: var(--stacked-card-height);
+        }
+    }
+
+    .task-ring-empty-state {
+        margin: 0;
+        padding: var(--card-pad-loose);
+        text-align: center;
+        color: var(--text-secondary);
+    }
+}

@@ -1,0 +1,647 @@
+[
+    {
+        "id": "8a-englisch",
+        "type": "group",
+        "name": "8a",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": null,
+        "properties": null,
+        "aggregations": [
+            {
+                "type": "Hör-/Lesestil",
+                "value": "global",
+                "includedIqbIds": [
+                    "EL69801",
+                    "EL69802",
+                    "EL69803",
+                    "EL69804",
+                    "EL69805",
+                    "EL69806",
+                    "EL709v201",
+                    "EL72501"
+                ],
+                "descriptiveStatistics": {
+                    "total": 28,
+                    "mean": 0.6071,
+                    "frequency": 136,
+                    "standardDeviation": 0.2673
+                }
+            },
+            {
+                "type": "Hör-/Lesestil",
+                "value": "detailliert",
+                "includedIqbIds": [
+                    "EL68301",
+                    "EL68302",
+                    "EL68303",
+                    "EL68304",
+                    "EL71604",
+                    "EL73203",
+                    "EL74102",
+                    "EL74103",
+                    "EL74104",
+                    "EL78401"
+                ],
+                "descriptiveStatistics": {
+                    "total": 28,
+                    "mean": 0.6964,
+                    "frequency": 195,
+                    "standardDeviation": 0.2808
+                }
+            },
+            {
+                "type": "Hör-/Lesestil",
+                "value": "selektiv",
+                "includedIqbIds": [
+                    "EL71601",
+                    "EL71602",
+                    "EL71603",
+                    "EL73201",
+                    "EL73202",
+                    "EL73204",
+                    "EL74101",
+                    "EL75201",
+                    "EL75202",
+                    "EL75203",
+                    "EL75204",
+                    "EL78402",
+                    "EL78403",
+                    "EL78901",
+                    "EL78902",
+                    "EL78903",
+                    "EL78904",
+                    "EL78905"
+                ],
+                "descriptiveStatistics": {
+                    "total": 28,
+                    "mean": 0.5734,
+                    "frequency": 289,
+                    "standardDeviation": 0.3077
+                }
+            },
+            {
+                "type": "Ergebnis",
+                "value": "Richtig",
+                "includedIqbIds": [],
+                "descriptiveStatistics": {
+                    "total": 28,
+                    "mean": 0.6151,
+                    "frequency": 620,
+                    "standardDeviation": 0.2786
+                }
+            },
+            {
+                "type": "Ergebnis",
+                "value": "Falsch",
+                "includedIqbIds": [],
+                "descriptiveStatistics": {
+                    "total": 28,
+                    "mean": 0.3165,
+                    "frequency": 319,
+                    "standardDeviation": 0.2208
+                }
+            },
+            {
+                "type": "Ergebnis",
+                "value": "Unbearbeitet",
+                "includedIqbIds": [],
+                "descriptiveStatistics": {
+                    "total": 28,
+                    "mean": 0.0685,
+                    "frequency": 69,
+                    "standardDeviation": 0.0739
+                }
+            }
+        ]
+    },
+    {
+        "id": "8a-englisch",
+        "type": "group",
+        "name": "8a",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": null,
+        "properties": null,
+        "aggregations": [
+            {
+                "type": "Hör-/Lesestil",
+                "value": "global",
+                "includedIqbIds": [
+                    "ER71001",
+                    "ER71002",
+                    "ER71003",
+                    "ER71004",
+                    "ER71005",
+                    "ER71006",
+                    "ER72601",
+                    "ER72701"
+                ],
+                "descriptiveStatistics": {
+                    "total": 28,
+                    "mean": 0.6205,
+                    "frequency": 139,
+                    "standardDeviation": 0.3254
+                }
+            },
+            {
+                "type": "Hör-/Lesestil",
+                "value": "detailliert",
+                "includedIqbIds": [
+                    "ER571r03",
+                    "ER571r04",
+                    "ER571r05",
+                    "ER70601",
+                    "ER70602",
+                    "ER70603",
+                    "ER70604",
+                    "ER73801",
+                    "ER73802",
+                    "ER73803",
+                    "ER73804",
+                    "ER73805",
+                    "ER73806",
+                    "ER73807",
+                    "ER76701",
+                    "ER76702",
+                    "ER76703",
+                    "ER76704",
+                    "ER76705",
+                    "ER76706",
+                    "ER76707"
+                ],
+                "descriptiveStatistics": {
+                    "total": 28,
+                    "mean": 0.5918,
+                    "frequency": 348,
+                    "standardDeviation": 0.2879
+                }
+            },
+            {
+                "type": "Hör-/Lesestil",
+                "value": "selektiv",
+                "includedIqbIds": [
+                    "ER571r01",
+                    "ER571r02",
+                    "ER71301",
+                    "ER71302",
+                    "ER71303",
+                    "ER71304",
+                    "ER72101",
+                    "ER72102",
+                    "ER72103",
+                    "ER72104",
+                    "ER72801",
+                    "ER72802",
+                    "ER72803",
+                    "ER72804"
+                ],
+                "descriptiveStatistics": {
+                    "total": 28,
+                    "mean": 0.5893,
+                    "frequency": 231,
+                    "standardDeviation": 0.3047
+                }
+            },
+            {
+                "type": "Ergebnis",
+                "value": "Richtig",
+                "includedIqbIds": [],
+                "descriptiveStatistics": {
+                    "total": 28,
+                    "mean": 0.5963,
+                    "frequency": 718,
+                    "standardDeviation": 0.2865
+                }
+            },
+            {
+                "type": "Ergebnis",
+                "value": "Falsch",
+                "includedIqbIds": [],
+                "descriptiveStatistics": {
+                    "total": 28,
+                    "mean": 0.3314,
+                    "frequency": 399,
+                    "standardDeviation": 0.2368
+                }
+            },
+            {
+                "type": "Ergebnis",
+                "value": "Unbearbeitet",
+                "includedIqbIds": [],
+                "descriptiveStatistics": {
+                    "total": 28,
+                    "mean": 0.0723,
+                    "frequency": 87,
+                    "standardDeviation": 0.0677
+                }
+            }
+        ]
+    },
+    {
+        "id": "school",
+        "type": "school",
+        "name": "Schulschnitt",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": null,
+        "properties": null,
+        "aggregations": [
+            {
+                "type": "Hör-/Lesestil",
+                "value": "global",
+                "includedIqbIds": [
+                    "EL709v201",
+                    "EL72501",
+                    "EL74801"
+                ],
+                "descriptiveStatistics": {
+                    "total": 76,
+                    "mean": 0.5521,
+                    "frequency": 126,
+                    "standardDeviation": 0.1547
+                }
+            },
+            {
+                "type": "Hör-/Lesestil",
+                "value": "detailliert",
+                "includedIqbIds": [
+                    "EL68301",
+                    "EL68302",
+                    "EL68303",
+                    "EL68304",
+                    "EL723v201",
+                    "EL723v202",
+                    "EL723v203",
+                    "EL723v204",
+                    "EL723v205",
+                    "EL723v206",
+                    "EL723v207",
+                    "EL78401"
+                ],
+                "descriptiveStatistics": {
+                    "total": 76,
+                    "mean": 0.4421,
+                    "frequency": 403,
+                    "standardDeviation": 0.1314
+                }
+            },
+            {
+                "type": "Hör-/Lesestil",
+                "value": "selektiv",
+                "includedIqbIds": [
+                    "EL75201",
+                    "EL75202",
+                    "EL75203",
+                    "EL75204",
+                    "EL78402",
+                    "EL78403",
+                    "EL78901",
+                    "EL78902",
+                    "EL78903",
+                    "EL78904",
+                    "EL78905",
+                    "EL79001",
+                    "EL79002",
+                    "EL79003",
+                    "EL79004",
+                    "EL79005",
+                    "EL79006"
+                ],
+                "descriptiveStatistics": {
+                    "total": 76,
+                    "mean": 0.6348,
+                    "frequency": 820,
+                    "standardDeviation": 0.0746
+                }
+            },
+            {
+                "type": "Ergebnis",
+                "value": "Richtig",
+                "includedIqbIds": [],
+                "descriptiveStatistics": {
+                    "total": 76,
+                    "mean": 0.5548,
+                    "frequency": 1518,
+                    "standardDeviation": 0.2635
+                }
+            }
+        ]
+    },
+    {
+        "id": "school",
+        "type": "school",
+        "name": "Schulschnitt",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": null,
+        "properties": null,
+        "aggregations": [
+            {
+                "type": "Hör-/Lesestil",
+                "value": "global",
+                "includedIqbIds": [
+                    "ER67401",
+                    "ER72601",
+                    "ER72701"
+                ],
+                "descriptiveStatistics": {
+                    "total": 74,
+                    "mean": 0.5025,
+                    "frequency": 112,
+                    "standardDeviation": 0.1778
+                }
+            },
+            {
+                "type": "Hör-/Lesestil",
+                "value": "detailliert",
+                "includedIqbIds": [
+                    "ER484r01",
+                    "ER70601",
+                    "ER70602",
+                    "ER70603",
+                    "ER70604",
+                    "ER71201",
+                    "ER71202",
+                    "ER71203",
+                    "ER71204",
+                    "ER71205",
+                    "ER73801",
+                    "ER73802",
+                    "ER73803",
+                    "ER73804",
+                    "ER73805",
+                    "ER73806",
+                    "ER73807"
+                ],
+                "descriptiveStatistics": {
+                    "total": 74,
+                    "mean": 0.6409,
+                    "frequency": 806,
+                    "standardDeviation": 0.0801
+                }
+            },
+            {
+                "type": "Hör-/Lesestil",
+                "value": "selektiv",
+                "includedIqbIds": [
+                    "ER69001",
+                    "ER69002",
+                    "ER69003",
+                    "ER69004",
+                    "ER69005",
+                    "ER71301",
+                    "ER71302",
+                    "ER71303",
+                    "ER71304",
+                    "ER72101",
+                    "ER72102",
+                    "ER72103",
+                    "ER72104",
+                    "ER72801",
+                    "ER72802",
+                    "ER72803",
+                    "ER72804"
+                ],
+                "descriptiveStatistics": {
+                    "total": 74,
+                    "mean": 0.5263,
+                    "frequency": 662,
+                    "standardDeviation": 0.115
+                }
+            },
+            {
+                "type": "Ergebnis",
+                "value": "Richtig",
+                "includedIqbIds": [],
+                "descriptiveStatistics": {
+                    "total": 74,
+                    "mean": 0.577,
+                    "frequency": 1836,
+                    "standardDeviation": 0.2531
+                }
+            }
+        ]
+    },
+    {
+        "id": "state",
+        "type": "state",
+        "name": "Landesschnitt",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": null,
+        "properties": null,
+        "aggregations": [
+            {
+                "type": "Hör-/Lesestil",
+                "value": "global",
+                "includedIqbIds": [
+                    "EL709v201",
+                    "EL72501",
+                    "EL74801"
+                ],
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.5424,
+                    "frequency": 732,
+                    "standardDeviation": 0.154
+                }
+            },
+            {
+                "type": "Hör-/Lesestil",
+                "value": "detailliert",
+                "includedIqbIds": [
+                    "EL68301",
+                    "EL68302",
+                    "EL68303",
+                    "EL68304",
+                    "EL723v201",
+                    "EL723v202",
+                    "EL723v203",
+                    "EL723v204",
+                    "EL723v205",
+                    "EL723v206",
+                    "EL723v207",
+                    "EL78401"
+                ],
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.5042,
+                    "frequency": 2723,
+                    "standardDeviation": 0.0917
+                }
+            },
+            {
+                "type": "Hör-/Lesestil",
+                "value": "selektiv",
+                "includedIqbIds": [
+                    "EL75201",
+                    "EL75202",
+                    "EL75203",
+                    "EL75204",
+                    "EL78402",
+                    "EL78403",
+                    "EL78901",
+                    "EL78902",
+                    "EL78903",
+                    "EL78904",
+                    "EL78905",
+                    "EL79001",
+                    "EL79002",
+                    "EL79003",
+                    "EL79004",
+                    "EL79005",
+                    "EL79006"
+                ],
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.5586,
+                    "frequency": 4273,
+                    "standardDeviation": 0.0795
+                }
+            },
+            {
+                "type": "Ergebnis",
+                "value": "Richtig",
+                "includedIqbIds": [],
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.5367,
+                    "frequency": 8694,
+                    "standardDeviation": 0.2802
+                }
+            }
+        ]
+    },
+    {
+        "id": "state",
+        "type": "state",
+        "name": "Landesschnitt",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": null,
+        "properties": null,
+        "aggregations": [
+            {
+                "type": "Hör-/Lesestil",
+                "value": "global",
+                "includedIqbIds": [
+                    "ER67401",
+                    "ER72601",
+                    "ER72701"
+                ],
+                "descriptiveStatistics": {
+                    "total": 451,
+                    "mean": 0.5349,
+                    "frequency": 724,
+                    "standardDeviation": 0.1718
+                }
+            },
+            {
+                "type": "Hör-/Lesestil",
+                "value": "detailliert",
+                "includedIqbIds": [
+                    "ER484r01",
+                    "ER70601",
+                    "ER70602",
+                    "ER70603",
+                    "ER70604",
+                    "ER71201",
+                    "ER71202",
+                    "ER71203",
+                    "ER71204",
+                    "ER71205",
+                    "ER73801",
+                    "ER73802",
+                    "ER73803",
+                    "ER73804",
+                    "ER73805",
+                    "ER73806",
+                    "ER73807"
+                ],
+                "descriptiveStatistics": {
+                    "total": 451,
+                    "mean": 0.5892,
+                    "frequency": 4517,
+                    "standardDeviation": 0.0918
+                }
+            },
+            {
+                "type": "Hör-/Lesestil",
+                "value": "selektiv",
+                "includedIqbIds": [
+                    "ER69001",
+                    "ER69002",
+                    "ER69003",
+                    "ER69004",
+                    "ER69005",
+                    "ER71301",
+                    "ER71302",
+                    "ER71303",
+                    "ER71304",
+                    "ER72101",
+                    "ER72102",
+                    "ER72103",
+                    "ER72104",
+                    "ER72801",
+                    "ER72802",
+                    "ER72803",
+                    "ER72804"
+                ],
+                "descriptiveStatistics": {
+                    "total": 451,
+                    "mean": 0.537,
+                    "frequency": 4115,
+                    "standardDeviation": 0.0661
+                }
+            },
+            {
+                "type": "Ergebnis",
+                "value": "Richtig",
+                "includedIqbIds": [],
+                "descriptiveStatistics": {
+                    "total": 451,
+                    "mean": 0.5608,
+                    "frequency": 10876,
+                    "standardDeviation": 0.2455
+                }
+            }
+        ]
+    }
+]

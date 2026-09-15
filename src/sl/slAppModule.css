@@ -1,0 +1,132 @@
+/**
+ * SL app shell — the nodes SlAppModule itself creates (shared nav cards, the
+ * no-results notice) and its narrow-viewport override of the shared view layout.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    @media (max-width: 1280px) {
+        /* Single scroll container: main-content scrolls the whole page so the nav
+           (appended after the view in the DOM) flows naturally below the view. */
+        .main-content {
+            overflow-y: auto;
+        }
+
+        /* Keep the header visible as the user scrolls down to the nav. */
+        .sl-shared-header-container {
+            position: sticky;
+            top: 0;
+            z-index: var(--z-overlay);
+        }
+
+        /* Let the view flow to its natural content height. Specificity 020
+           (.main-content .view-base) beats view-layout.css (010, imported later).
+           container-type: normal undoes the global size containment. */
+        .main-content .view-base {
+            flex: none;
+            overflow-y: visible;
+            container-type: normal;
+        }
+
+        /* Size the nav to its content; let cards wrap at narrow widths. */
+        .sl-shared-nav-cards-container {
+            height: auto;
+            flex-wrap: wrap;
+        }
+    }
+
+    /* The view header's layout and surface are fully owned by
+       common/modules/header/header-module.css — the same in EN, MA and SL. The only
+       SL-local rule is the narrow-viewport sticky positioning of the container
+       above. */
+
+    /* Dataset-level "keine Ergebnisse" notice (SlAppModule.#renderNoResultsNotice),
+       inserted between the shared header and the view containers. */
+    .sl-no-results-notice {
+        flex: none;
+        margin: var(--card-pad) var(--card-pad) 0;
+    }
+
+    /* ==========================================================================
+       Shared nav cards container (SlAppModule managed)
+       ========================================================================== */
+
+    /* Single element (id="sl-shared-nav-cards",
+       class="sl-shared-nav-cards-container"); SlAppModule.createFooterElements
+       creates it, then NavCardModule (a ContentModule) adds the shared card-shell
+       class to this same node at render time. Everything stays on the ID selector —
+       a plain class rule here would tie with that shared shell's rule
+       (content-module.css) on specificity and lose on source order
+       (content-module.css loads after layout.css), flipping flex-direction to
+       column and the border/overflow to the generic card shell. */
+    #sl-shared-nav-cards {
+        height: auto;
+        flex: none;
+        margin: 0 var(--card-pad) var(--card-pad) var(--card-pad);
+        padding: var(--layout-gap);
+        background-color: transparent;
+        box-shadow: var(--shadow-md);
+        /* Concentric with the --radius-md cards inside: outer = inner + --layout-gap. */
+        border-radius: var(--radius-xl);
+        border: none;
+        overflow: visible;
+        display: flex;
+        flex-direction: row;
+        gap: var(--layout-gap);
+    }
+
+    /* Each preview item takes equal width and fills height */
+    .sl-shared-nav-cards-container .preview-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--control-gap);
+        padding: var(--layout-gap-relaxed);
+        background: var(--color-card-background);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        position: static;
+        min-height: 0;
+        /* SL uses subtle hover (no lift/scale) */
+        --interactive-hover-bg: var(--color-background-muted);
+    }
+
+    /* SL disabled: visually active (selected tab look), no pointer events */
+    .sl-shared-nav-cards-container .preview-item.disabled-soft {
+        border-color: var(--primary-color);
+        background-color: var(--color-background-muted);
+        opacity: 1;
+        pointer-events: none;
+    }
+
+    /* Compact text for nav items */
+    .sl-shared-nav-cards-container .preview-label {
+        flex: 0 0 auto;
+        font-size: var(--fs-base);
+        font-weight: var(--fw-bold);
+        text-align: center;
+        color: var(--color-accent-text);
+        margin: 0;
+        line-height: var(--lh-ui);
+    }
+
+    .sl-shared-nav-cards-container .preview-description {
+        font-size: var(--fs-sm);
+        color: var(--text-secondary);
+        text-align: center;
+        margin: 0;
+        line-height: var(--lh-ui);
+    }
+
+    .sl-shared-nav-cards-container .preview-current-view {
+        font-size: var(--fs-sm);
+        color: var(--color-accent-text);
+        margin-inline-start: var(--layout-gap);
+        display: inline;
+    }
+}

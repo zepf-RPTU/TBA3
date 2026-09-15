@@ -1,0 +1,117 @@
+/**
+ *  SL Table overrides
+ *
+ *  Base Tabulator overrides are in common/data-display/tables/table-base.css.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* ==========================================================================
+       Domain table - scoped Tabulator overrides for SL domain tables
+       ========================================================================== */
+
+    .domain-table {
+        margin-bottom: 2.5rem;
+        box-shadow: var(--shadow-sm);
+        border-radius: var(--radius-md);
+        /* Tokens, not hex: the flash has to read on the dark surface too. */
+        --sl-cell-click-feedback-bg: color-mix(in srgb, var(--primary-color) 15%, transparent);
+        --sl-group-click-feedback-bg: var(--color-background-muted);
+    }
+
+    .domain-table .tabulator {
+        border: none;
+        border-radius: var(--radius-md);
+        font-size: var(--fs-sm);
+        --tabulator-background: var(--color-card-background);
+        --table-header-bg: var(--header-background);
+        --tabulator-header-shadow: none;
+        --tabulator-header-col-border-right: 1px solid var(--color-border);
+        --tabulator-header-title-color: var(--heading-color);
+        --tabulator-header-title-padding: 8px 10px 4px;
+        --tabulator-cell-border-right: 1px solid var(--color-border);
+        --tabulator-domain-group-bg: var(--header-background-alt);
+        --tabulator-domain-group-color: var(--heading-color);
+        --tabulator-domain-group-arrow-color: var(--heading-color);
+    }
+
+    /* Domain table wrapper */
+    .domain-table-wrapper {
+        margin-bottom: 3rem;
+    }
+
+    /* Embedded stacked-bar cell — shares the common row-content floor so SL bar
+       rows match EN/MA trait rows in height (see --table-row-content-min). */
+    .sl-cell-bar {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        min-height: var(--table-row-content-min);
+    }
+
+    /* ==========================================================================
+       State / school row styling
+       ========================================================================== */
+
+    .tabulator-row.state-row,
+    .tabulator-row.school-row {
+        background: transparent;
+        font-weight: var(--fw-bold);
+        transition: background-color 0.2s ease;
+    }
+
+    .tabulator-row.state-row {
+        color: var(--state-row-color);
+        border-top: 3px solid var(--state-row-color);
+    }
+
+    .tabulator-row.school-row {
+        color: var(--school-row-color);
+        border-top: 3px solid var(--school-row-color);
+    }
+
+    /* ==========================================================================
+       SL click feedback
+       ========================================================================== */
+
+    @keyframes sl-cell-click-feedback {
+        0% {
+            background-color: var(--sl-cell-click-feedback-bg);
+        }
+
+        100% {
+            background-color: transparent;
+        }
+    }
+
+    .cell-click-animation {
+        animation: sl-cell-click-feedback 0.15s ease-out;
+    }
+
+    @keyframes sl-group-click-feedback {
+        0% {
+            background-color: var(--sl-group-click-feedback-bg);
+        }
+
+        100% {
+            background-color: transparent;
+        }
+    }
+
+    .group-click-animation {
+        animation: sl-group-click-feedback 0.1s ease-out;
+    }
+
+    /* The whole group header toggles, not just Tabulator's arrow
+       (slDomainTableModule.js forwards the click), so it has to read as clickable —
+       and a header that toggles on every click must not select its own text on a
+       double one. */
+    .tabulator-group {
+        cursor: pointer;
+        /* eslint-disable-next-line css/use-baseline -- only `user-select: all` is non-Baseline; `none` is universal */
+        user-select: none;
+    }
+}

@@ -1,0 +1,117 @@
+/**
+ * View Layout — shared structural wrappers for routed view layout.
+ *
+ * .view-section  — flex-column wrapper for view regions
+ * .view-base     — shared defaults for every view root container
+ *
+ * View styles own concrete grid/flex placement. These classes provide only
+ * reusable structural primitives.
+ */
+
+/* ==========================================================================
+   View section — structural wrapper for layout regions inside views
+   ========================================================================== */
+
+/**
+ * Provides flex-column flow so child modules can size themselves via flex.
+ * Pair with .module-container on the child card when a routed region needs a
+ * separate layout wrapper.
+ */
+
+.view-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0;
+}
+
+/* ==========================================================================
+   View base — shared defaults for every view root container
+   ========================================================================== */
+
+/**
+ * Flex-column layout, tinted background, uniform padding and gap.
+ * Scrollable views override overflow locally.
+ * Grid views override display locally.
+ */
+
+.view-base {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    flex-direction: column;
+    background-color: var(--light-gray);
+    padding: var(--view-base-padding, var(--view-padding));
+    gap: var(--layout-gap);
+    overflow-y: auto;
+}
+
+.view-base > * {
+    min-height: 0;
+    min-width: 0;
+}
+
+[data-view-rendering='true'] {
+    visibility: hidden;
+}
+
+/* ==========================================================================
+   Shared layout primitives
+   ========================================================================== */
+
+/**
+ * Reuse these on view-owned wrappers instead of re-declaring the same
+ * flex/grid scaffolding in feature CSS.
+ */
+
+.layout-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--layout-stack-gap, var(--layout-gap));
+    min-height: 0;
+    min-width: 0;
+}
+
+.layout-row {
+    display: flex;
+    align-items: var(--layout-row-align, center);
+    gap: var(--layout-row-gap, var(--layout-gap));
+    min-width: 0;
+}
+
+.layout-row--wrap {
+    flex-wrap: wrap;
+}
+
+.layout-grid {
+    display: grid;
+    gap: var(--layout-gap);
+    min-height: 0;
+    min-width: 0;
+}
+
+.layout-grid--auto {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.layout-stack > *,
+.layout-row > *,
+.layout-grid > * {
+    min-width: 0;
+}
+
+@media (max-width: 1280px) {
+    .view-base {
+        container-type: size;
+        padding: var(--view-base-padding-lg, var(--view-base-padding, 0.5rem));
+    }
+}
+
+@media (max-width: 768px) {
+    .view-base {
+        padding: var(
+            --view-base-padding-md,
+            var(--view-base-padding-lg, var(--view-base-padding, 0.375rem))
+        );
+    }
+}

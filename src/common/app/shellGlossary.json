@@ -1,0 +1,139 @@
+{
+    "en": {
+        "shared": {
+            "_comment": "These entries power the interactive glossary popups: when an annotated term in the page text is hovered, tooltipService opens a floating popup showing title as the heading and body as the content."
+        }
+    },
+    "general": {
+        "tour": {
+            "_comment": "Closing cards appended to every guided walkthrough in all three dashboards (tourStepBuilder.js). A card is skipped on views where its anchor does not exist.",
+            "hover-help": {
+                "title": "Schon gewusst? – Erklärungen per Mouseover",
+                "tutorial": "<p>Viele Fachbegriffe und Spaltenüberschriften sind hinterlegt: Wenn Sie mit der Maus darüberfahren, erscheint eine kurze Erklärung. So können Sie jederzeit nachschlagen, ohne die Ansicht zu verlassen.</p>"
+            },
+            "export-help": {
+                "title": "Schon gewusst? – Inhalte herunterladen",
+                "tutorial": "<p>Über diese Schaltfläche können Sie Tabellen und Schaubilder herunterladen – Tabellen als CSV, JSON oder PDF, Schaubilder als PDF oder Bild. So nehmen Sie die Ergebnisse mit oder binden sie in eigene Dokumente ein.</p>"
+            },
+            "notes-help": {
+                "title": "Schon gewusst? – Eigene Notizen",
+                "tutorial": "<p>Mit dieser Schaltfläche öffnen Sie das Notizfeld. Dort können Sie zu jeder Ansicht eigene Beobachtungen und Gedanken festhalten – Ihre Notizen bleiben der jeweiligen Ansicht zugeordnet.</p>"
+            }
+        },
+        "report": {
+            "header": {
+                "note": "Kopfzeile (Bericht); der Titel benennt auch Seitenfuß und PDF",
+                "title": "Bericht",
+                "subtitle": "In den Ansichten markierte Module anordnen und als PDF speichern."
+            },
+            "empty": "Noch keine Elemente im Bericht. Markieren Sie in den Ansichten Module über das Kästchen-Symbol neben dem Export-Symbol – sie erscheinen hier als Karten und lassen sich anordnen und als PDF speichern.",
+            "exported-notice": "Bericht gespeichert – die Auswahl wurde geleert.",
+            "healed-notice-one": "1 Element ohne gespeichertes Bild wurde aus dem Bericht entfernt – bitte erneut markieren.",
+            "healed-notice-many": "{count} Elemente ohne gespeichertes Bild wurden aus dem Bericht entfernt – bitte erneut markieren.",
+            "zoom": {
+                "label": "Ansichtsgröße"
+            },
+            "pages": {
+                "label": "Elemente des Berichts"
+            },
+            "card-move": {
+                "label": "Karte verschieben"
+            },
+            "card-width": {
+                "label": "Breite"
+            },
+            "card-up": {
+                "label": "Nach oben"
+            },
+            "card-down": {
+                "label": "Nach unten"
+            },
+            "card-remove": {
+                "label": "Aus Bericht entfernen"
+            }
+        },
+        "dialogs": {
+            "detail": {
+                "label": "Detailansicht"
+            }
+        },
+        "buttons": {
+            "element_texts": {
+                "single-download": {
+                    "tooltip": "Dieses Element herunterladen."
+                },
+                "group-download": {
+                    "tooltip": "Dieses Element merken und später gemeinsam herunterladen."
+                },
+                "group-download-remove": {
+                    "tooltip": "Dieses Element aus dem Sammelexport entfernen."
+                },
+                "note-rename": {
+                    "label": "Seite umbenennen",
+                    "tooltip": "Seite umbenennen"
+                },
+                "note-rename-hint": {
+                    "tooltip": "Umbenennen: Stift oder Doppelklick"
+                },
+                "notes-toggle": {
+                    "label": "Notizen öffnen"
+                },
+                "tour-start": {
+                    "label": "Rundgang starten"
+                },
+                "tour-back": {
+                    "label": "Zurück"
+                },
+                "tour-skip": {
+                    "label": "Überspringen"
+                },
+                "tour-next": {
+                    "label": "Weiter"
+                },
+                "tour-finish": {
+                    "label": "Fertig"
+                },
+                "note-add": {
+                    "label": "Seite hinzufügen"
+                },
+                "note-delete": {
+                    "label": "Seite löschen"
+                },
+                "note-link": {
+                    "label": "Modul verknüpfen"
+                },
+                "notes-close": {
+                    "label": "Notizen schließen"
+                },
+                "notes-pages": {
+                    "label": "Notizseiten"
+                },
+                "notes-placeholder": {
+                    "label": "Notizen…"
+                },
+                "sidebar-views": {
+                    "label": "Ansichten"
+                },
+                "sidebar-more-views": {
+                    "label": "Weitere Ansichten"
+                },
+                "batch-export": {
+                    "label": "Sammelexport"
+                }
+            }
+        },
+        "messages": {
+            "capture-failed": "Das Element konnte nicht in den Sammelexport aufgenommen werden. Versuchen Sie es erneut.",
+            "export-failed": "Der Export ist fehlgeschlagen. Versuchen Sie es erneut.",
+            "report-export-failed": "Der Bericht konnte nicht als PDF gespeichert werden. Versuchen Sie es erneut.",
+            "no-entries": "Keine Einträge gefunden.",
+            "current-view": "Sie sind hier",
+            "confirm-delete-note": "Diese Seite mit ihrem Inhalt löschen?",
+            "confirm-clear-report": "Alle Elemente aus dem Bericht entfernen?",
+            "view-failed": "Die Ansicht konnte nicht geladen werden. Laden Sie die Seite neu.",
+            "unexpected-error": "Ein unerwarteter Fehler ist aufgetreten. Laden Sie die Seite neu, falls das Dashboard nicht mehr reagiert.",
+            "splash-placeholder": "Platzhalter",
+            "splash-image-credit": "Designed by <a href=\"https://www.freepik.com\" target=\"_blank\" rel=\"noopener noreferrer\">vectorpocket / Freepik</a>"
+        }
+    }
+}

@@ -1,0 +1,229 @@
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /**
+     * Scatterplot Filter Modal Styles
+     * Styles for the student selection modal in class view.
+     * The modal is opened from the scatterplot-search action button in the
+     * class table header (see EnClassTableModule).
+     */
+
+    /* ==========================================================================
+       Modal overlay
+       ========================================================================== */
+
+    .scatterplot-filter-overlay {
+        /* Modal sizing tokens — scoped here so they don't leak to other subjects */
+        --scatterplot-modal-height: 95vh;
+        --scatterplot-modal-header-height: 4.375rem;
+        --scatterplot-modal-sidebar-width: 8.75rem;
+        --scatterplot-modal-body-padding: var(--space-sm);
+        --scatterplot-modal-shadow: 0 1.25rem 3.75rem rgba(0, 0, 0, 0.3);
+        --scatterplot-selection-count-radius: 1.25rem;
+        /* Backdrop shell, fade and panel enter/exit come from the shared
+           .modal-backdrop (styles/modal-backdrop.css); only the centering is local. */
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* ==========================================================================
+       Modal container
+       ========================================================================== */
+
+    /* ContentModule integration: visual shell only — border: none because the
+       modal uses box-shadow instead of a border. */
+    .scatterplot-filter-modal {
+        background-color: var(--color-background);
+        border: none;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 var(--radius-lg);
+        box-shadow: var(--scatterplot-modal-shadow);
+        /* Height from CSS variable, width = chart height + sidebar + padding */
+        /* Chart is square, so its width = available height after header */
+        height: var(--scatterplot-modal-height);
+        width: calc(
+            var(--scatterplot-modal-height) - var(--scatterplot-modal-header-height) +
+                var(--scatterplot-modal-sidebar-width) + var(--scatterplot-modal-body-padding) * 2
+        );
+        max-width: 95vw;
+        max-height: none;
+        display: flex;
+        flex-direction: column;
+        flex: 0 0 auto;
+    }
+
+    /* ==========================================================================
+       Modal header
+       ========================================================================== */
+
+    .scatterplot-filter-modal-body {
+        display: flex;
+        padding: 0;
+    }
+
+    /* Owner-scoped name: a bare `.selection-count` collides with the batch-export
+       toolbar's class of the same name, which loads later and won on font-size. */
+    .scatterplot-selection-count {
+        font-weight: var(--fw-bold);
+        color: var(--text-secondary);
+        padding: var(--control-gap) var(--layout-gap-relaxed);
+        background-color: var(--color-background-secondary);
+        border-radius: var(--scatterplot-selection-count-radius);
+        font-size: var(--fs-sm);
+    }
+
+    .scatterplot-selection-count.has-selection {
+        background-color: var(--primary-color);
+        color: white;
+    }
+
+    /* ==========================================================================
+       Modal chart container
+       ========================================================================== */
+
+    .scatterplot-filter-body {
+        flex: 1 1 auto;
+        display: flex;
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .scatterplot-filter-chart-area {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--scatterplot-modal-body-padding);
+        min-width: 0;
+        min-height: 0;
+    }
+
+    /* Square container sized by the smaller dimension;
+       border/radius/background/flex reset card-shell defaults that conflict with
+       the square chart layout. */
+    .scatterplot-filter-chart {
+        aspect-ratio: 1 / 1;
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+        border: none;
+        border-radius: 0;
+        background: transparent;
+        flex: none;
+    }
+
+    .scatterplot-filter-chart svg {
+        width: 100%;
+        height: 100%;
+        /* Ensure SVG maintains square proportions */
+        aspect-ratio: 1 / 1;
+        /* Crosshair over the chart area (points override with pointer below) */
+        cursor: crosshair;
+    }
+
+    /* ==========================================================================
+       Modal sidebar (buttons)
+       ========================================================================== */
+
+    .scatterplot-filter-sidebar {
+        justify-content: center;
+        padding: var(--layout-pad);
+        border-inline-start: 1px solid var(--color-border);
+        background-color: var(--color-background-secondary);
+        width: var(--scatterplot-modal-sidebar-width);
+        flex-shrink: 0;
+    }
+
+    /* Secondary text buttons get a card-like fill; the primary confirm button
+       keeps its own (--btn-primary) fill so its light text stays legible. */
+    .scatterplot-filter-sidebar > .btn.btn--text:not(.btn--primary) {
+        --btn-fill: var(--color-background);
+    }
+
+    /* Separate the commit pair (Bestätigen/Abbrechen) from the selection helpers.
+       */
+    .scatterplot-filter-sidebar .confirm-btn {
+        margin-top: var(--layout-gap-relaxed);
+        aspect-ratio: 1 / 1;
+        --btn-padding-block: var(--space-sm);
+        --btn-padding-inline: var(--space-sm);
+        text-align: center;
+        line-height: var(--lh-ui);
+    }
+
+    /* ==========================================================================
+       Student point styles
+       ========================================================================== */
+
+    .student-point {
+        transition:
+            stroke 0.15s ease,
+            stroke-width 0.15s ease,
+            opacity 0.15s ease;
+        cursor: pointer;
+    }
+
+    /* ==========================================================================
+       Rectangle selection
+       ========================================================================== */
+
+    .selection-rectangle {
+        pointer-events: none;
+    }
+
+    /* Only while the user has armed touch selection: `touch-action: none` tells the
+       browser to hand the gesture to the chart instead of scrolling the page, and
+       that is exactly the trade the armed mode exists to make explicit. Left on
+       permanently it would make the chart a dead zone for scrolling. */
+    .scatterplot-filter-chart svg.selection-armed {
+        touch-action: none;
+    }
+
+    /* The armed-mode toggle is the touch route to the marquee; a mouse drags without
+       arming anything, so the button would only be noise.
+       Hidden on the absence of a coarse pointer, deliberately not on `hover: hover`:
+       the JS gate is per event (`pointerType === 'touch'`), so the button has to stay
+       wherever a finger can reach the chart at all. An iPad with a Magic Keyboard
+       reports `hover: hover` / `pointer: fine` and its touchscreen still needs this —
+       `hover: hover` would hide the only route a finger has. */
+    @media not (any-pointer: coarse) {
+        .scatterplot-filter-sidebar > [data-scatterplot-filter-action='arm-selection'] {
+            display: none;
+        }
+    }
+
+    .scatterplot-filter-chart svg .student-point {
+        cursor: pointer;
+    }
+
+    /* ==========================================================================
+       Responsive styles
+       ========================================================================== */
+
+    @media (max-width: 768px) {
+        .scatterplot-filter-modal {
+            width: 95vw;
+            height: 95vh;
+        }
+
+        .scatterplot-filter-body {
+            flex-direction: column;
+        }
+
+        .scatterplot-filter-sidebar {
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 100%;
+            border-inline-start: none;
+            border-top: 1px solid var(--color-border);
+            padding: var(--layout-pad);
+        }
+
+        .scatterplot-filter-sidebar > .btn {
+            flex: 1;
+            min-width: var(--scatterplot-modal-sidebar-width);
+        }
+    }
+}

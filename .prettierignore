@@ -1,0 +1,11 @@
+# Prettier formats CSS and JSON only; JS is oxfmt's (.oxfmtrc.json). Markdown and HTML are
+# deliberately unformatted: emphasis-style rewrites and table realignment cost more review
+# noise than they save.
+dist/
+public/
+coverage/
+test-results/
+node_modules/
+package-lock.json
+docs/module-index.md
+docs/.vitepress/cache/

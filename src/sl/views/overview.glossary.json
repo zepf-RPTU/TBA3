@@ -1,0 +1,98 @@
+{
+    "header": {
+        "note": "Kopfzeile (Übersicht)",
+        "title": "Übersicht über alle Fächer und Klassen",
+        "subtitle": "Graphische sowie tabellarische Ansichten aller Ergebnisse im Detail.",
+        "interface": {
+            "display-subjects": {
+                "label": "Nach Fächern",
+                "tooltip": "Ergebnisse nach Fächern sortieren und zusammenfassen."
+            },
+            "display-classes": {
+                "label": "Nach Klassen",
+                "tooltip": "Ergebnisse nach Klassen sortieren und zusammenfassen."
+            },
+            "display-graphs": {
+                "label": "Diagramme",
+                "tooltip": "Ergebnisse graphisch anzeigen lassen."
+            },
+            "display-tables": {
+                "label": "Tabellen",
+                "tooltip": "Ergebnisse tabellarisch anzeigen lassen."
+            },
+            "display-bars": {
+                "label": "Balken",
+                "tooltip": "Darstellung der Ergebnisse ausschließlich mit Balkendiagrammen."
+            },
+            "display-boxplots": {
+                "label": "Boxplot",
+                "tooltip": "Für die Darstellung einzelner Ergebnisse zusätzlich Boxplots verwenden."
+            }
+        }
+    },
+    "subject-view": {
+        "preview-cards": {
+            "note": "Übersicht: Fächer",
+            "element_texts": {
+                "preview-sw": {
+                    "title": "Selbstwirksamkeit",
+                    "description": "Allgemeines Maß zur Selbsteinschätzung der Schüler:innen als Lernende",
+                    "tooltip": "Schul- und klassenübergreifende Ergebnisse zur Selbstwirksamkeit anzeigen."
+                },
+                "preview-de": {
+                    "title": "Deutsch",
+                    "description": "Ergebnisse in den Domänen Lesen und Rechtschreibung",
+                    "tooltip": "Schul- und klassenübergreifende Ergebnisse im Fach Deutsch anzeigen."
+                },
+                "preview-en": {
+                    "title": "Englisch",
+                    "description": "Ergebnisse in den Domänen Hörverstehen und Leseverstehen",
+                    "tooltip": "Schul- und klassenübergreifende Ergebnisse im Fach Englisch anzeigen."
+                },
+                "preview-fr": {
+                    "title": "Französisch",
+                    "description": "Ergebnisse in den Domänen Hörverstehen und Leseverstehen",
+                    "tooltip": "Schul- und klassenübergreifende Ergebnisse im Fach Französisch anzeigen."
+                },
+                "preview-ma": {
+                    "title": "Mathematik",
+                    "description": "Ergebnisse im Fach Mathematik",
+                    "tooltip": "Schul- und klassenübergreifende Ergebnisse im Fach Mathematik anzeigen."
+                }
+            }
+        },
+        "chart": {
+            "note": "Kompetenzstufenverteilung: Fach",
+            "title": "Kompetenzstufenverteilung aller Klassen im Fach: {{Fach}}"
+        },
+        "table": {
+            "note": "Tabellenübersicht: Fach",
+            "title": "Tabellarische Übersicht aller Klassen nach Fächern"
+        }
+    },
+    "class-view": {
+        "preview-cards": {
+            "note": "Übersicht: Klassen",
+            "element_texts": {
+                "preview-school": {
+                    "title": "Schule",
+                    "description": "Ergebnisse aller Fächer auf Schulebene",
+                    "tooltip": "Fächerübergreifende Ergebnisse für die gesamte Schule anzeigen."
+                },
+                "preview-class": {
+                    "title": "Klasse {{Klasse}}",
+                    "description": "Ergebnisse aller Fächer in Klasse {{Klasse}}",
+                    "tooltip": "Fächerübergreifende Ergebnisse der Klasse {{Klasse}} anzeigen."
+                }
+            }
+        },
+        "chart": {
+            "note": "Kompetenzstufenverteilung: Klasse",
+            "title": "Kompetenzstufenverteilung aller Fächer der Klasse {{Klasse}}"
+        },
+        "table": {
+            "note": "Tabellenübersicht: Klasse",
+            "title": "Tabellarische Übersicht aller Fächer nach Klassen"
+        }
+    }
+}

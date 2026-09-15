@@ -1,0 +1,312 @@
+/**
+ * Notes drawer
+ *
+ * Slide-in, draggable panel holding the dashboard's rich-text notes (Quill).
+ * Opened via the shared header's notes button (see header-module.css for the
+ * button itself). One notebook per dashboard, split into user-created pages
+ * (tab strip), persisted to localStorage by NotesController.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    .notes-drawer {
+        position: fixed;
+        top: var(--space-lg);
+        inset-inline-end: 0;
+        z-index: var(--z-shell);
+        display: none;
+        flex-direction: column;
+        width: min(420px, 90vw);
+        height: 50vh;
+        min-width: min(320px, 100vw);
+        min-height: 220px;
+        max-width: 90vw;
+        max-height: calc(100vh - 2 * var(--space-lg));
+        background: var(--color-card-background);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-lg);
+    }
+
+    .notes-drawer.visible {
+        display: flex;
+    }
+
+    .notes-drawer-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-sm);
+        padding: var(--space-sm) var(--space-md);
+        background: var(--color-background-secondary);
+        border-bottom: 1px solid var(--color-border);
+        border-radius: var(--radius-md) var(--radius-md) 0 0;
+        cursor: grab;
+        /* The drawer is dragged by this header, so the pointer must not select its
+           text mid-drag. `user-select` as a whole is not Baseline (Firefox lacks
+           `user-select: all`), but the `none` value used here is supported
+           everywhere. */
+        /* eslint-disable-next-line css/use-baseline -- only `user-select: all` is non-Baseline; `none` is universal */
+        user-select: none;
+        /* The drag is already pointer-event based with setPointerCapture; without
+           this a touch pointerdown is claimed by the browser for panning, which
+           fires pointercancel and the drawer never moves under a finger. */
+        touch-action: none;
+        flex: 0 0 auto;
+    }
+
+    .notes-drawer-header:active {
+        cursor: grabbing;
+    }
+
+    .notes-drawer-title {
+        font-weight: var(--fw-bold);
+        color: var(--text-color);
+    }
+
+    /* One tab per note page. Tab pattern comes from the shared .tab-strip classes
+       (module-base's tabStrip.css); only the drawer-local chrome lives here.
+       The bottom padding gives the strip's horizontal scrollbar its own band, so
+       with many pages it no longer paints over the tab labels. */
+    .notes-drawer-tabs {
+        display: flex;
+        flex: 0 0 auto;
+        padding: var(--space-xs) var(--space-sm) var(--space-md);
+        background: var(--color-background-secondary);
+        border-bottom: 1px solid var(--color-border);
+        align-items: start;
+    }
+
+    /* The tablist scrolls; the page controls after it stay put. */
+    .notes-drawer-tablist {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    .notes-drawer-tab-actions {
+        display: flex;
+        flex: 0 0 auto;
+        gap: 2px;
+    }
+
+    /* Add/rename/delete page controls — plain glyph buttons sitting in the tab strip. */
+    .notes-drawer-tab-add,
+    .notes-drawer-tab-rename,
+    .notes-drawer-tab-delete {
+        flex: 0 0 auto;
+        padding: var(--space-sm);
+        font-size: var(--fs-sm);
+        line-height: 1;
+        color: var(--text-secondary);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .notes-drawer-tab-add:hover,
+    .notes-drawer-tab-rename:hover,
+    .notes-drawer-tab-delete:hover {
+        color: var(--text-color);
+    }
+
+    /* The tab strip is the densest cluster in the app: a tab and up to two glyph
+       buttons per page, all sized for a cursor. Give every one of them the full
+       target, the pencil this file adds included. */
+    @media (pointer: coarse) {
+        .notes-drawer-tab-add,
+        .notes-drawer-tab-rename,
+        .notes-drawer-tab-delete,
+        .notes-drawer-tab {
+            min-width: var(--touch-target-min);
+            min-height: var(--touch-target-min);
+        }
+    }
+
+    .notes-drawer-tab-rename {
+        margin-inline-start: calc(-1 * var(--space-xs));
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .notes-drawer-tab-rename svg {
+        width: 1em;
+        height: 1em;
+    }
+
+    .notes-drawer-tab-delete {
+        margin-inline-start: calc(-1 * var(--space-xs));
+    }
+
+    /* Inline rename field, swapped in for a tab on double-click. */
+    .notes-drawer-tab-input {
+        flex: 0 0 auto;
+        width: 8ch;
+        padding: var(--space-xs) var(--space-sm);
+        font-size: var(--fs-sm);
+        font-family: inherit;
+        color: var(--text-color);
+        background: var(--color-card-background);
+        border: 1px solid var(--primary-color);
+        border-radius: var(--radius-xs);
+    }
+
+    .notes-drawer-editor {
+        flex: 1 1 auto;
+        min-height: 0;
+    }
+
+    /* Resize grip — bottom-right corner, native-window-style diagonal lines. */
+    .notes-drawer-resize-handle {
+        position: absolute;
+        inset-inline-end: 1px;
+        bottom: 1px;
+        width: 14px;
+        height: 14px;
+        cursor: nwse-resize;
+        /* Same reason as the drag header above: without it the browser pans instead. */
+        touch-action: none;
+        background-image: repeating-linear-gradient(
+            135deg,
+            var(--color-border-medium) 0 1.5px,
+            transparent 1.5px 4px
+        );
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: 10px 10px;
+    }
+
+    /* Quill Snow theme overrides — blend the toolbar/editor into the dashboard's
+       own palette rather than Quill's default look. */
+    .notes-drawer .ql-toolbar.ql-snow {
+        border: none;
+        border-bottom: 1px solid var(--color-border);
+        font-family: var(--font-family-main);
+    }
+
+    .notes-drawer .ql-container.ql-snow {
+        border: none;
+        font-family: var(--font-family-main);
+        font-size: var(--fs-base);
+    }
+
+    .notes-drawer .ql-editor.ql-blank::before {
+        color: var(--text-muted);
+        font-style: normal;
+    }
+
+    /* Toolbar layout: the link control sits at the left end as the drawer's primary
+       action, the formatting tools are pushed to the right end. Quill's own buttons
+       are `float: left` inside their group; floats are ignored on flex items, so
+       each group becomes a flex row rather than fighting the vendor's float rules.
+       */
+    .notes-drawer .ql-toolbar.ql-snow {
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+    }
+
+    .notes-drawer .ql-toolbar.ql-snow .ql-formats {
+        display: inline-flex;
+        align-items: center;
+        margin-inline-end: 0;
+    }
+
+    .notes-drawer .ql-toolbar .notes-link-formats {
+        margin-inline-end: auto;
+    }
+
+    .notes-drawer .ql-toolbar .header-action-dropdown-wrapper {
+        display: inline-flex;
+    }
+
+    /* Quill's own `.ql-snow.ql-toolbar button { float: left; width: 28px; height:
+       24px }` applies to every button inside the toolbar — including this control's
+       trigger and the menu rows, which live in the toolbar too. Left in place it
+       collapses each menu row's <li> to zero height and clamps the row to 24px, so
+       long labels overlap the row below instead of growing it. Opt this control
+       out. */
+    .notes-drawer .ql-toolbar .header-action-dropdown-wrapper button {
+        float: none;
+        width: auto;
+        height: auto;
+        padding: var(--btn-padding-block) var(--btn-padding-inline);
+    }
+
+    /* The link button carries the feature's main action, so it reads as a labeled
+       accent button rather than another grey toolbar icon. The shared control
+       builder always stamps `btn btn--icon` (square, fixed size, no padding), so
+       the icon geometry has to be released here for the label to fit beside the
+       icon. */
+    .notes-drawer .notes-link-control > .btn {
+        width: auto;
+        height: auto;
+        min-width: 0;
+        min-height: var(--btn-height-toolbar-xs);
+        gap: var(--space-xs);
+        padding: var(--space-xs) var(--space-sm);
+        font-size: var(--fs-sm);
+        line-height: var(--lh-ui);
+        white-space: nowrap;
+        /* Accent *text* token: the primary fill sits at 3.3:1 on its light tint. */
+        color: var(--color-accent-text);
+        background: var(--primary-color-light);
+        border-color: var(--primary-color);
+    }
+
+    /* Must follow the rule above, not sit with the other coarse-pointer rules in
+       this file: that rule pins `min-height` to the xs token at the same
+       specificity, so an earlier override would simply lose. The trigger is a
+       labelled button (`width: auto`), so the shared `.btn--icon` sizing never
+       reaches it either. */
+    @media (pointer: coarse) {
+        .notes-drawer .notes-link-control > .btn {
+            min-height: var(--touch-target-min);
+        }
+    }
+
+    /* The trigger sits at the drawer's left edge, so its menu has to grow to the
+       right — the shell's default right-alignment would push it off the drawer. */
+    .notes-drawer .notes-link-control > .header-action-dropdown {
+        inset-inline-end: auto;
+        inset-inline-start: 0;
+    }
+
+    /* Step-1/step-2 drill-down: the "back" row reads as navigation, not a target.
+       */
+    .notes-drawer .notes-link-back {
+        color: var(--text-secondary);
+        font-size: var(--fs-sm);
+    }
+
+    /* Module-link chip inserted from the "link to module" toolbar control */
+    .notes-module-link {
+        color: var(--primary-color);
+        background: var(--primary-color-light);
+        border-radius: var(--radius-xs);
+        padding: 0 4px;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .notes-module-link:hover {
+        text-decoration: underline;
+    }
+
+    /* Scroll+highlight flash applied to a module when its notes chip is clicked */
+    .notes-highlight-flash {
+        animation: notes-highlight-pulse 1.5s ease-out;
+    }
+
+    @keyframes notes-highlight-pulse {
+        0% {
+            box-shadow: 0 0 0 3px var(--primary-color);
+        }
+
+        100% {
+            box-shadow: 0 0 0 3px transparent;
+        }
+    }
+}

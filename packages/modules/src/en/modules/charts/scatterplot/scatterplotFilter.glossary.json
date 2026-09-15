@@ -1,0 +1,28 @@
+{
+    "note": "Interaktiver Scatterplot zur visuellen Suche von Schüler:innen",
+    "title": "Schüler:innen suchen und finden",
+    "subtitle": "<p>Jeder Punkt im Koordinatensystem stellt einen Schüler/eine Schülerin dar. Wählen Sie einen oder mehrere Punkte aus, und benutzen Sie die Schaltflächen, um die Auswahl auf die Tabelle zu übertragen.</p>",
+    "tutorial": "<p>Alle Schüler:innen sind anhand ihrer GER-Stufe im Hör- und Leseverstehen im Koordinatensystem abgetragen. Die gestrichelten Linien zeigen dabei die Grenzbereiche zu benachbarten Stufen. Diese Darstellung erlaubt Ihnen, einen Überblick über die Verteilung der Klasse zu erhalten und gezielt Schüler:innen zu identifizieren, die sich vom Klassentrend in negativer wie in positiver Weise absetzen. Im <b>Hörverstehen</b> finden Sie die starke Schüler:innen weiter <b>oben</b> in der Verteilung und die schwächeren Schüler:innen im <b>unteren</b> Bereich. Das <b>Leseverstehen</b> ist von <b>links nach rechts</b> abgetragen.</p>",
+    "interface": {
+        "select-all": {
+            "label": "Alle auswählen",
+            "tooltip": "Alle Schüler:innen der Klasse auswählen."
+        },
+        "clear-selection": {
+            "label": "Auswahl aufheben",
+            "tooltip": "Die getroffene Auswahl vollständig zurücksetzen."
+        },
+        "arm-selection": {
+            "label": "Auswahlmodus",
+            "tooltip": "Mit dem Finger ein Rechteck über mehrere Punkte ziehen. Solange der Auswahlmodus aktiv ist, scrollt die Geste nicht die Seite."
+        },
+        "confirm": {
+            "label": "Auswahl bestätigen",
+            "tooltip": "Die Auswahl auf die Tabelle übertragen."
+        },
+        "cancel": {
+            "label": "Abbrechen",
+            "tooltip": "Schließen, ohne die Auswahl zu übernehmen."
+        }
+    }
+}

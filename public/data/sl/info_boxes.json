@@ -1,0 +1,413 @@
+{
+    "meta": {
+        "locale": "de-DE"
+    },
+    "sectionTypes": {
+        "general": {
+            "label": "General",
+            "icon": "stars",
+            "tooltip": "Eine Auswahl zusammengefasster Ergebnisse für einen ersten Gesamteindruck."
+        },
+        "praise": {
+            "label": "Praise",
+            "icon": "trophy",
+            "tooltip": "Eine Auswahl zusammengefasster Ergebnisse mit Fokus auf besonders bemerkenswerte Ergebnisse am oberen Rand des Leistungsspektrums.",
+            "materialLinkSubjectMode": "best"
+        },
+        "alarm": {
+            "label": "Alarm",
+            "icon": "warning",
+            "tooltip": "Eine Auswahl zusammengefasster Ergebnisse mit Fokus auf erhöhten Entwicklungsbedarf am unteren Rand des Leistungsspektrums.",
+            "materialLinkSubjectMode": "worst"
+        }
+    },
+    "boxes": {
+        "welcome": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Fächerübergreifend liegen im Jahrgang {{shareRange(target=school, levelAlias=ge_3)}} der SuS auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_3, skipBlock=true)}}.",
+                        "{{shareRange(target=school, levelAlias=e_1)}} der SuS liegen dabei höchstens auf Kompetenzstufe {{standardBands(levelAlias=e_1, skipBlock=true)}}.",
+                        "Am stärksten unterscheiden sich die Klassen im Fach {{selectShareTarget(id=widestWelcomeSubjectClassSpread, target=school, levelAlias=ge_3, scope=subjectClassRange, mode=max, field=subjectName)}}.",
+                        "Am stärksten unterscheiden sich die Fächer in Klasse {{selectShareTarget(id=widestWelcomeClassShareSpread, target=school, levelAlias=ge_3, scope=classRange, mode=max, field=className)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Übersicht+Gesamt}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "praise",
+                    "blocks": [
+                        "In folgenden Fächern liegt die Schule oberhalb des Landesschnitts: {{listStateComparisonSubjects(target=school, levelAlias=ge_3, comparison=gt, aggregation=anyDomain)}}.",
+                        "Die besten Ergebnisse wurden im Fach {{selectShareTarget(id=bestSchoolDomain, target=school, levelAlias=ge_3, scope=subjectDomainShare, mode=max, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:bestSchoolDomain, levelAlias=ge_3)}} der SuS auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_3, skipBlock=true)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Übersicht+Fach}}"
+                        },
+                        "Am besten schneidet Klasse {{selectShareTarget(id=bestClass, target=school, levelAlias=ge_3, scope=classMean, mode=max, field=className)}} ab. Über die Fächer hinweg liegen dort {{shareRange(target=selection:bestClass, levelAlias=ge_3)}} der SuS auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_3, skipBlock=true)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Ergebniszusammenfassung+Gesamt}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "alarm",
+                    "blocks": [
+                        "In folgenden Fächern liegt die Schule unterhalb des Landesschnitts: {{listStateComparisonSubjects(target=school, levelAlias=ge_3, comparison=lt, aggregation=anyDomain)}}.",
+                        "Die schwächsten Ergebnisse wurden im Fach {{selectShareTarget(id=worstSchoolDomain, target=school, levelAlias=ge_3, scope=subjectDomainShare, mode=min, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:worstSchoolDomain, levelAlias=le_3)}} der SuS höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_3, skipBlock=true)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Übersicht+Fach}}"
+                        },
+                        "Am schwächsten schneidet Klasse {{selectShareTarget(id=weakestClass, target=school, levelAlias=ge_3, scope=classMean, mode=min, field=className)}} ab. Über die Fächer hinweg liegen dort {{shareRange(target=selection:weakestClass, levelAlias=le_3)}} der SuS höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_3, skipBlock=true)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Ergebniszusammenfassung+Gesamt}}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "overviewBySubjects": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        {
+                            "text": "Schulweit liegen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_3, skipBlock=true)}}:",
+                            "sublist": [
+                                {
+                                    "repeat": "subjects",
+                                    "template": "{{subjectShare(target=school, levelAlias=ge_3, subjectName=current)}} im Fach [[subjectShortDisplayName]]."
+                                }
+                            ]
+                        },
+                        "Den größten Unterschied zwischen Klassen gibt es im Fach {{selectShareTarget(id=widestOverviewSubjectDomainSpread, target=school, levelAlias=ge_3, scope=subjectDomainClassRange, mode=max, field=subjectDomainLabel)}}.",
+                        "Die stärkste Abweichung zum Landesschnitt liegt im Fach {{selectShareTarget(id=largestSchoolStateGapSubject, target=school, levelAlias=ge_3, scope=subjectStateDiff, mode=max, field=subjectName)}} vor.",
+                        {
+                            "type": "link",
+                            "token": "{{Ergebniszusammenfassung+Gesamt}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "praise",
+                    "blocks": [
+                        "In folgenden Fächern liegt die Schule oberhalb des Landesschnitts: {{listStateComparisonSubjects(target=school, levelAlias=ge_3, comparison=gt, aggregation=subject)}}.",
+                        "Die besten Ergebnisse wurden im Fach {{selectShareTarget(id=bestSchoolDomain, target=school, levelAlias=ge_3, scope=subjectDomainShare, mode=max, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:bestSchoolDomain, levelAlias=ge_3)}} der SuS auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_3, skipBlock=true)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Übersicht+Fach}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "alarm",
+                    "blocks": [
+                        "In folgenden Fächern liegt die Schule unterhalb des Landesschnitts: {{listStateComparisonSubjects(target=school, levelAlias=ge_3, comparison=lt, aggregation=subject)}}.",
+                        "Die schwächsten Ergebnisse wurden im Fach {{selectShareTarget(id=worstSchoolDomain, target=school, levelAlias=ge_3, scope=subjectDomainShare, mode=min, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:worstSchoolDomain, levelAlias=le_3)}} der SuS höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_3, skipBlock=true)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Übersicht+Fach}}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "overviewByClasses": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        {
+                            "text": "Im Mittel liegen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_3, skipBlock=true)}}:",
+                            "sublist": [
+                                {
+                                    "repeat": "classes",
+                                    "template": "{{shareRange(target=class:current, levelAlias=ge_3)}} der Klasse [[quotedClassName]]."
+                                }
+                            ]
+                        },
+                        "Den größten Unterschied zwischen Fächern gibt es in Klasse {{selectShareTarget(id=widestOverviewClassShareSpread, target=school, levelAlias=ge_3, scope=classRange, mode=max, field=className)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Ergebniszusammenfassung+Gesamt}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "praise",
+                    "blocks": [
+                        "Folgende Klassen liegen in mindestens einem Fach oberhalb des Landesschnitts: {{listStateComparisonClasses(target=school, levelAlias=ge_3, comparison=gt)}}.",
+                        "Am besten schneidet Klasse {{selectShareTarget(id=bestClass, target=school, levelAlias=ge_3, scope=classMean, mode=max, field=className)}} ab. Über die Fächer hinweg liegen dort {{shareRange(target=selection:bestClass, levelAlias=ge_3)}} der SuS auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_3, skipBlock=true)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Leitfragen+Gesamt}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "alarm",
+                    "blocks": [
+                        "Folgende Klassen liegen in mindestens einem Fach unterhalb des Landesschnitts: {{listStateComparisonClasses(target=school, levelAlias=ge_3, comparison=lt)}}.",
+                        "Am schwächsten schneidet Klasse {{selectShareTarget(id=weakestClass, target=school, levelAlias=ge_3, scope=classMean, mode=min, field=className)}} ab. Über die Fächer hinweg liegen dort {{shareRange(target=selection:weakestClass, levelAlias=le_3)}} der SuS höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_3, skipBlock=true)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Leitfragen+Gesamt}}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "overviewSubjectSpecific": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Schulweit liegen {{subjectShare(target=school, levelAlias=ge_3, subjectName=current)}} der SuS auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_3, skipBlock=true)}}; in den einzelnen Klassen liegt dieser Wert bei {{subjectShareClassRange(target=school, levelAlias=ge_3, subjectName=current)}}.",
+                        "Bei {{selectSubjectDomain(id=currentSubjectDomain1, subjectName=current, order=1, multiDomainOnly=true, skipBlock=true, field=domainName)}} betragen diese Werte {{subjectShare(target=school, levelAlias=ge_3, subjectName=current, domainId=selection:currentSubjectDomain1)}} und {{subjectShareClassRange(target=school, levelAlias=ge_3, subjectName=current, domainId=selection:currentSubjectDomain1)}}.",
+                        "Bei {{selectSubjectDomain(id=currentSubjectDomain2, subjectName=current, order=2, multiDomainOnly=true, skipBlock=true, field=domainName)}} betragen diese Werte {{subjectShare(target=school, levelAlias=ge_3, subjectName=current, domainId=selection:currentSubjectDomain2)}} und {{subjectShareClassRange(target=school, levelAlias=ge_3, subjectName=current, domainId=selection:currentSubjectDomain2)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Übersicht+Fach}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "praise",
+                    "blocks": [
+                        "Folgende Klassen liegen oberhalb des Landesschnitts: {{listStateComparisonClasses(target=school, levelAlias=ge_3, comparison=gt, subjectName=current)}}.",
+                        {
+                            "text": "Kompetenzstufe {{standardBands(levelAlias=e_5, skipBlock=true)}} wird in den Klassen erreicht:",
+                            "sublist": [
+                                {
+                                    "repeat": "classes",
+                                    "filter": {
+                                        "subjectName": "current"
+                                    },
+                                    "template": "[[quotedClassName]] mit {{subjectShare(target=class:current, levelAlias=e_5, subjectName=current)}} der SuS."
+                                }
+                            ]
+                        },
+                        "Die besten Ergebnisse wurden von Klasse {{selectShareTarget(id=bestCurrentSubjectClass, target=school, levelAlias=ge_3, scope=classInSubject, subjectName=current, mode=max, field=className)}} erzielt. Dort liegen {{subjectShare(target=selection:bestCurrentSubjectClass, levelAlias=ge_3)}} der SuS auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_3, skipBlock=true)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Ergebniszusammenfassung+Fach}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "alarm",
+                    "blocks": [
+                        "Folgende Klassen liegen unterhalb des Landesschnitts: {{listStateComparisonClasses(target=school, levelAlias=ge_3, comparison=lt, subjectName=current)}}.",
+                        {
+                            "text": "Höchstens auf Kompetenzstufe {{standardBands(levelAlias=e_1, skipBlock=true)}} liegen in den Klassen:",
+                            "sublist": [
+                                {
+                                    "repeat": "classes",
+                                    "filter": {
+                                        "subjectName": "current"
+                                    },
+                                    "template": "[[quotedClassName]] mit {{subjectShare(target=class:current, levelAlias=e_1, subjectName=current)}} der SuS."
+                                }
+                            ]
+                        },
+                        "Die schwächsten Ergebnisse wurden von Klasse {{selectShareTarget(id=worstCurrentSubjectClass, target=school, levelAlias=ge_3, scope=classInSubject, subjectName=current, mode=min, field=className)}} erzielt. Dort liegen {{subjectShare(target=selection:worstCurrentSubjectClass, levelAlias=le_3)}} der SuS höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_3, skipBlock=true)}}."
+                    ]
+                }
+            ]
+        },
+        "overviewSchoolSpecific": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Fächerübergreifend liegen {{shareRange(target=school, levelAlias=ge_3)}} der SuS auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_3, skipBlock=true)}}.",
+                        "{{shareRange(target=school, levelAlias=e_1)}} der SuS liegen dabei höchstens auf Kompetenzstufe {{standardBands(levelAlias=e_1, skipBlock=true)}}.",
+                        "Der größte Unterschied besteht zwischen {{selectShareTarget(id=highestOverviewSchoolDomain, target=school, levelAlias=ge_3, scope=subjectDomainShare, mode=max, field=subjectDomainLabel)}} und {{selectShareTarget(id=lowestOverviewSchoolDomain, target=school, levelAlias=ge_3, scope=subjectDomainShare, mode=min, field=subjectDomainLabel)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Ergebniszusammenfassung+Gesamt}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "praise",
+                    "blocks": [
+                        "In folgenden Fächern liegt die Schule oberhalb des Landesschnitts: {{listStateComparisonSubjects(target=school, levelAlias=ge_3, comparison=gt, aggregation=anyDomain)}}.",
+                        "Die besten Ergebnisse wurden im Fach {{selectShareTarget(id=bestOverviewSchoolDomain, target=school, levelAlias=ge_3, scope=subjectDomainShare, mode=max, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:bestOverviewSchoolDomain, levelAlias=ge_3)}} der SuS auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_3, skipBlock=true)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Leitfragen+Gesamt}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "alarm",
+                    "blocks": [
+                        "In folgenden Fächern liegt die Schule unterhalb des Landesschnitts: {{listStateComparisonSubjects(target=school, levelAlias=ge_3, comparison=lt, aggregation=anyDomain)}}.",
+                        "Die schwächsten Ergebnisse wurden im Fach {{selectShareTarget(id=worstOverviewSchoolDomain, target=school, levelAlias=ge_3, scope=subjectDomainShare, mode=min, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:worstOverviewSchoolDomain, levelAlias=le_3)}} der SuS höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_3, skipBlock=true)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Leitfragen+Gesamt}}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "overviewClassSpecific": {
+            "sections": [
+                {
+                    "type": "general",
+                    "materialLinkSubjectMode": "extrema",
+                    "blocks": [
+                        {
+                            "text": "Fächerübergreifend liegen {{shareRange(target=class:current, levelAlias=ge_3)}} der SuS auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_3, skipBlock=true)}}.",
+                            "sublist": [
+                                {
+                                    "repeat": "subjects",
+                                    "filter": {
+                                        "className": "current"
+                                    },
+                                    "template": "Im Fach [[quotedSubjectDisplayName]] liegt dieser Wert bei {{subjectShare(target=class:current, levelAlias=ge_3, subjectName=current)}}."
+                                }
+                            ]
+                        },
+                        "Der größte Unterschied besteht zwischen {{selectShareTarget(id=highestCurrentClassSubjectDomain, target=class:current, levelAlias=ge_3, scope=subjectDomainShare, mode=max, field=subjectDomainLabel)}} und {{selectShareTarget(id=lowestCurrentClassSubjectDomain, target=class:current, levelAlias=ge_3, scope=subjectDomainShare, mode=min, field=subjectDomainLabel)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Übersicht+Fach}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "praise",
+                    "blocks": [
+                        "In folgenden Fächern liegen die Ergebnisse der Klasse oberhalb des Landesschnitts: {{listStateComparisonSubjects(target=class:current, levelAlias=ge_3, comparison=gt, aggregation=anyDomain)}}.",
+                        {
+                            "text": "Kompetenzstufe {{standardBands(levelAlias=e_5, skipBlock=true)}} wird in den Fächern erreicht:",
+                            "sublist": [
+                                {
+                                    "repeat": "subjects",
+                                    "filter": {
+                                        "className": "current"
+                                    },
+                                    "template": "[[quotedSubjectDisplayName]] mit {{subjectShare(target=class:current, levelAlias=e_5, subjectName=current)}} der SuS."
+                                }
+                            ]
+                        },
+                        "Die besten Ergebnisse wurden im Fach {{selectShareTarget(id=bestCurrentClassDomain, target=class:current, levelAlias=ge_3, scope=subjectDomainShare, mode=max, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:bestCurrentClassDomain, levelAlias=ge_3)}} der SuS auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_3, skipBlock=true)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Leitfragen+Gesamt}}"
+                        }
+                    ]
+                },
+                {
+                    "type": "alarm",
+                    "blocks": [
+                        "In folgenden Fächern liegen die Ergebnisse der Klasse unterhalb des Landesschnitts: {{listStateComparisonSubjects(target=class:current, levelAlias=ge_3, comparison=lt, aggregation=anyDomain)}}.",
+                        {
+                            "text": "Höchstens auf Kompetenzstufe {{standardBands(levelAlias=e_1, skipBlock=true)}} liegen in den Fächern:",
+                            "sublist": [
+                                {
+                                    "repeat": "subjects",
+                                    "filter": {
+                                        "className": "current"
+                                    },
+                                    "template": "[[quotedSubjectDisplayName]] insgesamt {{subjectShare(target=class:current, levelAlias=e_1, subjectName=current)}} der SuS."
+                                }
+                            ]
+                        },
+                        "Die schwächsten Ergebnisse wurden im Fach {{selectShareTarget(id=worstCurrentClassDomain, target=class:current, levelAlias=ge_3, scope=subjectDomainShare, mode=min, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:worstCurrentClassDomain, levelAlias=le_3)}} der SuS höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_3, skipBlock=true)}}.",
+                        {
+                            "type": "link",
+                            "token": "{{Leitfragen+Gesamt}}"
+                        }
+                    ]
+                }
+            ]
+        },
+        "overviewSelfEfficacy": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Schulweit liegt der mittlere Selbstwirksamkeitswert bei {{summaryEntity(namespace=selfEfficacy, entity=school, field=mean, format=decimal)}} (Median {{summaryEntity(namespace=selfEfficacy, entity=school, field=median, format=decimal)}}, n={{summaryEntity(namespace=selfEfficacy, entity=school, field=count, format=integer)}}).",
+                        "{{summaryEntity(namespace=selfEfficacy, entity=school, field=goodOrExcellentShare, format=percent)}} der SuS vergeben Ratings von mindestens 3,0; {{summaryEntity(namespace=selfEfficacy, entity=school, field=lowOrMediumShare, format=percent)}} bleiben unter 3,0.",
+                        "Zwischen den Klassen mit dem höchsten und niedrigsten Mittelwert liegt eine Differenz von {{summaryContext(namespace=selfEfficacy, field=classMeanDifference, format=decimal)}} Punkten: von {{summaryEntity(namespace=selfEfficacy, entity=worstClass, field=mean, format=decimal, skipBlock=true)}} in Klasse {{summaryEntity(namespace=selfEfficacy, entity=worstClass, field=className, skipBlock=true)}} zu {{summaryEntity(namespace=selfEfficacy, entity=bestClass, field=mean, format=decimal, skipBlock=true)}} in Klasse {{summaryEntity(namespace=selfEfficacy, entity=bestClass, field=className, skipBlock=true)}}."
+                    ]
+                },
+                {
+                    "type": "praise",
+                    "blocks": [
+                        "Die höchste mittlere Selbstwirksamkeit zeigt Klasse {{summaryEntity(namespace=selfEfficacy, entity=bestClass, field=className, skipBlock=true)}} mit {{summaryEntity(namespace=selfEfficacy, entity=bestClass, field=mean, format=decimal, skipBlock=true)}}.",
+                        "{{summaryEntity(namespace=selfEfficacy, entity=bestClass, field=goodOrExcellentShare, format=percent, skipBlock=true)}} der SuS dieser Klasse vergeben Ratings von mindestens 3,0; {{summaryEntity(namespace=selfEfficacy, entity=bestClass, field=excellentShare, format=percent, skipBlock=true)}} liegen sogar im Bereich 4,0-5,0.",
+                        "Der Anteil unter 3,0 liegt dort nur bei {{summaryEntity(namespace=selfEfficacy, entity=bestClass, field=lowOrMediumShare, format=percent, skipBlock=true)}}."
+                    ]
+                },
+                {
+                    "type": "alarm",
+                    "blocks": [
+                        "Die niedrigste mittlere Selbstwirksamkeit zeigt Klasse {{summaryEntity(namespace=selfEfficacy, entity=worstClass, field=className, skipBlock=true)}} mit {{summaryEntity(namespace=selfEfficacy, entity=worstClass, field=mean, format=decimal, skipBlock=true)}}.",
+                        "{{summaryEntity(namespace=selfEfficacy, entity=worstClass, field=lowOrMediumShare, format=percent, skipBlock=true)}} der SuS dieser Klasse bleiben unter 3,0.",
+                        "Ratings von mindestens 3,0 erreichen dort insgesamt nur {{summaryEntity(namespace=selfEfficacy, entity=worstClass, field=goodOrExcellentShare, format=percent, skipBlock=true)}}; im Bereich 4,0-5,0 liegen {{summaryEntity(namespace=selfEfficacy, entity=worstClass, field=excellentShare, format=percent, skipBlock=true)}}."
+                    ]
+                }
+            ]
+        },
+        "comparison": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Der {{summaryContext(namespace=comparison, field=shareLabel, skipBlock=true)}} beträgt in der Gruppe {{summaryEntity(namespace=comparison, entity=group1, field=label)}} {{summaryEntity(namespace=comparison, entity=group1, field=share, format=percent, skipBlock=true)}} und in der Gruppe {{summaryEntity(namespace=comparison, entity=group2, field=label)}} {{summaryEntity(namespace=comparison, entity=group2, field=share, format=percent, skipBlock=true)}}.",
+                        "Das mittlere Rating liegt in der Gruppe {{summaryEntity(namespace=comparison, entity=group1, field=label)}} bei {{summaryEntity(namespace=comparison, entity=group1, field=mean, format=decimal, skipBlock=true)}} und in der Gruppe {{summaryEntity(namespace=comparison, entity=group2, field=label)}} bei {{summaryEntity(namespace=comparison, entity=group2, field=mean, format=decimal, skipBlock=true)}}.",
+                        "Die Standardabweichung liegt in der Gruppe {{summaryEntity(namespace=comparison, entity=group1, field=label)}} bei {{summaryEntity(namespace=comparison, entity=group1, field=standardDeviation, format=decimal, skipBlock=true)}} und in der Gruppe {{summaryEntity(namespace=comparison, entity=group2, field=label)}} bei {{summaryEntity(namespace=comparison, entity=group2, field=standardDeviation, format=decimal, skipBlock=true)}}.",
+                        "Die Ratings reichen in der Gruppe {{summaryEntity(namespace=comparison, entity=group1, field=label)}} von {{summaryEntity(namespace=comparison, entity=group1, field=min, format=decimal, skipBlock=true)}} bis {{summaryEntity(namespace=comparison, entity=group1, field=max, format=decimal, skipBlock=true)}} und in der Gruppe {{summaryEntity(namespace=comparison, entity=group2, field=label)}} von {{summaryEntity(namespace=comparison, entity=group2, field=min, format=decimal, skipBlock=true)}} bis {{summaryEntity(namespace=comparison, entity=group2, field=max, format=decimal, skipBlock=true)}}."
+                    ]
+                }
+            ]
+        },
+        "comparisonCompetency": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Der Anteil auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_3, skipBlock=true)}} beträgt in der Gruppe {{summaryEntity(namespace=comparison, entity=group1, field=label)}} {{summaryEntity(namespace=comparison, entity=group1, field=share, format=percent, skipBlock=true)}} und in der Gruppe {{summaryEntity(namespace=comparison, entity=group2, field=label)}} {{summaryEntity(namespace=comparison, entity=group2, field=share, format=percent, skipBlock=true)}}."
+                    ]
+                }
+            ]
+        },
+        "comparisonRating": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Der Anteil mit gutem oder sehr gutem Rating beträgt in der Gruppe {{summaryEntity(namespace=comparison, entity=group1, field=label)}} {{summaryEntity(namespace=comparison, entity=group1, field=share, format=percent, skipBlock=true)}} und in der Gruppe {{summaryEntity(namespace=comparison, entity=group2, field=label)}} {{summaryEntity(namespace=comparison, entity=group2, field=share, format=percent, skipBlock=true)}}.",
+                        "Das mittlere Rating liegt in der Gruppe {{summaryEntity(namespace=comparison, entity=group1, field=label)}} bei {{summaryEntity(namespace=comparison, entity=group1, field=mean, format=decimal, skipBlock=true)}} und in der Gruppe {{summaryEntity(namespace=comparison, entity=group2, field=label)}} bei {{summaryEntity(namespace=comparison, entity=group2, field=mean, format=decimal, skipBlock=true)}}.",
+                        "Die Standardabweichung liegt in der Gruppe {{summaryEntity(namespace=comparison, entity=group1, field=label)}} bei {{summaryEntity(namespace=comparison, entity=group1, field=standardDeviation, format=decimal, skipBlock=true)}} und in der Gruppe {{summaryEntity(namespace=comparison, entity=group2, field=label)}} bei {{summaryEntity(namespace=comparison, entity=group2, field=standardDeviation, format=decimal, skipBlock=true)}}.",
+                        "Die Ratings reichen in der Gruppe {{summaryEntity(namespace=comparison, entity=group1, field=label)}} von {{summaryEntity(namespace=comparison, entity=group1, field=min, format=decimal, skipBlock=true)}} bis {{summaryEntity(namespace=comparison, entity=group1, field=max, format=decimal, skipBlock=true)}} und in der Gruppe {{summaryEntity(namespace=comparison, entity=group2, field=label)}} von {{summaryEntity(namespace=comparison, entity=group2, field=min, format=decimal, skipBlock=true)}} bis {{summaryEntity(namespace=comparison, entity=group2, field=max, format=decimal, skipBlock=true)}}."
+                    ]
+                }
+            ]
+        },
+        "comparisonPoints": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Ausgewertet wurden in der Gruppe {{summaryEntity(namespace=comparison, entity=group1, field=label)}} {{summaryEntity(namespace=comparison, entity=group1, field=n, format=integer, skipBlock=true)}} SuS und in der Gruppe {{summaryEntity(namespace=comparison, entity=group2, field=label)}} {{summaryEntity(namespace=comparison, entity=group2, field=n, format=integer, skipBlock=true)}} SuS.",
+                        "Die mittlere Lösungsquote liegt in der Gruppe {{summaryEntity(namespace=comparison, entity=group1, field=label)}} bei {{summaryEntity(namespace=comparison, entity=group1, field=mean, format=decimal, skipBlock=true)}} % und in der Gruppe {{summaryEntity(namespace=comparison, entity=group2, field=label)}} bei {{summaryEntity(namespace=comparison, entity=group2, field=mean, format=decimal, skipBlock=true)}} %.",
+                        "Die Standardabweichung der Lösungsquote liegt in der Gruppe {{summaryEntity(namespace=comparison, entity=group1, field=label)}} bei {{summaryEntity(namespace=comparison, entity=group1, field=standardDeviation, format=decimal, skipBlock=true)}} Prozentpunkten und in der Gruppe {{summaryEntity(namespace=comparison, entity=group2, field=label)}} bei {{summaryEntity(namespace=comparison, entity=group2, field=standardDeviation, format=decimal, skipBlock=true)}} Prozentpunkten.",
+                        "Die Lösungsquoten reichen in der Gruppe {{summaryEntity(namespace=comparison, entity=group1, field=label)}} von {{summaryEntity(namespace=comparison, entity=group1, field=min, format=decimal, skipBlock=true)}} % bis {{summaryEntity(namespace=comparison, entity=group1, field=max, format=decimal, skipBlock=true)}} % und in der Gruppe {{summaryEntity(namespace=comparison, entity=group2, field=label)}} von {{summaryEntity(namespace=comparison, entity=group2, field=min, format=decimal, skipBlock=true)}} % bis {{summaryEntity(namespace=comparison, entity=group2, field=max, format=decimal, skipBlock=true)}} %.",
+                        "Beide Gruppen werden über Klassen hinweg gebildet und können daher unterschiedliche Testhefte bearbeitet haben; außerdem zählt die Lösungsquote je SuS nur die selbst bearbeiteten Aufgaben. Für einen Vergleich auf gemeinsamer Skala wechseln Sie zur Kennzahl \"Kompetenzstufen\"."
+                    ]
+                }
+            ]
+        }
+    }
+}

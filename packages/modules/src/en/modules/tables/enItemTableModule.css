@@ -1,0 +1,46 @@
+/**
+ * EN item table — the task-grouping (data tree) skin.
+ *
+ * The EN table rules every view shares live in src/en/enAppModule.css; only what the
+ * grouped item table itself emits belongs here.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* ==========================================================================
+       Data tree styles — task grouping (grouped view)
+       ========================================================================== */
+
+    .tabulator {
+        /* Neutral surfaces: the parent row is structure, and its hover must not look
+           like the primary-tinted selection. */
+        --en-task-group-row-bg: var(--color-background-secondary);
+        --en-task-group-row-hover-bg: var(--color-background-muted);
+    }
+
+    .tabulator .tabulator-row.tabulator-tree-level-0 {
+        background-color: var(--en-task-group-row-bg);
+        font-weight: var(--fw-bold);
+    }
+
+    .tabulator .tabulator-row.tabulator-tree-level-0:hover {
+        background-color: var(--en-task-group-row-hover-bg);
+    }
+
+    .tabulator .tabulator-row.tabulator-tree-level-1 {
+        background-color: var(--table-row-bg);
+    }
+
+    /* ==========================================================================
+       Task item count badge
+       ========================================================================== */
+
+    .task-item-count {
+        font-size: var(--fs-sm);
+        color: var(--table-text-placeholder);
+        margin-inline-start: var(--space-xs);
+    }
+}

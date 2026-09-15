@@ -1,0 +1,58 @@
+/**
+ * item View Specific Styles
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    /* Grid Layout for Item View 03 - Header now in shared container */
+
+    /* Main container - Grid layout
+       2 rows x 4 columns:
+       - Top row (2fr): Lollipop Chart (cols 1-4 spanning full width)
+       - Bottom row (3fr): Table (cols 1-3 spanning) | Detail (col 4)
+       All columns equal width (1fr each) */
+    .en-item-view {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 2fr 3fr;
+    }
+
+    /* Chart section - top row, spanning all columns */
+    .en-item-view > .chart-section {
+        grid-column: 1 / 5;
+        grid-row: 1 / 2;
+    }
+
+    /* Table section - bottom left, spanning 3 columns */
+    .en-item-view > .table-section {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+    }
+
+    /* Table wrapper/container rules → shared in table-host.css */
+
+    /* Detail section - bottom right, 1 column */
+    .en-item-view > .detail-section {
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+    }
+
+    /* Item Detail Panel styles are in modules/item-detail.css */
+
+    @media (max-width: 1280px) {
+        .en-item-view {
+            grid-template-columns: 1fr;
+            grid-template-rows: 100% 100% 100%;
+        }
+
+        .en-item-view > .chart-section,
+        .en-item-view > .table-section,
+        .en-item-view > .detail-section {
+            grid-column: auto;
+            grid-row: auto;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+/**
+ * Summary / Überblick view (05) styles
+ *
+ * The SL landing view: one card per subject×domain, laid out in a responsive
+ * grid of at most three cards per row, filling the view when they fit. Header
+ * and navigation cards are managed by SlAppModule. Generic card styles come
+ * from @tba3/module-base/modules/contentModule.css — only summary-specific rules
+ * live here, keyed on owner-local classes.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    /* ==========================================================================
+       View container
+       ========================================================================== */
+
+    .sl-summary-view {
+        --view-base-padding-md: 0.75rem;
+
+        /* Floor for the chart surface — the school value box plus a full-height bar
+           need this much. Cards grow past it when the grid has room to spare. */
+        --summary-chart-min-height: 180px;
+        /* Card header plus the padding the shared card shell puts around the body.
+           */
+        --summary-card-chrome-height: 4.5rem;
+        --summary-row-min-height: calc(
+            var(--summary-chart-min-height) + var(--summary-card-chrome-height)
+        );
+    }
+
+    @media (max-width: 1024px) {
+        .sl-summary-view {
+            --summary-chart-min-height: 160px;
+        }
+    }
+
+    /* ==========================================================================
+       Rows grid — up to three cards per row, filling the view when they fit
+       ========================================================================== */
+
+    /* Columns: no breakpoint on the count. The minimum card width depends on how
+       many columns each chart draws (classes plus the visible averages), so the
+       view measures it and writes --summary-row-min-width; the third-of-a-row
+       floor caps auto-fit at three cards even where more would fit. `min(…, 100%)`
+       keeps a single narrow card from overflowing when even one column does not
+       fit, and the `1fr` max stretches whatever tracks were placed to fill the row.
+       A short last row keeps the column width rather than spreading, so bar
+       spacing stays identical in every card.
+
+       Rows: the floor is what "no scrolling needed" is measured against. Given the
+       room, `1fr` splits the view height evenly over the rows, so every card grows
+       by the same amount — bar heights are drawn against one shared scale, and a
+       taller surface in one card would make an identical deviation look bigger
+       there. Short of it the tracks stay at the floor and this grid scrolls. The
+       floor has to stay a fixed length: a content-based minimum would let the SVG
+       grow its card, which re-renders a taller SVG in turn. */
+    .summary-rows {
+        /* 1px off the third absorbs sub-pixel rounding that would otherwise drop
+           the row to two cards; the `1fr` max hands the width straight back. */
+        --summary-column-cap: calc((100% - 2 * var(--layout-gap) - 1px) / 3);
+
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(
+                min(max(var(--summary-row-min-width, 620px), var(--summary-column-cap)), 100%),
+                1fr
+            )
+        );
+        grid-auto-rows: minmax(var(--summary-row-min-height), 1fr);
+        flex: 1;
+        min-height: 0;
+        gap: var(--layout-gap);
+        overflow-y: auto;
+    }
+
+    /* No height of its own: the shared card shell already stretches the body to
+       fill the card, so the chart surface follows the row track. Equal-height
+       tracks are what keeps the shared bar scale honest. */
+    .summary-row-body svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    /* ==========================================================================
+       Empty state
+       ========================================================================== */
+
+    /* Shown when no row could be built — most often because the export's competence
+       scale names no KMK standard, so every metric is unknown rather than 0 %.
+       Reads as prose rather than as a card: there is no measurement to frame. */
+    .summary-empty-state {
+        max-width: 60ch;
+        margin: auto;
+        padding: var(--view-base-padding-md);
+        color: var(--text-secondary);
+        text-align: center;
+        line-height: var(--lh-text);
+    }
+}

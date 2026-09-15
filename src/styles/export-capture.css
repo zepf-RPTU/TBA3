@@ -1,0 +1,71 @@
+/**
+ * Export capture stage (src/common/export/exportCapture.js)
+ *
+ * The module card is cloned into an off-screen stage, controls are removed in
+ * JS, and these rules only unclip content, stop motion and size print tables.
+ * Shared CSS: owns .module-container / .content-module-body targeting here.
+ */
+
+.export-capture-stage {
+    position: fixed;
+    top: 0;
+    left: -100000px;
+    z-index: -1;
+    pointer-events: none;
+    /* The capture is what the reader sees: a card exported from the dark scheme is a
+       dark image, so the stage takes the surface, not white (the same colour the
+       rasterizer fills — see captureExportRoot). */
+    background: var(--color-background);
+}
+
+/* Let every card and body grow to its content; the capture sets an explicit
+   pixel height inline on chart bodies (their SVG sizes via height:100%). */
+[data-exporting] .module-container,
+[data-exporting] .content-module-body {
+    flex: none;
+    height: auto;
+    max-height: none;
+    min-height: 0;
+    overflow: visible;
+}
+
+/* !important is a deliberate exception to css/no-important (same idiom as the
+   reduced-motion reset in foundation/interactive.css): a broad reset cannot
+   otherwise beat component transition/animation declarations, and a capture
+   must never rasterize a mid-transition frame. */
+/* eslint-disable css/no-important */
+[data-exporting] *,
+[data-exporting] *::before,
+[data-exporting] *::after {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* eslint-enable css/no-important */
+
+/* Legend pills stay as information, not as buttons. */
+[data-exporting] .legend-pill {
+    cursor: default;
+    box-shadow: none;
+}
+
+/* Glossary terms are hover affordances: keep the words, drop the dotted mark
+   (border-bottom on HTML, text-decoration on SVG text). */
+[data-exporting] .glossary-term {
+    border-bottom: none;
+}
+
+[data-exporting] text.glossary-term,
+[data-exporting] tspan.glossary-term {
+    text-decoration: none;
+}
+
+/* Tabulator ships no styles for its HTML export output. */
+[data-exporting] .export-print-table {
+    overflow: visible;
+}
+
+[data-exporting] .tabulator-print-table {
+    width: 100%;
+    border-collapse: collapse;
+}

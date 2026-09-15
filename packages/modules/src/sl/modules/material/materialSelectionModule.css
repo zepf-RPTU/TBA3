@@ -1,0 +1,339 @@
+/**
+ * SL material module styles
+ *
+ * MaterialSelectionModule shell and report content surfaces.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* Material Selection Module */
+    .material-selection-module {
+        /* Ink pushed a step past --text-color. Mixing toward --secondary-color rather
+           than black: it is near-black in the light scheme (same result) and the
+           dark scheme's own ink stays readable on its surface. */
+        --material-metric-border-color: color-mix(
+            in srgb,
+            var(--text-color) 85%,
+            var(--secondary-color)
+        );
+        --material-distribution-stack-border: color-mix(
+            in srgb,
+            var(--text-color) 12%,
+            transparent
+        );
+        --material-distribution-stack-bg: color-mix(in srgb, var(--text-color) 5%, transparent);
+        --material-distribution-separator: color-mix(
+            in srgb,
+            var(--color-background) 75%,
+            transparent
+        );
+        --material-distribution-label-color: color-mix(
+            in srgb,
+            var(--text-color) 92%,
+            var(--secondary-color)
+        );
+        display: flex;
+        flex-direction: column;
+        gap: var(--layout-gap);
+    }
+
+    /* ==========================================================================
+       Content area
+       ========================================================================== */
+
+    .material-content-area {
+        padding: var(--card-pad);
+        overflow-y: auto;
+    }
+
+    .material-page {
+        display: flex;
+        flex-direction: column;
+        gap: var(--card-pad-loose);
+        padding: 0;
+    }
+
+    .material-page-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            'title badge'
+            'subtitle badge';
+        align-items: flex-start;
+        row-gap: calc(var(--control-gap) / 2);
+        gap: var(--layout-gap-loose);
+    }
+
+    .material-page-title {
+        grid-area: title;
+        margin: 0;
+        font-size: var(--fs-lg);
+        line-height: var(--lh-ui);
+        color: var(--text-color);
+    }
+
+    .material-page-subtitle {
+        grid-area: subtitle;
+    }
+
+    .material-page-subtitle,
+    .material-section-title,
+    .material-inline-note,
+    .material-under-construction-selection {
+        margin: 0;
+        color: var(--text-secondary);
+    }
+
+    .material-page-badge {
+        grid-area: badge;
+        display: inline-flex;
+        gap: var(--control-gap);
+        align-items: center;
+        justify-content: center;
+        min-width: 14rem;
+        padding: var(--layout-gap) var(--layout-gap-relaxed);
+        border: 1px solid var(--color-border);
+        color: var(--text-color);
+        font-weight: var(--fw-bold);
+        text-align: center;
+    }
+
+    .material-section,
+    .material-distribution-group {
+        display: flex;
+        flex-direction: column;
+        gap: var(--layout-gap-relaxed);
+    }
+
+    .material-metric-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+
+    .material-metric-table th,
+    .material-metric-table td {
+        border: 1px solid var(--material-metric-border-color);
+        padding: var(--layout-pad) var(--layout-gap-relaxed);
+        text-align: start;
+        vertical-align: top;
+        color: var(--text-color);
+    }
+
+    .material-metric-table th {
+        font-weight: var(--fw-bold);
+    }
+
+    .material-metric-table td {
+        font-variant-numeric: tabular-nums;
+    }
+
+    .material-metric-stack {
+        display: flex;
+        flex-direction: column;
+        gap: var(--control-gap);
+    }
+
+    .material-metric-range {
+        color: var(--text-secondary);
+    }
+
+    .material-delta {
+        white-space: nowrap;
+    }
+
+    .material-delta--positive {
+        color: var(--success-color);
+    }
+
+    .material-delta--negative {
+        color: var(--error-color);
+    }
+
+    .material-overview-layout {
+        display: grid;
+        grid-template-columns: minmax(16rem, 20rem) minmax(0, 1fr);
+        gap: var(--space-lg);
+        align-items: start;
+    }
+
+    .material-distribution-column {
+        display: flex;
+        flex-direction: column;
+        gap: var(--layout-gap-loose);
+    }
+
+    .material-distribution-group-title {
+        margin: 0;
+        font-weight: var(--fw-bold);
+        color: var(--text-color);
+    }
+
+    .material-distribution-group-panels {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--layout-gap-relaxed);
+    }
+
+    .material-distribution-panel {
+        display: flex;
+        flex-direction: column;
+        padding: var(--layout-pad);
+        border: 1px solid var(--color-border);
+    }
+
+    .material-distribution-panel-body {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: var(--layout-gap);
+        align-items: stretch;
+        min-height: 11.5rem;
+    }
+
+    .material-distribution-panel-title {
+        margin: 0;
+        font-size: var(--fs-base);
+        font-weight: var(--fw-bold);
+        color: var(--text-color);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-inline-end: calc(var(--control-gap) / 2);
+        border-inline-end: 1px solid var(--color-border);
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+    }
+
+    .material-distribution-panel-empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-secondary);
+    }
+
+    .material-distribution-chart {
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+        min-height: 10rem;
+    }
+
+    .material-distribution-stack-vertical {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 5.1rem;
+        min-width: 4.1rem;
+        overflow: hidden;
+        border: 1px solid var(--material-distribution-stack-border);
+        border-radius: var(--radius-md);
+        background: var(--material-distribution-stack-bg);
+    }
+
+    .material-distribution-stack-segment {
+        flex: var(--distribution-share);
+        min-height: 0.35rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: calc(var(--control-gap) / 2);
+        background-color: var(--ks-band-color);
+    }
+
+    .material-distribution-stack-segment + .material-distribution-stack-segment {
+        box-shadow: inset 0 1px 0 var(--material-distribution-separator);
+    }
+
+    .material-distribution-stack-segment-label {
+        font-size: var(--fs-base);
+        line-height: var(--lh-icon);
+        font-weight: var(--fw-bold);
+        color: var(--material-distribution-label-color);
+        text-align: center;
+        pointer-events: none;
+    }
+
+    .material-distribution-stack-segment.is-compact {
+        padding: 0;
+    }
+
+    .material-copy-column {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    .material-copy-block h3 {
+        margin: 0 0 var(--layout-gap-relaxed);
+        color: var(--text-color);
+    }
+
+    .material-copy-block ul {
+        margin: 0;
+        padding-inline-start: var(--list-indent);
+        display: grid;
+        gap: var(--layout-gap-relaxed);
+    }
+
+    .material-copy-block li {
+        margin: 0;
+        color: var(--text-color);
+    }
+
+    .material-template-placeholder {
+        color: var(--text-color);
+        font-weight: var(--fw-bold);
+        font-style: italic;
+    }
+
+    .material-best-metric {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--control-gap);
+    }
+
+    .material-best-metric.is-best {
+        font-weight: var(--fw-bold);
+    }
+
+    .material-best-metric-icon {
+        font-size: var(--fs-base);
+        color: var(--text-color);
+    }
+
+    .material-inline-symbol {
+        display: inline-flex;
+        vertical-align: text-bottom;
+    }
+
+    .material-result-row-label {
+        white-space: nowrap;
+    }
+
+    .material-inline-note {
+        font-size: var(--fs-base);
+    }
+
+    /* Custom scrollbar for content area */
+    .material-content-area::-webkit-scrollbar {
+        width: var(--space-sm);
+    }
+
+    .material-content-area::-webkit-scrollbar-track {
+        background: var(--color-background-secondary);
+        border-radius: var(--radius-sm);
+    }
+
+    .material-content-area::-webkit-scrollbar-thumb {
+        background: var(--color-border);
+        border-radius: var(--radius-sm);
+    }
+
+    .material-content-area::-webkit-scrollbar-thumb:hover {
+        background: var(--primary-color);
+    }
+}

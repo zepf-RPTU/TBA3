@@ -1,0 +1,138 @@
+/**
+ * MA help view: document-style page inside the shared .view-base shell (sections, cards, back navigation).
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .help-page {
+        width: 100%;
+        max-width: 72rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-lg);
+        padding-bottom: var(--content-panel-padding);
+    }
+
+    .help-section {
+        display: flex;
+        flex-direction: column;
+        gap: var(--layout-gap);
+    }
+
+    .help-section-title {
+        margin: 0;
+        color: var(--text-color);
+        line-height: var(--lh-ui);
+    }
+
+    .help-card-grid {
+        align-items: start;
+    }
+
+    .help-card {
+        display: flex;
+        flex-direction: column;
+        align-self: start;
+        gap: var(--layout-gap-loose);
+        min-height: max-content;
+        padding: var(--card-pad-loose);
+        background-color: var(--color-card-background);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .help-card-header {
+        display: flex;
+        align-items: center;
+        gap: var(--layout-gap-relaxed);
+        min-width: 0;
+        padding-bottom: var(--layout-gap-relaxed);
+        border-bottom: 2px solid var(--primary-color);
+    }
+
+    .help-card-header h3 {
+        margin: 0;
+        font-size: var(--fs-lg);
+    }
+
+    .help-card-icon {
+        font-size: var(--fs-lg);
+        line-height: var(--lh-icon);
+        flex-shrink: 0;
+    }
+
+    .help-card-content {
+        min-width: 0;
+        color: var(--text-secondary);
+        line-height: var(--lh-text);
+        /* Cap the measure on the prose, not the page: past ~70 characters the eye
+           loses the next line. */
+        max-width: 70ch;
+    }
+
+    .help-card-content p {
+        margin: 0 0 var(--layout-gap-relaxed) 0;
+    }
+
+    /* Back navigation card. The [hidden] rule is required because this author-level
+       `display: flex` otherwise beats the UA `[hidden] { display: none }` rule,
+       leaving HelpViewModule's `backNav.hidden = true` with no effect. */
+    .help-back-nav {
+        display: flex;
+    }
+
+    .help-back-nav[hidden] {
+        display: none;
+    }
+
+    .help-back-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--layout-gap-relaxed);
+        padding: var(--layout-gap-relaxed) var(--card-pad);
+        background-color: var(--color-card-background);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+        color: var(--text-color);
+        font-size: var(--fs-base);
+        cursor: pointer;
+        transition:
+            background-color 0.15s ease,
+            border-color 0.15s ease;
+    }
+
+    .help-back-btn:hover {
+        background-color: var(--color-border);
+        border-color: var(--primary-color);
+    }
+
+    .help-back-icon {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .help-card-content p:last-child {
+        margin-bottom: 0;
+    }
+
+    .help-card-content ul {
+        margin: var(--layout-gap) 0 0;
+        padding-inline-start: var(--list-indent);
+    }
+
+    .help-card-content li {
+        margin: var(--control-gap) 0;
+    }
+
+    .help-card-content strong {
+        color: var(--text-color);
+        font-weight: var(--fw-bold);
+    }
+}

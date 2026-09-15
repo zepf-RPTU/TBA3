@@ -1,0 +1,267 @@
+/**
+ * Glossary Popup Styles
+ * 
+ * Styles for inline glossary term annotations and their hover popups.
+ * Follows the conventions from tooltip.css but with key differences:
+ * - pointer-events: auto (popup content is interactive/scrollable)
+ * - Positioned relative to the annotated term element (not cursor)
+ * - Triggered by hover with delay (not mousemove)
+ * - Larger content area for rich HTML explanations
+ */
+
+/* ==========================================================================
+   CSS variables
+   ========================================================================== */
+
+:root {
+    /* Popup appearance */
+    --glossary-popup-bg: var(--color-background);
+    --glossary-popup-color: var(--text-color);
+    --glossary-popup-border: 1px solid var(--chart-grid-color);
+    --glossary-popup-border-radius: var(--radius-md);
+    --glossary-popup-shadow: var(--shadow-lg);
+
+    /* Spacing */
+    --glossary-popup-padding: var(--notice-padding);
+    --glossary-popup-max-width: 400px;
+    --glossary-popup-min-width: 200px;
+
+    /* Typography */
+    --glossary-popup-line-height: var(--lh-text);
+
+    /* Layout — must be above all overlays (scatterplot-filter: 9999, export:
+       10000) */
+    --glossary-popup-z-index: var(--z-glossary);
+    --glossary-popup-gap: var(--space-sm);
+
+    /* Animation */
+    --glossary-popup-transition: opacity 0.15s ease-in-out, visibility 0.15s ease-in-out;
+
+    /* Term annotation */
+    --glossary-term-border-color: currentColor;
+    --glossary-term-border-style: dotted;
+}
+
+/* ==========================================================================
+   Glossary term annotation
+   ========================================================================== */
+
+.glossary-term {
+    border-bottom: 1px var(--glossary-term-border-style) var(--glossary-term-border-color);
+    cursor: help;
+    /* Prevent underline from being clipped by line-height */
+    padding-bottom: 1px;
+}
+
+/* Inside trait badges — already styled as compact badges, suppress dotted
+   underline */
+.trait-item.glossary-term {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Inside Tabulator headers — inherit the header's text color */
+.tabulator .tabulator-header .glossary-term {
+    border-bottom-color: inherit;
+}
+
+/* Inside SVG — use text-decoration instead of border-bottom */
+text.glossary-term,
+tspan.glossary-term {
+    text-decoration: underline dotted;
+    text-decoration-color: var(--glossary-term-border-color);
+    cursor: help;
+}
+
+/* ==========================================================================
+   Glossary popup container
+   ========================================================================== */
+
+/* top/left default to the origin — see the note on `.tooltip` in tooltip.css:
+   an `auto` inset would park this hidden-but-laid-out popup below the fold and
+   make the page taller than the viewport. */
+.glossary-popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    opacity: 0;
+    background: var(--glossary-popup-bg);
+    color: var(--glossary-popup-color);
+    padding: var(--glossary-popup-padding);
+    border: var(--glossary-popup-border);
+    border-radius: var(--glossary-popup-border-radius);
+    box-shadow: var(--glossary-popup-shadow);
+    font-size: var(--fs-sm);
+    line-height: var(--glossary-popup-line-height);
+    max-width: var(--glossary-popup-max-width);
+    min-width: var(--glossary-popup-min-width);
+    z-index: var(--glossary-popup-z-index);
+    pointer-events: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    transition: var(--glossary-popup-transition);
+}
+
+/* Visible state */
+.glossary-popup.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Popup content elements
+   ========================================================================== */
+
+/* Only tap-opened popups carry this button (tooltipService renders it): a hovered
+   popup closes by moving the cursor away, a tapped one has no such gesture and a
+   tablet has no Escape key. Floated out of the flow so the title keeps its full
+   width and its underline; sized from `--touch-target-min` unconditionally rather
+   than waiting for the coarse-pointer pass — it is the one control in the app that
+   exists only for a fingertip, so it never wants the cursor-sized box. */
+.glossary-popup-close {
+    float: inline-end;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--touch-target-min);
+    height: var(--touch-target-min);
+    /* Pull the oversized hit area back into the popup's own padding so the glyph
+       sits in the corner and the title is not pushed down. The two negatives
+       mirror `--glossary-popup-padding` (= `--notice-padding`, `var(--space-md)
+       1.25rem`) component by component; a shorthand token cannot be decomposed,
+       so they are written out and must move with it. */
+    margin: calc(-1 * var(--space-md)) calc(-1 * 1.25rem) 0 var(--space-sm);
+    padding: 0;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--text-color);
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* The glyph, not the box: the button is a fingertip target, the icon inside it
+   stays cursor-sized, the same split `.btn--icon` makes app-wide. */
+.glossary-popup-close svg {
+    width: var(--btn-icon-size);
+    height: var(--btn-icon-size);
+}
+
+.glossary-popup-close:hover {
+    background: var(--color-border-light, #e8e8e8);
+}
+
+.glossary-popup-title {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-base);
+    margin: 0 0 var(--space-sm) 0;
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-border-light, #e8e8e8);
+    color: var(--text-color);
+}
+
+.glossary-popup-body {
+    margin: 0;
+}
+
+/* Style HTML content from glossary body/subtitle entries */
+.glossary-popup-body p {
+    margin: 0 0 var(--space-sm) 0;
+}
+
+.glossary-popup-body p:last-child {
+    margin-bottom: 0;
+}
+
+.glossary-popup-body ul,
+.glossary-popup-body ol {
+    margin: var(--control-gap) 0 var(--layout-gap) 0;
+    padding-inline-start: var(--list-indent);
+}
+
+.glossary-popup-body li {
+    margin-bottom: calc(var(--control-gap) / 2);
+}
+
+.glossary-popup-body b,
+.glossary-popup-body strong {
+    font-weight: var(--fw-bold);
+}
+
+/* Separates the scales of a multi-scale page in the KS/ger popup — see
+   competenceLevelGlossary.js. Not emitted anywhere else. */
+.glossary-popup-body hr {
+    margin: var(--layout-gap) 0;
+    border: 0;
+    border-top: 1px solid var(--color-border-light, #e8e8e8);
+}
+
+/* ==========================================================================
+   GAP BRIDGE — prevents mouseout flickering while crossing the gap
+   ========================================================================== */
+
+/**
+ * An invisible ::before pseudo-element extends the popup's pointer-events
+ * hit area into the gap between the popup and its trigger term. Without this,
+ * the mouse briefly lands on underlying page content while crossing the gap,
+ * which fires mouseout and triggers an unintended hide.
+ *
+ * Direction matches the popup placement set by #positionPopup via
+ * data-placement="below" (popup is below the term → bridge extends upward) or
+ * data-placement="above" (popup is above the term → bridge extends downward). A
+ * 2px overlap beyond the gap ensures no dead zone at the edge.
+ */
+.glossary-popup[data-placement='below']::before,
+.glossary-popup[data-placement='above']::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    inset-inline-end: 0;
+    height: calc(var(--glossary-popup-gap) + 2px);
+}
+
+.glossary-popup[data-placement='below']::before {
+    bottom: 100%;
+}
+
+.glossary-popup[data-placement='above']::before {
+    top: 100%;
+}
+
+/* ==========================================================================
+   NESTED POPUP TERMS (inside popup bodies)
+   ========================================================================== */
+
+/* Glossary terms inside popup bodies should be clearly interactive */
+.glossary-popup-body .glossary-term {
+    border-bottom-color: var(--glossary-term-border-color);
+    cursor: help;
+}
+
+/* ==========================================================================
+   Accessibility
+   ========================================================================== */
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .glossary-popup {
+        border: 2px solid #000;
+    }
+
+    .glossary-term {
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+    }
+
+    .glossary-popup-title {
+        border-bottom-color: #000;
+    }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .glossary-popup {
+        transition: none;
+    }
+}

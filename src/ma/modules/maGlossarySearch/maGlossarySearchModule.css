@@ -1,0 +1,148 @@
+/**
+ * MA glossary search: search field, result list and expandable result items.
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    #ma-help-glossary-search {
+        display: block;
+        flex: none;
+        overflow: visible;
+        padding: var(--layout-pad);
+    }
+
+    .help-search-input {
+        width: 100%;
+        padding: var(--layout-gap-relaxed) var(--card-pad);
+        margin-bottom: var(--layout-gap-relaxed);
+        font-size: var(--fs-base);
+        border: 2px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background: var(--color-card-background);
+    }
+
+    .help-search-input:focus {
+        border-color: var(--primary-color);
+    }
+
+    .help-item-content p:last-child {
+        margin-bottom: 0;
+    }
+
+    .help-item-content ul,
+    .help-item-content ol {
+        margin: var(--layout-gap) 0 0;
+        padding-inline-start: var(--list-indent);
+    }
+
+    .help-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--layout-gap-relaxed);
+    }
+
+    .help-item {
+        min-width: 0;
+        overflow: hidden;
+        background-color: var(--color-card-background);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        transition:
+            border-color 0.2s ease,
+            box-shadow 0.2s ease;
+    }
+
+    .help-item:hover {
+        box-shadow: var(--shadow-sm);
+    }
+
+    .help-item.expanded {
+        border-color: var(--primary-color);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .help-item-header {
+        display: flex;
+        align-items: center;
+        gap: var(--layout-gap);
+        width: 100%;
+        border: 0;
+        text-align: start;
+        color: inherit;
+        font: inherit;
+        justify-content: space-between;
+        padding: var(--notice-padding);
+        background-color: var(--color-card-background);
+        /* The fill above sits in `modules` and would otherwise beat
+           `.interactive-subtle:hover` in `foundation`, which layer order ranks lower
+           whatever its specificity — hence the explicit :hover rule below. */
+        --interactive-hover-bg: var(--light-gray);
+    }
+
+    .help-item-header:hover {
+        background-color: var(--interactive-hover-bg);
+    }
+
+    .help-item.expanded .help-item-header {
+        background-color: var(--light-gray);
+    }
+
+    .help-item-title {
+        margin: 0;
+        flex: 1 1 auto;
+        min-width: 0;
+        color: var(--text-color);
+        font-size: var(--fs-lg);
+        font-weight: var(--fw-bold);
+        line-height: var(--lh-ui);
+        word-wrap: break-word;
+        overflow-wrap: anywhere;
+    }
+
+    .help-item-toggle {
+        margin-inline-start: var(--layout-gap-loose);
+        flex-shrink: 0;
+        color: var(--primary-color);
+        font-size: var(--fs-base);
+        transition: transform 0.2s ease;
+    }
+
+    /* One glyph, turned: the arrow points where the content is going. */
+    .help-item.expanded .help-item-toggle {
+        transform: rotate(180deg);
+    }
+
+    .help-item-content {
+        min-width: 0;
+        max-width: min(100%, 70ch);
+        padding: var(--card-pad-loose);
+        border-top: 1px solid var(--color-border);
+        background-color: var(--color-background-secondary);
+        color: var(--text-color);
+        line-height: var(--lh-text);
+        word-wrap: break-word;
+        overflow-wrap: anywhere;
+    }
+
+    .help-item-content[hidden] {
+        display: none;
+    }
+
+    .help-item-content p {
+        margin: 0 0 var(--layout-gap-loose) 0;
+    }
+
+    .help-item-content li {
+        margin: var(--control-gap) 0;
+    }
+
+    .help-no-results {
+        text-align: center;
+        padding: var(--content-panel-padding);
+        color: var(--text-secondary);
+        font-style: italic;
+    }
+}

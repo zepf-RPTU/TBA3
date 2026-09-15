@@ -1,0 +1,10 @@
+{
+    "note": "Gruppenvergleich",
+    "title": "Gegenüberstellung ausgewählter Gruppen",
+    "messages": {
+        "no-groups": "Für die gewählten Gruppen liegen keine Daten vor. Wählen Sie oben andere Gruppen, ein anderes Fach oder eine andere Darstellung.",
+        "no-success-rates": "Keine Lösungsquoten für dieses Fach verfügbar",
+        "no-self-efficacy": "Keine Selbstwirksamkeitsdaten verfügbar",
+        "no-teaching-quality": "Keine Unterrichtsqualitätsdaten für dieses Fach"
+    }
+}

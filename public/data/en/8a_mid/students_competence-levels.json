@@ -1,0 +1,2434 @@
+﻿[
+    {
+        "id": "b09527e4",
+        "type": "student",
+        "name": "gross fluss.11",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "gross"
+            },
+            {
+                "key": "lastName",
+                "value": "fluss.11"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B2",
+                "nameShort": "B2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "8faa6efa",
+        "type": "student",
+        "name": "laut erdbeere.60",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "trait",
+                "label": "Förderbedarf",
+                "value": "f"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "laut"
+            },
+            {
+                "key": "lastName",
+                "value": "erdbeere.60"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "C1",
+                "nameShort": "C1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "c21064df",
+        "type": "student",
+        "name": "nah wald.50",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "nah"
+            },
+            {
+                "key": "lastName",
+                "value": "wald.50"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "4ba91527",
+        "type": "student",
+        "name": "weit apfel.23",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "weit"
+            },
+            {
+                "key": "lastName",
+                "value": "apfel.23"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "3127cec8",
+        "type": "student",
+        "name": "rund banane.22",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "trait",
+                "label": "nicht-dominant deutsch",
+                "value": "nd"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "rund"
+            },
+            {
+                "key": "lastName",
+                "value": "banane.22"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "ac398bad",
+        "type": "student",
+        "name": "gross orange.57",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "gross"
+            },
+            {
+                "key": "lastName",
+                "value": "orange.57"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "6f932342",
+        "type": "student",
+        "name": "schmal pflaume.19",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "trait",
+                "label": "Klassenwiederholung",
+                "value": "kw"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "schmal"
+            },
+            {
+                "key": "lastName",
+                "value": "pflaume.19"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "360462e0",
+        "type": "student",
+        "name": "breit wiese.57",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "breit"
+            },
+            {
+                "key": "lastName",
+                "value": "wiese.57"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "f8eb6441",
+        "type": "student",
+        "name": "kalt birne.42",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "birne.42"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "003be36b",
+        "type": "student",
+        "name": "kalt sonne.50",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "sonne.50"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "a55ebc47",
+        "type": "student",
+        "name": "weit erdbeere.32",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "weit"
+            },
+            {
+                "key": "lastName",
+                "value": "erdbeere.32"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "C1",
+                "nameShort": "C1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "843b84bd",
+        "type": "student",
+        "name": "weit apfel.41",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "weit"
+            },
+            {
+                "key": "lastName",
+                "value": "apfel.41"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "e8f37573",
+        "type": "student",
+        "name": "hoch orange.15",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "hoch"
+            },
+            {
+                "key": "lastName",
+                "value": "orange.15"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "90b85190",
+        "type": "student",
+        "name": "leise erdbeere.38",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "trait",
+                "label": "Förderbedarf",
+                "value": "f"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "leise"
+            },
+            {
+                "key": "lastName",
+                "value": "erdbeere.38"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "e352987e",
+        "type": "student",
+        "name": "leise traube.96",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "leise"
+            },
+            {
+                "key": "lastName",
+                "value": "traube.96"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "f957fdfc",
+        "type": "student",
+        "name": "gross sonne.81",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "gross"
+            },
+            {
+                "key": "lastName",
+                "value": "sonne.81"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "5785ba01",
+        "type": "student",
+        "name": "breit zitrone.65",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "breit"
+            },
+            {
+                "key": "lastName",
+                "value": "zitrone.65"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "c899fa8f",
+        "type": "student",
+        "name": "jung mond.35",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "jung"
+            },
+            {
+                "key": "lastName",
+                "value": "mond.35"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B2",
+                "nameShort": "B2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "52b77edd",
+        "type": "student",
+        "name": "kalt blume.30",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "blume.30"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "176b1a4e",
+        "type": "student",
+        "name": "nah mond.21",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "trait",
+                "label": "Teilleistungsschwäche Mathematik",
+                "value": "tm"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "nah"
+            },
+            {
+                "key": "lastName",
+                "value": "mond.21"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "a4fd7e68",
+        "type": "student",
+        "name": "hoch wald.80",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "trait",
+                "label": "Förderbedarf",
+                "value": "f"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "hoch"
+            },
+            {
+                "key": "lastName",
+                "value": "wald.80"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "8c2da51d",
+        "type": "student",
+        "name": "nah kirsche.67",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "nah"
+            },
+            {
+                "key": "lastName",
+                "value": "kirsche.67"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "bee1d1c0",
+        "type": "student",
+        "name": "laut berg.35",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "laut"
+            },
+            {
+                "key": "lastName",
+                "value": "berg.35"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "da39668f",
+        "type": "student",
+        "name": "klein banane.12",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "trait",
+                "label": "Teilleistungsstörung Deutsch",
+                "value": "td"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "klein"
+            },
+            {
+                "key": "lastName",
+                "value": "banane.12"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B2",
+                "nameShort": "B2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "aa38e2e1",
+        "type": "student",
+        "name": "alt wolke.38",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "alt"
+            },
+            {
+                "key": "lastName",
+                "value": "wolke.38"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "5c53b8c6",
+        "type": "student",
+        "name": "kalt orange.59",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "trait",
+                "label": "Teilleistungsschwäche Mathematik",
+                "value": "tm"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "orange.59"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B2",
+                "nameShort": "B2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "ce29f8aa",
+        "type": "student",
+        "name": "laut stern.16",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "laut"
+            },
+            {
+                "key": "lastName",
+                "value": "stern.16"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "f5ea3f92",
+        "type": "student",
+        "name": "warm pflaume.15",
+        "domain": {
+            "id": "ho",
+            "name": "Hörverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "warm"
+            },
+            {
+                "key": "lastName",
+                "value": "pflaume.15"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "b09527e4",
+        "type": "student",
+        "name": "gross fluss.11",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "gross"
+            },
+            {
+                "key": "lastName",
+                "value": "fluss.11"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B2",
+                "nameShort": "B2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "8faa6efa",
+        "type": "student",
+        "name": "laut erdbeere.60",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "trait",
+                "label": "Förderbedarf",
+                "value": "f"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "laut"
+            },
+            {
+                "key": "lastName",
+                "value": "erdbeere.60"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B2",
+                "nameShort": "B2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "c21064df",
+        "type": "student",
+        "name": "nah wald.50",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "nah"
+            },
+            {
+                "key": "lastName",
+                "value": "wald.50"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B2",
+                "nameShort": "B2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "4ba91527",
+        "type": "student",
+        "name": "weit apfel.23",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "weit"
+            },
+            {
+                "key": "lastName",
+                "value": "apfel.23"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "3127cec8",
+        "type": "student",
+        "name": "rund banane.22",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "trait",
+                "label": "nicht-dominant deutsch",
+                "value": "nd"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "rund"
+            },
+            {
+                "key": "lastName",
+                "value": "banane.22"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "ac398bad",
+        "type": "student",
+        "name": "gross orange.57",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "gross"
+            },
+            {
+                "key": "lastName",
+                "value": "orange.57"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "6f932342",
+        "type": "student",
+        "name": "schmal pflaume.19",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "trait",
+                "label": "Klassenwiederholung",
+                "value": "kw"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "schmal"
+            },
+            {
+                "key": "lastName",
+                "value": "pflaume.19"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "360462e0",
+        "type": "student",
+        "name": "breit wiese.57",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "breit"
+            },
+            {
+                "key": "lastName",
+                "value": "wiese.57"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "f8eb6441",
+        "type": "student",
+        "name": "kalt birne.42",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "birne.42"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "003be36b",
+        "type": "student",
+        "name": "kalt sonne.50",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "sonne.50"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "a55ebc47",
+        "type": "student",
+        "name": "weit erdbeere.32",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "weit"
+            },
+            {
+                "key": "lastName",
+                "value": "erdbeere.32"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "C1",
+                "nameShort": "C1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "843b84bd",
+        "type": "student",
+        "name": "weit apfel.41",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "weit"
+            },
+            {
+                "key": "lastName",
+                "value": "apfel.41"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B2",
+                "nameShort": "B2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "e8f37573",
+        "type": "student",
+        "name": "hoch orange.15",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "hoch"
+            },
+            {
+                "key": "lastName",
+                "value": "orange.15"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "90b85190",
+        "type": "student",
+        "name": "leise erdbeere.38",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "trait",
+                "label": "Förderbedarf",
+                "value": "f"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "leise"
+            },
+            {
+                "key": "lastName",
+                "value": "erdbeere.38"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "e352987e",
+        "type": "student",
+        "name": "leise traube.96",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "leise"
+            },
+            {
+                "key": "lastName",
+                "value": "traube.96"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "f957fdfc",
+        "type": "student",
+        "name": "gross sonne.81",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "gross"
+            },
+            {
+                "key": "lastName",
+                "value": "sonne.81"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "5785ba01",
+        "type": "student",
+        "name": "breit zitrone.65",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "breit"
+            },
+            {
+                "key": "lastName",
+                "value": "zitrone.65"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "c899fa8f",
+        "type": "student",
+        "name": "jung mond.35",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "jung"
+            },
+            {
+                "key": "lastName",
+                "value": "mond.35"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "C1",
+                "nameShort": "C1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "52b77edd",
+        "type": "student",
+        "name": "kalt blume.30",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "blume.30"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "176b1a4e",
+        "type": "student",
+        "name": "nah mond.21",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "trait",
+                "label": "Teilleistungsschwäche Mathematik",
+                "value": "tm"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "nah"
+            },
+            {
+                "key": "lastName",
+                "value": "mond.21"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "a4fd7e68",
+        "type": "student",
+        "name": "hoch wald.80",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "trait",
+                "label": "Förderbedarf",
+                "value": "f"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "hoch"
+            },
+            {
+                "key": "lastName",
+                "value": "wald.80"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "8c2da51d",
+        "type": "student",
+        "name": "nah kirsche.67",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "nah"
+            },
+            {
+                "key": "lastName",
+                "value": "kirsche.67"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "bee1d1c0",
+        "type": "student",
+        "name": "laut berg.35",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "laut"
+            },
+            {
+                "key": "lastName",
+                "value": "berg.35"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "da39668f",
+        "type": "student",
+        "name": "klein banane.12",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "trait",
+                "label": "Teilleistungsstörung Deutsch",
+                "value": "td"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "klein"
+            },
+            {
+                "key": "lastName",
+                "value": "banane.12"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "C1",
+                "nameShort": "C1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "aa38e2e1",
+        "type": "student",
+        "name": "alt wolke.38",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "alt"
+            },
+            {
+                "key": "lastName",
+                "value": "wolke.38"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A2",
+                "nameShort": "A2",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "5c53b8c6",
+        "type": "student",
+        "name": "kalt orange.59",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "trait",
+                "label": "Teilleistungsschwäche Mathematik",
+                "value": "tm"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "orange.59"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "B1",
+                "nameShort": "B1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "ce29f8aa",
+        "type": "student",
+        "name": "laut stern.16",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "laut"
+            },
+            {
+                "key": "lastName",
+                "value": "stern.16"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    },
+    {
+        "id": "f5ea3f92",
+        "type": "student",
+        "name": "warm pflaume.15",
+        "domain": {
+            "id": "le",
+            "name": "Leseverstehen"
+        },
+        "subject": {
+            "id": null,
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "warm"
+            },
+            {
+                "key": "lastName",
+                "value": "pflaume.15"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": null,
+                "name": "A1",
+                "nameShort": "A1",
+                "description": null,
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                }
+            }
+        ]
+    }
+]

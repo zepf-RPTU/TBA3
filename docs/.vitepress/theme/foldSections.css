@@ -1,0 +1,45 @@
+/* A top-level section folded by foldSections.mjs: the h2 is the <summary>, a chevron at the
+   right edge of its text line shows the state. */
+.vp-doc .doc-section > summary {
+    margin: 0;
+    list-style: none;
+    cursor: pointer;
+}
+
+.vp-doc .doc-section > summary::-webkit-details-marker {
+    display: none;
+}
+
+.vp-doc .doc-section > summary:focus-visible {
+    outline: 2px solid var(--vp-c-brand-1);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+.vp-doc .doc-section > summary > h2 {
+    padding-right: 32px;
+}
+
+/* Centred on the h2's 32px line box, which starts below its 24px padding-top. */
+.vp-doc .doc-section > summary > h2::after {
+    content: '';
+    position: absolute;
+    top: 36px;
+    right: 8px;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid var(--vp-c-text-3);
+    border-bottom: 2px solid var(--vp-c-text-3);
+    transform: rotate(-45deg);
+    transition:
+        transform 0.25s,
+        border-color 0.25s;
+}
+
+.vp-doc .doc-section[open] > summary > h2::after {
+    transform: rotate(45deg);
+}
+
+.vp-doc .doc-section > summary:hover > h2::after {
+    border-color: var(--vp-c-text-1);
+}

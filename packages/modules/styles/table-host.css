@@ -1,0 +1,63 @@
+/**
+ * Table Host — shared table-module host surfaces.
+ *
+ * .table-container                  — inner Tabulator mount element
+ * .content-module-body.has-table    — table-host body layout variant
+ * .info-table-section/.data-table-section — shared student table split layout
+ *
+ * These rules stay table-scoped even when they compose ContentModule slot
+ * classes such as .content-module-body.
+ */
+
+/* ==========================================================================
+   Table container — shared Tabulator mount element inside table modules
+   ========================================================================== */
+
+/**
+ * TableModule renders a single inner .table-container into the content body;
+ * preset buttons now live in the module header toolbar.
+ */
+
+.table-container {
+    flex: 1;
+    position: relative;
+    overflow: auto;
+    min-height: 0;
+    min-width: 0;
+}
+
+/* When the body hosts a table (class set by createTable() or manual DOM),
+   become a flex column so the inner .table-container is the sole scroll
+   region. min-width: 0 on body and every direct child prevents flex items
+   from refusing to shrink below content width, which is the correct fix
+   for horizontal overflow — not hiding it with overflow: hidden. */
+.content-module-body.has-table {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    min-width: 0;
+}
+
+.content-module-body.has-table > * {
+    min-width: 0;
+}
+
+/* Student view: info table (single row) takes natural height;
+   data table fills the remaining space and scrolls internally.
+   Lobotomised-owl adds gap only between siblings (info → data),
+   not above the first child. */
+.content-module-body > .info-table-section {
+    flex: 0 0 auto;
+}
+
+.content-module-body > .data-table-section {
+    flex: 1;
+    min-height: 0;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-module-body.has-table > * + * {
+    margin-top: var(--layout-gap-relaxed);
+}

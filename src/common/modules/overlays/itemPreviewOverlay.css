@@ -1,0 +1,155 @@
+/**
+ * Item preview overlay
+ *
+ * Modal pop-up for displaying a single task ("Aufgabe") with placeholder media
+ * slots. Follows the SL detail-overlay pattern (backdrop, centered content).
+ */
+
+/* Repeated in every sheet: a chunk's CSS may reach the page before the entry sheet,
+   and the first @layer statement seen fixes the order. */
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* Backdrop shell comes from the shared .modal-backdrop class
+       (@tba3/modules/styles/modal-backdrop.css); this rule only centers the content. */
+    .item-preview-overlay {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .item-preview-overlay-content {
+        position: relative;
+        background: var(--color-card-background);
+        margin: var(--overlay-margin);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-lg);
+        padding: var(--space-lg);
+        width: min(640px, 90vw);
+        max-height: calc(100vh - 2 * var(--overlay-margin));
+        overflow-y: auto;
+    }
+
+    .item-preview-overlay-close {
+        position: absolute;
+        top: var(--control-gap);
+        inset-inline-end: var(--control-gap);
+        z-index: 1;
+    }
+
+    .item-preview-overlay-body {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .item-preview-overlay-header {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        padding-inline-end: 2rem; /* keep clear of the close button */
+    }
+
+    .item-preview-overlay-number {
+        font-weight: var(--fw-bold);
+        color: var(--text-secondary);
+    }
+
+    .item-preview-overlay-title {
+        margin: 0;
+        font-size: var(--fs-lg);
+        line-height: var(--lh-ui);
+    }
+
+    .item-preview-overlay-meta {
+        margin: 0;
+    }
+
+    /* Placeholder media slots — Text / Bild / Audio */
+    .item-preview-media {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: var(--space-sm);
+    }
+
+    .item-preview-media-slot {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 96px;
+        padding: var(--space-md);
+        border: 1px dashed var(--chart-grid-color);
+        border-radius: var(--radius-md);
+        background: var(--color-background);
+    }
+
+    .item-preview-media-slot-label {
+        font-weight: var(--fw-bold);
+        color: var(--text-color);
+    }
+
+    .item-preview-media-slot-hint {
+        font-size: var(--fs-sm);
+        color: var(--text-muted);
+    }
+
+    /* Trigger button rendered in front of the task number in the tables */
+    .item-number-cell {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--space-xs);
+    }
+
+    /* Every column wraps by default (createColumnDef stamps cell-wrap-text); a task
+       number must not — "H-1.1" split as "H-" / "1.1" reads as two values. */
+    .item-number-cell-value {
+        white-space: nowrap;
+    }
+
+    /* A ghost button: the eye alone is the mark, and the box appears under the pointer.
+       Fifty bordered buttons per screen were more chrome than data. */
+    .item-preview-trigger {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px;
+        color: var(--text-muted);
+        line-height: 0;
+        --btn-fill: transparent;
+        border-color: transparent;
+    }
+
+    .item-preview-trigger:not(:disabled):hover,
+    .item-preview-trigger:focus-visible {
+        border-color: var(--color-border);
+    }
+
+    /* Hit area, not the visible mark: the glyph stays cursor-sized, the target
+       grows to 40px wide and to the row's full height (the cell padding on each
+       side). Not taller — the trigger in the next row is only one row away, and two
+       targets must never overlap. Under a coarse pointer the width is a fingertip. */
+    .item-preview-trigger::after {
+        content: '';
+        position: absolute;
+        top: calc(-1 * var(--space-xs));
+        bottom: calc(-1 * var(--space-xs));
+        left: 50%;
+        width: max(100%, 40px);
+        translate: -50% 0;
+    }
+
+    @media (pointer: coarse) {
+        .item-preview-trigger::after {
+            width: max(100%, var(--touch-target-min));
+        }
+    }
+
+    .item-preview-trigger:hover,
+    .item-preview-trigger:focus-visible {
+        color: var(--text-color);
+    }
+}

@@ -1,0 +1,11 @@
+{
+    "note": "Abweichung der Klassen vom Schulwert",
+    "title": "{{Bereich}}",
+    "messages": {
+        "no-class-data": "Für diesen Bereich enthält der Datensatz keine Klassendaten; nur der Schulwert liegt vor.",
+        "no-school-row": "Für diesen Bereich enthält der Datensatz keine Schulzeile. Ohne Schulwert lässt sich keine Abweichung der Klassen zeigen.",
+        "no-class-values": "Keine Klasse liefert für diesen Bereich einen Wert für »{{Kennzahl}}«.",
+        "metric-unsupported-competence-levels": "»{{Kennzahl}}« lässt sich für diesen Bereich nicht berechnen: Die Kompetenzstufen dieses Bereichs kennen keine Stufe dafür.",
+        "metric-unsupported-solution-rate": "»{{Kennzahl}}« lässt sich für diesen Bereich nicht berechnen: Der Datensatz enthält für diesen Bereich keine Aufgabenergebnisse."
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "messages": {
+        "empty": "Für die gewählte Kennzahl liegen keine Ergebnisse vor. Wählen Sie oben eine andere Kennzahl."
+    },
+    "header": {
+        "note": "Kopfzeile (Überblick)",
+        "title": "Schul- und Klassenleistung auf einen Blick",
+        "subtitle": "Für jedes Fach bzw. jede Domäne sehen Sie links den Wert Ihrer Schule und rechts, wie stark der Landesschnitt und jede Klasse davon abweichen. Die Bereiche sind vom besten zum schwächsten Ergebnis sortiert.",
+        "interface": {
+            "metric-select": {
+                "label": "Metrik",
+                "tooltip": "Wählen Sie die Kennzahl, auf die Schul- und Klassenleistung reduziert werden."
+            }
+        }
+    }
+}
