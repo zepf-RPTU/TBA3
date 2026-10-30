@@ -1,0 +1,118 @@
+/**
+ * The shell of a `<dialog>` overlay opened with `showModal()` (ModalDialog in
+ * @tba3/modules/overlays). The top layer replaces any z-index; the dim is the
+ * dialog's `::backdrop`.
+ */
+
+/* The full-viewport, transparent layer the panel sits in, so a click on its own
+   box is a click on the backdrop; hence the UA reset (centred fit-content box,
+   border, padding, Canvas colours). Panels size from --shell-width /
+   --shell-height, never below the shell floor: below it the dialog scrolls. */
+.modal-dialog {
+    --modal-transition-duration: var(--motion-duration-fast);
+    --modal-transition-easing: cubic-bezier(0.2, 0, 0, 1);
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    overflow: auto;
+}
+
+/* `display` and `overlay` transition discretely, so the dialog stays rendered
+   (and in the top layer) until the fade-out has ended. */
+.modal-dialog,
+.modal-dialog::backdrop {
+    opacity: 0;
+    transition:
+        opacity var(--modal-transition-duration) var(--modal-transition-easing),
+        display var(--modal-transition-duration) allow-discrete,
+        overlay var(--modal-transition-duration) allow-discrete;
+}
+
+.modal-dialog[open] {
+    display: flex;
+}
+
+.modal-dialog[open],
+.modal-dialog[open]::backdrop {
+    opacity: 1;
+}
+
+.modal-dialog::backdrop {
+    background: var(--overlay-backdrop);
+}
+
+/* The panel (every direct child: a close button beside it rides along) rises 8px
+   on open and sinks 4px on close; @starting-style gives the open its start. */
+.modal-dialog > * {
+    translate: 0 4px;
+    transition: translate var(--modal-transition-duration) var(--modal-transition-easing);
+}
+
+.modal-dialog[open] > * {
+    translate: 0 0;
+}
+
+@starting-style {
+    .modal-dialog[open],
+    .modal-dialog[open]::backdrop {
+        opacity: 0;
+    }
+
+    .modal-dialog[open] > * {
+        translate: 0 8px;
+    }
+}
+
+/* The dialog card, and its close button pinned to a top corner (of the card, or of
+   the dialog when it sits beside the card). */
+.modal-panel {
+    margin: var(--overlay-margin);
+    background: var(--color-card-background);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+}
+
+.modal-close {
+    position: absolute;
+    top: var(--control-gap);
+    inset-inline-end: var(--control-gap);
+    z-index: 1;
+}
+
+/* A dialog whose card sits in the middle; without it the card stretches across the
+   cross axis. */
+.modal-dialog--centered {
+    align-items: center;
+    justify-content: center;
+}
+
+/* The confirmation before a destructive action (confirmDialog.js). */
+.confirm-panel {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    max-width: min(440px, calc(0.9 * var(--shell-width)));
+}
+
+.confirm-title {
+    margin: 0;
+    font-size: var(--fs-lg);
+}
+
+.confirm-panel p {
+    margin: 0;
+}
+
+.confirm-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: var(--space-sm);
+}

@@ -1,0 +1,250 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    .material-selection-module {
+        /* Ink a step past --text-color. Mixed toward --secondary-color, not black:
+           near-black in the light scheme (same result), and the dark scheme's own
+           ink stays readable on its surface. */
+        --material-metric-border-color: color-mix(
+            in srgb,
+            var(--text-color) 85%,
+            var(--secondary-color)
+        );
+        --material-distribution-stack-border: color-mix(
+            in srgb,
+            var(--text-color) 12%,
+            transparent
+        );
+        --material-distribution-stack-bg: color-mix(in srgb, var(--text-color) 5%, transparent);
+        --material-distribution-separator: color-mix(
+            in srgb,
+            var(--color-background) 75%,
+            transparent
+        );
+        padding: var(--card-pad);
+        overflow-y: auto;
+    }
+
+    .material-page {
+        display: flex;
+        flex-direction: column;
+        gap: var(--card-pad-loose);
+    }
+
+    .material-page-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        grid-template-areas:
+            'title badge'
+            'subtitle badge';
+        align-items: flex-start;
+        gap: var(--layout-gap-loose);
+    }
+
+    .material-page-title {
+        grid-area: title;
+        font-size: var(--fs-lg);
+    }
+
+    .material-page-subtitle {
+        grid-area: subtitle;
+        color: var(--text-secondary);
+    }
+
+    .material-page-badge {
+        grid-area: badge;
+        display: inline-flex;
+        gap: var(--control-gap);
+        align-items: center;
+        justify-content: center;
+        min-width: 14rem;
+        padding: var(--layout-gap) var(--layout-gap-relaxed);
+        border: 1px solid var(--color-border);
+        color: var(--text-color);
+        font-weight: var(--fw-bold);
+        text-align: center;
+    }
+
+    .material-section,
+    .material-distribution-group {
+        display: flex;
+        flex-direction: column;
+        gap: var(--layout-gap-relaxed);
+    }
+
+    .material-metric-table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+
+    .material-metric-table th,
+    .material-metric-table td {
+        border: 1px solid var(--material-metric-border-color);
+        padding: var(--layout-pad) var(--layout-gap-relaxed);
+        text-align: start;
+        vertical-align: top;
+        color: var(--text-color);
+    }
+
+    .material-metric-table td {
+        font-variant-numeric: tabular-nums;
+    }
+
+    .material-metric-stack {
+        display: flex;
+        flex-direction: column;
+        gap: var(--control-gap);
+    }
+
+    .material-metric-range {
+        color: var(--text-secondary);
+    }
+
+    .material-delta {
+        white-space: nowrap;
+    }
+
+    /* Above / below the comparison, not right / wrong: the same ahead-behind pair as
+       --tint-positive / --tint-negative, in their text-strength shades. */
+    .material-delta--positive {
+        color: var(--color-accent-text);
+    }
+
+    .material-delta--negative {
+        color: var(--result-incorrect-text);
+    }
+
+    .material-overview-layout {
+        display: grid;
+        grid-template-columns: minmax(16rem, 20rem) minmax(0, 1fr);
+        gap: var(--space-lg);
+        align-items: start;
+    }
+
+    .material-distribution-column {
+        display: flex;
+        flex-direction: column;
+        gap: var(--layout-gap-loose);
+    }
+
+    .material-distribution-group-panels {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: var(--layout-gap-relaxed);
+    }
+
+    .material-distribution-panel {
+        display: flex;
+        flex-direction: column;
+        padding: var(--layout-pad);
+        border: 1px solid var(--color-border);
+    }
+
+    .material-distribution-panel-body {
+        display: grid;
+        grid-template-columns: auto minmax(0, 1fr);
+        gap: var(--layout-gap);
+        min-height: 11.5rem;
+    }
+
+    .material-distribution-panel-title {
+        font-size: var(--fs-base);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-inline-end: calc(var(--control-gap) / 2);
+        border-inline-end: 1px solid var(--color-border);
+        writing-mode: vertical-rl;
+    }
+
+    .material-distribution-panel-empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--text-secondary);
+    }
+
+    .material-distribution-chart {
+        display: flex;
+        justify-content: center;
+        min-height: 10rem;
+    }
+
+    .material-distribution-stack-vertical {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+        max-width: 5.1rem;
+        min-width: 4.1rem;
+        overflow: hidden;
+        border: 1px solid var(--material-distribution-stack-border);
+        border-radius: var(--radius-md);
+        background: var(--material-distribution-stack-bg);
+    }
+
+    .material-distribution-stack-segment {
+        flex: var(--distribution-share);
+        min-height: 0.35rem;
+        padding: calc(var(--control-gap) / 2);
+    }
+
+    .material-distribution-stack-segment + .material-distribution-stack-segment {
+        box-shadow: inset 0 1px 0 var(--material-distribution-separator);
+    }
+
+    /* A .stacked-bar-label (stacked-bar.css) at body size. */
+    .material-distribution-stack-segment-label {
+        font-size: var(--fs-base);
+    }
+
+    .material-copy-column {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-lg);
+    }
+
+    .material-copy-block h3 {
+        margin-bottom: var(--layout-gap-relaxed);
+    }
+
+    .material-copy-block h4 {
+        margin-block: var(--layout-gap-relaxed) var(--control-gap);
+    }
+
+    .material-copy-block ul {
+        margin: 0;
+        padding-inline-start: var(--list-indent);
+        display: grid;
+        gap: var(--layout-gap-relaxed);
+    }
+
+    .material-best-metric {
+        display: inline-flex;
+        align-items: center;
+        gap: var(--control-gap);
+    }
+
+    .material-best-metric.is-best {
+        font-weight: var(--fw-bold);
+    }
+
+    .material-best-metric-icon {
+        font-size: var(--fs-base);
+        color: var(--text-color);
+    }
+
+    .material-inline-symbol {
+        display: inline-flex;
+        vertical-align: text-bottom;
+    }
+
+    .material-result-row-label {
+        white-space: nowrap;
+    }
+
+    .material-inline-note {
+        font-size: var(--fs-base);
+        color: var(--text-secondary);
+    }
+}

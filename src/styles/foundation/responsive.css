@@ -1,0 +1,14 @@
+/**
+ * The one root font-size: the --fs-* and --space-* tokens are rem, so text and spacing
+ * scale together. Structural reflow has one breakpoint, `--stacked-layout`
+ * (breakpoints.css); the shell is never narrower than 1024px (--shell-min-width), so
+ * there is no smaller tier.
+ */
+
+html {
+    /* A share of the user's default, 15px at the browser's 16px: a dense dashboard's
+       size. No viewport term: browser zoom shrinks the viewport, so a vw share would
+       cancel part of every zoom step (200 % zoom gave ~177 % text, WCAG 1.4.4). */
+    /* eslint-disable-next-line no-restricted-syntax -- the root every rem token derives from */
+    font-size: 93.75%;
+}

@@ -1,0 +1,87 @@
+{
+  "name": "@tba3/modules",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Die konkreten VERA-Module: alle 19 Diagramm-Descriptoren, die Tabellenschicht mit ihren zehn konkreten Tabellen und das Vokabular, das sie sprechen - Kompetenzstufen, Glossar und die datengetriebene Farbpalette. Eigene Laufzeitabhängigkeiten: DOMPurify, das HTML aus der API bereinigt, Lit, auf dem die Module als Custom Elements aufsetzen und mit dem sie ihr HTML rendern, @preact/signals-core, in dessen Signalen Module und Renderer ihren Zustand halten, Valibot, das jedes geladene Dokument gegen sein Schema prüft, d3-array, d3-color und d3-interpolate für Mittelwerte und Farben außerhalb der Diagramme sowie d3-shape für die Markerformen, die auch der Tooltip-Schlüssel zeichnet.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "*.css",
+    "src/**/*Module.js",
+    "src/common/tables/tabulatorBuild.js"
+  ],
+  "dependencies": {
+    "@preact/signals-core": "^1.14.4",
+    "@tba3/module-base": "*",
+    "d3-array": "^3.2.4",
+    "d3-color": "^3.1.0",
+    "d3-interpolate": "^3.0.1",
+    "d3-shape": "^3.2.0",
+    "dompurify": "^3.4.16",
+    "lit": "^3.3.3",
+    "valibot": "^1.5.0"
+  },
+  "peerDependencies": {
+    "d3": "^7.9.0",
+    "tabulator-tables": "^6.5.2"
+  },
+  "peerDependenciesMeta": {
+    "d3": {
+      "optional": true
+    },
+    "tabulator-tables": {
+      "optional": true
+    }
+  },
+  "exports": {
+    "./context": "./src/common/context/index.js",
+    "./domain": "./src/common/domain/index.js",
+    "./documents": "./src/common/data/index.js",
+    "./en-domain": "./src/en/index.js",
+    "./ma-domain": "./src/ma/index.js",
+    "./sl-domain": "./src/sl/index.js",
+    "./glossary": "./src/common/glossary/index.js",
+    "./sanitize": "./src/common/services/sanitizeHtml.js",
+    "./theme": "./src/common/services/theme.js",
+    "./tooltips": "./src/common/services/tooltips.js",
+    "./overlays": "./src/common/overlays/index.js",
+    "./charts": "./src/common/charts/index.js",
+    "./glossary/en": "./src/en/enGlossaryFragments.js",
+    "./glossary/ma": "./src/ma/maGlossaryFragments.js",
+    "./glossary/sl": "./src/sl/slGlossaryFragments.js",
+    "./charts/item-lollipop": "./src/en/modules/charts/itemLollipop/itemLollipopConfig.js",
+    "./charts/en-competence-level-distribution": "./src/en/modules/charts/competenceLevelDistribution/enCompetenceLevelDistributionConfig.js",
+    "./charts/scatterplot": "./src/en/modules/charts/scatterplot/index.js",
+    "./charts/style": "./src/en/modules/charts/style/index.js",
+    "./charts/item-success-lollipop": "./src/ma/modules/charts/itemSuccessLollipop/itemSuccessLollipopConfig.js",
+    "./charts/competence-level-bar": "./src/ma/modules/charts/competenceLevelBar/simpleCompetenceLevelBarConfig.js",
+    "./charts/ma-competence-level-distribution": "./src/ma/modules/charts/competenceLevelDistribution/maCompetenceLevelDistributionConfig.js",
+    "./charts/item-ring-focus": "./src/ma/modules/charts/itemRing/itemRingFocusConfig.js",
+    "./charts/item-ring-grid": "./src/ma/modules/charts/itemRing/index.js",
+    "./charts/group-deviation": "./src/sl/modules/charts/groupDeviation/index.js",
+    "./charts/competence-detail": "./src/sl/modules/charts/competence/detail/competenceDetailSectionConfig.js",
+    "./charts/competence-overview": "./src/sl/modules/charts/competence/overview/competenceChartConfig.js",
+    "./charts/group-comparison": "./src/sl/modules/charts/groupComparison/groupComparisonConfig.js",
+    "./charts/longitudinal": "./src/sl/modules/charts/longitudinal/index.js",
+    "./charts/self-efficacy": "./src/sl/modules/charts/selfEfficacy/selfEfficacyConfig.js",
+    "./en-item-detail": "./src/en/modules/enItemDetail/enItemDetailModule.js",
+    "./info-box": "./src/sl/modules/infoBox/index.js",
+    "./material-selection": "./src/sl/modules/material/materialSelectionModule.js",
+    "./tables/en-group": "./src/en/modules/tables/enGroupTableModule.js",
+    "./tables/en-item": "./src/en/modules/tables/enItemTableModule.js",
+    "./tables/en-student-data": "./src/en/modules/tables/enStudentDataTableModule.js",
+    "./tables/en-student-info": "./src/en/modules/tables/enStudentInfoTableModule.js",
+    "./tables/ma-group": "./src/ma/modules/tables/maGroupTableModule.js",
+    "./tables/ma-item": "./src/ma/modules/tables/maItemTableModule.js",
+    "./tables/ma-student-data": "./src/ma/modules/tables/maStudentDataTableModule.js",
+    "./tables/ma-student-info": "./src/ma/modules/tables/maStudentInfoTableModule.js",
+    "./tables/sl-group": "./src/sl/modules/tables/slGroupTableModule.js",
+    "./tables/sl-domain": "./src/sl/modules/tables/slDomainTableModule.js",
+    "./styles/*": "./styles/*"
+  },
+  "files": [
+    "src",
+    "styles",
+    "README.md"
+  ]
+}

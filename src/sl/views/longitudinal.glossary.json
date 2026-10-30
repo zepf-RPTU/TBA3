@@ -1,0 +1,33 @@
+{
+    "header": {
+        "title": "Entwicklung über die Jahrgänge",
+        "subtitle": "Gegenüberstellung der letzten fünf Jahre",
+        "interface": {
+            "domain-select": {
+                "label": "Bereich"
+            },
+            "normal-view": {
+                "label": "Normale Ansicht",
+                "tooltip": "Wählen Sie die normale Ansicht, bei der die Anteile der Kompetenzstufen als einzelne Linien angezeigt werden."
+            },
+            "stacked-view": {
+                "label": "Gestapelte Ansicht",
+                "tooltip": "Wählen Sie die gestapelte Ansicht, bei der die Anteile der Kompetenzstufen als gestapelte Flächen angezeigt werden."
+            },
+            "lines": {
+                "label": "Punkte & Linien",
+                "tooltip": "Zeigen Sie Unterrichtsqualität und Selbstwirksamkeit mithilfe von Punkten und Linien an."
+            },
+            "boxplot": {
+                "label": "Boxplot",
+                "tooltip": "Zeigen Sie Unterrichtsqualität und Selbstwirksamkeit mithilfe von Boxplots an."
+            },
+            "view-group": {
+                "label": "Ansicht"
+            },
+            "chart-type-group": {
+                "label": "Diagrammart"
+            }
+        }
+    }
+}

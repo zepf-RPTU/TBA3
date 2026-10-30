@@ -1,0 +1,82 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .help-page {
+        width: 100%;
+        max-width: 72rem;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-lg);
+        padding-bottom: var(--content-panel-padding);
+    }
+
+    .help-section {
+        display: flex;
+        flex-direction: column;
+        gap: var(--layout-gap);
+    }
+
+    .help-card-grid {
+        align-items: start;
+    }
+
+    .help-card {
+        display: flex;
+        flex-direction: column;
+        gap: var(--layout-gap-loose);
+        min-height: max-content;
+        padding: var(--card-pad-loose);
+        background-color: var(--color-card-background);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .help-card-header {
+        display: flex;
+        align-items: center;
+        gap: var(--layout-gap-relaxed);
+        padding-bottom: var(--layout-gap-relaxed);
+        border-bottom: 2px solid var(--primary-color);
+    }
+
+    .help-card-header h3 {
+        font-size: var(--fs-lg);
+    }
+
+    .help-card-icon {
+        font-size: var(--fs-lg);
+        line-height: var(--lh-icon);
+        flex-shrink: 0;
+    }
+
+    .help-card-content {
+        color: var(--text-secondary);
+        line-height: var(--lh-text);
+        /* Cap the line length of the prose, not the page. */
+        max-width: 70ch;
+    }
+
+    .help-back-nav {
+        display: flex;
+    }
+
+    /* The `display: flex` above would otherwise beat the UA `[hidden]` rule. */
+    .help-back-nav[hidden] {
+        display: none;
+    }
+
+    .help-back-btn {
+        --btn-padding-block: var(--layout-gap-relaxed);
+        --btn-padding-inline: var(--card-pad);
+        --btn-radius: var(--radius-md);
+        --btn-hover-fill: var(--color-border);
+        gap: var(--layout-gap-relaxed);
+    }
+
+    /* The card's prose is secondary ink; its emphasis takes the full ink. */
+    .help-card-content strong {
+        color: var(--text-color);
+    }
+}

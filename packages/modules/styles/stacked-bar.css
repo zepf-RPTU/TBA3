@@ -1,0 +1,202 @@
+/**
+ * Stacked bar styles shared by table cells, SVG charts and DOM bars.
+ */
+
+:root {
+    /* The height every DOM bar is drawn at. TABLE_BAR_HEIGHT_PX
+       (columnWidthConstants.js) mirrors it for the SVG box-plot cell beside it. */
+    --stacked-bar-height: 18px;
+    --stacked-bar-border-radius: var(--radius-sm);
+    /* The track and the highlight ring are drawn against the surface, so they flip with
+       the scheme; a label sits on its band colour and takes that band's ink instead. */
+    --stacked-bar-bg: light-dark(rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.06));
+    --stacked-bar-border: 1px solid light-dark(rgba(0, 0, 0, 0.1), rgba(255, 255, 255, 0.12));
+    --stacked-bar-shadow: inset 0 1px 2px light-dark(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.3));
+
+    --stacked-bar-highlight-stroke: light-dark(#000, #fff);
+}
+
+.stacked-bar-container {
+    position: relative;
+    display: flex;
+    height: var(--stacked-bar-height);
+    width: 100%;
+    background-color: var(--stacked-bar-bg);
+    border-radius: var(--stacked-bar-border-radius);
+    border: var(--stacked-bar-border);
+    box-shadow: var(--stacked-bar-shadow);
+    /* The segments are plain flex children; clipped, their square ends keep to the
+       track's rounded corners. */
+    overflow: hidden;
+}
+
+/* The no-data label, centred on an empty track (createEmptyBarLabel). */
+.stacked-bar-empty {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Segments
+   ========================================================================== */
+
+/* A label shows only where it fits whole. HTML cannot measure as the SVG bars
+   do, so this is layout: the empty ::before takes the first flex line's full
+   height, so a label wider than the room left wraps onto a second line, which
+   the segment clips. A column resize, which does not re-run the formatter,
+   re-decides it. */
+.stacked-bar-segment {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    transition: opacity var(--motion-duration-fast) var(--motion-ease-standard);
+    position: relative;
+}
+
+.stacked-bar-segment::before {
+    content: '';
+    block-size: 100%;
+}
+
+/* A vertical stack turns this: the ::before takes the first
+   column's full width, so a label taller than the segment wraps into a second
+   column, which the segment clips. */
+.stacked-bar-segment--vertical {
+    flex-direction: column;
+}
+
+.stacked-bar-segment--vertical::before {
+    block-size: 0;
+    inline-size: 100%;
+}
+
+/* Dims as an SVG chart's `area` hover does (HOVER_OPACITY). */
+.stacked-bar-segment:hover {
+    opacity: var(--chart-hover-opacity);
+}
+
+/* The gap between fills, as insetStackedSegment draws it for SVG: every fill gives
+   up half of it on both sides, outer ends included, so a boundary stays where its
+   share puts it; a fill thinner than the gap is left whole rather than vanishing.
+   Clipped rather than bordered, the widths still sum to the track. The inset
+   resolves against the segment's own width: (100% − gap) × 1000 is negative for a
+   sliver, clamped to no inset, and huge otherwise, clamped to half the gap. A
+   vertical stack separates its own segments. */
+.stacked-bar-container > .stacked-bar-segment {
+    --segment-inset: clamp(
+        0px,
+        calc((100% - var(--stacked-bar-segment-gap)) * 1000),
+        calc(var(--stacked-bar-segment-gap) / 2)
+    );
+    clip-path: inset(0 var(--segment-inset));
+}
+
+/* A segment the benchmark line crosses keeps its label clear of it: the room past
+   the line (--label-room, a share of the bar, set by createDOMStackedBar) plus a
+   gap becomes end padding, which resolves against the bar as the share does.
+   Capped at the segment's share, a sliver is not padded wider than itself. */
+.stacked-bar-segment--marked {
+    padding-inline-end: clamp(0px, calc(var(--label-room) + 4px), var(--segment-share));
+}
+
+/* The benchmark line (createDOMStackedBar's `marker`), at its share of the bar. */
+.stacked-bar-container > .bar-benchmark-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    margin-inline-start: -1px;
+    background-color: var(--benchmark-color);
+    z-index: 2;
+}
+
+/* ==========================================================================
+   Labels
+   ========================================================================== */
+
+/* A competence band stamps --competence-level-band-ink (applyCompetenceBandPaint):
+   white or dark, whichever contrasts more with the band, so the label needs no
+   shadow; every other segment keeps the shared label colour. */
+.stacked-bar-label {
+    color: var(--competence-level-band-ink, var(--text-on-primary));
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+    font-variant-numeric: tabular-nums;
+    pointer-events: none;
+    white-space: nowrap;
+    /* Unclamped, so a label that does not fit wraps away instead of shrinking; at
+       line-height 1 it is shorter than the track, so the first flex line keeps the
+       track's height and centres it. */
+    line-height: 1;
+    padding: 0 4px;
+}
+
+.tabulator-cell .stacked-bar-container {
+    margin: 2px 0;
+}
+
+/* ==========================================================================
+   SVG bar segments
+   ========================================================================== */
+
+/* stackedBarBuilder's createSVGStackedBar: the `area` hover writes the opacity,
+   this eases it. */
+.bar-segment {
+    transition: opacity var(--motion-duration-fast) var(--motion-ease-standard);
+}
+
+.bar-segment.highlighted {
+    stroke: var(--stacked-bar-highlight-stroke);
+    stroke-width: 3px;
+}
+
+/* ==========================================================================
+   Competence level paint (SVG and DOM)
+   ========================================================================== */
+
+/* The scale comes from the loaded data, which no fixed set of CSS variables can
+   express: renderers stamp the resolved colour on each element as
+   --competence-level-band-color (applyCompetenceBandPaint). The `level-<token>`
+   class they also emit is a selector/test hook, not paint. Every level paints one
+   solid colour of its own. */
+.bar-segment.competence-level {
+    fill: var(--competence-level-band-color);
+}
+
+.stacked-bar-segment.competence-level,
+.legend-swatch.competence-level {
+    background-color: var(--competence-level-band-color);
+}
+
+/* In forced colours and print the bars keep their colours (data marks,
+   dataMark.css; the properties inherit, so the in-bar labels keep their ink).
+   Under forced colours, and when the user asks for more contrast, each segment also
+   gets a CanvasText edge, so neighbouring bands stay apart in any palette (outside
+   forced colours CanvasText follows color-scheme). No pattern or hatch: colour is a
+   band's only channel. */
+
+@media (prefers-contrast: more), (forced-colors: active) {
+    .bar-segment {
+        stroke: CanvasText;
+        stroke-width: 1px;
+    }
+
+    .stacked-bar-segment {
+        outline: 1px solid CanvasText;
+        outline-offset: -1px;
+    }
+
+    /* The outlines separate the fills: the gap's 1px clip per side would cut the
+       inset outline away at every join. */
+    .stacked-bar-container > .stacked-bar-segment {
+        clip-path: none;
+    }
+}

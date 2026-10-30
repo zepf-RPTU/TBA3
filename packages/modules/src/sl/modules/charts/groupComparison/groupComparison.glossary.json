@@ -1,0 +1,34 @@
+{
+    "title": "Gegenüberstellung ausgewählter Gruppen",
+    "messages": {
+        "one-group": "Für einen Vergleich werden mindestens zwei Gruppen benötigt; diese Kategorie hat nur eine. Wählen Sie oben eine andere Kategorie.",
+        "no-groups": "Für die gewählten Gruppen liegen keine Daten vor. Wählen Sie oben andere Gruppen, ein anderes Fach oder eine andere Darstellung.",
+        "no-success-rates": "Keine Lösungsquoten für dieses Fach verfügbar",
+        "points-mixed-booklets": "Die gewählten Gruppen haben unterschiedliche Testhefte bearbeitet; ihre Lösungsquoten sind nicht vergleichbar. Wählen Sie oben eine andere Darstellung oder andere Gruppen.",
+        "no-self-efficacy": "Keine Daten zur Selbstwirksamkeit verfügbar",
+        "no-teaching-quality": "Keine Daten zur Unterrichtsqualität für dieses Fach verfügbar"
+    },
+    "interface": {
+        "chartType": {
+            "label": "Diagrammtyp"
+        },
+        "subjectIndex": {
+            "label": "Fach/Domäne"
+        },
+        "subjectIndex-none": {
+            "label": "Nicht fachspezifisch"
+        },
+        "scopeFilter": {
+            "label": "Vergleichsebene"
+        },
+        "category": {
+            "label": "Kategorie"
+        },
+        "group1": {
+            "label": "Gruppe 1"
+        },
+        "group2": {
+            "label": "Gruppe 2"
+        }
+    }
+}

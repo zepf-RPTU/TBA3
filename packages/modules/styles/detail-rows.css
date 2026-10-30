@@ -1,0 +1,147 @@
+/**
+ * The parts of an item stats card: the sections, the label/value lines (resultRows.js)
+ * and the student list (studentGroupList.js).
+ */
+
+/* The item a card stands for, above its sections. */
+.detail-heading {
+    margin: 0 0 var(--space-md);
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+}
+
+.detail-section {
+    margin-bottom: var(--space-md);
+}
+
+/* Section headings a step above the panel's text size. */
+.detail-section h4 {
+    margin: 0 0 var(--space-sm);
+    font-size: var(--fs-base);
+    font-weight: var(--fw-bold);
+}
+
+.detail-section:last-child {
+    margin-bottom: 0;
+}
+
+/* What a card says in place of an empty list or table. */
+.empty-message {
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-xs) 0;
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    color: var(--text-secondary);
+    flex: 0 0 50%;
+}
+
+.detail-value {
+    color: var(--text-color);
+    text-align: end;
+    flex: 1;
+}
+
+.detail-value:is(.highlight, .success, .error) {
+    font-weight: var(--fw-bold);
+}
+
+.detail-value.highlight {
+    font-size: var(--fs-base);
+    color: var(--color-accent-text);
+}
+
+.detail-value.success {
+    color: var(--result-correct-text);
+}
+
+.detail-value.error {
+    color: var(--result-incorrect-text);
+}
+
+/* The Pilotierung difference, in the item table's colours (table-base.css). */
+.detail-value .result-diff--up {
+    color: var(--result-correct-text);
+}
+
+.detail-value .result-diff--down {
+    color: var(--result-incorrect-text);
+}
+
+/* Group toggle buttons compacted for the narrow panel; the .btn--text
+   defaults are sized for toolbars. */
+.student-group-toggle {
+    margin-bottom: var(--space-sm);
+}
+
+.student-group-button {
+    --btn-padding-block: var(--space-xs);
+    --btn-padding-inline: var(--space-sm);
+    color: var(--text-secondary);
+}
+
+.student-group-button.is-active {
+    color: var(--text-color);
+    font-weight: var(--fw-bold);
+}
+
+/* Two columns in a ~270px panel track, more as it widens. */
+.detail-student-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+    gap: var(--space-xs);
+}
+
+/* Names that carry a detail (a student's rate) need wider columns. */
+.detail-student-grid--detail {
+    grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+}
+
+.detail-student-name {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-xs);
+    width: 100%;
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-sm);
+    color: var(--text-color);
+    text-align: start;
+}
+
+/* Flagged (not attempted): muted, dashed border and a * marker, so a skipped item
+   reads apart from a wrong answer without colour alone. */
+.detail-student-name.is-flagged {
+    border-style: dashed;
+    color: var(--text-secondary);
+}
+
+.detail-student-name-detail,
+.detail-student-name-flag {
+    margin-inline-start: auto;
+}
+
+.detail-student-name-detail {
+    color: var(--text-secondary);
+    font-variant-numeric: tabular-nums;
+}
+
+.detail-student-legend {
+    margin: var(--space-xs) 0 0;
+    color: var(--text-secondary);
+}

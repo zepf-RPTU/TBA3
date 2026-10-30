@@ -1,0 +1,78 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* ==========================================================================
+       Header controls
+       ========================================================================== */
+
+    .info-box-controls {
+        padding: var(--layout-gap-relaxed) 0.85rem 0.85rem;
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    .info-box-section-buttons {
+        gap: 0;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .info-box-section-btn {
+        --btn-height-toolbar: var(--btn-height-toolbar-lg);
+        --btn-icon-size: 1.4rem;
+    }
+
+    /* The token above, in the modules layer, beats the fingertip target buttons.css
+       sets in the foundation layer, so touch re-declares it here. */
+    @media (pointer: coarse) {
+        .info-box-section-btn {
+            --btn-height-toolbar: var(--touch-target-min);
+        }
+    }
+
+    /* ==========================================================================
+       Content blocks
+       ========================================================================== */
+
+    .info-box-block-sequence {
+        --layout-stack-gap: var(--layout-gap-loose);
+    }
+
+    .info-box-block-list {
+        margin: 0;
+        max-width: 70ch;
+        padding-inline-start: var(--list-indent);
+        --layout-stack-gap: var(--layout-gap-relaxed);
+    }
+
+    .info-box-block-item {
+        line-height: var(--lh-text);
+    }
+
+    .info-box-block-sublist {
+        margin-top: var(--layout-gap);
+        padding-inline-start: var(--layout-gap-loose);
+        --layout-stack-gap: var(--layout-gap);
+    }
+
+    .info-box-placeholder-value {
+        font-weight: var(--fw-bold);
+    }
+
+    /* ==========================================================================
+       Action links and empty state
+       ========================================================================== */
+
+    .info-box-link-list {
+        justify-content: center;
+    }
+
+    .info-box-link-list > .btn--text {
+        --btn-padding-block: 0.35rem;
+        --btn-padding-inline: var(--layout-gap-relaxed);
+    }
+
+    .info-box-empty-state {
+        margin: 0;
+        color: var(--text-muted);
+    }
+}

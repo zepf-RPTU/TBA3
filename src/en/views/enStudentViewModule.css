@@ -1,0 +1,49 @@
+/**
+ * EN Schüler:in view — the student tables on the left; the spider chart above
+ * the item detail panel on the right.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .en-student-view .content-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(0, 1fr);
+        flex: 1;
+    }
+
+    .en-student-view .content-grid > .view-section {
+        gap: var(--layout-gap);
+    }
+
+    /* The spider takes two thirds of the column, the item detail the rest. */
+    .en-student-view .right-column > .chart-section {
+        flex: 2 1 0;
+    }
+
+    .en-student-view .right-column > .detail-section {
+        flex: 1 1 0;
+    }
+
+    @media (--stacked-layout) {
+        .en-student-view .content-grid {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            flex: none;
+        }
+
+        .en-student-view .content-grid > .left-column {
+            height: var(--stacked-card-height);
+        }
+
+        .en-student-view .right-column > .chart-section {
+            height: var(--stacked-card-height);
+            flex: none;
+        }
+
+        .en-student-view .right-column > .detail-section {
+            flex: none;
+            height: var(--stacked-card-height);
+        }
+    }
+}

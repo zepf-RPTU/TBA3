@@ -1,0 +1,104 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    .help-glossary-search {
+        flex: none;
+        padding: var(--layout-pad);
+    }
+
+    .help-search-label {
+        display: block;
+        margin-bottom: var(--control-gap);
+        font-weight: var(--fw-semibold);
+    }
+
+    /* The field is a .control-input (controls.css); this sheet only places it. */
+    .help-search-input {
+        width: 100%;
+    }
+
+    /* The live region a search announces its count in; empty before one. */
+    .help-result-count {
+        min-height: var(--lh-text);
+        margin: var(--control-gap) 0 var(--layout-gap-relaxed);
+        font-size: var(--fs-sm);
+        color: var(--text-secondary);
+    }
+
+    .help-list {
+        display: flex;
+        flex-direction: column;
+        gap: var(--layout-gap-relaxed);
+    }
+
+    .help-item {
+        overflow: hidden;
+        background-color: var(--color-card-background);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        transition:
+            border-color var(--motion-duration-fast) var(--motion-ease-standard),
+            box-shadow var(--motion-duration-fast) var(--motion-ease-standard);
+    }
+
+    .help-item:hover {
+        box-shadow: var(--shadow-sm);
+    }
+
+    .help-item[open] {
+        border-color: var(--primary-color);
+        box-shadow: var(--shadow-sm);
+    }
+
+    .help-item-header {
+        display: flex;
+        align-items: center;
+        gap: var(--layout-gap);
+        padding: var(--notice-padding);
+        list-style: none;
+    }
+
+    /* The toggle arrow is the disclosure marker. */
+    .help-item-header::-webkit-details-marker {
+        display: none;
+    }
+
+    .help-item[open] .help-item-header {
+        --interactive-bg: var(--color-background-muted);
+    }
+
+    .help-item-title {
+        flex: 1 1 auto;
+        min-width: 0;
+        font-size: var(--fs-lg);
+        overflow-wrap: anywhere;
+    }
+
+    .help-item-toggle {
+        margin-inline-start: var(--layout-gap-loose);
+        flex-shrink: 0;
+        color: var(--color-accent-text);
+        transition: transform var(--motion-duration-fast) var(--motion-ease-standard);
+    }
+
+    .help-item[open] .help-item-toggle {
+        transform: rotate(180deg);
+    }
+
+    .help-item-content {
+        max-width: 70ch;
+        padding: var(--card-pad-loose);
+        border-top: 1px solid var(--color-border);
+        background-color: var(--color-background-secondary);
+        color: var(--text-color);
+        line-height: var(--lh-text);
+        overflow-wrap: anywhere;
+    }
+
+    .help-no-results {
+        text-align: center;
+        padding: var(--content-panel-padding);
+        color: var(--text-secondary);
+        font-style: italic;
+    }
+}

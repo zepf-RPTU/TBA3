@@ -1,0 +1,27 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    .student-top-bar-container {
+        flex: 0 0 auto;
+    }
+
+    /* The bar is its own headerless card, whose column direction (.module-container)
+       would otherwise win over .layout-row. The selector and the info table sit
+       together as one group in the bar's centre. */
+    .student-top-bar-content {
+        flex-direction: row;
+        justify-content: center;
+        padding: var(--layout-pad);
+    }
+
+    .student-top-bar-content .ma-student-selector {
+        flex: 0 0 auto;
+    }
+
+    /* As wide as its few short values, not the bar: a full-width header band
+       would leave them stranded at the leading edge. */
+    .student-top-bar-info {
+        flex: 0 1 auto;
+        min-width: 0;
+    }
+}

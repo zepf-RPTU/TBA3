@@ -1,0 +1,69 @@
+/**
+ * The ring figure (itemRingFigure.js), wherever it is drawn: chrome
+ * ink and ring text. The data-driven paint (level fills and the label ink over
+ * them) stays in the script.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* The arcs are outlined in the card surface, so neighbouring segments part. */
+    .item-ring-outer-arc,
+    .item-ring-level-unsolved {
+        stroke: var(--color-card-background);
+        stroke-width: 2px;
+    }
+
+    .item-ring-outer-arc-background {
+        fill: var(--chart-grid-color);
+    }
+
+    .item-ring-outer-arc-success {
+        fill: var(--result-correct);
+    }
+
+    .item-ring-student-tick-line {
+        stroke-width: 3px;
+        stroke: var(--text-color);
+    }
+
+    /* The item table's Pilotierung marker (progressBarColumn.css), turned radial. */
+    .item-ring-pilot-tick-line {
+        stroke-width: 2px;
+        stroke: var(--benchmark-color);
+    }
+
+    .item-ring-student-icon {
+        fill: none;
+        stroke: var(--text-color);
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        cursor: default;
+    }
+
+    /* The rate scales with --ring-fs, which the drawing card stamps for the
+       ring's diameter. */
+    .item-ring-center-text {
+        text-anchor: middle;
+        fill: var(--text-color);
+        font-size: calc(1.4 * var(--ring-fs));
+        font-weight: var(--fw-bold);
+    }
+
+    .item-ring-level-label {
+        text-anchor: middle;
+        font-weight: var(--fw-bold);
+        pointer-events: none;
+    }
+
+    /* Arcs keep their fills under forced colours (data marks, dataMark.css) and
+       are edged in CanvasText, so neighbouring levels and solved vs unsolved stay
+       apart. Last in the layer, so it outranks the arc strokes above. */
+    @media (forced-colors: active) {
+        .item-ring-level-arc,
+        .item-ring-outer-arc {
+            stroke: CanvasText;
+            stroke-width: 1px;
+        }
+    }
+}

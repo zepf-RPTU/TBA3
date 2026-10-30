@@ -1,0 +1,43 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* A split body (a chart type's `bodyControls` strip, a data table): the strip stays
+       put and the chart area or the table area scrolls; the body itself neither pads nor
+       scrolls, as the chart area pads itself (.chart-container). With a data table, the
+       chart area and the table area take turns filling the body, the other one `hidden`. */
+    .chart-host-body--controls,
+    .chart-host-body--table {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    .chart-host-controls {
+        flex: none;
+        padding: var(--layout-gap-relaxed) var(--layout-pad) var(--layout-pad);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    /* The renderer's .chart-container, or the key layout around it, which pads its own
+       parts. A chart type that composes a layout of its own in it pads that layout
+       itself: the split body no longer does. */
+    .chart-host-chart-area {
+        flex: 1;
+        min-height: 0;
+        overflow: auto;
+    }
+
+    /* The key layout gives the chart area a `display` of its own (html-legend-panel.css,
+       an earlier layer), which would beat the `hidden` attribute's. */
+    .chart-host-chart-area[hidden] {
+        display: none;
+    }
+
+    .chart-host-table-area {
+        flex: 1;
+        min-height: 0;
+        overflow: auto;
+        padding: var(--layout-pad);
+    }
+}

@@ -1,0 +1,191 @@
+/**
+ * Placeholders for the blank render windows. .app-skeleton is static markup in each
+ * dashboard's HTML covering the cold start, removed by bootstrapDashboardApp.js.
+ * .view-skeleton is built by viewSkeleton.js and covers the lazy view import and the
+ * render window view-layout.css hides via [data-view-rendering="true"].
+ */
+
+@keyframes skeleton-appear {
+    to {
+        opacity: 1;
+    }
+}
+
+/* The highlight is twice the card's width and crosses it from its left edge
+   until it has fully left on the right. */
+@keyframes skeleton-sweep {
+    from {
+        translate: -50% 0;
+    }
+
+    to {
+        translate: 50% 0;
+    }
+}
+
+/* ==========================================================================
+   Shared placeholder block
+   ========================================================================== */
+
+.skeleton-card {
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+    min-height: 0;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-background-secondary);
+}
+
+/* The sweeping highlight, on its own layer: animating `translate` stays on the
+   compositor, where animating the card's background-position would repaint it
+   every frame. Removing it (reduced motion, below) leaves a plain block. */
+.skeleton-card::after {
+    content: '';
+    position: absolute;
+    inset-block: 0;
+    left: 0;
+    width: 200%;
+    background-image: linear-gradient(
+        90deg,
+        transparent 0%,
+        var(--color-background-hover) 50%,
+        transparent 100%
+    );
+    animation: skeleton-sweep 1.4s linear infinite;
+}
+
+/* The reduced-motion reset (interactive.css) only neutralises the sweep's timing;
+   dropping the highlight keeps it from reading as a stalled gradient. */
+@media (prefers-reduced-motion: reduce) {
+    .skeleton-card::after {
+        content: none;
+    }
+}
+
+/* ==========================================================================
+   View skeleton
+   ========================================================================== */
+
+/* Anti-flash: both mount at opacity 0 behind a delayed fade-in, so a render that
+   finishes inside the delay never paints a placeholder. The reduced-motion reset
+   (interactive.css) collapses duration but not delay, so the guard survives there. */
+.view-skeleton,
+.app-skeleton {
+    background-color: var(--color-background-page);
+    opacity: 0;
+    animation: skeleton-appear 0.2s ease 0.15s forwards;
+}
+
+/* Stacked over the view container in the view's one-cell shell grid
+   (view-layout.css), so it covers exactly the box the view renders into. Not a
+   child of the container: each view's DOM build replaces that content. */
+.view-skeleton {
+    z-index: var(--z-module-content);
+    display: grid;
+    gap: var(--layout-gap);
+    padding: var(--view-padding);
+    pointer-events: none;
+}
+
+.view-skeleton--stack {
+    grid-template-columns: 1fr;
+}
+
+/* Chart band over a content band. */
+.view-skeleton--rows {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3fr;
+}
+
+.view-skeleton--split {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Matches the MA overview, whose ring grid takes the wider column. */
+.view-skeleton--split-wide {
+    grid-template-columns: 1fr 1.2fr;
+}
+
+/* Matches the narrow/wide/narrow proportions of the EN overview grid. */
+.view-skeleton--triple {
+    grid-template-columns: 1fr 1.8fr 1fr;
+}
+
+.view-skeleton--grid {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}
+
+/* Collapse to a single column at the same breakpoint the real view grids do. */
+@media (--stacked-layout) {
+    .view-skeleton--split,
+    .view-skeleton--split-wide,
+    .view-skeleton--grid {
+        grid-template-columns: 1fr;
+    }
+
+    .view-skeleton--rows {
+        grid-template-rows: none;
+    }
+
+    /* The EN overview stacks its wide centre band first, then the two side charts
+       side by side (enOverviewViewModule.css). */
+    .view-skeleton--triple {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 2fr 1fr;
+    }
+
+    .view-skeleton--triple > :nth-child(2) {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+}
+
+/* ==========================================================================
+   App shell skeleton — cold start, before any view container exists
+   ========================================================================== */
+
+.app-skeleton {
+    position: fixed;
+    inset: 0;
+    /* One tier above the sidebar: SidebarModule inserts the rail after this element,
+       and at an equal z-index the later sibling would paint on top and take clicks
+       while the app is still booting. */
+    z-index: calc(var(--z-shell) + 1);
+    display: flex;
+}
+
+.app-skeleton-rail {
+    flex: none;
+    width: var(--sidebar-rail-width);
+    border-inline-end: 1px solid var(--color-border);
+    background-color: var(--color-card-background);
+}
+
+.app-skeleton-main {
+    display: flex;
+    flex: 1;
+    min-width: 0;
+    flex-direction: column;
+    gap: var(--layout-gap);
+    padding: var(--view-padding);
+}
+
+.app-skeleton-status {
+    font-size: var(--fs-base);
+    line-height: var(--lh-ui);
+    color: var(--text-secondary);
+}
+
+.app-skeleton-header {
+    flex: none;
+    height: 3rem;
+}
+
+.app-skeleton-body {
+    display: grid;
+    flex: 1;
+    min-height: 0;
+    gap: var(--layout-gap);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+}

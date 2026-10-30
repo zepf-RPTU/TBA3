@@ -1,0 +1,59 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* A chart's data as a table, in the look of the Tabulator tables (table-base.css). */
+    .chart-data-table {
+        border-collapse: collapse;
+        font-size: var(--fs-sm);
+        font-variant-numeric: tabular-nums;
+    }
+
+    /* A chart with two tables heads each. */
+    .chart-data-table-title {
+        margin: 0 0 var(--layout-gap);
+        font-size: var(--fs-base);
+        font-weight: var(--fw-semibold);
+    }
+
+    .chart-data-table + .chart-data-table-title {
+        margin-top: var(--layout-gap-relaxed);
+    }
+
+    .chart-data-table th,
+    .chart-data-table td {
+        padding: var(--table-cell-padding-block) var(--table-cell-padding-inline);
+        border-bottom: 1px solid var(--color-border-light);
+        text-align: start;
+    }
+
+    .chart-data-table thead th {
+        background: var(--table-header-bg);
+        border-bottom-color: var(--table-header-border-bottom);
+        color: var(--table-header-text);
+        font-weight: var(--fw-semibold);
+    }
+
+    .chart-data-table tbody th {
+        color: var(--text-color);
+        font-weight: var(--fw-semibold);
+    }
+
+    .chart-data-table td {
+        color: var(--table-text-secondary);
+    }
+
+    /* A column of figures is centred, as every Tabulator figure column is: one
+       alignment rule for numbers in every table. A figure keeps its line: `15,4 % (4)`
+       broken in two reads as two values. A text column (an Aufgabe, a GER level) and the
+       row heads read from the start. */
+    .chart-data-table td,
+    .chart-data-table thead th:not(:first-child) {
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .chart-data-table td.chart-data-table-text,
+    .chart-data-table thead th.chart-data-table-text {
+        text-align: start;
+    }
+}

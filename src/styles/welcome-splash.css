@@ -1,0 +1,162 @@
+/**
+ * The landing layout: a centred greeting card over a background photo, a nav-cards
+ * grid below, and the nav cards' skin (visual left, title and description beside it),
+ * for NavCardModule's cards and static links alike.
+ */
+
+.welcome-splash {
+    position: relative;
+    /* The first format the browser decodes wins; JPEG for those without AVIF/WebP. */
+    background: center / cover no-repeat
+        image-set(
+            url('./welcome-splash-background.avif') type('image/avif'),
+            url('./welcome-splash-background.webp') type('image/webp'),
+            url('./welcome-splash-background.jpg') type('image/jpeg')
+        );
+}
+
+/* The background is provisional ("Platzhalter"), and its Freepik license requires
+   the credit wherever the image is shown. A card-coloured chip, because plain text
+   on the light, busy illustration would fail the contrast checks. */
+.welcome-image-notice {
+    position: absolute;
+    inset-block-end: var(--space-md);
+    inset-inline-end: var(--space-md);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background: var(--color-card-background);
+    box-shadow: var(--shadow-md);
+    text-align: end;
+    font-size: var(--fs-sm);
+    color: var(--text-secondary);
+}
+
+.welcome-image-notice-label {
+    font-weight: var(--fw-bold);
+}
+
+/* Greeting and nav cards share one column width, so their edges line up. */
+.welcome-container {
+    --welcome-column: 75%;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--layout-gap);
+    color: var(--text-color);
+}
+
+.welcome-greeting {
+    text-align: center;
+    padding: var(--card-pad);
+    background: var(--color-card-background);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    width: var(--welcome-column);
+    flex: 0 1 auto;
+    max-height: 50%;
+    align-self: center;
+    overflow-y: auto;
+}
+
+.welcome-greeting p {
+    color: var(--text-secondary);
+    line-height: var(--lh-text);
+}
+
+/* The longest prose in the app, across the shared column: one paragraph per
+   column keeps lines readable where a single column would run past 100
+   characters. Below two 32ch tracks it stacks. */
+.welcome-greeting-body {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(32ch, 100%), 1fr));
+    gap: var(--space-md) var(--card-pad-loose);
+    align-items: start;
+    text-align: start;
+    flex: 0 1 auto;
+}
+
+.welcome-cards {
+    display: grid;
+    /* Two columns wherever two 22rem tracks fit the shared column, one below; the
+       half-width floor stops a wide screen from opening a third. */
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, max(22rem, (100% - var(--layout-gap)) / 2)), 1fr)
+    );
+    gap: var(--layout-gap);
+    max-height: 50%;
+    width: var(--welcome-column);
+    align-self: center;
+    background: var(--color-card-background);
+    /* Concentric with the --radius-md cards inside: outer = inner + inset (padding
+       and border). */
+    border-radius: calc(var(--radius-md) + var(--layout-gap) + 1px);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--color-border);
+    padding: var(--layout-gap);
+    overflow-y: auto;
+}
+
+/* Every nav card is an .interactive-card (the current view's is never listed):
+   foundation's .interactive-card / .hover-border paint the fill and border
+   tokens, hover states included. */
+.welcome-splash .preview-item {
+    --interactive-bg: var(--color-background-page);
+    --interactive-hover-bg: var(--primary-color-light);
+    padding: var(--card-pad-loose);
+    border-radius: var(--radius-md);
+    border-width: 2px;
+    border-style: solid;
+    display: grid;
+    /* The text column may narrow below its longest word ("Kompetenzstufen" beside the
+       icon on a phone), and a word breaks only where it would overflow the card. */
+    grid-template-columns: auto minmax(0, 1fr);
+    overflow-wrap: break-word;
+    column-gap: var(--space-lg);
+    row-gap: var(--control-gap);
+    align-items: start;
+}
+
+.welcome-splash .preview-label {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+    color: var(--color-accent-text);
+    line-height: var(--lh-ui);
+}
+
+.welcome-splash .preview-description {
+    font-size: var(--fs-base);
+    color: var(--text-secondary);
+    line-height: var(--lh-text);
+    text-align: start;
+}
+
+/* The card's Material Symbols glyph. */
+.welcome-splash .preview-icon {
+    --preview-display-size: 2.5rem;
+    width: 80px;
+    height: 80px;
+    background: var(--color-background-page);
+    font-size: var(--preview-display-size);
+    border-inline-start: 4px solid var(--primary-color);
+    grid-row: 1 / 3;
+}
+
+@media (--stacked-layout) {
+    .welcome-container {
+        --welcome-column: 90%;
+    }
+
+    .welcome-greeting {
+        max-height: none;
+    }
+}

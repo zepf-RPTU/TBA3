@@ -1,0 +1,88 @@
+/**
+ * Dashboard chooser (index.html) entry sheet, in the apps' layer order: the
+ * foundation and common sheets it shares with them, then its own `views` rules.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@import '@tba3/module-base/styles/tokens.css' layer(foundation);
+@import '@tba3/modules/styles/tokens.css' layer(foundation);
+@import './styles/foundation/variables.css' layer(foundation);
+@import './styles/foundation/typography.css' layer(foundation);
+@import './styles/foundation/responsive.css' layer(foundation);
+@import '@tba3/module-base/styles/interactive.css' layer(foundation);
+@import './styles/foundation/layout-reset.css' layer(foundation);
+@import './styles/preview-media.css' layer(common);
+@import './styles/welcome-splash.css' layer(views);
+
+/* Additions to the shared welcome-splash shell. In the apps .view-base supplies
+   the box .welcome-container fills, and the greeting is the welcome view's
+   GreetingModule card (title rule + body). */
+@layer views {
+    .chooser {
+        height: 100%;
+        padding: var(--card-pad-loose);
+    }
+
+    /* The page's one <h1>, at the size the welcome greetings give their title. */
+    .chooser-title {
+        font-size: var(--fs-module-title);
+        padding-bottom: var(--space-sm);
+        margin-bottom: var(--space-sm);
+        border-bottom: 1px solid var(--color-border);
+    }
+
+    /* The chooser's content is short, so its shared column stops at the width three
+       dashboard cards need instead of spanning a wide screen. */
+    .chooser .welcome-container {
+        --welcome-column: min(90%, 72rem);
+    }
+
+    /* The apps cap the greeting at half the view and scroll its long prose; here a
+       capped card would hide the links under the logo, so the page scrolls instead. */
+    .chooser .welcome-greeting {
+        max-height: none;
+        flex-shrink: 0;
+    }
+
+    .chooser-intro {
+        max-inline-size: 65ch;
+        margin-inline: auto;
+    }
+
+    .chooser-docs {
+        margin-top: var(--space-md);
+    }
+
+    .chooser-docs a {
+        color: var(--color-accent-text);
+        font-weight: var(--fw-bold);
+    }
+
+    /* The publisher's mark heads the card, at the width the dashboards' sidebar shows
+       it. The JPEG carries its own white surface, so in dark mode it sits as a white
+       tile. */
+    .chooser-logo {
+        display: block;
+        width: 250px;
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto var(--space-md);
+        border-radius: var(--radius-sm);
+    }
+
+    .chooser-cards {
+        /* One column per dashboard where three 18rem tracks fit, stacking below. */
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(min(100%, max(18rem, (100% - 2 * var(--layout-gap)) / 3)), 1fr)
+        );
+    }
+
+    /* The cards are the apps' welcome nav cards (welcome-splash.css), with a bigger
+       glyph on the card's own fill. */
+    .chooser .preview-icon {
+        font-size: var(--fs-h1);
+        background: none;
+    }
+}

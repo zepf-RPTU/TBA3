@@ -1,0 +1,19 @@
+{
+    "interface": {
+        "dataset-select": {
+            "label": "Lerngruppe"
+        },
+        "layout-both": {
+            "label": "Beides"
+        },
+        "layout-table": {
+            "label": "Tabelle"
+        },
+        "layout-charts": {
+            "label": "Diagramme"
+        },
+        "layout-group": {
+            "label": "Darstellung"
+        }
+    }
+}

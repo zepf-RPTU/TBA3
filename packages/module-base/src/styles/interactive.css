@@ -1,0 +1,124 @@
+:root {
+    --interactive-hover-bg: var(--color-background-muted);
+}
+
+/* ==========================================================================
+   Composable primitives
+   ========================================================================== */
+
+.interactive-card,
+.interactive-subtle {
+    cursor: pointer;
+    transition:
+        background var(--motion-duration-fast) var(--motion-ease-standard),
+        border-color var(--motion-duration-fast) var(--motion-ease-standard),
+        box-shadow var(--motion-duration-fast) var(--motion-ease-standard),
+        transform var(--motion-duration-fast) var(--motion-ease-standard),
+        color var(--motion-duration-fast) var(--motion-ease-standard),
+        opacity var(--motion-duration-fast) var(--motion-ease-standard);
+    /* Consumers set `--interactive-bg` / `--interactive-border-color`, never
+       `background` or `border-color`: those would come from a higher layer and
+       silently beat the :hover rules below. Same model as `--btn-fill` in
+       buttons.css. */
+    background: var(--interactive-bg, transparent);
+}
+
+/* A link drawn as a surface reads as its content, not as link text. */
+a:is(.interactive-card, .interactive-subtle) {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hover-border {
+    border-color: var(--interactive-border-color, transparent);
+}
+
+.hover-border:hover {
+    border-color: var(--primary-color);
+}
+
+/* ==========================================================================
+   Native button elements
+   ========================================================================== */
+
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   Bundled presets
+   ========================================================================== */
+
+:is(.interactive-card, .interactive-subtle):hover {
+    background: var(--interactive-hover-bg);
+}
+
+.interactive-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.interactive-card:active {
+    transform: translateY(-2px) scale(var(--press-scale));
+}
+
+.interactive-card:focus-visible,
+.interactive-subtle:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 0;
+}
+
+/* Standard properties only, so every engine draws the same bar. The thumb takes the
+   control-border ink (3:1 on the card): a scroller's only cue to what lies past its
+   edge must be visible. */
+.styled-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border-control) var(--color-background-secondary);
+}
+
+/* ==========================================================================
+   Colour-scheme switch
+   ========================================================================== */
+
+/* For the frame a light/dark switch lands in (colorSchemeService.js), so the page
+   snaps to the new scheme instead of fading each surface on its own transition. */
+/* eslint-disable css/no-important */
+html[data-scheme-switching] *,
+html[data-scheme-switching] *::before,
+html[data-scheme-switching] *::after {
+    transition: none !important;
+}
+
+/* eslint-enable css/no-important */
+
+/* ==========================================================================
+   Reduced motion
+   ========================================================================== */
+
+/* Covers every CSS transition and animation; script-driven motion is gated by
+   its owner. */
+@media (prefers-reduced-motion: reduce) {
+    /* A universal reset (specificity 0,0,0) cannot otherwise override component
+       transition/animation declarations. */
+    /* eslint-disable css/no-important */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        /* 0s, not the idiom's 0.01ms: `transition-property` defaults to `all`,
+           so any non-zero duration turns every style change into a transition,
+           and a widget measuring itself on mount reads mid-transition sizes. */
+        transition-duration: 0s !important;
+        /* A visibility toggle delays the `visibility` flip by its fade; with the
+           fade gone the delay must go too. */
+        transition-delay: 0s !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* eslint-enable css/no-important */
+}

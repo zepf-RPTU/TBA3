@@ -1,0 +1,57 @@
+/**
+ * The renderer stamps the groups and places the school box; the colours are the
+ * cascade's, so a scheme switch repaints without a redraw.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* A reading of one number, not data: HTML in the plot's left margin, where the
+       renderer places it (left, top on the zero line, width); centred on that line
+       here. */
+    .school-value-box {
+        position: absolute;
+        transform: translateY(-50%);
+        box-sizing: border-box;
+        padding: 0.75rem 0.625rem;
+        border: 1.5px solid var(--text-secondary);
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    /* A display numeral, deliberately larger than --fs-lg. */
+    .school-value {
+        color: var(--text-color);
+        font-size: calc(var(--fs-lg) * 1.6);
+        font-weight: var(--fw-semibold);
+        line-height: 1.1;
+    }
+
+    .school-value-caption {
+        color: var(--text-secondary);
+        font-size: var(--fs-sm);
+        line-height: 1.35;
+    }
+
+    /* A tint of the verdict's hue with a hairline edge: the label carries the
+       magnitude, the fill only the verdict, so "unfavourable" does not wear the
+       falsch red of a result bar. */
+    .deviation-bar {
+        stroke-width: 1;
+    }
+
+    .deviation-bar--favourable {
+        fill: var(--tint-positive);
+        stroke: var(--primary-color);
+    }
+
+    .deviation-bar--unfavourable {
+        fill: var(--tint-negative);
+        stroke: var(--result-incorrect);
+    }
+
+    .deviation-bar--neutral {
+        fill: var(--tint-neutral);
+        stroke: var(--text-secondary);
+    }
+}

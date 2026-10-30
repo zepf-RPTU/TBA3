@@ -1,0 +1,39 @@
+/**
+ * The progress-bar column. The bar itself, benchmark marker included, is the
+ * shared DOM stacked bar (stacked-bar.css), filled from the --result-* tokens;
+ * .percentage-bar-container is this column's hook on it.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* The label of the header-click sort step in force (progressBarSorting.js): the
+       weight marks it where colour cannot be the only cue. */
+    .progress-bar-sort-active {
+        color: var(--color-accent-text);
+        font-weight: var(--fw-bold);
+    }
+
+    /* The Pilotierung cell's value and difference, meeting at the centre line: every
+       value ends, and every difference starts, at one x whatever their digit counts. */
+    .pilot-cell {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 0.35em;
+    }
+
+    .pilot-value {
+        justify-self: end;
+    }
+
+    .pilot-diff {
+        justify-self: start;
+    }
+
+    /* The Richtig share label (createProgressBarFormatter) starts at the bar's
+       left edge; whether it fits, and its room beside the benchmark line, are
+       stacked-bar.css's job. */
+    .percentage-bar-container .stacked-bar-segment {
+        justify-content: flex-start;
+    }
+}

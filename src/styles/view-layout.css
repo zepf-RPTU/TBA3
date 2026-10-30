@@ -1,0 +1,124 @@
+/**
+ * The page shell every dashboard's entry HTML carries and the lifecycle's
+ * wrappers around each routed view. View styles own concrete grid/flex placement;
+ * the in-view primitives (`.layout-stack`, `.layout-row`, `.layout-grid`) are
+ * module-base's layout.css.
+ */
+
+/* ==========================================================================
+   App shell
+   ========================================================================== */
+
+/* The first focusable element on every dashboard page, so a keyboard user can
+   bypass the rail; off-screen until focused. It clears both the sidebar's
+   --z-shell tier and the skeleton's one above it (skeleton.css): during boot it
+   is the page's only focusable element, and at the skeleton's tier the later
+   sibling would paint over it. */
+.skip-link {
+    position: fixed;
+    top: var(--space-sm);
+    inset-inline-start: var(--space-sm);
+    z-index: calc(var(--z-shell) + 2);
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-sm);
+    background: var(--color-accent-solid);
+    color: var(--text-on-primary);
+    text-decoration: none;
+    transform: translateY(calc(-100% - var(--space-md)));
+}
+
+.skip-link:focus-visible {
+    transform: none;
+    outline: var(--focus-ring);
+    outline-offset: 0;
+    box-shadow: 0 0 0 calc(var(--focus-ring-width) + 2px) var(--color-background);
+}
+
+/* The dashboard shell's floor: below it the page scrolls (layout-reset.css). overflow:
+   clip keeps anything in the body box from extending the page past the viewport. The
+   surfaces appended to body (tooltips, glossary popups, dialogs, the notes drawer, the
+   tour card) are `position: fixed` or in the top layer, so it does not reach them. */
+body {
+    min-width: var(--shell-min-width);
+    min-height: var(--shell-min-height);
+    overflow: clip;
+}
+
+/* The sidebar sibling rule in sidebarModule.css owns the sidebar offset, so all
+   three apps compute the same main-content box. */
+.main-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: clip;
+}
+
+/* ==========================================================================
+   View section
+   ========================================================================== */
+
+/* A layout region inside a view, giving child modules a flex column to size in.
+   Pair with .module-container on the child card when a routed region needs a
+   separate layout wrapper. */
+.view-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    min-width: 0;
+}
+
+/* ==========================================================================
+   View shell — the lifecycle's wrapper around each view container
+   ========================================================================== */
+
+/* One grid cell: the view container and, while it renders, its skeleton
+   (skeleton.css) stack in it, so the placeholder covers the view's box with no
+   measurement. The shell shows and hides; the container keeps its layout. */
+.view-shell {
+    display: grid;
+    flex: 1;
+    min-height: 0;
+    grid-template: minmax(0, 1fr) / minmax(0, 1fr);
+}
+
+.view-shell > * {
+    grid-area: 1 / 1;
+}
+
+/* A failed load (bootstrapDashboardApp.js): above the views of a running shell,
+   alone in the app container, or at the end of the page without one. */
+.dashboard-bootstrap-error {
+    flex: none;
+    margin: var(--card-pad) var(--card-pad) 0;
+}
+
+/* ==========================================================================
+   View base — shared defaults for every view root container
+   ========================================================================== */
+
+/* Grid views override display locally. */
+.view-base {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    flex-direction: column;
+    padding: var(--view-base-padding, var(--view-padding));
+    gap: var(--layout-gap);
+    overflow-y: auto;
+}
+
+.view-base > * {
+    min-height: 0;
+    min-width: 0;
+}
+
+[data-view-rendering='true'] {
+    visibility: hidden;
+}
+
+@media (--stacked-layout) {
+    .view-base {
+        container-type: size;
+        padding: var(--view-base-padding, var(--space-sm));
+    }
+}

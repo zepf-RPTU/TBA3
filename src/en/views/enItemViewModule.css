@@ -1,0 +1,52 @@
+/**
+ * EN Aufgaben view — the item lollipop across the top; the item table and
+ * detail panel below.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .en-item-view {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        /* Even rows: the lollipop stacks one strip per domain. */
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            'chart chart'
+            'table detail';
+    }
+
+    .en-item-view > .chart-section {
+        grid-area: chart;
+    }
+
+    /* A folded chart keeps its header; the table and detail take the rest. */
+    .en-item-view:has(> .chart-section.collapsed) {
+        grid-template-rows: auto 1fr;
+    }
+
+    .en-item-view > .table-section {
+        grid-area: table;
+    }
+
+    .en-item-view > .detail-section {
+        grid-area: detail;
+    }
+
+    @media (--stacked-layout) {
+        .en-item-view {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, var(--stacked-card-height));
+            grid-template-areas:
+                'chart'
+                'table'
+                'detail';
+        }
+
+        /* `min-content`, not `auto`: the folded card scrolls, so its automatic minimum
+           is 0, and the stacked rows already fill the view. */
+        .en-item-view:has(> .chart-section.collapsed) {
+            grid-template-rows: min-content repeat(2, var(--stacked-card-height));
+        }
+    }
+}

@@ -1,0 +1,100 @@
+/**
+ * A Tabulator column header is one flex row: the title, then its sort indicator.
+ * Filtering is the filter menu's job (tableFilterMenu.js), so there is no second
+ * row. TableHeaderGeometry counts the indicator in the column's width floor.
+ */
+
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content {
+    /* The cells' inline padding, so header text lines up with the cell text below
+       it (TableHeaderGeometry reads the same token for the width floors). */
+    padding: var(--tabulator-header-col-padding);
+    display: flex;
+    align-items: center;
+    gap: var(--control-gap);
+    height: 100%;
+}
+
+/* The title and sorter become flex children of .tabulator-col-content without
+   moving DOM nodes, which Tabulator's re-renders would undo. */
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title-holder {
+    display: contents;
+}
+
+/* The title takes its own width, so the sort indicator sits right beside it, not
+   at the column edge where it reads as the next header's; the header-align-*
+   classes below place the pair. The title shrinks and wraps before the indicator
+   does.
+
+   The wrap is capped at --table-header-max-lines: uncapped, one long title in a
+   squeezed column pushes every header several lines tall. The cap also bounds
+   how far a stale height measurement can drift (TableHeaderGeometry#attach).
+
+   `-webkit-line-clamp` needs the legacy `-webkit-box` display and its own
+   `overflow: hidden`; every current engine implements the prefixed property, and
+   unprefixed `line-clamp` is not Baseline. The title stays a flex item, so
+   `flex` still applies. Clipping is safe: glossary popups are appended to
+   document.body (tooltipService), not nested in the title. */
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-title {
+    flex: 0 1 auto;
+    white-space: normal;
+    overflow-wrap: break-word;
+    width: auto;
+    min-width: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--table-header-max-lines);
+    overflow: hidden;
+}
+
+/* The sort indicator never shrinks. Tabulator positions it absolutely; here it is
+   a flex item. */
+.tabulator .tabulator-header .tabulator-col .tabulator-col-content .tabulator-col-sorter {
+    flex: 0 0 auto;
+    position: static;
+}
+
+/* ==========================================================================
+   Header alignment
+   ========================================================================== */
+
+/* The title and its indicator align like the column's cells via the header-align-*
+   class columnDefinitionProcessor.js derives from `hozAlign` (Tabulator aligns
+   only a header with `headerHozAlign`, which nothing here sets). text-align
+   places a wrapped title's lines. */
+
+.tabulator .tabulator-header .tabulator-col.header-align-left .tabulator-col-content {
+    text-align: start;
+}
+
+.tabulator .tabulator-header .tabulator-col.header-align-center .tabulator-col-content {
+    justify-content: center;
+    text-align: center;
+}
+
+/* ==========================================================================
+   Column groups
+   ========================================================================== */
+
+/* A column group header has a title and no sorter: a centred flex row, as
+   Tabulator draws it. No tint: the group cell wraps its child headers, so a
+   background would darken the whole grouped block. The border marks the
+   hierarchy. */
+.tabulator .tabulator-header .tabulator-col.tabulator-col-group {
+    border-bottom: 2px solid var(--table-header-border-bottom);
+}
+
+/* The title row keeps its own height, not the group's: Tabulator gives the child
+   headers the group's height minus this row's (Column.verticalAlign), so a stretched
+   row would take their height and clip a child title that wraps. */
+.tabulator .tabulator-header .tabulator-col.tabulator-col-group > .tabulator-col-content {
+    justify-content: center;
+    height: auto;
+}
+
+.tabulator
+    .tabulator-header
+    .tabulator-col.tabulator-col-group
+    > .tabulator-col-content
+    .tabulator-col-title-holder {
+    display: flex;
+}

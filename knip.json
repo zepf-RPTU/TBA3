@@ -1,0 +1,32 @@
+{
+    "$schema": "https://unpkg.com/knip@6/schema.json",
+    "workspaces": {
+        ".": {
+            "entry": [
+                "src/common/app/bootstrapDashboardApp.js!",
+                "src/en/enAppModule.js!",
+                "src/ma/maAppModule.js!",
+                "src/sl/slAppModule.js!",
+                "tools/**/*.mjs",
+                "tools/hooks/*",
+                "tests/**/*.js",
+                "config/*.mjs",
+                "config/*.js",
+                "config/*.d.ts",
+                "docs/.vitepress/*.mjs",
+                "docs/.vitepress/theme/*.mjs"
+            ],
+            "project": ["src/**/*.js!"]
+        },
+        "packages/module-base": {
+            "entry": ["test/**/*.js"]
+        },
+        "packages/modules": {
+            "entry": ["test/**/*.js"]
+        }
+    },
+    "rules": {
+        "optionalPeerDependencies": "off",
+        "cycles": "error"
+    }
+}

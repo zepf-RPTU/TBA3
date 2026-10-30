@@ -1,0 +1,41 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    .student-point {
+        /* The ring the selection controller sets per point. */
+        stroke: var(--mark-outline);
+        transition:
+            stroke var(--motion-duration-fast) var(--motion-ease-standard),
+            stroke-width var(--motion-duration-fast) var(--motion-ease-standard),
+            opacity var(--motion-duration-fast) var(--motion-ease-standard);
+        /* The chart picks the point nearest the pointer (`wireNearestPoints`). */
+        pointer-events: none;
+    }
+
+    .selection-rectangle {
+        pointer-events: none;
+    }
+
+    /* During a marquee drag the marks must not catch the pointer, so the drag
+       reads the background. `!important` beats the inline `pointer-events: auto`
+       a shown average marker gets from `joinAverageMarkers`. */
+    svg.marquee-active :is(.group-average-point, .comparison-average-point) {
+        /* eslint-disable-next-line css/no-important */
+        pointer-events: none !important;
+    }
+
+    /* Only while touch selection is armed (scatterSelectionController.js): the
+       gesture goes to the chart instead of scrolling the page. */
+    svg.selection-armed {
+        touch-action: none;
+    }
+
+    /* Points keep their fill (data marks, dataMark.css); under forced colours a
+       resting point is ringed in CanvasText so overlapping points stay apart. A
+       selected point keeps its highlight ring. */
+    @media (forced-colors: active) {
+        .student-point:not(.selected) {
+            stroke: CanvasText;
+        }
+    }
+}

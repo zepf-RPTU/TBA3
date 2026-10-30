@@ -1,0 +1,18 @@
+/**
+ * The dots' paint is set in longitudinalLineChart.js; an end label's leader is a
+ * shared .chart-separator.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* A dot's colour names its category, so it stays (data marks, dataMark.css);
+       under forced colours a CanvasText ring keeps dots of series that meet in one
+       year apart. */
+    @media (forced-colors: active) {
+        .series-dots .dot {
+            stroke: CanvasText;
+            stroke-width: 1px;
+        }
+    }
+}

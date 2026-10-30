@@ -1,0 +1,15 @@
+{
+    "title": "Aufgabenübersicht",
+    "tutorial": "<p>Die Tabelle listet alle Teilaufgaben Ihres Testhefts mit Leitidee, Aufgabenniveau und dem Ergebnis der Lerngruppe. Der Verteilungsbalken zeigt, welcher Anteil der Lerngruppe eine Teilaufgabe richtig gelöst, falsch gelöst oder nicht bearbeitet hat; die Markierung im Balken und die Spalte „Pilotierung“ zeigen, welche Lösungsquote nach der Pilotierung zu erwarten war. Über das Augen-Symbol vor der Aufgabennummer öffnen Sie eine Vorschau der Aufgabe.</p><p>Vermutlich interessieren Sie nicht alle Teilaufgaben gleichermaßen. Schränken Sie die Auswahl über die Filter-Schaltfläche über der Tabelle oder mit Schaltflächen wie „Schwächste 5“ ein: Welche Teilaufgaben haben der Lerngruppe die größten Schwierigkeiten bereitet – und war bei ihrem Niveau überhaupt etwas anderes zu erwarten? Oder gibt es eigentlich leichte Teilaufgaben, die dennoch nicht flächendeckend gelöst wurden?</p>",
+    "interface": {
+        "best-five": {
+            "label": "Stärkste 5"
+        },
+        "worst-five": {
+            "label": "Schwächste 5"
+        },
+        "incomplete": {
+            "label": "Hohe Nichtbearbeitung"
+        }
+    }
+}

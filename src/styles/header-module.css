@@ -1,0 +1,143 @@
+/**
+ * The one view-header layout; an app must not re-declare it.
+ */
+
+/* [ title | controls | notes, info ] over a full-width subtitle row. Columns 1 and
+   3 share the room left beside the controls, but the title column never narrows
+   below its longest word (`min-content`), so a title breaks between words, not
+   inside them; the controls then sit off-centre. The subtitle takes its own row. Every child pins its own grid-row/grid-column, so DOM order does not
+   drive placement. */
+.header-module {
+    width: 100%;
+    background-color: var(--color-card-background);
+    border: 1px solid var(--color-border);
+
+    display: grid;
+    grid-template-columns: minmax(min-content, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    column-gap: var(--space-lg);
+    row-gap: var(--space-xs);
+    min-height: var(--header-min-height);
+    padding: var(--header-padding);
+    position: relative;
+    flex-shrink: 0;
+}
+
+.header-module-control-list {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--layout-gap-loose);
+    /* The controls (form font: inherit) take it from here. */
+    font-size: var(--fs-header-control);
+}
+
+.header-module-actions {
+    grid-column: 3;
+    grid-row: 1;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: var(--layout-gap-relaxed);
+    position: relative;
+    z-index: calc(var(--z-overlay) + 1);
+}
+
+.header-module-control-list > *,
+.header-module-actions > * {
+    flex: 0 0 auto;
+}
+
+.header-module-control-list:empty,
+.header-module-actions:empty {
+    display: none;
+}
+
+/* The view title: the page's one <h1>. */
+.header-module-title {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    max-width: 100%;
+    /* The column fits the longest word; hyphenation (the page is lang="de") lets a
+       one-word title ("Schüler:innenansicht") narrow it further, and `break-word`
+       breaks a word only where nothing else fits. */
+    hyphens: auto;
+    overflow-wrap: break-word;
+    /* The h2 step (variables.css): the title is an h1 for the outline, not for
+       size. */
+    font-size: var(--fs-h2);
+}
+
+.header-module-title-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.header-module-subtitle {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    font-size: var(--fs-base);
+    color: var(--text-secondary);
+    line-height: var(--lh-ui);
+}
+
+/* One look for header selects and the student selectors: .header-module-select
+   is the container of a `type: 'select'` control, .header-module-student-select
+   the select class of a student selector's SelectControlModule. */
+.header-module-select {
+    justify-content: center;
+}
+
+/* On the container too, so the --wide modifier beside it can raise the floor. */
+.header-module-select,
+.header-module-student-select {
+    --header-select-min-width: 11rem;
+}
+
+/* No max-width: a native <select> sizes to its widest option and clips (never
+   ellipsizes) below that, so any cap silently truncates the collapsed label.
+   The min-width keeps short-option selects from collapsing; the header grid
+   bounds the wide end. */
+.header-module-select .control-select,
+.header-module-student-select {
+    min-width: var(--header-select-min-width);
+    --control-padding: 0.4rem;
+}
+
+/* For option labels long enough that the default floor would make the collapsed
+   box jump on selection. */
+.header-module-select--wide {
+    --header-select-min-width: 15.5rem;
+}
+
+/* When title, controls and actions do not fit one row (measured by headerModule.js):
+   two columns (title | actions shrunk to content), the controls on row 2 and the
+   subtitle on row 3. */
+.header-module--stacked {
+    grid-template-columns: minmax(min-content, 1fr) auto;
+}
+
+.header-module--stacked > .header-module-actions {
+    grid-column: 2;
+}
+
+.header-module--stacked > .header-module-control-list {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.header-module--stacked > .header-module-subtitle {
+    grid-row: 3;
+}

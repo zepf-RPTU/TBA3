@@ -1,0 +1,75 @@
+/**
+ * Toast region (notificationService.js): bottom-centre stack; the UA popover box
+ * (centred fit-content, bordered, padded, Canvas-coloured) is reset here.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    .toast-region {
+        inset: auto 0 var(--space-lg);
+        width: auto;
+        height: auto;
+        margin: 0;
+        border: 0;
+        background: none;
+        color: inherit;
+        overflow: visible;
+        flex-direction: column;
+        align-items: center;
+        gap: var(--space-sm);
+        padding: 0 var(--space-md);
+        pointer-events: none;
+    }
+
+    .toast-region:popover-open {
+        display: flex;
+    }
+
+    .toast {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        max-width: 36rem;
+        padding: var(--space-sm) var(--space-md);
+        border: 1px solid var(--color-notice-border);
+        border-radius: var(--radius-md);
+        background: var(--color-notice-bg);
+        color: var(--color-notice-text);
+        box-shadow: var(--shadow-lg);
+        pointer-events: auto;
+        animation: toast-enter var(--motion-duration-fast) var(--motion-ease-standard);
+        transition:
+            opacity var(--motion-duration-fast) var(--motion-ease-standard),
+            translate var(--motion-duration-fast) var(--motion-ease-standard);
+    }
+
+    /* A persistent toast reports a failure or lost work: the card surface, edged and
+       marked in the error red, not the amber of a notice. */
+    .toast--persistent {
+        border-color: var(--color-error);
+        background: var(--color-card-background);
+        color: var(--text-color);
+    }
+
+    .toast-error-icon {
+        flex: none;
+        color: var(--color-error);
+    }
+
+    .toast.is-leaving {
+        opacity: 0;
+        translate: 0 8px;
+    }
+
+    .toast-text {
+        flex: 1 1 auto;
+    }
+
+    @keyframes toast-enter {
+        from {
+            opacity: 0;
+            translate: 0 8px;
+        }
+    }
+}

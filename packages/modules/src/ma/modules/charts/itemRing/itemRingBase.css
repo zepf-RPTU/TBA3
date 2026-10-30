@@ -1,0 +1,171 @@
+/**
+ * The item ring grid: body, legend row, cells and their states. The ring figure
+ * itself is itemRingFigure.css.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* The controller stamps the solved geometry on the body as custom properties
+       (tracks, cell size, ring font size) plus `data-wrap` in wrap mode; this
+       layer beats .chart-container's width, height and font-size from common.
+       The gutter keeps wrap mode's scrollbar from resizing the grid and feeding
+       back into the ResizeObserver; both edges, since one edge would shift the
+       centred grid by half the scrollbar. The padding is the reach of a ring's
+       outline (focus ring plus its offset): the body clips as a scroller, and
+       wrap mode puts the first row flush at its top edge. */
+    .item-ring-grid-body {
+        display: grid;
+        grid-template-columns: repeat(var(--ring-cols), var(--ring-w));
+        grid-template-rows: repeat(var(--ring-rows), var(--ring-h));
+        gap: var(--layout-gap);
+        padding: calc(var(--focus-ring-width) + var(--focus-ring-offset));
+        justify-content: center;
+        align-content: center;
+        scrollbar-gutter: stable both-edges;
+        /* Takes the height the legend row leaves, and is the element that scrolls. */
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow-y: auto;
+    }
+
+    /* The host body as a column: legend row, then the grid. */
+    .item-ring-grid-host {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    /* A body split for the data table pads nothing: the chart area pads the legend and
+       the grid together, as the body did. */
+    .chart-host-chart-area.item-ring-grid-host {
+        padding: var(--chart-container-padding);
+    }
+
+    /* One-row key to the ring's encodings (the shared swatch key's row variant),
+       under the card title, centred as every chart key is. */
+    .item-ring-legend {
+        flex: 0 0 auto;
+        padding: 0 var(--layout-pad) var(--space-xs);
+        font-size: var(--fs-sm);
+    }
+
+    .item-ring-legend .legend-swatch-list--row {
+        justify-content: center;
+    }
+
+    /* The pilot tick as the ring draws it: a bare 2px line, sized with the row. */
+    .item-ring-legend-mark {
+        flex-shrink: 0;
+        width: 2px;
+        height: 0.9em;
+        background-color: var(--benchmark-color);
+    }
+
+    /* The selection's tick (3px, text ink) and its figure, as the ring draws them. */
+    .item-ring-legend-selection {
+        display: inline-flex;
+        flex-shrink: 0;
+        align-items: center;
+        gap: 2px;
+    }
+
+    .item-ring-legend-mark--selection {
+        width: 3px;
+        background-color: var(--text-color);
+    }
+
+    .item-ring-legend-selection svg {
+        width: 0.7em;
+        height: 1.2em;
+        fill: none;
+        stroke: var(--text-color);
+        stroke-width: 1.2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    /* The solved/unsolved split in neutral ink: solved at full strength, unsolved
+       at the 0.35 the level arcs composite at. Wider than the shared swatch: at
+       0.75rem a half-and-half fill reads as one flat colour. Ink set here, not
+       inherited from the label, so the split stays grey. */
+    .item-ring-legend-swatch--result {
+        width: 1.5rem;
+        background: linear-gradient(
+            90deg,
+            var(--text-secondary) 50%,
+            color-mix(in srgb, var(--text-secondary) 35%, var(--color-card-background)) 50%
+        );
+    }
+
+    /* Wrap mode scrolls, so the grid starts at the top instead of centring its
+       overflow. */
+    .item-ring-grid-body[data-wrap] {
+        align-content: start;
+    }
+
+    :is(.item-ring-svg-title, .item-ring-svg-count) {
+        text-anchor: middle;
+    }
+
+    .item-ring-svg-title {
+        font-weight: var(--fw-bold);
+        fill: var(--text-color);
+    }
+
+    /* The item count under it: the rate reads with caution over few items. */
+    .item-ring-svg-count {
+        fill: var(--text-secondary);
+    }
+
+    /* One grid cell (the renderer's positioned .chart-container). Ring text inherits
+       its size from the cell, so it scales with the ring. */
+    .item-ring-card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: var(--radius-md);
+        font-size: var(--ring-fs);
+    }
+
+    /* A selectable ring is a <button>: none of the native button look. */
+    .item-ring-card--selectable {
+        border: 0;
+        background: none;
+        outline-offset: var(--focus-ring-offset);
+    }
+
+    /* Its width is the shared chart root's 100%. */
+    .item-ring-chart-svg {
+        height: auto;
+        overflow: visible;
+    }
+
+    /* The "Gesamt" ring: set apart by a surface tint, not an outline, which is the
+       selection's cue. The selected tint below replaces it. */
+    .item-ring-card[data-ring='all'] {
+        background-color: var(--color-background-secondary);
+    }
+
+    /* Hover and selection share one outline; hover draws it light gray. Hover only
+       with a hovering pointer: a tap leaves :hover stuck, which would read as a
+       selection. */
+    @media (hover: hover) {
+        .item-ring-card--selectable:hover {
+            outline: 2px solid var(--color-border);
+        }
+    }
+
+    /* Selected, as a selected table row: primary tint plus accent edge. */
+    .item-ring-card--selectable.selected {
+        outline: 2px solid var(--primary-color);
+        background-color: var(--primary-color-light);
+    }
+
+    /* Keyboard focus: the focus ink, outside the hover and selection outline's
+       place. */
+    .item-ring-card--selectable:focus-visible {
+        outline: var(--focus-ring);
+    }
+}

@@ -1,0 +1,54 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* A multi-value cell (createMultiValueListColumn): one line per value. */
+    .multi-value-cell {
+        --layout-stack-gap: calc(var(--control-gap) / 2);
+        align-items: start;
+    }
+
+    /* The item number with its preview trigger in front (columnFactories.js). */
+    /* The number goes under its eye when the cell is too narrow for both (large text,
+       WCAG 1.4.4), rather than ending in an ellipsis. */
+    .item-number-cell {
+        display: inline-flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--space-xs);
+    }
+
+    /* Every column wraps by default (createColumnDef stamps cell-wrap-text); an item
+       number must not — "H-1.1" split as "H-" / "1.1" reads as two values. */
+    .item-number-cell-value {
+        white-space: nowrap;
+    }
+
+    /* A ghost button: the eye alone is the mark, and the box appears under the pointer. */
+    .item-preview-trigger {
+        position: relative;
+        color: var(--text-muted);
+        line-height: 0;
+        --btn-fill: transparent;
+        border-color: transparent;
+    }
+
+    .item-preview-trigger:hover,
+    .item-preview-trigger:focus-visible {
+        border-color: var(--color-border);
+        color: var(--text-color);
+    }
+
+    /* The hit area: the glyph stays cursor-sized, the target grows to 40px wide
+       and the row's full height (the cell padding on each side). Not taller: the
+       next row's trigger is one row away, and targets must not overlap. Under a
+       coarse pointer buttons.css already makes the button a fingertip wide. */
+    .item-preview-trigger::after {
+        content: '';
+        position: absolute;
+        top: calc(-1 * var(--space-xs));
+        bottom: calc(-1 * var(--space-xs));
+        left: 50%;
+        width: max(100%, 40px);
+        translate: -50% 0;
+    }
+}

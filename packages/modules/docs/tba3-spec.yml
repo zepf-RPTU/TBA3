@@ -1,0 +1,757 @@
+# TBA III Auswertungsschnittstelle — the upstream OpenAPI spec, kept here as a reference.
+# Source: https://github.com/indibit-eu/tba3/blob/1af9d16a42c77c21284901271648f7a3762bc649/tba3-spec.yml
+# Copyright 2025 indibit GmbH, MIT licence (see NOTICE).
+# Reference only: nothing is generated from it. What TBA3 requires of each document is
+# the schemas in packages/modules/src/common/data/schemas/.
+
+openapi: 3.1.0
+info:
+  title: TBA III
+  summary: Schnittstelle für den Zugriff auf Auswertungsdaten von VERA
+  description: >-
+    Diese API ermöglicht den Zugriff auf Auswertungsdaten von VERA. Sie bietet
+    Endpunkte für die Abfrage von Leistungsdaten auf verschiedenen Ebenen
+    (Lerngruppe, Schule, Bundesland) und für verschiedene Arten von Daten
+    (Kompetenzstufen, Item-Statistiken, Aggregationen).
+  version: '1.2'
+  license:
+    name: MIT
+    url: https://opensource.org/license/MIT
+servers:
+  - url: https://apps.indibit.eu/tba3-api
+    description: Mock-Server von indibit
+security: []
+tags:
+  - name: groups
+    description: Ergebnisse auf Ebene einer Lerngruppe
+  - name: schools
+    description: Ergebnisse zusammengefasst nach Schule
+  - name: states
+    description: Ergebnisse auf Landesebene
+paths:
+  /groups/{id}/competence-levels:
+    get:
+      operationId: getGroupCompetenceLevels
+      summary: Kompetenzstufenverteilung in der Lerngruppe
+      tags:
+        - groups
+      parameters:
+        - $ref: '#/components/parameters/groupId'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/comparison'
+      responses:
+        '200':
+          description: Kompetenzstufenverteilung in der Lerngruppe
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/competence-levels'
+        '400':
+          description: Ungültige Anfrage, z.B. ungültige Werte für die Parameter
+        '404':
+          description: >-
+            Lerngruppe oder Kompetenzstufenverteilung für die Lerngruppe nicht
+            gefunden
+  /groups/{id}/items:
+    get:
+      operationId: getGroupItems
+      summary: Lösungshäufigkeiten je Item in der Lerngruppe
+      tags:
+        - groups
+      parameters:
+        - $ref: '#/components/parameters/groupId'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/comparison'
+      responses:
+        '200':
+          description: Lösungshäufigkeiten je Item in der Lerngruppe
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/items'
+        '400':
+          description: Ungültige Anfrage, z.B. ungültige Werte für die Parameter
+        '404':
+          description: >-
+            Lerngruppe oder Lösungshäufigkeiten für die Lerngruppe nicht
+            gefunden
+  /groups/{id}/aggregations:
+    get:
+      operationId: getGroupAggregations
+      summary: Aggregierte Werte (z.B. Lösungshäufigkeiten) in der Lerngruppe
+      tags:
+        - groups
+      parameters:
+        - $ref: '#/components/parameters/groupId'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/aggregation'
+        - $ref: '#/components/parameters/comparison'
+      responses:
+        '200':
+          description: Abhängig vom Typ berechnete Aggregation für die Lerngruppe
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/aggregations'
+        '400':
+          description: Ungültige Anfrage, z.B. ungültige Werte für die Parameter
+        '404':
+          description: Lerngruppe oder Werte für die Lerngruppe nicht gefunden
+  /schools/{id}/competence-levels:
+    get:
+      operationId: getSchoolCompetenceLevels
+      summary: Kompetenzstufenverteilung an der Schule
+      tags:
+        - schools
+      parameters:
+        - $ref: '#/components/parameters/schoolId'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/comparison'
+      responses:
+        '200':
+          description: Kompetenzstufenverteilung an der Schule
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/competence-levels'
+        '400':
+          description: Ungültige Anfrage, z.B. ungültige Werte für die Parameter
+        '404':
+          description: Schule oder Kompetensstufenverteilung für die Schule nicht gefunden
+  /schools/{id}/items:
+    get:
+      operationId: getSchoolItems
+      summary: Lösungshäufigkeiten je Item an der Schule
+      tags:
+        - schools
+      parameters:
+        - $ref: '#/components/parameters/schoolId'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/comparison'
+      responses:
+        '200':
+          description: Lösungshäufigkeiten je Item an der Schule
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/items'
+        '400':
+          description: Ungültige Anfrage, z.B. ungültige Werte für die Parameter
+        '404':
+          description: Schule oder Lösungshäufigkeit je Item für die Schule nicht gefunden
+  /schools/{id}/aggregations:
+    get:
+      operationId: getSchoolAggregations
+      summary: Aggregierte Werte (z.B. Lösungshäufigkeiten) an der Schule
+      tags:
+        - schools
+      parameters:
+        - $ref: '#/components/parameters/schoolId'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/aggregation'
+        - $ref: '#/components/parameters/comparison'
+      responses:
+        '200':
+          description: Abhängig vom Typ berechnete Aggregation für die Schule
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/aggregations'
+        '400':
+          description: Ungültige Anfrage, z.B. ungültige Werte für die Parameter
+        '404':
+          description: Schule oder Werte für die Schule nicht gefunden
+  /states/{id}/competence-levels:
+    get:
+      operationId: getStateCompetenceLevels
+      summary: Kompetenzstufenverteilung im Bundesland
+      tags:
+        - states
+      parameters:
+        - $ref: '#/components/parameters/stateId'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/comparison'
+      responses:
+        '200':
+          description: Kompetenzstufenverteilung im Bundesland
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/competence-levels'
+        '400':
+          description: Ungültige Anfrage, z.B. ungültige Werte für die Parameter
+        '404':
+          description: >-
+            Bundesland oder Kompetensstufenverteilung für das Bundesland nicht
+            gefunden
+  /states/{id}/items:
+    get:
+      operationId: getStateItems
+      summary: Lösungshäufigkeiten je Item im Bundesland
+      tags:
+        - states
+      parameters:
+        - $ref: '#/components/parameters/stateId'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/comparison'
+      responses:
+        '200':
+          description: Lösungshäufigkeiten je Item im Bundesland
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/items'
+        '400':
+          description: Ungültige Anfrage, z.B. ungültige Werte für die Parameter
+        '404':
+          description: >-
+            Bundesland oder Lösungshäufigkeit je Item für das Bundesland nicht
+            gefunden
+  /states/{id}/aggregations:
+    get:
+      operationId: getStateAggregations
+      summary: Aggregierte Werte (z.B. Lösungshäufigkeiten) im Bundesland
+      tags:
+        - states
+      parameters:
+        - $ref: '#/components/parameters/stateId'
+        - $ref: '#/components/parameters/type'
+        - $ref: '#/components/parameters/aggregation'
+        - $ref: '#/components/parameters/comparison'
+      responses:
+        '200':
+          description: Abhängig vom Typ berechnete Aggregation für das Bundesland
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/aggregations'
+        '400':
+          description: Ungültige Anfrage, z.B. ungültige Werte für die Parameter
+        '404':
+          description: Bundesland oder Werte für das Bundesland nicht gefunden
+components:
+  parameters:
+    groupId:
+      in: path
+      name: id
+      required: true
+      schema:
+        type: string
+      description: Id der Lerngruppe
+      examples:
+        Deutsch Grundschule (mittel):
+          value: 3a-deutsch
+          description: Lerngruppe 3a (mittel), Fach Deutsch
+        Deutsch Grundschule (gut):
+          value: 3b-deutsch
+          description: Lerngruppe 3b (gut), Fach Deutsch
+        Deutsch Grundschule (schlecht):
+          value: 3c-deutsch
+          description: Lerngruppe 3c (schlecht), Fach Deutsch
+        Mathematik Grundschule (mittel):
+          value: 3a-mathe
+          description: Lerngruppe 3a (mittel), Fach Mathematik
+        Mathematik Grundschule (gut):
+          value: 3b-mathe
+          description: Lerngruppe 3b (gut), Fach Mathematik
+        Mathematik Grundschule (schlecht):
+          value: 3c-mathe
+          description: Lerngruppe 3c (schlecht), Fach Mathematik
+        Deutsch (mittel):
+          value: 8a-deutsch
+          description: Lerngruppe 8a (mittel), Fach Deutsch
+        Deutsch (gut):
+          value: 8b-deutsch
+          description: Lerngruppe 8b (gut), Fach Deutsch
+        Deutsch (schlecht):
+          value: 8c-deutsch
+          description: Lerngruppe 8c (schlecht), Fach Deutsch
+        Englisch (mittel):
+          value: 8a-englisch
+          description: Lerngruppe 8a (mittel), Fach Englisch
+        Englisch (gut):
+          value: 8b-englisch
+          description: Lerngruppe 8b (gut), Fach Englisch
+        Englisch (schlecht):
+          value: 8c-englisch
+          description: Lerngruppe 8c (schlecht), Fach Englisch
+        Mathematik (mittel):
+          value: 8a-mathe
+          description: Lerngruppe 8a (mittel), Fach Mathematik
+        Mathematik (gut):
+          value: 8b-mathe
+          description: Lerngruppe 8b (gut), Fach Mathematik
+        Mathematik (schlecht):
+          value: 8c-mathe
+          description: Lerngruppe 8c (schlecht), Fach Mathematik
+    type:
+      in: query
+      name: type
+      explode: false
+      schema:
+        type: string
+      description: Wertegruppen, welche ausgegeben werden sollen
+      examples:
+        Lerngruppe:
+          value: ''
+          description: Liefert Leistungsdaten auf Gruppenebene (Standard).
+        Schüler:
+          value: students
+          description: Liefert Leistungsdaten auf Schülerebene.
+        Lerngruppe und Schüler:
+          value: group,students
+          description: Liefert Leistungsdaten auf Gruppen- und Schülerebene.
+        Land und Schulamtsbezirke:
+          value: state,district
+          description: >-
+            Liefert Leistungsdaten für Landes- und Bezirksebene (nur für /state
+            Endpunkte).
+    comparison:
+      in: query
+      name: comparison
+      explode: false
+      schema:
+        type: string
+      description: Filter für bestimmte Vergleichsgruppen, die ausgegeben werden sollen.
+    aggregation:
+      in: query
+      name: aggregation
+      explode: false
+      schema:
+        type: string
+      description: Aggregationsarten, die berechnet werden sollen
+      examples:
+        Kompetenzen:
+          value: competence
+          description: >-
+            Aggregiert Leistungsdaten nach zugewiesenen Kompetenzen der
+            einzelnen Items.
+        Geschlecht:
+          value: gender
+          description: Aggregiert Leistungsdaten nach Geschlecht der Schüler:innen.
+    schoolId:
+      in: path
+      name: id
+      required: true
+      schema:
+        type: string
+      description: Id der Schule
+      examples:
+        Grundschule:
+          value: gs-musterstadt
+          description: Beispielhafte Grundschule
+        Gymnasium:
+          value: gym-beispielstadt
+          description: Beispielhaftes Gymnasium
+    stateId:
+      in: path
+      name: id
+      required: true
+      schema:
+        type: string
+      description: Id des Bundeslandes
+      examples:
+        Beispielland:
+          value: beispielland
+          description: Beispielhaftes Bundesland
+  schemas:
+    domain:
+      type: object
+      required:
+        - name
+      properties:
+        id:
+          type: string
+          examples:
+            - 4ddfdc3e-79fd-47be-bbc0-341f403ac5db
+        name:
+          type: string
+          description: Name der Domäne
+          examples:
+            - Rechtschreibung
+            - Leseverstehen
+    subject:
+      type: object
+      required:
+        - name
+      properties:
+        id:
+          type: string
+          examples:
+            - 4ddfdc3e-79fd-47be-bbc0-341f403ac5db
+        name:
+          type: string
+          description: Name des Fachs
+          examples:
+            - Deutsch
+            - Mathematik
+    characteristic:
+      type: object
+      required:
+        - type
+        - value
+      properties:
+        type:
+          type: string
+          description: Type of characteristic
+          examples:
+            - languageAtHome
+            - gender
+            - SES
+            - schoolType
+        label:
+          type: string
+          description: Label for the characteristic
+          examples:
+            - Sprache zu Hause
+            - Geschlecht
+            - Sozioökonomischer Status
+            - Schulart
+        value:
+          type: string
+          description: Specific value of the characteristic
+          examples:
+            - german
+            - male
+            - low
+            - gymnasium
+    covariates:
+      type: array
+      description: Kovariaten der Testgruppe
+      items:
+        $ref: '#/components/schemas/characteristic'
+    value-group:
+      type: object
+      required:
+        - name
+      properties:
+        id:
+          type: string
+          examples:
+            - 32fbeb80-224a-4d13-a23c-0eec6c0d3ea7
+        type:
+          type: string
+          description: Art der Wertegruppe, z.B. `group`, `student`, `school`
+          examples:
+            - group
+            - student
+            - school
+        name:
+          type: string
+          description: Bezeichnung der Wertegruppe
+          examples:
+            - Klasse 8a
+            - Schüler 1
+            - Korrigierter Landesmittelwert
+        domain:
+          $ref: '#/components/schemas/domain'
+          description: Domäne der Wertegruppe (optional)
+        subject:
+          $ref: '#/components/schemas/subject'
+          description: Fach der Wertegruppe (optional)
+        covariates:
+          $ref: '#/components/schemas/covariates'
+          description: Kovariaten der Wertegruppe
+        properties:
+          type: array
+          description: >-
+            Liste von Key-Value-Werten mit zusätzlichen Informationen, z.B.
+            Testdauer, andere systemspezifische Attribute
+          items:
+            type: object
+            required:
+              - key
+              - value
+            properties:
+              key:
+                type: string
+              value:
+                type: string
+    competence-level:
+      type: object
+      required:
+        - nameShort
+      properties:
+        id:
+          type: string
+          examples:
+            - 18488a76-0cb6-4d16-9f7b-d2c69f73e058
+        name:
+          type: string
+          description: Name der Komptenzstufe
+          examples:
+            - Optimalstandard
+            - Regularstandard
+        nameShort:
+          type: string
+          description: Kürzel der Kompetenzstufe
+          examples:
+            - V
+            - Ia
+            - A2.1
+        description:
+          type: string
+          description: Beschreibung der Kompetenzstufe
+          examples:
+            - >-
+              Kann Aussagen zu zentralen Aspekten des Textes selbstständig
+              begründen
+    competence-level-descriptive-statistics:
+      type: object
+      required:
+        - descriptiveStatistics
+      properties:
+        descriptiveStatistics:
+          type: object
+          required:
+            - total
+            - mean
+            - frequency
+          properties:
+            total:
+              type: integer
+              description: Gesamtzahl der Schüler:innen in der Wertegruppe
+              examples:
+                - 4
+            mean:
+              type: number
+              description: >-
+                Anteil der Schüler:innen an der Gesamtzahl, die diese
+                Kompetenzstufe erreicht haben.
+              minimum: 0
+              maximum: 1
+              examples:
+                - 0.75
+            frequency:
+              type: integer
+              description: >-
+                Anzahl der Schüler:innen, die diese Kompetenzstufe erreicht
+                haben.
+              examples:
+                - 3
+    competence-level-statistics:
+      type: array
+      description: Kompetenzstufenverteilung in der Wertegruppe
+      items:
+        allOf:
+          - $ref: '#/components/schemas/competence-level'
+          - $ref: '#/components/schemas/competence-level-descriptive-statistics'
+    competence-levels:
+      type: array
+      items:
+        allOf:
+          - $ref: '#/components/schemas/value-group'
+          - type: object
+            required:
+              - competenceLevels
+            properties:
+              competenceLevels:
+                $ref: '#/components/schemas/competence-level-statistics'
+    exercise:
+      type: object
+      required:
+        - name
+      properties:
+        id:
+          type: string
+          examples:
+            - 4ddfdc3e-79fd-47be-bbc0-341f403ac5db
+        name:
+          type: string
+          description: Name der Aufgabe
+          examples:
+            - At the Summer Camp
+    competence:
+      type: object
+      properties:
+        id:
+          type: string
+          examples:
+            - 4ddfdc3e-79fd-47be-bbc0-341f403ac5db
+        type:
+          type: string
+          description: Art der Kompetenz
+          examples:
+            - Kompetenz
+            - Leitidee
+            - Allgemeine Kompetenz
+        name:
+          type: string
+          description: Name der Kompetenz
+          examples:
+            - 2.5.1
+            - L1
+        description:
+          type: string
+          description: Beschreibung der Kompetenz
+          examples:
+            - Richtig schreiben
+            - Leitidee Zahl
+    item-parameters:
+      type: object
+      description: >-
+        (importierte) Itemparameter aus den Itemkennwerten des IQB. Bisher
+        unvollständige, exemplarische Liste.
+      properties:
+        logit:
+          description: Schwierigkeit des Items in Logit
+          type: number
+        bistaPoints:
+          description: >-
+            Schwierigkeit des Items in Punkten nach deutscher
+            Bildungsstandardmetrik
+          type: number
+        solutionFrequencyGymnasium:
+          description: Mittlere Lösungshäufigkeit der Pilotierung an Gymnasien
+          type: number
+        solutionFrequencyNonGymnasium:
+          description: Mittlere Lösungshäufigkeit der Pilotierung an Nicht-Gymnasien
+          type: number
+        solutionFrequencyPrimarySchool:
+          description: Mittlere Lösungshäufigkeit der Pilotierung an Grundschulen
+          type: number
+        subject:
+          description: Fach des Items
+          type: string
+        domain:
+          description: Kompetenzbereich des Items
+          type: string
+        competenceLevel:
+          description: Kompetenzstufe des Items
+          $ref: '#/components/schemas/competence-level'
+        competences:
+          description: Liste der dem Item zugeordneten Kompetenzen
+          type: array
+          items:
+            $ref: '#/components/schemas/competence'
+    item:
+      type: object
+      required:
+        - name
+        - iqbId
+        - exercise
+      properties:
+        id:
+          type: string
+          examples:
+            - b8d23653-3881-40de-a45a-d34e2dd191ed
+        name:
+          type: string
+          description: Bezeichnung des Items im Testheft (oft die Fragennummer)
+          examples:
+            - '2.1'
+            - '2.2'
+        position:
+          type: integer
+          description: Position des Items im Testheft
+          examples:
+            - 1
+            - 2
+        iqbId:
+          type: string
+          description: IQB Item-Id des Items
+          examples:
+            - AB1021
+            - AB1022
+        exercise:
+          description: Aufgabe, der das Item zugeordnet ist
+          $ref: '#/components/schemas/exercise'
+        parameters:
+          description: Itemkennwerte des IQB für das Item
+          $ref: '#/components/schemas/item-parameters'
+    descriptive-statistics:
+      type: object
+      required:
+        - descriptiveStatistics
+      properties:
+        descriptiveStatistics:
+          type: object
+          required:
+            - total
+            - mean
+            - frequency
+            - standardDeviation
+          properties:
+            total:
+              type: integer
+              description: Gesamtzahl der Items
+              examples:
+                - 4
+            mean:
+              type: number
+              description: Anteil richtig gelöster Items / Mittlere Lösungsquote
+              minimum: 0
+              maximum: 1
+              examples:
+                - 0.75
+            frequency:
+              type: integer
+              description: Absolute Anzahl richtig gelöster Items
+              examples:
+                - 3
+            standardDeviation:
+              type: number
+              description: Standardabweichung der mittleren Lösungsquote
+    item-statistics:
+      type: array
+      description: Statistiken für einzelne Items in der Wertegruppe
+      items:
+        allOf:
+          - $ref: '#/components/schemas/item'
+          - $ref: '#/components/schemas/descriptive-statistics'
+    items:
+      type: array
+      items:
+        allOf:
+          - $ref: '#/components/schemas/value-group'
+          - type: object
+            required:
+              - items
+            properties:
+              items:
+                $ref: '#/components/schemas/item-statistics'
+    aggregation:
+      type: object
+      required:
+        - type
+        - value
+      properties:
+        type:
+          type: string
+          description: >-
+            Aggregationsart (z.B. Kompetenzstandard, Aufgabe), eigene
+            Aggregationsarten können definiert werden.
+          examples:
+            - competences
+            - exercise
+            - gender
+        value:
+          type: string
+          description: >-
+            Einzelne aggregierte Gruppe, z.B. der Aufgabenname, die Bezeichnung
+            der Kompetenz, ...
+          examples:
+            - 2.5.3
+        includedIqbIds:
+          type: array
+          description: >-
+            Liste von IQB ItemIds, die in der Berechnung der Aggregation
+            berücksichtigt wurden.
+          items:
+            type: string
+    aggregations:
+      type: array
+      items:
+        allOf:
+          - $ref: '#/components/schemas/value-group'
+          - type: object
+            required:
+              - aggregations
+            properties:
+              aggregations:
+                type: array
+                description: Einzelne Aggregationen
+                items:
+                  allOf:
+                    - $ref: '#/components/schemas/aggregation'
+                    - $ref: '#/components/schemas/descriptive-statistics'

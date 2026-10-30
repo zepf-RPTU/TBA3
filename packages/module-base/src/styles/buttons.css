@@ -1,0 +1,231 @@
+/**
+ * Three structural families plus fill modifiers. Hover and selected states
+ * change only background-color; a fill comes in through `--btn-fill` and
+ * `--btn-hover-fill`. Border and text colour are set once per button context
+ * and stay fixed across all states.
+ */
+
+:root {
+    --btn-radius: var(--radius-sm);
+    --btn-height-toolbar-xs: 1.75rem;
+    --btn-height-toolbar-lg: 2.5rem;
+    --btn-height-toolbar: 2rem;
+    --btn-icon-size: 1rem;
+    --btn-padding-block: var(--space-sm);
+    --btn-padding-inline: 1rem;
+    --btn-active-fill: color-mix(in srgb, var(--primary-color) 20%, transparent);
+    --btn-active-hover-fill: color-mix(in srgb, var(--primary-color) 35%, transparent);
+    --btn-disabled-opacity: 0.5;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+.btn {
+    margin: 0;
+    /* The reset hands buttons the page's font, prose leading included. */
+    line-height: var(--lh-ui);
+    transition:
+        background-color var(--motion-duration-fast) var(--motion-ease-standard),
+        transform var(--motion-duration-fast) var(--motion-ease-standard);
+}
+
+.btn:not(:disabled, [aria-disabled='true']):hover {
+    background-color: var(--btn-hover-fill, var(--color-background-hover));
+}
+
+.btn:not(:disabled, [aria-disabled='true']):active {
+    transform: scale(var(--press-scale));
+}
+
+.btn:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 0;
+}
+
+/* A popup or disclosure trigger reads as pressed while it is expanded. */
+.btn:is(.is-active, .is-selected, [aria-expanded='true']) {
+    background-color: var(--btn-active-fill);
+}
+
+.btn:is(.is-active, .is-selected, [aria-expanded='true']):not(
+        :disabled,
+        [aria-disabled='true']
+    ):hover {
+    background-color: var(--btn-active-hover-fill);
+}
+
+/* Forced colours replace the fill that tells a pressed button: the system's selection
+   colours tell it instead. */
+@media (forced-colors: active) {
+    .btn:is(.is-active, .is-selected, [aria-expanded='true']) {
+        /* eslint-disable-next-line css/use-baseline -- progressive enhancement: only engines with forced colours read it */
+        forced-color-adjust: none;
+        background-color: SelectedItem;
+        color: SelectedItemText;
+    }
+}
+
+/* aria-disabled keeps the button focusable, so its tooltip can still explain why. */
+.btn:is(:disabled, [aria-disabled='true']) {
+    opacity: var(--btn-disabled-opacity);
+    cursor: not-allowed;
+}
+
+/* ==========================================================================
+   Size modifiers
+   ========================================================================== */
+
+.btn--size-control {
+    --btn-padding-block: 0.625rem;
+    --btn-padding-inline: 1.25rem;
+    --btn-radius: var(--radius-md);
+}
+
+.btn--size-toolbar-xs {
+    --btn-height-toolbar: var(--btn-height-toolbar-xs);
+}
+
+/* After `.btn--size-toolbar-xs`, so at equal specificity xs icon buttons get the
+   fingertip target too. `--touch-target-min`, not `--btn-height-toolbar-lg`: rem
+   tokens resolve against the host's root font-size, so 2.5rem is 40px only at a
+   16px root and less under a smaller one. `--btn-icon-size` stays: a bigger glyph
+   would change every icon's optical weight. */
+@media (pointer: coarse) {
+    .btn--icon {
+        --btn-height-toolbar: var(--touch-target-min);
+    }
+
+    /* Labelled buttons are sized by their padding, not the toolbar token, so they
+       take the floor directly. */
+    :is(.btn--size-control, .btn--text) {
+        min-height: var(--touch-target-min);
+    }
+}
+
+/* ==========================================================================
+   Structural families
+   ========================================================================== */
+
+:is(.btn--icon, .btn--text) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--btn-radius);
+    background-color: var(--btn-fill, var(--color-card-background));
+    border: 1px solid var(--color-border);
+}
+
+:is(.btn--icon, .btn--text) svg {
+    width: var(--btn-icon-size);
+    height: var(--btn-icon-size);
+    display: block;
+    flex-shrink: 0;
+}
+
+.btn--icon {
+    width: var(--btn-height-toolbar);
+    height: var(--btn-height-toolbar);
+    min-width: var(--btn-height-toolbar);
+    min-height: var(--btn-height-toolbar);
+    padding: 0;
+    font-size: var(--btn-icon-size);
+    line-height: var(--lh-icon);
+    color: var(--text-secondary);
+}
+
+/* Ø, the averages sign: the one typographic mark in an icon button (Material
+   Symbols has no diameter glyph). At the icon size its ink matches the
+   400-weight glyphs beside it; the weight is pinned so a header cannot make it
+   bolder. */
+.btn--icon .btn-glyph {
+    flex-shrink: 0;
+    font-size: var(--btn-icon-size);
+    /* eslint-disable-next-line no-restricted-syntax -- matches the icon font's 400 glyphs; no text weight token */
+    font-weight: 400;
+}
+
+.btn--text {
+    gap: var(--layout-gap);
+    padding: var(--btn-padding-block) var(--btn-padding-inline);
+    color: var(--text-color);
+}
+
+/* A menu row. */
+.btn--item {
+    display: block;
+    min-width: 100%;
+    padding: var(--btn-padding-block) var(--btn-padding-inline);
+    background-color: var(--btn-fill, transparent);
+    border: none;
+    border-radius: 0;
+    color: var(--text-color);
+    text-align: start;
+    /* A menu caps its width, so a long label wraps rather than overflowing it. */
+    overflow-wrap: anywhere;
+}
+
+/* ==========================================================================
+   Fill modifiers
+   ========================================================================== */
+
+/* For CTA and confirm actions. */
+.btn--primary {
+    --btn-fill: var(--color-accent-solid);
+    --btn-hover-fill: var(--color-accent-solid-hover);
+    background-color: var(--btn-fill);
+    border-color: transparent;
+    color: var(--text-on-primary);
+}
+
+/* Beside `.btn--primary`, for the confirming button of a destructive action
+   (confirmDialog.js): swaps only the fill. */
+.btn--danger {
+    --btn-fill: var(--color-danger-solid);
+    --btn-hover-fill: var(--color-danger-solid-hover);
+}
+
+/* ==========================================================================
+   Group wrappers
+   ========================================================================== */
+
+.btn-group {
+    display: flex;
+    align-items: center;
+    gap: var(--layout-gap);
+    min-width: 0;
+}
+
+/* Each button keeps its own frame, fill and height; the group only joins them, so
+   it needs no height of its own wherever it sits. */
+.btn-group--segmented {
+    gap: 0;
+}
+
+.btn-group--segmented > .btn:not(:first-child) {
+    margin-inline-start: -1px;
+    border-start-start-radius: 0;
+    border-end-start-radius: 0;
+}
+
+.btn-group--segmented > .btn:not(:last-child) {
+    border-start-end-radius: 0;
+    border-end-end-radius: 0;
+}
+
+/* The next button paints over the overlap, the focus ring included. */
+.btn-group--segmented > .btn:focus-visible {
+    position: relative;
+    z-index: 1;
+}
+
+.btn-group--wrap {
+    flex-wrap: wrap;
+}
+
+.btn-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--layout-gap-relaxed);
+}

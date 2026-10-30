@@ -1,0 +1,26 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    .item-detail-panel {
+        height: 100%;
+    }
+
+    /* No tab-strip rules here: the subtitle slot supplies its chrome and
+       tabStrip.css the pattern; .item-detail-tab(s) are JS hooks only. */
+
+    .item-detail-content {
+        padding: var(--card-pad-loose);
+        overflow-y: auto;
+        font-size: var(--fs-sm);
+    }
+
+    /* Caps the student list's column count in the full-width tier. */
+    .item-detail-content .detail-student-grid {
+        max-width: 42rem;
+    }
+
+    .item-detail-content > .empty-message {
+        text-align: center;
+        margin-top: var(--content-panel-padding);
+    }
+}

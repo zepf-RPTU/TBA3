@@ -1,0 +1,13 @@
+/**
+ * SL (Schulleitung) entry sheet: app.css brings the shared sheets and the layer
+ * order; this adds only SL's own.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+/* Unlayered on purpose: app.css layers each sheet it imports. */
+/* eslint-disable-next-line css/use-layers */
+@import '../styles/app.css';
+/* Later in `foundation` than the shared tokens, so SL's own win. */
+@import './variables.css' layer(foundation);
+@import './charts-row.css' layer(views);

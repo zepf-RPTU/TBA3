@@ -1,0 +1,90 @@
+/* SL table overrides on top of table-base.css. */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* A group-table cell that stacks one line per Domäne. */
+    .sl-stacked-cell {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 4px 0;
+        width: 100%;
+    }
+
+    /* ==========================================================================
+       Grouped tables (the domain and the group table)
+       ========================================================================== */
+
+    .sl-grouped-table {
+        margin-bottom: 4rem;
+    }
+
+    /* A Domäne label and its stacked bar share the row-content floor: each label
+       sits level with its bar, and SL bar rows match the other tables' trait rows
+       in height. */
+    .sl-cell-label,
+    .sl-cell-bar {
+        display: flex;
+        align-items: center;
+        min-height: var(--table-row-content-min);
+    }
+
+    /* ==========================================================================
+       Comparison and school rows
+       ========================================================================== */
+
+    .tabulator-row.comparison-row,
+    .tabulator-row.school-row {
+        background: transparent;
+        font-weight: var(--fw-bold);
+    }
+
+    .tabulator-row.comparison-row {
+        border-top: 3px solid var(--comparison-row-color);
+    }
+
+    .tabulator-row.school-row {
+        border-top: 3px solid var(--school-row-color);
+    }
+
+    /* The group table separates its rows, the school's included, by a hairline. */
+    .sl-group-table .tabulator .tabulator-row {
+        border-top: 1px solid var(--color-border);
+    }
+
+    /* The Selbstwirksamkeit footer is set off from the Fach rows; only its Fach and
+       survey cells show, the others keep their place in the layout. */
+    .sl-group-table .tabulator .tabulator-row.self-efficacy-row {
+        border-top: 2px solid var(--table-section-border);
+        font-weight: var(--fw-semibold);
+    }
+
+    .self-efficacy-row
+        > .tabulator-cell:not(
+            [tabulator-field='subjectName'],
+            [tabulator-field='teachingQuality']
+        ) {
+        visibility: hidden;
+        padding: 0;
+    }
+
+    /* ==========================================================================
+       Group headers — one per Fach/Domäne or per Lerngruppe
+       ========================================================================== */
+
+    /* The whole group header toggles (`groupToggleElement: 'header'`), so it reads as
+       clickable and a double click must not select its text. */
+    .sl-grouped-table .tabulator-group {
+        color: var(--heading-color);
+        font-size: var(--fs-base);
+        background: var(--color-background-secondary);
+        cursor: pointer;
+        /* eslint-disable-next-line css/use-baseline -- only `user-select: all` is non-Baseline; `none` is universal */
+        user-select: none;
+    }
+
+    .sl-grouped-table .tabulator-group .tabulator-arrow {
+        margin-inline-end: var(--space-sm);
+    }
+}

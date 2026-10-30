@@ -1,0 +1,304 @@
+/**
+ * The Tabulator overrides every table shares. The --table-* tokens default in
+ * tokens.css. The --tabulator-* tokens (frame, header-cell padding) are this
+ * sheet's own, declared on .tabulator: an app or a unit sets them on its own
+ * .tabulator rule rather than overriding the properties they feed.
+ */
+
+/* ==========================================================================
+   Base table reset
+   ========================================================================== */
+
+.tabulator {
+    border: var(--tabulator-border);
+    background-color: var(--color-background);
+    font-size: var(--fs-sm);
+    line-height: var(--lh-ui);
+    border-radius: var(--tabulator-radius);
+    /* Inset in its card (the card body's padding), a table draws its own frame, at
+       a smaller radius than the --radius-md card. table-host.css drops the frame
+       where a table fills the card's box. */
+    --tabulator-border: 1px solid var(--color-border);
+    --tabulator-radius: var(--radius-sm);
+    --tabulator-header-col-padding: 0.5em var(--table-cell-padding-inline);
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.tabulator .tabulator-header {
+    background: var(--table-header-bg);
+    border-bottom: 1px solid var(--table-header-border-bottom);
+    font-weight: var(--fw-semibold);
+    color: var(--table-header-text);
+}
+
+.tabulator .tabulator-header .tabulator-col {
+    background: transparent;
+    /* No column dividers (Tabulator's sheet draws one per header cell). */
+    border-inline-end: none;
+    /* The content box takes the padding (table-header-layout.css), so a group
+       cell, which wraps its child headers, insets none of them. */
+    padding: 0;
+    transition: background-color var(--motion-duration-fast) var(--motion-ease-standard);
+}
+
+/* Only a sortable header reacts to hover. */
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable:hover,
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable:focus-visible {
+    background-color: var(--table-header-hover-bg);
+}
+
+/* A sortable header, the table body and a selectable row take focus (tabulatorAria.js).
+   The ring is inset: the header cells and rows sit edge to edge, and the body fills its
+   holder, so an outer ring would be clipped. */
+.tabulator .tabulator-header .tabulator-col.tabulator-sortable:focus-visible,
+.tabulator .tabulator-table:focus-visible,
+.tabulator .tabulator-row:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: calc(-1 * var(--focus-ring-width));
+}
+
+.tabulator .tabulator-header .tabulator-col .tabulator-col-title {
+    padding: var(--table-col-title-padding);
+}
+
+/* ==========================================================================
+   Glyphs in Tabulator's arrow boxes
+   ========================================================================== */
+
+/* tabulatorIcons.js puts a Material glyph in every arrow Tabulator draws with
+   borders. The group toggle's box keeps its click handler; only its border paint
+   goes. The glyph is an .icon (icons.css), sized by its em box. */
+.tabulator .tabulator-arrow {
+    width: auto;
+    height: auto;
+    border: none;
+    display: inline-flex;
+}
+
+/* ==========================================================================
+   Sort indicator
+   ========================================================================== */
+
+/* Three glyphs sit in every sorter; aria-sort decides which one shows. The unsorted
+   glyph takes the header ink: it is the only cue that the column sorts, so it needs
+   the 3:1 of a UI component against the header surface. */
+.tabulator .tabulator-header .tabulator-col-sorter {
+    color: var(--table-header-text);
+}
+
+.tabulator .tabulator-header .tabulator-col-sorter .tabulator-glyph {
+    display: none;
+}
+
+.tabulator .tabulator-header .tabulator-col[aria-sort='none'] .tabulator-glyph--unsorted,
+.tabulator .tabulator-header .tabulator-col[aria-sort='ascending'] .tabulator-glyph--asc,
+.tabulator .tabulator-header .tabulator-col[aria-sort='descending'] .tabulator-glyph--desc {
+    display: block;
+}
+
+.tabulator .tabulator-header .tabulator-col[aria-sort='ascending'] .tabulator-col-sorter,
+.tabulator .tabulator-header .tabulator-col[aria-sort='descending'] .tabulator-col-sorter {
+    color: var(--color-accent-text);
+}
+
+/* The whole header cell sorts, so the title's block padding is the hit area. Only
+   the block axis grows: the column width floors reserve the inline padding, so
+   raising it would make titles wrap mid-word. */
+@media (pointer: coarse) {
+    .tabulator .tabulator-header .tabulator-col .tabulator-col-title {
+        padding-block: var(--layout-gap-relaxed);
+    }
+}
+
+/* ==========================================================================
+   Group rows
+   ========================================================================== */
+
+/* The label is the `<span role="gridcell">` TableModule's default `groupHeader`
+   returns, and Tabulator's sheet paints any span in a group row red (its item-count
+   style). */
+.tabulator .tabulator-group > span {
+    color: inherit;
+    margin-inline-start: 0;
+}
+
+/* The label's toggle button: the group row's look, no button chrome. */
+.tabulator .table-group-toggle {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: inherit;
+}
+
+.tabulator .table-group-toggle:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: var(--focus-ring-offset);
+}
+
+/* One chevron: the open state is a rotation, not a second shape. */
+.tabulator .tabulator-group .tabulator-glyph {
+    transition: rotate var(--motion-duration-fast) var(--motion-ease-standard);
+}
+
+.tabulator .tabulator-group.tabulator-group-visible .tabulator-glyph {
+    rotate: 90deg;
+}
+
+/* ==========================================================================
+   Table body
+   ========================================================================== */
+
+/* The holder is the scroll box the rows clip in: an opaque fill keeps the text at the
+   clip edge antialiased as on the rows. */
+.tabulator .tabulator-tableholder {
+    background: var(--color-background);
+}
+
+.tabulator .tabulator-table {
+    background: transparent;
+}
+
+/* ==========================================================================
+   Rows
+   ========================================================================== */
+
+.tabulator .tabulator-row {
+    background: var(--table-row-bg);
+    border-bottom: 1px solid var(--color-border-light);
+    transition: background-color var(--motion-duration-fast) var(--motion-ease-standard);
+}
+
+.tabulator .tabulator-row.tabulator-selectable:hover,
+.tabulator .tabulator-row.tabulator-selectable:focus-within {
+    background-color: var(--table-row-hover-bg);
+}
+
+.tabulator .tabulator-row.tabulator-selected {
+    background-color: var(--table-row-selected-bg);
+    box-shadow: inset 3px 0 0 var(--primary-color);
+}
+
+.tabulator .tabulator-row.tabulator-selected:hover,
+.tabulator .tabulator-row.tabulator-selected:focus-within {
+    background-color: var(--table-row-selected-hover-bg);
+}
+
+/* ==========================================================================
+   Cells
+   ========================================================================== */
+
+.tabulator .tabulator-cell {
+    border-inline-end: none;
+    padding: var(--table-cell-padding-block) var(--table-cell-padding-inline);
+    color: var(--table-text-secondary);
+    /* Equal-width digits: a sort, filter or dataset switch must not reflow a column. */
+    font-variant-numeric: tabular-nums;
+    /* In a column of glossary terms the dotted underline takes the muted ink. */
+    --glossary-term-underline-color: var(--table-text-muted);
+}
+
+.tabulator .tabulator-cell.cell-wrap-text {
+    white-space: normal;
+    /* `anywhere`, not `break-word`: the cell is an inline-flex box (Tabulator's
+       vertAlign), and only `anywhere` lowers its min-content, so text wider than its
+       column wraps instead of being clipped. createColumnDef floors each column to its
+       widest word, so words break only where a column cannot get that wide. */
+    overflow-wrap: anywhere;
+    hyphens: auto;
+}
+
+/* The empty-table message. Its text sits in Tabulator's contents box, which the
+   vendor sheet paints light grey and bold: it takes the message's own ink and weight. */
+.tabulator .tabulator-placeholder {
+    background: var(--color-background-secondary);
+    color: var(--table-text-secondary);
+    font-style: italic;
+    padding: 4em 2em;
+    text-align: center;
+    font-size: var(--fs-lg);
+}
+
+.tabulator .tabulator-placeholder .tabulator-placeholder-contents {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+/* The Pilotierung difference beside a Lösungsquote (progressBarColumn.js) is text,
+   so it takes the text-grade result tokens, not the bar fills. The sign is the
+   cue; the colour only echoes it. */
+.tabulator .tabulator-cell .result-diff--up {
+    color: var(--result-correct-text);
+}
+
+.tabulator .tabulator-cell .result-diff--down {
+    color: var(--result-incorrect-text);
+}
+
+/* ==========================================================================
+   Cell formatter classes
+   ========================================================================== */
+
+.result-icon-correct {
+    color: var(--result-correct);
+}
+
+.result-icon-incorrect {
+    color: var(--result-incorrect);
+}
+
+.result-icon-not-attempted {
+    color: var(--result-not-attempted);
+}
+
+.student-id-link {
+    /* A <button> that reads as a link: no button chrome. */
+    appearance: none;
+    padding: 0;
+    border: 0;
+    background: none;
+    font: inherit;
+    color: var(--color-accent-text);
+    text-decoration: underline;
+    cursor: pointer;
+    transition: color var(--motion-duration-fast) var(--motion-ease-standard);
+}
+
+.student-id-link:hover {
+    color: var(--primary-hover);
+}
+
+.traits-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: calc(var(--control-gap) / 2);
+    height: 100%;
+    min-height: var(--table-row-content-min);
+    width: 100%;
+}
+
+.traits-container .trait-empty {
+    font-size: var(--fs-lg);
+    /* A line box no taller than the glyph: the dash must not set the row height. */
+    line-height: var(--lh-icon);
+    font-weight: var(--fw-bold);
+    color: var(--text-muted);
+}
+
+.traits-container .trait-item {
+    cursor: help;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-bold);
+}
+
+/* A trait chip is a compact badge already: no dotted term underline. */
+.traits-container .trait-item.glossary-term {
+    text-decoration: none;
+}

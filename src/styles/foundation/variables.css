@@ -1,0 +1,67 @@
+/**
+ * tba3's additions to the package token defaults (`@tba3/module-base/styles/tokens.css`,
+ * `@tba3/modules/styles/tokens.css`, both schemes as `light-dark()`), which app.css
+ * imports just before this sheet. The theme variants live in competence-levels.css;
+ * SL's own tokens follow in src/sl/variables.css.
+ */
+
+:root {
+    /* One family for UI, tables, charts and tooltips: chart text never sits in a
+       second face beside the system one. */
+    --font-family-main:
+        -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+    /* Heading steps for typography.css. The view header title (an <h1> at the h2
+       step) reads the token too, so the scale keeps one home. */
+    --fs-h1: 2.125rem;
+    --fs-h2: 1.875rem;
+    /* Module-card titles (an h2 in the outline, a card heading in size) and h3. */
+    --fs-module-title: 1.45rem;
+    /* The header row's controls: a step under the body text so the title keeps its room. */
+    --fs-header-control: 0.875rem;
+
+    /* The page surface the cards sit on (view background, skeletons, welcome tiles). */
+    --color-background-page: light-dark(#f0f0f0, #161a22);
+
+    --export-success-color: light-dark(#28a745, #4ade80);
+
+    --view-padding: 0.5rem var(--space-md);
+    --header-padding: 0.75rem 1rem;
+    --header-min-height: 60px;
+    /* Smallest shell the layout is designed for (layout-reset.css); below it the
+       page scrolls instead of squeezing further. */
+    --shell-min-width: 1024px;
+    --shell-min-height: 600px;
+    /* In-flow boxes and the modal dialogs (which cover the shell) read these, not
+       `vh`/`vw`, so they stop shrinking with the shell. Viewport-fixed chrome keeps
+       `vh`/`vw`. */
+    --shell-height: max(100vh, var(--shell-min-height));
+    --shell-width: max(100vw, var(--shell-min-width));
+    /* The collapsed sidebar rail's width, one value for the rail and whatever offsets
+       or mimics it. rem, so the rail grows with the icons and labels it holds when the
+       text is enlarged. */
+    --sidebar-rail-width: 4.25rem;
+
+    /* A card's height when a view's cards stack (narrow or short viewports): one screen minus
+       the peek, so the next card's header stays visible as a cue past the fold. The
+       cqh variant sizes against the .view-base size container (`--stacked-layout`,
+       view-layout.css); the vh variant against the viewport minus the header. */
+    --stacked-card-peek: 3rem;
+    --stacked-card-height: calc(
+        100cqh - var(--space-md) - var(--layout-gap) - var(--stacked-card-peek)
+    );
+    --stacked-card-height-vh: calc(
+        var(--shell-height) - var(--header-min-height) - var(--space-md) - var(--layout-gap) -
+            var(--stacked-card-peek)
+    );
+
+    /* An open strip-chart card (StripBarChart): one band of bar under the card header. */
+    --strip-card-height: calc(6rem + 2.5rem);
+
+    /* The content-module header over its card body; the view skeleton over its view. */
+    --z-module-content: 10;
+    /* Sticky page chrome; the view header's actions sit one above. */
+    --z-overlay: 100;
+    /* Sidebar rail; the boot skeleton and the skip link above it. */
+    --z-shell: 1000;
+}

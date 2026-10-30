@@ -1,0 +1,87 @@
+{
+    "header": {
+        "title": "Ergebnisse im Detail",
+        "subtitle": "Graphische sowie tabellarische Ansichten aller Ergebnisse im Detail",
+        "interface": {
+            "display-subjects": {
+                "label": "Nach Fächern"
+            },
+            "display-groups": {
+                "label": "Nach Lerngruppen"
+            },
+            "display-graphs": {
+                "label": "Diagramme"
+            },
+            "display-tables": {
+                "label": "Tabellen"
+            },
+            "display-bars": {
+                "label": "Balken",
+                "tooltip": "Darstellung der Ergebnisse ausschließlich mit Balkendiagrammen."
+            },
+            "display-boxplots": {
+                "label": "Boxplot",
+                "tooltip": "Für die Darstellung einzelner Ergebnisse zusätzlich Boxplots verwenden."
+            },
+            "grouping-group": {
+                "label": "Gruppierung"
+            },
+            "display-group": {
+                "label": "Darstellung"
+            },
+            "viz-group": {
+                "label": "Diagrammart"
+            }
+        }
+    },
+    "subject-view": {
+        "preview-cards": {
+            "element_texts": {
+                "preview-sw": {
+                    "title": "Selbstwirksamkeit",
+                    "description": "Allgemeines Maß zur Selbsteinschätzung der Schüler:innen als Lernende"
+                },
+                "preview-de": {
+                    "title": "Deutsch",
+                    "description": "Ergebnisse in den Domänen {{Domänen}}"
+                },
+                "preview-en": {
+                    "title": "Englisch",
+                    "description": "Ergebnisse in den Domänen {{Domänen}}"
+                },
+                "preview-fr": {
+                    "title": "Französisch",
+                    "description": "Ergebnisse in den Domänen {{Domänen}}"
+                },
+                "preview-ma": {
+                    "title": "Mathematik",
+                    "description": "Ergebnisse im Fach Mathematik"
+                }
+            }
+        },
+        "chart": {
+            "title": "Kompetenzstufenverteilung aller Lerngruppen im Fach: {{Fach}}"
+        },
+        "table": {
+            "title": "Tabellarische Übersicht aller Lerngruppen nach Fächern"
+        }
+    },
+    "group-view": {
+        "preview-cards": {
+            "element_texts": {
+                "preview-school": {
+                    "title": "Schule"
+                },
+                "preview-group": {
+                    "title": "Lerngruppe {{Lerngruppe}}"
+                }
+            }
+        },
+        "chart": {
+            "title": "Kompetenzstufenverteilung aller Fächer der Lerngruppe {{Lerngruppe}}"
+        },
+        "table": {
+            "title": "Tabellarische Übersicht aller Fächer nach Lerngruppen"
+        }
+    }
+}

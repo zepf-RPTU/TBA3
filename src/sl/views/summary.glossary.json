@@ -1,0 +1,18 @@
+{
+    "messages": {
+        "empty": "Dieser Datensatz enthält keine Ergebnisse."
+    },
+    "header": {
+        "title": "Schul- und Lerngruppenleistung auf einen Blick",
+        "subtitle": "Für jedes Fach bzw. jede Domäne sehen Sie links den Wert Ihrer Schule und rechts, wie stark der Landesschnitt und jede Lerngruppe davon abweichen.",
+        "interface": {
+            "dataset-select": {
+                "label": "Schule"
+            },
+            "metric-select": {
+                "label": "Kennzahl",
+                "tooltip": "Wählen Sie die Kennzahl, auf die Schul- und Lerngruppenleistung reduziert werden."
+            }
+        }
+    }
+}

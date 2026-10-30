@@ -1,0 +1,283 @@
+{
+    "element_texts": {
+        "kompetenzstufe": {
+            "title": "Kompetenzstufe",
+            "aliases": ["Kompetenzstufe"],
+            "body": "Erreichte Kompetenzstufe gemäß dem Kompetenzstufenmodell für die Primarstufe und die Sekundarstufe I mit angestrebtem mittlerem Schulabschluss."
+        },
+        "ger": {
+            "title": "GER-Stufe",
+            "aliases": ["GER-Stufe"],
+            "body": "Erreichtes Sprachniveau nach dem Gemeinsamen Europäischen Referenzrahmen, alternativ: Kompetenzstufe."
+        },
+        "kompetenzstufenverteilung": {
+            "title": "Kompetenzstufenverteilung",
+            "aliases": [
+                "Kompetenzstufenverteilung",
+                {
+                    "text": "Kompetenzstufen",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Das Kompetenzstufenmodell beschreibt mehrere Kompetenzstufen, wobei allen Schüler:innen anhand der erzielten Lösungsquoten konkret eine der Stufen zugeordnet werden kann. Die Kompetenzstufenverteilung beschreibt meist graphisch, wie sich die betrachtete Gruppe hinsichtlich der Kompetenzstufen zusammensetzt und gibt damit einen Überblick über das allgemeine Leistungsniveau der Lerngruppe. Die Darstellung erfolgt meist in farbigen Balkendiagrammen, die sich zu 100 % aufaddieren und damit die Anteile der jeweiligen Stufe kennzeichnen.</p>"
+        },
+        "hörverstehen": {
+            "title": "Hörverstehen (Englisch, Französisch)",
+            "aliases": ["Hörverstehen"],
+            "domains": [
+                {
+                    "subject": "Englisch",
+                    "id": "ho"
+                },
+                {
+                    "subject": "Französisch",
+                    "id": "ho"
+                }
+            ],
+            "body": "<p>Hörverstehen und Leseverstehen beschreiben die zwei Dimensionen der Sprachkompetenz in den Fächern Englisch und Französisch, die im Rahmen der VERA-Testung durch Aufgaben erfasst werden. Hörverstehen testet dabei die Kompetenz im Umgang mit gesprochenem Wort. Die zugehörigen Aufgaben basieren auf Audiospuren, etwa der Aufzeichnung eines Alltagsgesprächs, auf deren Grundlage die Schüler:innen Fragen zum Inhalt des Gesprochenen schriftlich beantworten müssen.</p>"
+        },
+        "leseverstehen": {
+            "title": "Leseverstehen (Englisch, Französisch)",
+            "aliases": ["Leseverstehen"],
+            "domains": [
+                {
+                    "subject": "Englisch",
+                    "id": "le"
+                },
+                {
+                    "subject": "Französisch",
+                    "id": "le"
+                }
+            ],
+            "body": "<p>Leseverstehen und Hörverstehen beschreiben die zwei Dimensionen der Sprachkompetenz in den Fächern Englisch und Französisch, die im Rahmen der VERA-Testung durch Aufgaben erfasst werden. Leseverstehen testet dabei die Kompetenz im Umgang mit geschriebenem Wort. Die zugehörigen Aufgaben basieren auf Texten, Textausschnitten oder schriftlichen Fragen, auf deren Grundlage die Schüler:innen Fragen zum Inhalt des Geschriebenen schriftlich beantworten müssen.</p>"
+        },
+        "lesen": {
+            "title": "Lesen (Deutsch)",
+            "domains": [
+                {
+                    "subject": "Deutsch",
+                    "id": "le"
+                }
+            ],
+            "body": "<p>Lesen beschreibt eine der Dimensionen der Sprachkompetenz im Fach Deutsch, die im Rahmen der VERA-Testung durch Aufgaben erfasst werden. Lesen testet dabei den Umgang mit geschriebenen Texten, das Verstehen und Nutzen von Medien sowie Kenntnisse im Bereich Literatur. Die zugehörigen Aufgaben basieren auf Texten, Textausschnitten oder schriftlichen Fragen.</p>"
+        },
+        "orthografie": {
+            "title": "Orthografie (Deutsch)",
+            "aliases": ["Orthografie", "Rechtschreibung"],
+            "domains": [
+                {
+                    "subject": "Deutsch",
+                    "id": "rs"
+                }
+            ],
+            "body": "<p>Orthografie, also Rechtschreibung, beschreibt eine der Dimensionen der Schreibkompetenz im Fach Deutsch, die im Rahmen der VERA-Testung durch Aufgaben erfasst werden. Orthografie testet richtiges Schreiben sowie die zielgerichtete Überarbeitung bzw. Korrektur von Texten. Zugehörige Aufgaben bestehen beispielsweise aus Lückentexten, in denen Wörter und Zeichen ergänzt werden müssen.</p>"
+        },
+        "sprachgebrauch": {
+            "title": "Sprachgebrauch (Deutsch)",
+            "aliases": ["Sprachgebrauch"],
+            "domains": [
+                {
+                    "subject": "Deutsch",
+                    "id": "sp"
+                }
+            ],
+            "body": "<p>Sprachgebrauch, in den Bildungsstandards „Sprache und Sprachgebrauch untersuchen“, beschreibt eine der Dimensionen der Sprachkompetenz im Fach Deutsch, die im Rahmen der VERA-Testung durch Aufgaben erfasst werden. Sprachgebrauch testet dabei das Nachdenken über Sprache: Wortarten, Satzglieder und Satzbau, Wortbildung und Wortbedeutung sowie die Wahl sprachlicher Mittel, die zu Situation und Adressat passen. Zugehörige Aufgaben verlangen beispielsweise, Wörter oder Satzteile zu bestimmen, Sätze umzuformen oder in einem Text die passende Formulierung auszuwählen.</p>"
+        },
+        "hören-deutsch": {
+            "title": "Hören (Deutsch)",
+            "domains": [
+                {
+                    "subject": "Deutsch",
+                    "id": "ho"
+                }
+            ],
+            "body": "<p>Hören, in den Bildungsstandards Teil des Bereichs „Sprechen und Zuhören“, beschreibt eine der Dimensionen der Sprachkompetenz im Fach Deutsch, die im Rahmen der VERA-Testung durch Aufgaben erfasst werden. Hören testet dabei das Verstehen gesprochener Texte: Informationen entnehmen, Zusammenhänge erfassen und die Absicht des Gesprochenen erkennen. Die zugehörigen Aufgaben basieren auf Audiospuren, etwa einer Reportage, einem Hörspiel oder einem Gespräch, zu deren Inhalt Fragen schriftlich beantwortet werden müssen.</p>"
+        },
+        "lösungsquote": {
+            "title": "Lösungsquote",
+            "aliases": ["Lösungsquote"],
+            "body": "<p>Die Lösungsquote oder auch Lösungshäufigkeit der Lerngruppe oder einzelner Schüler:innen beschreibt die Summe gelöster Teilaufgaben, entweder als prozentualer oder als absoluter Wert im Verhältnis zur Gesamtzahl der gestellten Teilaufgaben. Über das gesamte Testheft hinweg dient die Lösungsquote unmittelbar zur Berechnung der Kompetenzstufe. Innerhalb eines Faches oder einer Domäne unter Verwendung eines gemeinsamen Testheftes sind Lösungsquoten über Gruppen hinweg vergleichbar.</p>"
+        },
+        "aufgaben": {
+            "title": "Aufgaben",
+            "aliases": ["Aufgaben", "Aufgabe"],
+            "body": "<p>Eine Aufgabe fasst eine oder mehrere Teilaufgaben zusammen, die auf einem gemeinsamen Text, einer Tonspur oder einer Problemstellung beruhen. Ausgewertet werden die Teilaufgaben, nicht die Aufgaben.</p>"
+        },
+        "items": {
+            "title": "Teilaufgaben",
+            "aliases": ["Teilaufgaben", "Teilaufgabe", "Items", "Item"],
+            "body": "<p>Teilaufgaben (auch Items) bilden den kleinsten Auswertungsgegenstand in VERA. Sie unterscheiden sich oftmals hinsichtlich der Schwierigkeit bzw. der für das Lösen benötigten Kompetenz; das verwendete Testheft setzt sich immer aus leichten und schwierigeren Teilaufgaben zusammen. Für die Berechnung der Kompetenzstufe zählt die Anzahl der gelösten Teilaufgaben.</p>"
+        },
+        "lerngruppenschnitt": {
+            "title": "Lerngruppenschnitt",
+            "aliases": ["Lerngruppendurchschnitt", "Lerngruppenschnitt"],
+            "body": "<p>Die meisten Ergebnisse werden üblicherweise über die gesamte Lerngruppe hinweg betrachtet. Der Lerngruppenschnitt ist dabei eines der zentralen Gesamtergebnisse und bietet einen guten Eindruck, wo möglicherweise die Stärken und Entwicklungspotenziale einer Lerngruppe als Ganzes liegen.</p>"
+        },
+        "schulschnitt": {
+            "title": "Schulschnitt",
+            "aliases": ["Schuldurchschnitt", "Schulschnitt"],
+            "body": "<p>Zentrale Ergebnisse, etwa allgemeine Lösungsquoten oder Kompetenzstufenverteilungen, können manchmal über alle Lerngruppen eines Jahrgangs hinweg an einer Schule betrachtet werden. Der Schulschnitt ist dabei eines der wichtigsten Gesamtergebnisse und bietet einen guten Eindruck, wo möglicherweise die Stärken und Entwicklungspotenziale einer Schule als Ganzes liegen.</p>"
+        },
+        "landesschnitt": {
+            "title": "Landesschnitt",
+            "aliases": ["Landesdurchschnitt", "Landesschnitt"],
+            "body": "<p>In manchen Bundesländern, Bezirken oder Schulen werden zentrale Ergebnisse auch auf Landesebene rückgemeldet. Der Landesschnitt kann dabei eine aussagekräftige Größe des sozialen Vergleichs sein und bietet einen guten Eindruck, wo möglicherweise die Stärken und Entwicklungspotenziale einer Schule im Vergleich zu anderen Schulen des Landes liegen.</p>"
+        },
+        "fach": {
+            "title": "Fach",
+            "aliases": [
+                {
+                    "text": "Fach",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Das Fach beschreibt den schulischen Lernbereich, auf den sich die dargestellten Ergebnisse beziehen, zum Beispiel Deutsch, Englisch oder Mathematik.</p>"
+        },
+        "lerngruppe": {
+            "title": "Lerngruppe",
+            "aliases": [
+                {
+                    "text": "Lerngruppe",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Die Lerngruppe bezeichnet die Gruppe von Schüler:innen, für die die ausgewählten Ergebnisse berichtet oder mit anderen Gruppen verglichen werden.</p>"
+        },
+        "anzahl-schüler": {
+            "title": "Anzahl Schüler:innen",
+            "aliases": [
+                {
+                    "text": "Anzahl Schüler:innen",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Die Anzahl der Schüler:innen gibt an, wie viele Schüler:innen die aktuell dargestellte Gruppe, Lerngruppe oder Fachauswahl umfasst.</p>"
+        },
+        "geschlechtsverteilung": {
+            "title": "Geschlechtsverteilung",
+            "aliases": [
+                {
+                    "text": "Geschlechtsverteilung",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Die Geschlechtsverteilung fasst zusammen, wie sich die aktuell betrachtete Gruppe auf die Kategorien männlich, weiblich und divers verteilt.</p>"
+        },
+        "geschlecht": {
+            "title": "Geschlecht",
+            "aliases": ["Geschlecht"],
+            "body": "<p>An den meisten Schulen ist das Geschlecht eines der wenigen Merkmale, die neben den Testergebnissen bei Schüler:innen erfasst und berichtet werden. In dieser Rückmeldung wird dabei zwischen divers, männlich und weiblich unterschieden.</p>"
+        },
+        "male": {
+            "title": "männlich",
+            "aliases": [
+                {
+                    "text": "männlich",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Männlich beschreibt neben divers und weiblich eine der möglichen Ausprägungen des Merkmals Geschlecht.</p>"
+        },
+        "female": {
+            "title": "weiblich",
+            "aliases": [
+                {
+                    "text": "weiblich",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Weiblich beschreibt neben divers und männlich eine der möglichen Ausprägungen des Merkmals Geschlecht.</p>"
+        },
+        "diverse": {
+            "title": "divers",
+            "aliases": [
+                {
+                    "text": "divers",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Divers beschreibt neben männlich und weiblich eine der möglichen Ausprägungen des Merkmals Geschlecht.</p>"
+        },
+        "merkmal": {
+            "title": "Schüler:innenmerkmale",
+            "aliases": ["Merkmale"],
+            "body": "<p>Neben dem Geschlecht erfassen einige Schulen und Länder weitere leistungsrelevante Merkmale der Schüler:innen. Die Liste der Merkmale variiert stark zwischen den auswertenden Einrichtungen und umfasst beispielsweise Merkmale der schulischen Historie, sozioökonomische Merkmale oder besondere Gutachten und Diagnosen.</p>"
+        },
+        "f": {
+            "title": "Förderbedarf",
+            "aliases": [
+                "Förderbedarf",
+                {
+                    "text": "F",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Bei dem/der Schüler:in wurde ein nicht weiter spezifizierter sonderpädagogischer Förderbedarf festgestellt.</p>"
+        },
+        "kw": {
+            "title": "Klassenwiederholung",
+            "aliases": [
+                "Klassenwiederholung",
+                {
+                    "text": "KW",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Der/die Schüler:in hat die aktuelle Jahrgangsstufe bereits einmal wiederholt.</p>"
+        },
+        "s": {
+            "title": "ungenügende Sprachkenntnisse",
+            "aliases": [
+                "ungenügende Sprachkenntnisse",
+                {
+                    "text": "S",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Der/die Schüler:in verfügt über ungenügende allgemeine Sprachkenntnisse.</p>"
+        },
+        "nd": {
+            "title": "nicht-dominant deutsch",
+            "aliases": [
+                "nicht-dominant deutsch",
+                {
+                    "text": "ND",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Der/die Schüler:in hat einen nicht deutschsprachigen Hintergrund.</p>"
+        },
+        "td": {
+            "title": "Teilleistungsstörung Deutsch",
+            "aliases": [
+                "Teilleistungsstörung Deutsch",
+                {
+                    "text": "TD",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Der/die Schüler:in hat eine Teilleistungsstörung im Fach Deutsch.</p>"
+        },
+        "tm": {
+            "title": "Teilleistungsschwäche Mathematik",
+            "aliases": [
+                "Teilleistungsschwäche Mathematik",
+                {
+                    "text": "TM",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Der/die Schüler:in hat eine Teilleistungsschwäche im Fach Mathematik.</p>"
+        },
+        "selbstwirksamkeit": {
+            "title": "Selbstwirksamkeit",
+            "aliases": ["Selbstwirksamkeit"],
+            "body": "<p>Ein Maß, das die Selbstwirksamkeitserwartung der Schüler:innen in ihrer Rolle als Lernende beschreibt. Es handelt sich um ein (fiktives) exemplarisches Maß, das als fachübergreifendes Merkmal von Schüler:innen im Schulkontext dienen soll.</p>"
+        },
+        "unterrichtsqualität": {
+            "title": "Unterrichtsqualität",
+            "aliases": ["Unterrichtsqualität"],
+            "body": "<p>Die Unterrichtsqualität basiert auf einem lerngruppen- und fachspezifischen Urteil der Schüler:innen. Es handelt sich um ein (fiktives) exemplarisches Maß, das zum Vergleich unterschiedlicher Lerngruppen innerhalb eines Faches dienen soll.</p>"
+        }
+    }
+}

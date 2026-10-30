@@ -1,0 +1,14 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    .table-preset-container {
+        flex-shrink: 0;
+    }
+
+    .table-preset-container > .btn--text {
+        white-space: nowrap;
+        font-size: var(--fs-sm);
+        height: var(--btn-height-toolbar, 2rem);
+        --btn-padding-block: 0;
+    }
+}

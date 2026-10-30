@@ -1,0 +1,9 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    /* One band of bar, not a viewport-relative banner. */
+    .ma-group-view .competence-level-bar-wrapper {
+        flex: 0 0 auto;
+        height: var(--strip-card-height);
+    }
+}

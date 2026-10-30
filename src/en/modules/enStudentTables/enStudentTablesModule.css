@@ -1,0 +1,14 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* The student selector in the header's title slot. */
+    .en-student-tables-selector {
+        flex: 0 0 auto;
+    }
+
+    /* The one-row info table keeps its natural height; the data table (a card,
+       flex: 1) fills the rest and scrolls. */
+    .en-student-info-table {
+        flex: 0 0 auto;
+    }
+}

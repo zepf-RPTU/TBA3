@@ -1,0 +1,16 @@
+{
+    "header": {
+        "title": "Lerngruppenübersicht",
+        "subtitle": "Zentrale Merkmale und Ergebnisse aller Schüler:innen",
+        "tutorial": "<p>Ergebnisse können nach <b>Domänen</b> untergliedert werden. Sie können die angezeigten Ergebnisse auf eine der Domänen beschränken. Außerdem werden in allen Darstellungen der Ergebnisse Schulschnitt, Landesschnitt oder auch andere Vergleichswerte mit angezeigt. Sie können diese über die Schaltfläche jederzeit aus- oder wieder einblenden. Ein Vergleich mit anderen Gruppen kann helfen, die Ergebnisse besser einzuordnen.</p>"
+    },
+    "filter": {
+        "tutorial": "<p>Über die Filter-Schaltfläche im Kopf der Tabelle öffnen Sie das Streudiagramm aus der Übersicht. Markieren Sie dort Schüler:innen und bestätigen Sie die Auswahl: Die Tabelle und das Schaubild darüber zeigen dann nur noch diese Schüler:innen. Mit der Schaltfläche „Ansicht zurücksetzen“ (Kreispfeil rechts neben dem Filtermenü) heben Sie die Auswahl wieder auf.</p>",
+        "title": "Visuelle Suche mit Streudiagramm"
+    },
+    "lollipop": {
+        "title": "Durchschnittliche Lösungsquoten der Lerngruppe nach Stilen im {{Domänen}}",
+        "subtitle": "<p>Sie sehen die durchschnittlichen Lösungsquoten der Lerngruppe (der Auswahl), unterteilt nach den Hör- bzw. Lesestilen, welchen die jeweiligen Teilaufgaben zugeordnet werden können.</p>",
+        "tutorial": "<p>Die Teilaufgaben können bestimmten Hör- bzw. Lesestilen zugeordnet werden. Es werden die Stile <b>„selektiv“</b>, <b>„detailliert“</b> und <b>„global“</b> unterschieden. Die Stiele zeigen, wie viel Prozent aller Teilaufgaben, die einem bestimmten Stil zugeordnet werden können, im Mittel gelöst wurden. Sie können sich dadurch einen Eindruck verschaffen, welche Stile von den ausgewählten Schüler:innen bzw. der Lerngruppe zuverlässig oder aber weniger zuverlässig angewandt werden.</p>"
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "noEmit": true,
+        "target": "ES2022",
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "lib": ["ES2022", "DOM"],
+        "strict": true,
+        "strictPropertyInitialization": false,
+        "skipLibCheck": true,
+        "noImplicitReturns": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitOverride": true
+    },
+    "include": [
+        "../src/**/*.js",
+        "../packages/*/index.js",
+        "../packages/*/src/**/*.js",
+        "../config/**/*.js",
+        "../config/**/*.mjs",
+        "../tools/**/*.mjs",
+        "../vite.config.js",
+        "../playwright.config.js",
+        "global.d.ts",
+        "tabulator.d.ts",
+        "../tests/**/*.js",
+        "../packages/*/test/**/*.js"
+    ]
+}

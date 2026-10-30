@@ -1,0 +1,230 @@
+/**
+ * Paints the page, the card chrome and the overlay toolbar; the view supplies
+ * every position. Nothing here is transform-scaled, so the toolbar and the page
+ * footer keep their own type size at any zoom.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .report-view {
+        /* The page stack brings its own margins; the view frames the scroll area. */
+        --view-base-padding: var(--space-md);
+        overflow: hidden;
+    }
+
+    .report-toolbar {
+        justify-content: space-between;
+        flex: none;
+    }
+
+    .report-summary {
+        color: var(--text-secondary);
+    }
+
+    .report-empty {
+        padding: var(--space-md);
+        border: 1px dashed var(--color-border-medium);
+        border-radius: var(--radius-md);
+        color: var(--text-secondary);
+        background: var(--color-card-background);
+    }
+
+    /* ==========================================================================
+       Page stack
+       ========================================================================== */
+
+    .report-scroll {
+        flex: 1;
+        overflow: auto;
+        padding: var(--space-md);
+        /* A reserved gutter keeps clientWidth constant, so the fit modes cannot
+           oscillate between "scrollbar" and "no scrollbar". */
+        scrollbar-gutter: stable;
+    }
+
+    /* The view sets the stack's size and each sheet's and card's box in preview
+       px as custom properties (the CSP allows no style attribute). */
+    .report-pages {
+        position: relative;
+        margin: 0 auto;
+        width: var(--report-stack-width);
+        height: var(--report-stack-height);
+    }
+
+    .report-sheet,
+    .report-card {
+        position: absolute;
+        left: var(--report-box-left);
+        top: var(--report-box-top);
+        width: var(--report-box-width);
+        height: var(--report-box-height);
+    }
+
+    /* Paper is white whatever the screen shows: the sheet and its footer resolve every
+       light-dark() token light. A card has no fill of its own: it sits on its sheet. */
+    .report-sheet {
+        color-scheme: light;
+        background: var(--color-card-background);
+        box-shadow: var(--shadow-md);
+    }
+
+    .report-sheet-footer {
+        position: absolute;
+        inset-inline: var(--report-page-margin, 0);
+        /* Half the page margin above the paper edge, as in pdfComposer.save(). */
+        bottom: calc(var(--report-page-margin, 0px) / 2);
+        /* 8 pt of A4's 595 pt width — the footer's size in the PDF. */
+        font-size: calc(var(--report-page-width, 0px) * 8 / 595);
+        line-height: var(--lh-ui);
+        color: var(--text-secondary);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* ==========================================================================
+       Card
+       ========================================================================== */
+
+    /* The card is the printed image and nothing else: no border or radius. Its
+       bounds show only while it is being worked on. */
+    .report-card:hover,
+    .report-card:focus-within,
+    .report-card.is-active,
+    .report-card.is-dragging {
+        outline: 2px solid var(--primary-color);
+        z-index: 2;
+    }
+
+    .report-card.is-dragging {
+        opacity: 0.6;
+    }
+
+    .report-card-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        /* A white capture on the white paper has no edge; pure black at 10% gives
+           every thumbnail the same hairline without tinting it. */
+        outline: 1px solid oklch(0 0 0 / 0.1);
+        outline-offset: -1px;
+    }
+
+    /* ==========================================================================
+       Overlay toolbar
+       ========================================================================== */
+
+    /* `opacity: 0` (not visibility/display) keeps the buttons in the tab order,
+       so :focus-within is a real keyboard path. Chrome, not page content: it
+       keeps its natural size at every zoom and overflows a narrow card rather
+       than shrinking, so the card must not clip it; data-align flips it at the
+       right edge. */
+    .report-card-toolbar {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        display: flex;
+        align-items: center;
+        gap: var(--space-xs);
+        width: max-content;
+        padding: var(--space-xs) var(--space-sm);
+        border: 1px solid var(--color-border-light);
+        border-radius: var(--radius-md);
+        background: var(--color-card-background);
+        box-shadow: var(--shadow-md);
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* Never shrink a control: .btn-group carries min-width: 0, so a squeezed
+       group would overflow onto the next control. Only the heading below may
+       give way. */
+    .report-card-toolbar > * {
+        flex: none;
+    }
+
+    .report-card[data-align='end'] .report-card-toolbar {
+        left: auto;
+        right: 0;
+    }
+
+    /* Everything hover reveals, the drag handle included, is
+       `pointer-events: none` until it fires, so this is gated on a pointer that
+       can hover. Not paired with `(pointer: fine)`: a touchscreen laptop reports
+       `hover: hover, pointer: coarse` and must keep the hover reveal. */
+    @media (hover: hover) {
+        .report-card:hover .report-card-toolbar {
+            opacity: 1;
+            pointer-events: auto;
+        }
+    }
+
+    /* Ungated: keyboard focus, a drag and the tapped card are independent of
+       pointer type. A tap sets `.is-active` on one card rather than a
+       `(hover: none)` block revealing every toolbar: at ~427px against cards as
+       narrow as 191px, toolbars overlap their neighbours, and `.report-card`
+       creates no stacking context at rest, so with several revealed the one that
+       swallows a tap would follow DOM order, which a reorder separates from
+       visual order. The `z-index: 2` above puts the active card's toolbar on
+       top. */
+    .report-card:focus-within .report-card-toolbar,
+    .report-card.is-active .report-card-toolbar,
+    .report-card.is-dragging .report-card-toolbar {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Opted out of the coarse-pointer target in buttons.css, an accepted
+       limitation until the preview gets a control layer sized for its cards.
+       The ~427px toolbar meets cards of ~390 / 258 / 191 / 125px for spans
+       12 / 8 / 6 / 4 at `fit-page` on a tablet; two half-width cards sit 191px
+       apart, so their toolbars already overlap by ~230px. 44px buttons would
+       widen that; 2rem still clears WCAG 2.5.8's 24px floor. */
+    @media (pointer: coarse) {
+        .report-card-toolbar .btn--icon {
+            --btn-height-toolbar: 2rem;
+        }
+    }
+
+    .report-card-handle {
+        cursor: grab;
+        touch-action: none;
+    }
+
+    .report-card.is-dragging .report-card-handle {
+        cursor: grabbing;
+    }
+
+    .report-card-heading {
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 auto;
+        min-width: 0;
+        max-width: 22ch;
+    }
+
+    /* Both lines wrap inside the 22ch cap: the meta tells captures of two groups
+       apart, and an ellipsis would cut exactly that. */
+    .report-card-title,
+    .report-card-meta {
+        overflow-wrap: anywhere;
+    }
+
+    .report-card-title {
+        font-weight: var(--fw-bold);
+    }
+
+    .report-card-meta {
+        font-size: var(--fs-sm);
+        color: var(--text-muted);
+    }
+
+    .report-card-spans .btn {
+        --btn-padding-block: 0.125rem;
+        --btn-padding-inline: var(--space-sm);
+        font-size: var(--fs-sm);
+        height: var(--btn-height-toolbar-xs);
+    }
+}

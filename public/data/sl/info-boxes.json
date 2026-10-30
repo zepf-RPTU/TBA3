@@ -1,0 +1,405 @@
+{
+    "meta": {
+        "locale": "de-DE",
+        "materialLinkLabel": "{{type}}: {{subject}} im Material anzeigen",
+        "quotedLabel": "„{{label}}“"
+    },
+    "sectionTypes": {
+        "general": {
+            "icon": "stars",
+            "tooltip": "Eine Auswahl zusammengefasster Ergebnisse für einen ersten Gesamteindruck."
+        },
+        "praise": {
+            "icon": "trophy",
+            "tooltip": "Eine Auswahl zusammengefasster Ergebnisse mit Fokus auf besonders bemerkenswerte Ergebnisse am oberen Rand des Leistungsspektrums.",
+            "materialLinkSubjectMode": "best"
+        },
+        "alarm": {
+            "icon": "warning",
+            "tooltip": "Eine Auswahl zusammengefasster Ergebnisse mit Fokus auf erhöhten Entwicklungsbedarf am unteren Rand des Leistungsspektrums.",
+            "materialLinkSubjectMode": "worst"
+        }
+    },
+    "boxes": {
+        "matrix": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Fächerübergreifend liegen im Jahrgang {{shareRange(target=school, levelAlias=ge_medium)}} der Schüler:innen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_medium)}}.",
+                        "{{shareRange(target=school, levelAlias=le_low)}} der Schüler:innen liegen dabei höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_low)}}.",
+                        "Am stärksten unterscheiden sich die Lerngruppen im Fach {{selectShareTarget(id=widestMatrixSubjectGroupSpread, target=school, levelAlias=ge_medium, scope=subjectGroupRange, mode=max, field=subjectName)}}.",
+                        "Am stärksten unterscheiden sich die Fächer in Lerngruppe {{selectShareTarget(id=widestMatrixGroupShareSpread, target=school, levelAlias=ge_medium, scope=groupRange, mode=max, field=groupName)}}.",
+                        {
+                            "type": "link",
+                            "material": "Übersicht",
+                            "subject": "Gesamt"
+                        }
+                    ]
+                },
+                {
+                    "type": "praise",
+                    "blocks": [
+                        "In folgenden Fächern liegt die Schule oberhalb des Landesschnitts: {{listStateComparisonSubjects(target=school, levelAlias=ge_medium, comparison=gt, aggregation=anyDomain, empty=keinem Fach)}}.",
+                        "Die besten Ergebnisse wurden im Fach {{selectShareTarget(id=bestSchoolDomain, target=school, levelAlias=ge_medium, scope=subjectDomainShare, mode=max, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:bestSchoolDomain, levelAlias=ge_medium)}} der Schüler:innen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_medium)}}.",
+                        {
+                            "type": "link",
+                            "material": "Übersicht",
+                            "subject": "Fach"
+                        },
+                        "Am besten schneidet Lerngruppe {{selectShareTarget(id=bestGroup, target=school, levelAlias=ge_medium, scope=groupMean, mode=max, field=groupName)}} ab. Über die Fächer hinweg liegen dort {{shareRange(target=selection:bestGroup, levelAlias=ge_medium)}} der Schüler:innen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_medium)}}.",
+                        {
+                            "type": "link",
+                            "material": "Ergebniszusammenfassung",
+                            "subject": "Gesamt"
+                        }
+                    ]
+                },
+                {
+                    "type": "alarm",
+                    "blocks": [
+                        "In folgenden Fächern liegt die Schule unterhalb des Landesschnitts: {{listStateComparisonSubjects(target=school, levelAlias=ge_medium, comparison=lt, aggregation=anyDomain, empty=keinem Fach)}}.",
+                        "Die schwächsten Ergebnisse wurden im Fach {{selectShareTarget(id=worstSchoolDomain, target=school, levelAlias=ge_medium, scope=subjectDomainShare, mode=min, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:worstSchoolDomain, levelAlias=le_medium)}} der Schüler:innen höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_medium)}}.",
+                        {
+                            "type": "link",
+                            "material": "Übersicht",
+                            "subject": "Fach"
+                        },
+                        "Am schwächsten schneidet Lerngruppe {{selectShareTarget(id=weakestGroup, target=school, levelAlias=ge_medium, scope=groupMean, mode=min, field=groupName)}} ab. Über die Fächer hinweg liegen dort {{shareRange(target=selection:weakestGroup, levelAlias=le_medium)}} der Schüler:innen höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_medium)}}.",
+                        {
+                            "type": "link",
+                            "material": "Ergebniszusammenfassung",
+                            "subject": "Gesamt"
+                        }
+                    ]
+                }
+            ]
+        },
+        "detailsBySubjects": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        {
+                            "text": "Schulweit liegen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_medium)}}:",
+                            "sublist": [
+                                {
+                                    "repeat": "subjects",
+                                    "template": "{{subjectShare(target=school, levelAlias=ge_medium)}} im Fach [[subjectShortDisplayName]]."
+                                }
+                            ]
+                        },
+                        "Den größten Unterschied zwischen Lerngruppen gibt es im Fach {{selectShareTarget(id=widestDetailsSubjectDomainSpread, target=school, levelAlias=ge_medium, scope=subjectDomainGroupRange, mode=max, field=subjectDomainLabel)}}.",
+                        "Die stärkste Abweichung zum Landesschnitt liegt im Fach {{selectShareTarget(id=largestSchoolStateGapSubject, target=school, levelAlias=ge_medium, scope=subjectStateDiff, mode=max, field=subjectName)}} vor.",
+                        {
+                            "type": "link",
+                            "material": "Ergebniszusammenfassung",
+                            "subject": "Gesamt"
+                        }
+                    ]
+                },
+                {
+                    "type": "praise",
+                    "blocks": [
+                        "In folgenden Fächern liegt die Schule oberhalb des Landesschnitts: {{listStateComparisonSubjects(target=school, levelAlias=ge_medium, comparison=gt, aggregation=subject, empty=keinem Fach)}}.",
+                        "Die besten Ergebnisse wurden im Fach {{selectShareTarget(id=bestSchoolDomain, target=school, levelAlias=ge_medium, scope=subjectDomainShare, mode=max, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:bestSchoolDomain, levelAlias=ge_medium)}} der Schüler:innen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_medium)}}.",
+                        {
+                            "type": "link",
+                            "material": "Übersicht",
+                            "subject": "Fach"
+                        }
+                    ]
+                },
+                {
+                    "type": "alarm",
+                    "blocks": [
+                        "In folgenden Fächern liegt die Schule unterhalb des Landesschnitts: {{listStateComparisonSubjects(target=school, levelAlias=ge_medium, comparison=lt, aggregation=subject, empty=keinem Fach)}}.",
+                        "Die schwächsten Ergebnisse wurden im Fach {{selectShareTarget(id=worstSchoolDomain, target=school, levelAlias=ge_medium, scope=subjectDomainShare, mode=min, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:worstSchoolDomain, levelAlias=le_medium)}} der Schüler:innen höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_medium)}}.",
+                        {
+                            "type": "link",
+                            "material": "Übersicht",
+                            "subject": "Fach"
+                        }
+                    ]
+                }
+            ]
+        },
+        "detailsByGroups": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        {
+                            "text": "Im Mittel liegen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_medium)}}:",
+                            "sublist": [
+                                {
+                                    "repeat": "groups",
+                                    "template": "{{shareRange(target=group:current, levelAlias=ge_medium)}} der Lerngruppe [[quotedGroupName]]."
+                                }
+                            ]
+                        },
+                        "Den größten Unterschied zwischen Fächern gibt es in Lerngruppe {{selectShareTarget(id=widestDetailsGroupShareSpread, target=school, levelAlias=ge_medium, scope=groupRange, mode=max, field=groupName)}}.",
+                        {
+                            "type": "link",
+                            "material": "Ergebniszusammenfassung",
+                            "subject": "Gesamt"
+                        }
+                    ]
+                },
+                {
+                    "type": "praise",
+                    "blocks": [
+                        "Folgende Lerngruppen liegen in mindestens einem Fach oberhalb des Landesschnitts: {{listStateComparisonGroups(target=school, levelAlias=ge_medium, comparison=gt, empty=keine Lerngruppe)}}.",
+                        "Am besten schneidet Lerngruppe {{selectShareTarget(id=bestGroup, target=school, levelAlias=ge_medium, scope=groupMean, mode=max, field=groupName)}} ab. Über die Fächer hinweg liegen dort {{shareRange(target=selection:bestGroup, levelAlias=ge_medium)}} der Schüler:innen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_medium)}}.",
+                        {
+                            "type": "link",
+                            "material": "Leitfragen",
+                            "subject": "Gesamt"
+                        }
+                    ]
+                },
+                {
+                    "type": "alarm",
+                    "blocks": [
+                        "Folgende Lerngruppen liegen in mindestens einem Fach unterhalb des Landesschnitts: {{listStateComparisonGroups(target=school, levelAlias=ge_medium, comparison=lt, empty=keine Lerngruppe)}}.",
+                        "Am schwächsten schneidet Lerngruppe {{selectShareTarget(id=weakestGroup, target=school, levelAlias=ge_medium, scope=groupMean, mode=min, field=groupName)}} ab. Über die Fächer hinweg liegen dort {{shareRange(target=selection:weakestGroup, levelAlias=le_medium)}} der Schüler:innen höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_medium)}}.",
+                        {
+                            "type": "link",
+                            "material": "Leitfragen",
+                            "subject": "Gesamt"
+                        }
+                    ]
+                }
+            ]
+        },
+        "detailsSubjectSpecific": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Schulweit liegen {{subjectShare(target=school, levelAlias=ge_medium)}} der Schüler:innen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_medium)}}; in den einzelnen Lerngruppen liegt dieser Wert bei {{subjectShareGroupRange(target=school, levelAlias=ge_medium)}}.",
+                        {
+                            "repeat": "domains",
+                            "template": "Bei {{selectSubjectDomain(id=currentSubjectDomain, field=domainName)}} betragen diese Werte {{subjectShare(target=school, levelAlias=ge_medium, domainId=selection:currentSubjectDomain)}} und {{subjectShareGroupRange(target=school, levelAlias=ge_medium, domainId=selection:currentSubjectDomain)}}."
+                        },
+                        {
+                            "type": "link",
+                            "material": "Übersicht",
+                            "subject": "Fach"
+                        }
+                    ]
+                },
+                {
+                    "type": "praise",
+                    "blocks": [
+                        "Folgende Lerngruppen liegen oberhalb des Landesschnitts: {{listStateComparisonGroups(target=school, levelAlias=ge_medium, comparison=gt, empty=keine Lerngruppe)}}.",
+                        {
+                            "text": "Kompetenzstufe {{standardBands(levelAlias=e_high)}} wird in den Lerngruppen erreicht:",
+                            "sublist": [
+                                {
+                                    "repeat": "groups",
+                                    "template": "[[quotedGroupName]] mit {{subjectShare(target=group:current, levelAlias=e_high)}} der Schüler:innen."
+                                }
+                            ]
+                        },
+                        "Die besten Ergebnisse wurden von Lerngruppe {{selectShareTarget(id=bestCurrentSubjectGroup, target=school, levelAlias=ge_medium, scope=groupInSubject, mode=max, field=groupName)}} erzielt. Dort liegen {{subjectShare(target=selection:bestCurrentSubjectGroup, levelAlias=ge_medium)}} der Schüler:innen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_medium)}}.",
+                        {
+                            "type": "link",
+                            "material": "Ergebniszusammenfassung",
+                            "subject": "Fach"
+                        }
+                    ]
+                },
+                {
+                    "type": "alarm",
+                    "blocks": [
+                        "Folgende Lerngruppen liegen unterhalb des Landesschnitts: {{listStateComparisonGroups(target=school, levelAlias=ge_medium, comparison=lt, empty=keine Lerngruppe)}}.",
+                        {
+                            "text": "Höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_low)}} liegen in den Lerngruppen:",
+                            "sublist": [
+                                {
+                                    "repeat": "groups",
+                                    "template": "[[quotedGroupName]] mit {{subjectShare(target=group:current, levelAlias=le_low)}} der Schüler:innen."
+                                }
+                            ]
+                        },
+                        "Die schwächsten Ergebnisse wurden von Lerngruppe {{selectShareTarget(id=worstCurrentSubjectGroup, target=school, levelAlias=ge_medium, scope=groupInSubject, mode=min, field=groupName)}} erzielt. Dort liegen {{subjectShare(target=selection:worstCurrentSubjectGroup, levelAlias=le_medium)}} der Schüler:innen höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_medium)}}."
+                    ]
+                }
+            ]
+        },
+        "detailsSchoolSpecific": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Fächerübergreifend liegen {{shareRange(target=school, levelAlias=ge_medium)}} der Schüler:innen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_medium)}}.",
+                        "{{shareRange(target=school, levelAlias=le_low)}} der Schüler:innen liegen dabei höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_low)}}.",
+                        "Der größte Unterschied besteht zwischen {{selectShareTarget(id=highestDetailsSchoolDomain, target=school, levelAlias=ge_medium, scope=subjectDomainShare, mode=max, field=subjectDomainLabel)}} und {{selectShareTarget(id=lowestDetailsSchoolDomain, target=school, levelAlias=ge_medium, scope=subjectDomainShare, mode=min, field=subjectDomainLabel)}}.",
+                        {
+                            "type": "link",
+                            "material": "Ergebniszusammenfassung",
+                            "subject": "Gesamt"
+                        }
+                    ]
+                },
+                {
+                    "type": "praise",
+                    "blocks": [
+                        "In folgenden Fächern liegt die Schule oberhalb des Landesschnitts: {{listStateComparisonSubjects(target=school, levelAlias=ge_medium, comparison=gt, aggregation=anyDomain, empty=keinem Fach)}}.",
+                        "Die besten Ergebnisse wurden im Fach {{selectShareTarget(id=bestDetailsSchoolDomain, target=school, levelAlias=ge_medium, scope=subjectDomainShare, mode=max, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:bestDetailsSchoolDomain, levelAlias=ge_medium)}} der Schüler:innen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_medium)}}.",
+                        {
+                            "type": "link",
+                            "material": "Leitfragen",
+                            "subject": "Gesamt"
+                        }
+                    ]
+                },
+                {
+                    "type": "alarm",
+                    "blocks": [
+                        "In folgenden Fächern liegt die Schule unterhalb des Landesschnitts: {{listStateComparisonSubjects(target=school, levelAlias=ge_medium, comparison=lt, aggregation=anyDomain, empty=keinem Fach)}}.",
+                        "Die schwächsten Ergebnisse wurden im Fach {{selectShareTarget(id=worstDetailsSchoolDomain, target=school, levelAlias=ge_medium, scope=subjectDomainShare, mode=min, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:worstDetailsSchoolDomain, levelAlias=le_medium)}} der Schüler:innen höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_medium)}}.",
+                        {
+                            "type": "link",
+                            "material": "Leitfragen",
+                            "subject": "Gesamt"
+                        }
+                    ]
+                }
+            ]
+        },
+        "detailsGroupSpecific": {
+            "sections": [
+                {
+                    "type": "general",
+                    "materialLinkSubjectMode": "extrema",
+                    "blocks": [
+                        {
+                            "text": "Fächerübergreifend liegen {{shareRange(target=group:current, levelAlias=ge_medium)}} der Schüler:innen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_medium)}}.",
+                            "sublist": [
+                                {
+                                    "repeat": "subjects",
+                                    "template": "Im Fach [[quotedSubjectDisplayName]] liegt dieser Wert bei {{subjectShare(target=group:current, levelAlias=ge_medium)}}."
+                                }
+                            ]
+                        },
+                        "Der größte Unterschied besteht zwischen {{selectShareTarget(id=highestCurrentGroupSubjectDomain, target=group:current, levelAlias=ge_medium, scope=subjectDomainShare, mode=max, field=subjectDomainLabel)}} und {{selectShareTarget(id=lowestCurrentGroupSubjectDomain, target=group:current, levelAlias=ge_medium, scope=subjectDomainShare, mode=min, field=subjectDomainLabel)}}.",
+                        {
+                            "type": "link",
+                            "material": "Übersicht",
+                            "subject": "Fach"
+                        }
+                    ]
+                },
+                {
+                    "type": "praise",
+                    "blocks": [
+                        "In folgenden Fächern liegen die Ergebnisse der Lerngruppe oberhalb des Landesschnitts: {{listStateComparisonSubjects(target=group:current, levelAlias=ge_medium, comparison=gt, aggregation=anyDomain, empty=keinem Fach)}}.",
+                        {
+                            "text": "Kompetenzstufe {{standardBands(levelAlias=e_high)}} wird in den Fächern erreicht:",
+                            "sublist": [
+                                {
+                                    "repeat": "subjects",
+                                    "template": "[[quotedSubjectDisplayName]] mit {{subjectShare(target=group:current, levelAlias=e_high)}} der Schüler:innen."
+                                }
+                            ]
+                        },
+                        "Die besten Ergebnisse wurden im Fach {{selectShareTarget(id=bestCurrentGroupDomain, target=group:current, levelAlias=ge_medium, scope=subjectDomainShare, mode=max, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:bestCurrentGroupDomain, levelAlias=ge_medium)}} der Schüler:innen auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_medium)}}.",
+                        {
+                            "type": "link",
+                            "material": "Leitfragen",
+                            "subject": "Gesamt"
+                        }
+                    ]
+                },
+                {
+                    "type": "alarm",
+                    "blocks": [
+                        "In folgenden Fächern liegen die Ergebnisse der Lerngruppe unterhalb des Landesschnitts: {{listStateComparisonSubjects(target=group:current, levelAlias=ge_medium, comparison=lt, aggregation=anyDomain, empty=keinem Fach)}}.",
+                        {
+                            "text": "Höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_low)}} liegen in den Fächern:",
+                            "sublist": [
+                                {
+                                    "repeat": "subjects",
+                                    "template": "[[quotedSubjectDisplayName]] insgesamt {{subjectShare(target=group:current, levelAlias=le_low)}} der Schüler:innen."
+                                }
+                            ]
+                        },
+                        "Die schwächsten Ergebnisse wurden im Fach {{selectShareTarget(id=worstCurrentGroupDomain, target=group:current, levelAlias=ge_medium, scope=subjectDomainShare, mode=min, field=subjectDomainLabel)}} erzielt. Dort liegen {{share(target=selection:worstCurrentGroupDomain, levelAlias=le_medium)}} der Schüler:innen höchstens auf Kompetenzstufe {{standardBands(levelAlias=le_medium)}}.",
+                        {
+                            "type": "link",
+                            "material": "Leitfragen",
+                            "subject": "Gesamt"
+                        }
+                    ]
+                }
+            ]
+        },
+        "detailsSelfEfficacy": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Schulweit liegt der mittlere Selbstwirksamkeitswert bei {{summary(namespace=selfEfficacy, entity=school, field=mean, format=decimal)}} (Median {{summary(namespace=selfEfficacy, entity=school, field=median, format=decimal)}}, n={{summary(namespace=selfEfficacy, entity=school, field=count, format=integer)}}).",
+                        "{{summary(namespace=selfEfficacy, entity=school, field=goodOrExcellentShare, format=percent)}} der Schüler:innen vergeben Ratings von mindestens 3,0; {{summary(namespace=selfEfficacy, entity=school, field=lowOrMediumShare, format=percent)}} bleiben unter 3,0.",
+                        "Zwischen den Lerngruppen mit dem höchsten und niedrigsten Mittelwert liegt eine Differenz von {{summary(namespace=selfEfficacy, field=groupMeanDifference, format=decimal)}} Punkten: von {{summary(namespace=selfEfficacy, entity=worstGroup, field=mean, format=decimal)}} in Lerngruppe {{summary(namespace=selfEfficacy, entity=worstGroup, field=groupName)}} zu {{summary(namespace=selfEfficacy, entity=bestGroup, field=mean, format=decimal)}} in Lerngruppe {{summary(namespace=selfEfficacy, entity=bestGroup, field=groupName)}}."
+                    ]
+                },
+                {
+                    "type": "praise",
+                    "blocks": [
+                        "Die höchste mittlere Selbstwirksamkeit zeigt Lerngruppe {{summary(namespace=selfEfficacy, entity=bestGroup, field=groupName)}} mit {{summary(namespace=selfEfficacy, entity=bestGroup, field=mean, format=decimal)}}.",
+                        "{{summary(namespace=selfEfficacy, entity=bestGroup, field=goodOrExcellentShare, format=percent)}} der Schüler:innen dieser Lerngruppe vergeben Ratings von mindestens 3,0; {{summary(namespace=selfEfficacy, entity=bestGroup, field=excellentShare, format=percent)}} liegen sogar im Bereich 4,0-5,0.",
+                        "Der Anteil unter 3,0 liegt dort nur bei {{summary(namespace=selfEfficacy, entity=bestGroup, field=lowOrMediumShare, format=percent)}}."
+                    ]
+                },
+                {
+                    "type": "alarm",
+                    "blocks": [
+                        "Die niedrigste mittlere Selbstwirksamkeit zeigt Lerngruppe {{summary(namespace=selfEfficacy, entity=worstGroup, field=groupName)}} mit {{summary(namespace=selfEfficacy, entity=worstGroup, field=mean, format=decimal)}}.",
+                        "{{summary(namespace=selfEfficacy, entity=worstGroup, field=lowOrMediumShare, format=percent)}} der Schüler:innen dieser Lerngruppe bleiben unter 3,0.",
+                        "Ratings von mindestens 3,0 erreichen dort insgesamt nur {{summary(namespace=selfEfficacy, entity=worstGroup, field=goodOrExcellentShare, format=percent)}}; im Bereich 4,0-5,0 liegen {{summary(namespace=selfEfficacy, entity=worstGroup, field=excellentShare, format=percent)}}."
+                    ]
+                }
+            ]
+        },
+        "comparisonCompetence": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Der Anteil auf oder oberhalb von Kompetenzstufe {{standardBands(levelAlias=ge_medium)}} beträgt in der Gruppe {{summary(namespace=comparison, entity=group1, field=label)}} {{summary(namespace=comparison, entity=group1, field=share, format=percent)}} und in der Gruppe {{summary(namespace=comparison, entity=group2, field=label)}} {{summary(namespace=comparison, entity=group2, field=share, format=percent)}}."
+                    ]
+                }
+            ]
+        },
+        "comparisonRating": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Der Anteil mit gutem oder sehr gutem Rating beträgt in der Gruppe {{summary(namespace=comparison, entity=group1, field=label)}} {{summary(namespace=comparison, entity=group1, field=share, format=percent)}} und in der Gruppe {{summary(namespace=comparison, entity=group2, field=label)}} {{summary(namespace=comparison, entity=group2, field=share, format=percent)}}.",
+                        "Das mittlere Rating liegt in der Gruppe {{summary(namespace=comparison, entity=group1, field=label)}} bei {{summary(namespace=comparison, entity=group1, field=mean, format=decimal)}} und in der Gruppe {{summary(namespace=comparison, entity=group2, field=label)}} bei {{summary(namespace=comparison, entity=group2, field=mean, format=decimal)}}.",
+                        "Die Standardabweichung liegt in der Gruppe {{summary(namespace=comparison, entity=group1, field=label)}} bei {{summary(namespace=comparison, entity=group1, field=standardDeviation, format=decimal)}} und in der Gruppe {{summary(namespace=comparison, entity=group2, field=label)}} bei {{summary(namespace=comparison, entity=group2, field=standardDeviation, format=decimal)}}.",
+                        "Die Ratings reichen in der Gruppe {{summary(namespace=comparison, entity=group1, field=label)}} von {{summary(namespace=comparison, entity=group1, field=min, format=decimal)}} bis {{summary(namespace=comparison, entity=group1, field=max, format=decimal)}} und in der Gruppe {{summary(namespace=comparison, entity=group2, field=label)}} von {{summary(namespace=comparison, entity=group2, field=min, format=decimal)}} bis {{summary(namespace=comparison, entity=group2, field=max, format=decimal)}}."
+                    ]
+                }
+            ]
+        },
+        "comparisonPoints": {
+            "sections": [
+                {
+                    "type": "general",
+                    "blocks": [
+                        "Ausgewertet wurden in der Gruppe {{summary(namespace=comparison, entity=group1, field=label)}} {{summary(namespace=comparison, entity=group1, field=n, format=integer)}} Schüler:innen und in der Gruppe {{summary(namespace=comparison, entity=group2, field=label)}} {{summary(namespace=comparison, entity=group2, field=n, format=integer)}} Schüler:innen.",
+                        "Die mittlere Lösungsquote liegt in der Gruppe {{summary(namespace=comparison, entity=group1, field=label)}} bei {{summary(namespace=comparison, entity=group1, field=mean, format=decimal)}} % und in der Gruppe {{summary(namespace=comparison, entity=group2, field=label)}} bei {{summary(namespace=comparison, entity=group2, field=mean, format=decimal)}} %.",
+                        "Die Standardabweichung der Lösungsquote liegt in der Gruppe {{summary(namespace=comparison, entity=group1, field=label)}} bei {{summary(namespace=comparison, entity=group1, field=standardDeviation, format=decimal)}} Prozentpunkten und in der Gruppe {{summary(namespace=comparison, entity=group2, field=label)}} bei {{summary(namespace=comparison, entity=group2, field=standardDeviation, format=decimal)}} Prozentpunkten.",
+                        "Die Lösungsquoten reichen in der Gruppe {{summary(namespace=comparison, entity=group1, field=label)}} von {{summary(namespace=comparison, entity=group1, field=min, format=decimal)}} % bis {{summary(namespace=comparison, entity=group1, field=max, format=decimal)}} % und in der Gruppe {{summary(namespace=comparison, entity=group2, field=label)}} von {{summary(namespace=comparison, entity=group2, field=min, format=decimal)}} % bis {{summary(namespace=comparison, entity=group2, field=max, format=decimal)}} %.",
+                        "Beide Gruppen werden über Lerngruppen hinweg gebildet und können daher unterschiedliche Testhefte bearbeitet haben; außerdem zählt die Lösungsquote je Schüler:in nur die selbst bearbeiteten Aufgaben. Für einen Vergleich auf gemeinsamer Skala wechseln Sie zum Diagrammtyp \"Kompetenzstufen\"."
+                    ]
+                }
+            ]
+        }
+    }
+}

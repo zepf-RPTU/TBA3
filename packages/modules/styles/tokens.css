@@ -1,0 +1,152 @@
+/**
+ * Defaults for every custom property this package's sheets and scripts read but do not
+ * define, on top of `@tba3/module-base/styles/tokens.css`: import that sheet, then this
+ * one. Same contract: override on order alone, a host that skips it owes every token,
+ * both colour schemes as `light-dark()`, and `token-defaults` (check-structure.mjs)
+ * fails a missing default or an unread one.
+ * Not listed: tokens a sheet defines for itself (`--stacked-bar-*`, `--tabulator-*`) and
+ * the band colours the renderers stamp inline.
+ */
+
+:root {
+    /* A glossary term's underline; a surface that must not show it sets it
+       transparent, and wins over this foundation default by layer. */
+    --glossary-term-underline-color: currentColor;
+
+    /* The modal dialogs' backdrop. */
+    --overlay-backdrop: light-dark(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.65));
+
+    --color-border-medium: light-dark(#adb5bd, #4b5566);
+    --primary-color-light: color-mix(in srgb, var(--primary-color) 10%, var(--color-background));
+    /* A bar "ahead of" or "behind" the school is a tint of its sign's hue, not the
+       richtig/falsch fill of a result bar. Mixed into the card; the bar's full-hue
+       stroke carries the 3:1 edge. */
+    --tint-positive: color-mix(in srgb, var(--primary-color) 24%, var(--color-card-background));
+    --tint-negative: color-mix(in srgb, var(--result-incorrect) 24%, var(--color-card-background));
+    /* A bar at no difference: neither sign's hue, in secondary ink. */
+    --tint-neutral: color-mix(in srgb, var(--text-secondary) 24%, var(--color-card-background));
+
+    /* Rows carry no zebra and the header is a neutral surface in secondary ink, so
+       the data (competence bands, result bars) stands out. Selection is the primary
+       tint with an accent bar. */
+    --table-row-bg: var(--color-background);
+    --table-row-hover-bg: var(--color-background-hover);
+    --table-row-selected-bg: var(--primary-color-light);
+    --table-row-selected-hover-bg: color-mix(
+        in srgb,
+        var(--primary-color) 16%,
+        var(--color-background)
+    );
+    --table-text-secondary: light-dark(#4a5568, #c2c9d4);
+    /* The glossary underline in a table cell (table-base.css): 3.4:1 on
+       --table-row-bg. */
+    --table-text-muted: light-dark(#808d9f, #7d8696);
+
+    --table-header-bg: var(--color-background-secondary);
+    --table-header-text: var(--text-secondary);
+    --table-header-hover-bg: var(--color-background-muted);
+    --table-header-border-bottom: var(--color-border);
+    --table-header-max-lines: 2;
+    /* Vertical only: the header content box's padding (table-header-layout.css) owns
+       the inset, which keeps header text aligned with the cells. */
+    --table-col-title-padding: 4px 0;
+    /* rem, so rows scale with the root font-size. The block padding is
+       the row-height lever. */
+    --table-cell-padding-block: 0.2rem;
+    --table-cell-padding-inline: 0.5rem;
+    /* Shared floor for embedded content. */
+    --table-row-content-min: 1.5rem;
+
+    --chart-domain0-color: #e69138;
+    --chart-domain1-color: #4b89dc;
+    /* The tooltip box's edge: none on white, a hairline on the dark card. */
+    --tooltip-border: light-dark(transparent, var(--color-border-medium));
+    /* The tooltip box, near-black in both schemes, and the white hairlines under its
+       title and above its footer. */
+    --tooltip-background: rgba(0, 0, 0, 0.85);
+    --tooltip-title-rule: rgba(255, 255, 255, 0.2);
+    --tooltip-divider-rule: rgba(255, 255, 255, 0.15);
+    /* A threshold guide in its domain's hue, capped dark enough for 3:1 on white
+       (the orange fill alone is 2.5:1). Dark scheme: the hue as is. */
+    --chart-domain0-guide: light-dark(
+        oklch(from var(--chart-domain0-color) min(l, 0.62) c h),
+        var(--chart-domain0-color)
+    );
+    --chart-domain1-guide: light-dark(
+        oklch(from var(--chart-domain1-color) min(l, 0.62) c h),
+        var(--chart-domain1-color)
+    );
+    --chart-student-point-color: light-dark(#2d3748, #e2e8f0);
+    --chart-grid-color: light-dark(#e0e0e0, #3a4352);
+    /* Axis baselines: 3:1 against the card, the WCAG floor for a graphic the chart is
+       read by (tick labels use --text-secondary, gridlines stay quieter). */
+    --chart-axis-color: light-dark(#8d8d8d, #6b7485);
+    --chart-label-color: light-dark(#000000, #e6e9ef);
+    /* The selected student's own series: the accent hue, with its own dark value
+       since the button accent has none (2.3:1 on the dark card). */
+    --student-performance-color: light-dark(#1d4ed8, #60a5fa);
+    /* The group mark is ink, not a hue: shape (triangle) and fill tell it from the
+       comparison marks, the accent from the student. Schule sits midway in lightness
+       between the group ink and Land, so the three greys differ by more than shape
+       (OKLab ΔE ≥ 15 each). */
+    --group-average-color: var(--text-color);
+    --school-average-color: light-dark(#5c5c5c, #717986);
+    --state-average-color: light-dark(#888888, #a0a8b5);
+    /* Comparison averages of an unrecognised value-group type. A hue, not another
+       grey: several state marks already walk a greyscale shade ramp. */
+    --other-average-color: light-dark(#7b4fa8, #b794e0);
+    /* A benchmark that is not an average (the Pilotierung expected solution rate):
+       a bare line in full ink, black here and white on the dark surface. */
+    --benchmark-color: light-dark(#000000, #ffffff);
+
+    /* The Okabe-Ito bluish green and vermillion, which stay apart under protan and
+       deutan vision (OKLab ΔE 11), unlike a green/red pair. */
+    --result-correct: #009e73;
+    --result-incorrect: #d55e00;
+    --result-not-attempted: #9e9e9e;
+    /* The fills above sit at 3.4:1 / 3.9:1 on white, fine for bars and rings; text
+       in a result colour uses these (≥ 4.5:1 on white). */
+    --result-correct-text: light-dark(#00745a, #54b28d);
+    --result-incorrect-text: light-dark(#a64a00, #ea8f56);
+
+    /* Okabe-Ito, the blue lifted a touch (from #0072b2) to clear 3:1 on the dark card
+       (3.10:1; 5.02:1 on white): the three stay ΔE ≥ 8 apart under protan, deutan and
+       tritan vision. */
+    --gender-male-color: #009e73;
+    --gender-female-color: #2873b2;
+    --gender-diverse-color: #e69f00;
+
+    /* Static UI ink: no data-competence-level-theme variants, unlike the data
+       colours above, since none of these encodes data. */
+    --shadow-color: light-dark(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.5));
+    --default-bar-color: light-dark(#cccccc, #555e6d);
+    --table-section-border: light-dark(#0c5460, #7fd0e0);
+
+    --overlay-margin: 2rem;
+    /* The box the modal dialogs size off. Here the viewport; tba3 floors both at its
+       shell minimum (variables.css), so below it a modal scrolls with the page. */
+    --shell-width: 100vw;
+    --shell-height: 100vh;
+    --content-panel-padding: 2rem;
+
+    --chart-container-padding: var(--layout-pad);
+    --chart-legend-gap: var(--space-sm);
+    /* A hidden comparison's legend entry: `.legend-swatch-item.is-hidden` and the
+       HTML pill swatch. */
+    --legend-hidden-opacity: 0.3;
+
+    /* A hovered chart area mark (bar, segment, arc) dims to this; mirrors
+       HOVER_OPACITY in chartInteractionUtils.js for the HTML stacked bars. */
+    --chart-hover-opacity: 0.8;
+
+    /* No overlay z-index: dialogs, tooltips, popups and menus are in the top layer,
+       stacked by the order they opened in. */
+
+    /* Heading ink: the brand's dark shade, and its own light ink on dark, since
+       --secondary-color stays dark there as the sidebar's ground. */
+    --heading-color: light-dark(var(--secondary-color), #f1f4f8);
+    --comparison-row-color: light-dark(#92400e, #f0b45a);
+    --school-row-color: light-dark(#1e40af, #93c5fd);
+    --sl-self-efficacy: #5b8dee;
+    --sl-teaching-quality: #9b59b6;
+}

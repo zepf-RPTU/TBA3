@@ -1,0 +1,14 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    .mode-button {
+        min-width: 5rem;
+        white-space: nowrap;
+    }
+
+    /* Unavailable only because it is already chosen, so it does not grey out; a
+       choice that cannot be made does, like any disabled button. */
+    .mode-button.is-active {
+        --btn-disabled-opacity: 1;
+    }
+}

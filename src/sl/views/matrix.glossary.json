@@ -1,0 +1,15 @@
+{
+    "header": {
+        "title": "Gesamtbild der Kompetenzstufen",
+        "subtitle": "Diese Sicht wurde im Laufe des Projekts verworfen und nicht weiterentwickelt, ist aber trotzdem Teil dieser Demo."
+    },
+    "chart": {
+        "title": "Kompetenzstufenverteilung über alle Lerngruppen und Fächer im direkten Vergleich"
+    },
+    "text": {
+        "title": "Entwicklungspotenziale",
+        "messages": {
+            "empty": "Zu diesem Datensatz gibt es keine Hinweise."
+        }
+    }
+}

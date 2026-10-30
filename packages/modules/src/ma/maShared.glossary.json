@@ -1,0 +1,251 @@
+{
+    "element_texts": {
+        "kompetenzstufe": {
+            "title": "Kompetenzstufe (Primarstufe)",
+            "aliases": ["Kompetenzstufe"],
+            "body": "Erreichte Kompetenzstufe gemäß dem globalen Kompetenzstufenmodell im Fach Mathematik für den Primarbereich (Bildungsstandards für das Ende der Jahrgangsstufe 4)."
+        },
+        "kompetenzstufenverteilung": {
+            "title": "Kompetenzstufenverteilung",
+            "aliases": ["Kompetenzstufenverteilung"],
+            "body": "<p>Das Kompetenzstufenmodell beschreibt mehrere Kompetenzstufen, wobei allen Schüler:innen anhand der erzielten Lösungsquoten konkret eine der Stufen zugeordnet werden kann. Die Kompetenzstufenverteilung beschreibt meist graphisch, wie sich die betrachtete Gruppe hinsichtlich der Kompetenzstufen zusammensetzt und gibt damit einen Überblick über das allgemeine Leistungsniveau der Lerngruppe. Die Darstellung erfolgt meist in farbigen Balkendiagrammen, welche sich zu 100 % aufaddieren und damit die Anteile der jeweiligen Stufe kennzeichnen.</p>"
+        },
+        "lösungsquote": {
+            "title": "Lösungsquote",
+            "aliases": ["Lösungsquote"],
+            "body": "<p>Die Lösungsquote oder auch Lösungshäufigkeit der Lerngruppe (oder einzelner Schüler:innen) beschreibt die Summe gelöster Teilaufgaben, entweder als prozentualer oder als absoluter Wert im Verhältnis zur Gesamtzahl der gestellten Teilaufgaben. Über das gesamte Testheft hinweg dient die Lösungsquote unmittelbar zur Berechnung der Kompetenzstufe. Die Lösungsquote lässt sich jedoch auch zur Beschreibung einzelner Leitideen und der damit verbundenen inhaltlichen Schwerpunkte heranziehen und bezieht sich dann i. d. R. nur auf einen Ausschnitt des Testheftes. Hierbei sind die Ergebnisse jedoch mit Vorsicht zu interpretieren, da die dargestellten Werte oftmals nur auf wenigen Teilaufgaben beruhen.</p>"
+        },
+        "pilotierung": {
+            "title": "Pilotierung",
+            "aliases": [
+                {
+                    "text": "Pilotierung",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Der Wert der <b>Pilotierung</b> beschreibt die erwartete Lösungsquote einer Teilaufgabe basierend auf evaluativen Vorstudien. Schwierige Teilaufgaben werden dabei weniger häufig gelöst als einfache. Um die Leistung Ihrer Lerngruppe zu beurteilen, empfiehlt es sich, die <b>Differenz</b> zum Pilotierungswert zu betrachten. Hat Ihre Lerngruppe besser abgeschnitten als erwartet, ist dieser Wert positiv und <span class=\"result-diff--up\">grün</span>. Bei schlechteren Ergebnissen ist der Wert negativ und <span class=\"result-diff--down\">orange</span>.</p>"
+        },
+        "nr": {
+            "title": "Aufgabennummer",
+            "aliases": [
+                {
+                    "text": "Nr.",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Zur einfachen Kennzeichnung der Teilaufgaben werden neben einem Namen Nummern vergeben. Die Nummer gibt nicht zwangsläufig die Reihenfolge in der Testdurchführung wieder. Besteht eine Aufgabe aus mehreren Teilaufgaben, erkennen Sie dies an der Nummerierung (z. B. 1.1, 1.2).</p>"
+        },
+        "aufgaben": {
+            "title": "Aufgaben",
+            "aliases": ["Aufgaben", "Aufgabe"],
+            "body": "<p>Eine Aufgabe fasst eine oder mehrere Teilaufgaben zusammen, die auf einer gemeinsamen Problemstellung beruhen (etwa einen A-Teil und einen B-Teil). Eigenständige Aufgaben sind durchnummeriert (z. B. 1.0, 2.0); gehören mehrere Teilaufgaben zu einer Aufgabe, erkennen Sie dies an der Nummerierung (z. B. 1.1, 1.2). Ausgewertet werden die Teilaufgaben, nicht die Aufgaben.</p>"
+        },
+        "items": {
+            "title": "Teilaufgaben",
+            "aliases": ["Teilaufgaben", "Teilaufgabe", "Items", "Item"],
+            "body": "<p>Teilaufgaben (auch Items) bilden den kleinsten Auswertungsgegenstand in VERA. Sie unterscheiden sich oftmals hinsichtlich der Schwierigkeit bzw. der für das Lösen benötigten Kompetenz; das verwendete Testheft setzt sich immer aus leichten und schwierigeren Teilaufgaben zusammen. Für die Berechnung der Kompetenzstufe zählt die Anzahl der gelösten Teilaufgaben: Jede Teilaufgabe zählt einzeln, auch wenn mehrere zu einer Aufgabe gehören.</p>"
+        },
+        "ergebnis": {
+            "title": "Ergebnis",
+            "aliases": [
+                {
+                    "text": "Ergebnis",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Das Ergebnis beschreibt, ob eine einzelne Teilaufgabe richtig, falsch oder gar nicht bearbeitet wurde. In den Tabellen wird diese Codierung meist über Symbole dargestellt.</p>"
+        },
+        "verteilung": {
+            "title": "Verteilung: Richtig | Unbearbeitet | Falsch",
+            "label": "Verteilung",
+            "body": "<p>Der Balken teilt die Teilaufgaben nach ihrem Ergebnis auf, von links nach rechts: <strong>richtig</strong>, <strong>unbearbeitet</strong> und <strong>falsch</strong>. Die drei Anteile summieren sich zu 100 %; über einem Abschnitt nennt der Tooltip, welches Ergebnis er zeigt und mit welchem Anteil.</p><p>Ein Klick auf die Spaltenüberschrift sortiert nacheinander nach dem Anteil richtig, unbearbeitet und falsch, jeweils auf- und absteigend; der Anteil, nach dem gerade sortiert wird, steht unter der Überschrift.</p>"
+        },
+        "richtig": {
+            "title": "richtig gelöst",
+            "label": "Richtig",
+            "aliases": [
+                {
+                    "text": "Richtig",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Alle Teilaufgaben, die im Sinne der Aufgabenstellung korrekt und vollständig gelöst wurden, werden als „richtig“ codiert (je nach Testform/Testsystem automatisch oder durch die Lehrkraft). Der Anteil oder die Anzahl der gelösten Teilaufgaben wird häufig als Lösungsquote bezeichnet und ist die entscheidende Prüfgröße bei der Bestimmung der Kompetenzstufe.</p><p>Prozentual summieren sich richtig, unbearbeitet und falsch immer zu 100 %.</p>"
+        },
+        "unbearbeitet": {
+            "title": "nicht bearbeitet",
+            "aliases": ["Unbearbeitet"],
+            "body": "<p>Teilaufgaben, zu denen Schüler:innen keinerlei Antwort gegeben haben, werden als „unbearbeitet“ codiert. Unbearbeitete Teilaufgaben zählen nicht zu der Anzahl der gelösten Teilaufgaben und werden rechnerisch daher genauso behandelt wie falsch/unvollständig gelöste Teilaufgaben. Dennoch kann eine Unterscheidung in manchen Fällen sinnvoll sein, da sie Auskunft darüber geben kann, welche Teilaufgaben Schüler:innen beispielsweise aus Zeitdruck gar nicht erst versucht haben.</p>"
+        },
+        "falsch": {
+            "title": "falsch gelöst",
+            "aliases": [
+                {
+                    "text": "Falsch",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Alle Teilaufgaben, die im Sinne der Aufgabenstellung falsch oder unvollständig gelöst wurden, werden als „falsch“ codiert (je nach Testform/Testsystem automatisch oder durch die Lehrkraft). Dies beinhaltet ausschließlich Teilaufgaben, zu denen Schüler:innen tatsächlich eine Antwort gegeben haben. Während für die Berechnung der Kompetenzstufe ausschließlich die Anzahl der richtigen Teilaufgaben zählt, kann der Blick auf die falsch gelösten Teilaufgaben in der Folgebetrachtung ebenfalls wertvoll sein.</p><p>Prozentual summieren sich richtig, unbearbeitet und falsch immer zu 100 %.</p>"
+        },
+        "aufgabenniveau": {
+            "title": "Aufgabenniveau",
+            "aliases": ["Aufgabenniveau", "Niveaustufe"],
+            "body": "<p>Jede Teilaufgabe des Testhefts kann einer bestimmten Kompetenzstufe zugeordnet werden. Dies kann als ein Maß der Schwierigkeit bzw. des Niveaus der Teilaufgabe verstanden werden. Um die Kompetenz der Schüler:innen messen zu können, bedarf es eines breit gefächerten Spektrums an Aufgabenschwierigkeiten; die Verteilung hängt vom ausgewählten Testheft ab. Grundsätzlich kann davon ausgegangen werden, dass Schüler:innen, die eine bestimmte Kompetenzstufe erreichen, auch die meisten Teilaufgaben, die ebendieser Stufe zugeordnet werden, lösen können. Dies ist jedoch nicht zwangsläufig der Fall.</p>"
+        },
+        "lerngruppenschnitt": {
+            "title": "Lerngruppenschnitt",
+            "aliases": ["Lerngruppendurchschnitt", "Lerngruppenschnitt"],
+            "body": "<p>Die meisten Ergebnisse, insbesondere Lösungsquoten einzelner Teilaufgaben, werden üblicherweise über die gesamte Lerngruppe hinweg betrachtet. Der Lerngruppenschnitt ist dabei eines der zentralen Gesamtergebnisse und bietet einen guten Eindruck, wo möglicherweise die Stärken und Entwicklungspotenziale einer Lerngruppe als Ganzes liegen. Der Lerngruppenschnitt eignet sich außerdem als Referenz für die Beurteilung einzelner Schüler:innen. Der Durchschnitt sollte idealerweise immer in Kombination mit der Verteilung bzw. Streuung der Lerngruppe betrachtet werden.</p>"
+        },
+        "schulschnitt": {
+            "title": "Schulschnitt",
+            "aliases": ["Schuldurchschnitt", "Schulschnitt"],
+            "body": "<p>Zentrale Ergebnisse, etwa allgemeine Lösungsquoten oder Kompetenzstufenverteilungen, können manchmal über alle Lerngruppen eines Jahrgangs hinweg an einer Schule betrachtet werden. Der Schulschnitt ist dabei eines der wichtigsten Gesamtergebnisse und bietet einen guten Eindruck, wo möglicherweise die Stärken und Entwicklungspotenziale einer Schule als Ganzes oder aber einzelner Lerngruppen im direkten Vergleich untereinander liegen.</p>"
+        },
+        "landesschnitt": {
+            "title": "Landesschnitt",
+            "aliases": ["Landesdurchschnitt", "Landesschnitt"],
+            "body": "<p>In manchen Bundesländern, Bezirken oder Schulen werden zentrale Ergebnisse, etwa allgemeine Lösungsquoten oder Kompetenzstufenverteilungen, auch auf Landesebene rückgemeldet. Dabei werden die Ergebnisse aller bzw. mehrerer Schulen zusammengefasst. Der Landesschnitt kann dabei eine aussagekräftige Größe des sozialen Vergleichs sein und bietet einen guten Eindruck, wo möglicherweise die Stärken und Entwicklungspotenziale einer Schule im Vergleich zu anderen Schulen des Landes liegen.</p>"
+        },
+        "leitidee": {
+            "title": "Leitidee",
+            "aliases": ["Leitidee"],
+            "body": "<p>Die Leitideen, Kompetenzbereiche oder auch inhaltsbezogene mathematische Kompetenzen beschreiben neben den allgemeinen mathematischen Kompetenzen (z. B. Problemlösen, Argumentieren) insgesamt fünf verschiedene <b>inhaltliche</b> Bereiche:</p><ul><li>Zahlen und Operationen (ZO)</li><li>Raum und Form (RF)</li><li>Muster und Strukturen (MS)</li><li>Größen und Messen (GM)</li><li>Daten, Häufigkeit und Wahrscheinlichkeit (DH)</li></ul><p>Jede Teilaufgabe lässt sich dabei einer Leitidee zuordnen, wobei Teilaufgaben innerhalb einer Leitidee auf gemeinsame, zentrale mathematische Konzepte zurückgreifen und diese inhaltlich operationalisieren. Die Leitideen bzw. Kompetenzbereiche selbst können nicht mit Kompetenzstufen beschrieben werden; zur Beschreibung kann höchstens die Lösungsquote herangezogen werden, welche jedoch insbesondere bei wenigen Teilaufgaben nur bedingt interpretiert werden sollte. In einem Testdurchgang werden üblicherweise nicht alle Leitideen abgebildet; stattdessen variieren die repräsentierten Inhaltsbereiche zwischen Schulen, Ländern und/oder Jahrgängen. Die Aufgabenringe lassen sich statt nach Leitideen auch nach allgemeinen Kompetenzen oder Anforderungsbereichen gruppieren.</p>"
+        },
+        "allgemeine-kompetenz": {
+            "title": "Allgemeine Kompetenz",
+            "aliases": ["Allgemeine Kompetenzen", "Allgemeine Kompetenz"],
+            "body": "<p>Die allgemeinen mathematischen Kompetenzen beschreiben, <b>wie</b> sich Schüler:innen mit mathematischen Inhalten auseinandersetzen, quer zu den Leitideen. Eine Teilaufgabe kann mehrere allgemeine Kompetenzen ansprechen und steht dann in jedem ihrer Aufgabenringe.</p><p>In der Primarstufe (VERA 3) sind es fünf: Problemlösen, Kommunizieren, Argumentieren, Modellieren und Darstellen.</p><p>In der Sekundarstufe I (VERA 8) sind es sechs:</p><ul><li>K1 Mathematisch argumentieren</li><li>K2 Probleme mathematisch lösen</li><li>K3 Mathematisch modellieren</li><li>K4 Mathematische Darstellungen verwenden</li><li>K5 Mit symbolischen, formalen und technischen Elementen der Mathematik umgehen (kurz: Mit Elementen der Mathematik umgehen)</li><li>K6 Mathematisch kommunizieren</li></ul>"
+        },
+        "anforderungsbereich": {
+            "title": "Anforderungsbereich",
+            "aliases": ["Anforderungsbereiche", "Anforderungsbereich"],
+            "body": "<p>Die Anforderungsbereiche beschreiben den kognitiven Anspruch einer Teilaufgabe in drei Stufen:</p><ul><li><b>I Reproduzieren:</b> Grundwissen wiedergeben und Routineverfahren in einem bekannten Zusammenhang ausführen.</li><li><b>II Zusammenhänge herstellen:</b> Kenntnisse, Fertigkeiten und Fähigkeiten verknüpfen, die in der Auseinandersetzung mit Mathematik erworben wurden.</li><li><b>III Verallgemeinern und Reflektieren:</b> komplexe Gegebenheiten bearbeiten, eigene Lösungsansätze entwickeln, Ergebnisse verallgemeinern und reflektieren.</li></ul><p>Der Anforderungsbereich ist nicht dasselbe wie das Aufgabenniveau: Dieses beschreibt die empirische Schwierigkeit einer Teilaufgabe auf der Kompetenzstufenskala.</p>"
+        },
+        "ZO": {
+            "title": "Zahlen und Operationen",
+            "aliases": [
+                {
+                    "text": "ZO",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Die Leitidee <b>Zahlen und Operationen</b> gliedert sich in drei Bereiche:</p><ul><li>Zahldarstellungen und Zahlbeziehungen verstehen (z. B. den Aufbau des dezimalen Stellenwertsystems verstehen)</li><li>Rechenoperationen verstehen und beherrschen (z. B. die vier Grundrechenarten und ihre Zusammenhänge verstehen)</li><li>in Kontexten rechnen (z. B. Sachaufgaben lösen und dabei die Beziehungen zwischen der Sache und den einzelnen Lösungsschritten beschreiben)</li></ul>"
+        },
+        "RF": {
+            "title": "Raum und Form",
+            "aliases": [
+                {
+                    "text": "RF",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Die Leitidee <b>Raum und Form</b> gliedert sich in vier Bereiche:</p><ul><li>sich im Raum orientieren (z. B. über räumliches Vorstellungsvermögen verfügen)</li><li>geometrische Figuren erkennen, benennen und darstellen (z. B. Körper und ebene Figuren nach Eigenschaften sortieren und Fachbegriffe zuordnen)</li><li>einfache geometrische Abbildungen erkennen, benennen und darstellen (z. B. ebene Figuren in Gitternetzen abbilden, verkleinern und vergrößern)</li><li>Flächen und Rauminhalte vergleichen und messen (z. B. Umfang und Flächeninhalt von ebenen Figuren untersuchen)</li></ul>"
+        },
+        "MS": {
+            "title": "Muster und Strukturen",
+            "aliases": [
+                {
+                    "text": "MS",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Die Leitidee <b>Muster und Strukturen</b> gliedert sich in zwei Bereiche:</p><ul><li>Gesetzmäßigkeiten erkennen, beschreiben und darstellen (z. B. strukturierte Zahldarstellungen, etwa die Hundertertafel, verstehen und nutzen)</li><li>funktionale Beziehungen erkennen, beschreiben und darstellen (z. B. funktionale Beziehungen in Tabellen darstellen und untersuchen)</li></ul>"
+        },
+        "GM": {
+            "title": "Größen und Messen",
+            "aliases": [
+                {
+                    "text": "GM",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Die Leitidee <b>Größen und Messen</b> beschreibt drei Bereiche:</p><ul><li>Wissen über die Größenbereiche und ihre Repräsentanten, Bezeichnungen und Relationen (z. B. Länge, Geldwerte, Zeit/Zeitspannen, Masse/Gewicht)</li><li>Fähigkeiten in Bezug auf das Messen und das Schätzen von und Rechnen mit Größen sowie die Klassifizierung von Messinstrumenten</li><li>Vorstellungen über Größen im Sinne von Stützpunktvorstellungen</li></ul>"
+        },
+        "DH": {
+            "title": "Daten, Häufigkeit und Wahrscheinlichkeit",
+            "aliases": [
+                {
+                    "text": "DH",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Die Leitidee <b>Daten, Häufigkeit und Wahrscheinlichkeit</b> beschreibt zwei Bereiche:</p><ul><li>Daten erfassen und darstellen (z. B. in Beobachtungen, Untersuchungen und einfachen Experimenten Daten sammeln, strukturieren und in Tabellen, Schaubildern und Diagrammen darstellen)</li><li>Wahrscheinlichkeiten von Ereignissen in Zufallsexperimenten vergleichen (z. B. Grundbegriffe kennen, etwa „sicher“, „unmöglich“, „wahrscheinlich“)</li></ul>"
+        },
+        "id": {
+            "title": "Schüler-ID",
+            "aliases": [
+                {
+                    "text": "ID",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Alle Schüler:innen werden im Testsystem der auswertenden Einrichtung anonym geführt. Die Zuordnung zu Ergebnissen sowie zu Lerngruppen oder gar Schulen erfolgt anhand einer eindeutigen ID. Diese dient der Identifikation, ohne dass persönliche Informationen der Schüler:innen verarbeitet werden müssen.</p>"
+        },
+        "geschlecht": {
+            "title": "Geschlecht",
+            "aliases": ["Geschlecht"],
+            "body": "<p>An den meisten Schulen ist das Geschlecht eines der wenigen Merkmale, die neben den Testergebnissen bei Schüler:innen erfasst und berichtet werden. In dieser Rückmeldung wird dabei zwischen divers (d), männlich (m) und weiblich (w) unterschieden.</p>"
+        },
+        "male": {
+            "title": "männlich",
+            "aliases": [
+                {
+                    "text": "männlich",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Männlich beschreibt neben divers und weiblich eine der möglichen Ausprägungen des Merkmals „Geschlecht“.</p>"
+        },
+        "female": {
+            "title": "weiblich",
+            "aliases": [
+                {
+                    "text": "weiblich",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Weiblich beschreibt neben divers und männlich eine der möglichen Ausprägungen des Merkmals „Geschlecht“.</p>"
+        },
+        "diverse": {
+            "title": "divers",
+            "aliases": [
+                {
+                    "text": "divers",
+                    "exact": true
+                }
+            ],
+            "body": "<p>Divers beschreibt neben männlich und weiblich eine der möglichen Ausprägungen des Merkmals „Geschlecht“.</p>"
+        },
+        "merkmal": {
+            "title": "Schüler:innenmerkmale",
+            "aliases": ["Merkmale"],
+            "body": "<p>Neben dem Geschlecht erfassen einige Schulen und Länder weitere leistungsrelevante Merkmale der Schüler:innen. Die Liste der Merkmale variiert stark zwischen den auswertenden Einrichtungen und umfasst beispielsweise Merkmale der schulischen Historie (z. B. Klassenwiederholung), sozioökonomische Merkmale (z. B. Muttersprache) oder besondere Gutachten und Diagnosen (z. B. Förderbedarfe).</p>"
+        },
+        "f": {
+            "title": "Förderbedarf",
+            "aliases": ["Förderbedarf"],
+            "body": "<p>Bei dem/der Schüler:in wurde ein nicht weiter spezifizierter sonderpädagogischer Förderbedarf festgestellt.</p>"
+        },
+        "kw": {
+            "title": "Klassenwiederholung",
+            "aliases": ["Klassenwiederholung"],
+            "body": "<p>Der/die Schüler:in hat die aktuelle Jahrgangsstufe bereits einmal wiederholt.</p>"
+        },
+        "s": {
+            "title": "ungenügende Sprachkenntnisse",
+            "body": "<p>Der/die Schüler:in verfügt über ungenügende allgemeine Sprachkenntnisse.</p>"
+        },
+        "nd": {
+            "title": "nicht-dominant deutsch",
+            "body": "<p>Der/die Schüler:in hat einen nicht deutschsprachigen Hintergrund.</p>"
+        },
+        "td": {
+            "title": "Teilleistungsstörung Deutsch",
+            "body": "<p>Der/die Schüler:in hat eine Teilleistungsstörung im Fach Deutsch.</p>"
+        },
+        "tm": {
+            "title": "Teilleistungsschwäche Mathematik",
+            "body": "<p>Der/die Schüler:in hat eine Teilleistungsschwäche im Fach Mathematik.</p>"
+        }
+    }
+}

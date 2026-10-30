@@ -1,0 +1,118 @@
+/**
+ * The `.tooltip` box and the content rows `cursorTooltip.buildHTML()` emits.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* ==========================================================================
+       Base tooltip
+       ========================================================================== */
+
+    /* The popover box shared with the glossary popup (glossary-popup.css): top
+       layer, placed by `left`/`top` against the viewport; `inset: auto`,
+       `margin: 0` and `overflow: visible` undo the UA's centred popover box. Fades
+       in from `@starting-style`, out with `display` and `overlay` held until the
+       fade has run. */
+    :is(.tooltip, .glossary-popup) {
+        inset: auto;
+        margin: 0;
+        overflow: visible;
+        opacity: 0;
+        padding: var(--notice-padding);
+        border-radius: var(--radius-md);
+        font-size: var(--fs-sm);
+        line-height: var(--lh-text);
+        overflow-wrap: break-word;
+        box-shadow: var(--shadow-lg);
+        transition:
+            opacity var(--motion-duration-fast) var(--motion-ease-standard),
+            display var(--motion-duration-fast) allow-discrete,
+            overlay var(--motion-duration-fast) allow-discrete;
+    }
+
+    :is(.tooltip, .glossary-popup):popover-open {
+        opacity: 1;
+    }
+
+    @starting-style {
+        :is(.tooltip, .glossary-popup):popover-open {
+            opacity: 0;
+        }
+    }
+
+    /* The tooltip is near-black in both schemes, so on the dark card its edge
+       (`--tooltip-border`) draws it. */
+    .tooltip {
+        border: 1px solid var(--tooltip-border);
+        background: var(--tooltip-background);
+        color: var(--text-on-primary);
+        pointer-events: none;
+        max-width: 300px;
+    }
+
+    /* Takes the pointer while shown, so the user can hover into it: a rich label, and
+       every mark tooltip, which a magnifier user pans across (cursorTooltip.js). */
+    .tooltip:is(.is-interactive, .mark-tooltip):popover-open {
+        pointer-events: auto;
+    }
+
+    /* ==========================================================================
+       Tooltip content elements
+       ========================================================================== */
+
+    .tooltip-title {
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-base);
+        margin-bottom: var(--layout-gap);
+        padding-bottom: var(--layout-gap-relaxed);
+        border-bottom: 1px solid var(--tooltip-title-rule);
+    }
+
+    .tooltip-subtitle {
+        opacity: 0.9;
+        margin-bottom: var(--layout-gap-relaxed);
+    }
+
+    .tooltip-row {
+        display: flex;
+        justify-content: space-between;
+        gap: var(--layout-gap-relaxed);
+    }
+
+    .tooltip-row .label {
+        opacity: 0.9;
+    }
+
+    /* A row's key: its mark as on the chart, on a card-surface chip the
+       near-black box would otherwise swallow. */
+    .tooltip-key {
+        width: 1em;
+        height: 1em;
+        margin-inline-end: 0.35em;
+        vertical-align: -0.15em;
+        border-radius: var(--radius-sm);
+        background: var(--color-card-background);
+    }
+
+    .tooltip-key path {
+        fill: var(--tooltip-key-fill);
+        stroke: var(--tooltip-key-stroke);
+        stroke-width: var(--tooltip-key-stroke-width);
+    }
+
+    .tooltip-key-dot {
+        fill: var(--tooltip-key-dot);
+    }
+
+    .tooltip-row .value {
+        font-weight: var(--fw-bold);
+        font-variant-numeric: tabular-nums;
+    }
+
+    .tooltip-divider {
+        margin-top: var(--layout-gap-relaxed);
+        padding-top: var(--layout-gap-relaxed);
+        border-top: 1px solid var(--tooltip-divider-rule);
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "header": {
+        "title": "Ergebnisse einzelner Schüler:innen",
+        "subtitle": "Merkmale, Lösungsquoten und Aufgabenlösungen einzelner Schüler:innen",
+        "tutorial": "<p>Hier betrachten Sie die Ergebnisse einzelner Schüler:innen. Ergebnisse können nach <b>Domänen</b> untergliedert werden. In allen Darstellungen der Ergebnisse werden Schulschnitt, Landesschnitt oder auch andere Vergleichswerte mit angezeigt. Sie können diese über die Schaltfläche jederzeit aus- oder wieder einblenden. Ein Vergleich mit anderen Gruppen kann helfen, die Ergebnisse besser einzuordnen.</p>"
+    },
+    "student-tables": {
+        "title": "Schüler:innenübersicht"
+    },
+    "student-row": {
+        "title": "Schüler:in im Detail",
+        "tutorial": "<p>Diese Zeile enthält die wichtigsten Merkmale eines/einer Schüler:in auf einen Blick.</p>"
+    },
+    "spider-lollipop": {
+        "title": "Individuelle Lösungsquoten nach Stilen",
+        "tutorial": "<p>In diesem Schaubild werden alle Teilaufgaben jeweils einem der drei Bearbeitungsstile (global, detailliert, selektiv) zugeordnet und anschließend zusammengefasst. Die Darstellung variiert je nachdem, ob Sie beide Domänen gemeinsam oder getrennt anzeigen lassen.</p><p>Das Schaubild beschreibt dabei, wie viel Prozent der Teilaufgaben des jeweiligen Stils gelöst wurden. Je weiter außen ein Punkt auf der Achse seines Stils liegt (Gesamtansicht) bzw. je länger der Stiel (getrennte Ansicht), desto besser beherrscht der/die Schüler:in den Stil. Lesen Sie die Werte an den Achsen ab, nicht an der Größe der Fläche: Sie hängt auch von der Reihenfolge der Achsen ab.</p><p>Zusätzlich können Sie über die Kopfzeile weitere Vergleichswerte einblenden lassen.</p>"
+    },
+    "item-details": {
+        "title": "Aufgabendetails",
+        "body": "Wählen Sie eine Teilaufgabe aus der Tabelle aus.",
+        "tutorial": "<p>Wenn Sie in der linken Tabelle eine der Teilaufgaben auswählen, erhalten Sie hier detailliertere Informationen, u. a. Beschreibungen der Aufgabeninhalte, Details zu den individuellen Ergebnissen, Vergleichs- bzw. Erwartungswerte aus der Pilotierung der Teilaufgabe sowie verknüpfte Aufgaben und Materialien.</p>"
+    }
+}

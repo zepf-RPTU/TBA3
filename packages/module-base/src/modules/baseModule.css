@@ -1,0 +1,17 @@
+/**
+ * Every module element: a block box (a custom element is inline by default) and
+ * a `hidden` attribute that wins over the display a class gives it.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer foundation {
+    :where([data-tba-module]) {
+        display: block;
+    }
+
+    [data-tba-module][hidden] {
+        /* eslint-disable-next-line css/no-important -- important in the first layer that sets it, so no later display rule unhides a module */
+        display: none !important;
+    }
+}

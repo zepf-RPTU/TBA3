@@ -1,0 +1,28 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    .group-comparison-controls {
+        --layout-row-align: flex-end;
+        --layout-row-gap: var(--control-gap);
+    }
+
+    /* A select sizes to its widest option; the row wraps before one squeezes. */
+    .group-comparison-control {
+        flex: 1 1 auto;
+    }
+
+    .group-comparison-control-label {
+        color: var(--text-color);
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    /* Control tokens come from .control-select--card; only sizing and overflow
+       are local. */
+    .group-comparison-control-select {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

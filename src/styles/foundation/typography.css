@@ -1,0 +1,40 @@
+/**
+ * Heading styles for all apps. A module may step a heading's size with an `--fs-*`
+ * token; margin, weight, line-height and colour stay here.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: var(--heading-color);
+    line-height: var(--lh-ui);
+    font-weight: var(--fw-bold);
+    text-wrap: balance;
+}
+
+/* Negative tracking only at display sizes; at text sizes it crowds the letters. */
+h1,
+h2 {
+    letter-spacing: -0.025em;
+}
+
+h1 {
+    font-size: var(--fs-h1);
+}
+
+h2 {
+    font-size: var(--fs-h2);
+}
+
+h3 {
+    font-size: var(--fs-module-title);
+    letter-spacing: -0.01em;
+}
+
+h4 {
+    font-size: var(--fs-lg);
+}

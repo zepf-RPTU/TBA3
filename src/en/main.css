@@ -1,0 +1,11 @@
+/**
+ * EN (Englisch 8) entry sheet: app.css brings the shared sheets and the layer order;
+ * this adds the welcome splash EN and MA share.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+/* Unlayered on purpose: app.css layers each sheet it imports. */
+/* eslint-disable-next-line css/use-layers */
+@import '../styles/app.css';
+@import '../styles/welcome-splash.css' layer(views);

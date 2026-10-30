@@ -1,0 +1,28 @@
+{
+    "title": "Navigation",
+    "tutorial": "<p>Wählen Sie eine der folgenden Ansichten:</p><ul><li><b>Übersicht: Die Gesamtergebnisse auf einen Blick.</b> Die Verteilung der Lerngruppe auf die {{Stufen}} je Domäne und alle Schüler:innen in einem Streudiagramm.</li><li><b>Lerngruppe: Die Lerngruppe im Detail.</b> Eine Tabelle aller Schüler:innen, die Sie durchsuchen, filtern und sortieren können.</li><li><b>Aufgaben: Ergebnisse einzelner Aufgaben und Teilaufgaben.</b> Die Lösungsquoten aller Teilaufgaben im Vergleich; zu einer gewählten Aufgabe sehen Sie ihre Merkmale, das Aufgabenmaterial und welche Schüler:innen sie gelöst haben.</li><li><b>Schüler:in: Die Ergebnisse einzelner Schüler:innen.</b> Merkmale, Lösungsquoten und die Lösungen aller Teilaufgaben eines/einer ausgewählten Schüler:in.</li></ul>",
+    "element_texts": {
+        "nav-welcome": {
+            "title": "Willkommen"
+        },
+        "nav-overview": {
+            "title": "Übersicht",
+            "description": "Sich einen Überblick über die {{Stufen}} der Lerngruppe je Domäne verschaffen."
+        },
+        "nav-group": {
+            "title": "Lerngruppe",
+            "description": "Die Ergebnisse aller Schüler:innen in einer Tabelle durchsuchen, filtern und vergleichen."
+        },
+        "nav-item": {
+            "title": "Aufgaben",
+            "description": "Die Lösungsquoten der Teilaufgaben vergleichen und einzelne Teilaufgaben im Detail ansehen."
+        },
+        "nav-student": {
+            "title": "Schüler:in",
+            "description": "Die Ergebnisse einzelner Schüler:innen bis zu den einzelnen Teilaufgaben einsehen."
+        },
+        "nav-report": {
+            "title": "Bericht"
+        }
+    }
+}

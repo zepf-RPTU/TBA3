@@ -1,0 +1,124 @@
+/**
+ * The header-action dropdown holding a table's column filters
+ * (tableFilterMenu.js). The overlay is headerActionDropdown.css and the control
+ * surface controls.css; here only the grid, active marks, clear-all row and badge.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* ==========================================================================
+       Active-filter badge
+       ========================================================================== */
+
+    [data-header-action-button='table-filters'] {
+        position: relative;
+    }
+
+    /* Half outside the button's corner, ringed in the surface colour, so the count
+       never covers the icon. */
+    .table-filter-badge {
+        position: absolute;
+        top: -0.3em;
+        inset-inline-end: -0.3em;
+        min-width: 1.1em;
+        padding: 0 0.25em;
+        border-radius: var(--radius-lg);
+        box-shadow: 0 0 0 2px var(--color-card-background);
+        background: var(--color-accent-solid);
+        color: var(--text-on-primary);
+        font-size: var(--fs-sm);
+        line-height: var(--lh-icon);
+        text-align: center;
+        pointer-events: none;
+    }
+
+    /* ==========================================================================
+       Panel
+       ========================================================================== */
+
+    /* One label column for every row: the rows are `display: contents`, so their
+       labels and controls are the grid's cells. */
+    .table-filter-panel {
+        display: grid;
+        grid-template-columns: max-content minmax(10rem, 1fr);
+        align-items: center;
+        gap: var(--space-xs) var(--space-sm);
+        min-width: 220px;
+        padding: var(--space-sm) var(--menu-inset-inline);
+    }
+
+    .table-filter-field {
+        display: contents;
+    }
+
+    .table-filter-field.is-active > .control-label {
+        color: var(--text-color);
+        font-weight: var(--fw-semibold);
+    }
+
+    /* The surface is foundation's .control-select / .control-input; one height for
+       both, so a text row and a list row line up. */
+    .table-filter-field-control {
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 0;
+        block-size: var(--control-block-size);
+    }
+
+    .table-filter-field.is-active > .table-filter-field-control {
+        border-color: var(--primary-color);
+    }
+
+    /* A list filter's summary button: the selection's text, then the chevron that
+       stands where a native select draws its own. */
+    .table-filter-list-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-xs);
+        font: inherit;
+    }
+
+    /* The span is exactly one line tall and a font's descent can run past it, so
+       only the inline axis clips: `hidden` would cut the "g" of "ausgewählt". `clip`
+       makes no scroll container, so the flex item's minimum width is zeroed by hand. */
+    .table-filter-list-summary {
+        min-width: 0;
+        overflow-x: clip;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .table-filter-list-toggle > .icon {
+        transition: transform var(--motion-duration-fast) var(--motion-ease-standard);
+    }
+
+    .table-filter-list-toggle[aria-expanded='true'] > .icon {
+        transform: rotate(180deg);
+    }
+
+    /* The checkboxes sit under their summary button in the control column, as the
+       column menu's checkbox rows, aligned with the button's text. */
+    .table-filter-options {
+        grid-column: 2;
+        margin: 0;
+        padding: 0 0 var(--space-xs);
+        list-style: none;
+    }
+
+    .table-filter-options .header-action-dropdown-option {
+        --btn-padding-inline: var(--space-xs);
+    }
+
+    /* The clear-all action row and its separator span the grid and reach the panel's
+       edges, as the column menu's rows reach the menu's. */
+    .table-filter-panel > :is(.header-action-menu-separator, li:has(> .table-filter-clear)) {
+        grid-column: 1 / -1;
+        margin-inline: calc(-1 * var(--menu-inset-inline));
+    }
+
+    .table-filter-panel > li:has(> .table-filter-clear) {
+        margin-block-end: calc(-1 * var(--space-sm));
+    }
+}

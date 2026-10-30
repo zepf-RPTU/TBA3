@@ -1,0 +1,39 @@
+/**
+ * EN Lerngruppe view — the style chart above the group table.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .en-group-view {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 2fr;
+    }
+
+    /* A folded chart keeps its header; the table takes the rest. */
+    .en-group-view:has(> .chart-section.collapsed) {
+        grid-template-rows: auto 1fr;
+    }
+
+    /* A dataset without style buckets has no chart: the table takes the view. */
+    .en-group-view:not(:has(> .chart-section)) {
+        grid-template-rows: 1fr;
+    }
+
+    @media (--stacked-layout) {
+        .en-group-view {
+            grid-template-rows: auto var(--stacked-card-height);
+        }
+
+        .en-group-view:not(:has(> .chart-section)) {
+            grid-template-rows: var(--stacked-card-height);
+        }
+
+        /* `min-content`, not `auto`: the folded card scrolls, so its automatic minimum
+           is 0, and the table's row already fills the view. */
+        .en-group-view:has(> .chart-section.collapsed) {
+            grid-template-rows: min-content var(--stacked-card-height);
+        }
+    }
+}

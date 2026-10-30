@@ -1,0 +1,99 @@
+# The quality gate (`npm run check`, what the pre-push hook runs), the fixture-tier
+# end-to-end suite, and — on main — the GitHub Pages deploy of the dashboards and the
+# wiki. The deploy waits for neither: a pushed main is a snapshot that already passed the
+# pre-push hook, so the checks here are the Linux run and the gate for pull requests.
+# Nothing here needs anything outside this repository: the dashboards run on the
+# committed fixtures.
+name: ci
+
+on:
+    push:
+        branches: [main]
+    pull_request:
+    workflow_dispatch:
+
+permissions:
+    contents: read
+
+jobs:
+    check:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v7
+            - uses: actions/setup-node@v7
+              with:
+                  node-version-file: .nvmrc
+                  cache: npm
+            - run: npm ci --ignore-scripts
+            # The unit suite's browser project drives the system Chrome; the runner image
+            # ships one, so the install only runs where it is missing.
+            - run: google-chrome --version || npx playwright install --with-deps chrome
+            - run: npm run check
+
+    e2e:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v7
+            - uses: actions/setup-node@v7
+              with:
+                  node-version-file: .nvmrc
+                  cache: npm
+            - run: npm ci --ignore-scripts
+            - run: google-chrome --version || npx playwright install --with-deps chrome
+            - run: npm run test:e2e
+
+    # The nginx image as compose.yaml runs it: what it serves, its headers, and the
+    # dashboards booting under the header CSP (tests/e2e-docker/).
+    docker:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v7
+            - uses: actions/setup-node@v7
+              with:
+                  node-version-file: .nvmrc
+                  cache: npm
+            - run: npm ci --ignore-scripts
+            - run: google-chrome --version || npx playwright install --with-deps chrome
+            - run: docker compose up --build --detach --wait
+            - run: npm run test:docker
+            - if: failure()
+              run: docker compose logs
+
+    # dist/ is gitignored, so the artifact is built here and never committed. Pages serves
+    # a project page from /<repo>/, hence TBA3_BASE (vite.config.js,
+    # docs/.vitepress/config.mjs). Only the demo fixtures work on Pages: there is no /api/
+    # behind it, so `?scope=` datasets need a locally running API.
+    pages-build:
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v7
+            - uses: actions/setup-node@v7
+              with:
+                  node-version-file: .nvmrc
+                  cache: npm
+            - run: npm ci --ignore-scripts
+            # This order: Vite empties dist/ first, VitePress then writes dist/docs/.
+            - run: npm run build
+              env:
+                  TBA3_BASE: /${{ github.event.repository.name }}/
+            - uses: actions/upload-pages-artifact@v5
+              with:
+                  path: dist
+
+    pages-deploy:
+        needs: pages-build
+        runs-on: ubuntu-latest
+        permissions:
+            pages: write
+            id-token: write
+        # Queue, never cancel: a deploy cancelled midway can leave Pages half-updated.
+        concurrency:
+            group: pages
+            cancel-in-progress: false
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        steps:
+            - id: deployment
+              uses: actions/deploy-pages@v5

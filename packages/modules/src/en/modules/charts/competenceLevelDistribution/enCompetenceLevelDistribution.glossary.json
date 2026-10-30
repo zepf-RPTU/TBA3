@@ -1,0 +1,4 @@
+{
+    "tutorial": "<p>Dieses Diagramm zeigt die <b>Verteilung der {{Stufen}}</b> in Ihrer Lerngruppe für den Bereich <b>{{Domäne}}</b>. Was die einzelnen Stufen bedeuten, erklärt der Begriff {{Stufe}}.</p><p><b>Darstellung:</b> Jeder Balken steht für eine Gruppe und ist in Abschnitte je {{Stufe}} geteilt, die zusammen 100 % ergeben. Je größer ein Abschnitt, desto mehr Schüler:innen haben diese Stufe im Bereich „{{Domäne}}“ erreicht.</p><p>Beim Zuschalten von Vergleichsgruppen kommt für jede Gruppe ein weiterer Balken hinzu.</p>",
+    "title": "{{Skala}}-Verteilung: {{Domäne}}"
+}

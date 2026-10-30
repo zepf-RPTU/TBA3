@@ -1,0 +1,13 @@
+{
+    "interface": {
+        "dataset-select": {
+            "label": "Lerngruppe"
+        },
+        "domain-all": {
+            "label": "Alle"
+        },
+        "domain-group": {
+            "label": "Domäne"
+        }
+    }
+}

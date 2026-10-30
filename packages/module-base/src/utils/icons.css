@@ -1,0 +1,43 @@
+/**
+ * The inline Material Symbols SVG icons.js emits: a 1em square, so it scales
+ * with the font-size around it, painted in currentColor, so it follows the text
+ * colour and every theme. A host's buttons size it through `--btn-icon-size`
+ * (buttons.css); anything else sets font-size on the icon or its parent. Every
+ * custom property this sheet reads carries a fallback.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer foundation {
+    .icon {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        flex-shrink: 0;
+        vertical-align: -0.125em;
+        fill: currentColor;
+    }
+
+    /* Two-state icon: both glyphs share one grid cell and cross-fade (opacity,
+       scale, blur) instead of swapping paths in one frame. `data-state` on the
+       wrapper says which is shown, `data-swap` on each glyph which state it
+       belongs to. */
+    .icon-swap {
+        display: inline-grid;
+        place-items: center;
+    }
+
+    .icon-swap > .icon {
+        grid-area: 1 / 1;
+        transition-property: opacity, scale, filter;
+        transition-duration: var(--motion-duration-fast, 150ms);
+        transition-timing-function: var(--motion-ease-standard, cubic-bezier(0.65, 0, 0.35, 1));
+    }
+
+    .icon-swap:not([data-state='on']) > [data-swap='on'],
+    .icon-swap[data-state='on'] > [data-swap='off'] {
+        opacity: 0;
+        scale: 0.25;
+        filter: blur(4px);
+    }
+}

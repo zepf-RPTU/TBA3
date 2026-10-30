@@ -1,0 +1,34 @@
+{
+    "title": "Navigation",
+    "element_texts": {
+        "nav-summary": {
+            "title": "Überblick",
+            "description": "Schul- und Lerngruppenleistung je Fach auf einen Blick",
+            "tooltip": "Wählen Sie diese Ansicht, wenn Sie je Fach eine einzelne Kennzahl Ihrer Schule und die Abweichung der einzelnen Lerngruppen sehen möchten."
+        },
+        "nav-matrix": {
+            "title": "Gesamtbild (alt)",
+            "description": "Kompetenzstufen aller Lerngruppen und Fächer in einer Darstellung",
+            "tooltip": "Wählen Sie diese Ansicht, wenn Sie die vollständige Kompetenzstufenverteilung aller Lerngruppen und Fächer nebeneinander sehen möchten."
+        },
+        "nav-details": {
+            "title": "Details",
+            "description": "Detaillierte Analyse nach Fächern und Lerngruppen"
+        },
+        "nav-comparison": {
+            "title": "Gruppenvergleich",
+            "description": "Ergebnisse verschiedener Gruppen vergleichen"
+        },
+        "nav-longitudinal": {
+            "title": "Entwicklung",
+            "description": "Verlauf der Ergebnisse über mehrere Jahre"
+        },
+        "nav-material": {
+            "title": "Materialien",
+            "description": "Vorlagen und Muster zur Weiterarbeit"
+        },
+        "nav-report": {
+            "title": "Bericht"
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .ma-overview-view .overview-charts-section {
+        /* The ring grid takes the spare width; the KS bars still stand. */
+        grid-template-columns: 1fr 1.2fr;
+        flex: 1;
+    }
+
+    @media (--stacked-layout) {
+        .ma-overview-view .overview-charts-section {
+            grid-template-columns: 1fr;
+            flex: none;
+        }
+
+        .ma-overview-view .overview-competence-level-chart-container,
+        .ma-overview-view .overview-item-ring-chart-container {
+            height: var(--stacked-card-height);
+        }
+    }
+}

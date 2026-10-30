@@ -1,0 +1,16 @@
+{
+    "title": "Tabellarische Übersicht aller Aufgaben und Teilaufgaben",
+    "subtitle": "<p>Die Tabelle bildet die wichtigsten Merkmale und Ergebnisse aller (ausgewählten) Aufgaben und Teilaufgaben ab. Sortieren Sie über die Spaltenüberschriften und filtern Sie über die Filter-Schaltfläche über der Tabelle.</p>",
+    "tutorial": "<p>In dieser Tabelle finden Sie eine Übersicht aller Aufgaben sowie der zugehörigen Teilaufgaben inklusive einzelner Aufgabenmerkmale und den erreichten Lösungsquoten in den Bereichen {{Domänen}}. Jede Teilaufgabe hat eine Schwierigkeit bzw. ein Niveau, das an die {{Stufen}} angelehnt ist. Der Balken zeigt, wie viele Ihrer Schüler:innen eine Teilaufgabe gelöst, nicht gelöst oder nicht bearbeitet haben.</p><p>Nutzen Sie die zur Verfügung stehenden Filter und Sortiermöglichkeiten, wenn Sie eine gezielte Auswahl von Teilaufgaben treffen möchten. Das obige Schaubild mit den Lösungsquoten der Teilaufgaben passt sich dabei Ihrer aktuellen Auswahl an. Sie können außerdem zu jeder der Teilaufgaben weitere Details erhalten, indem Sie diese in der Tabelle bzw. im obigen Schaubild anklicken.</p>",
+    "interface": {
+        "best-five": {
+            "label": "Stärkste 5"
+        },
+        "worst-five": {
+            "label": "Schwächste 5"
+        },
+        "incomplete": {
+            "label": "Hohe Nichtbearbeitung"
+        }
+    }
+}

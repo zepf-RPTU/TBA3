@@ -1,0 +1,14 @@
+{
+    "title": "Aufgabenlösungen des/der Schüler:in",
+    "tutorial": "<p>Die Tabelle zeigt für die ausgewählte Person jede Teilaufgabe mit Leitidee, Aufgabenniveau und Ergebnis: ✓ richtig, ✗ falsch, ⊘ nicht bearbeitet. Wen Sie betrachten, wählen Sie in der Kopfzeile. Die Schaltflächen „Unter KS“ und „Über KS“ zeigen nicht gelöste Teilaufgaben unterhalb bzw. gelöste Teilaufgaben oberhalb der erreichten Kompetenzstufe.</p><p>Nutzen Sie zuvor die Lerngruppenübersicht, um Schüler:innen zu finden, denen Sie genauer nachgehen möchten. Hier sehen Sie dann im Einzelnen, welche Teilaufgaben gelungen sind und welche nicht – vielleicht lassen sich Schwierigkeiten inhaltlich klar eingrenzen. VERA ist nicht für die Individualdiagnostik konzipiert; die Ergebnisse können aber Anstoß für weitere diagnostische Schritte sein.</p>",
+    "interface": {
+        "below-competence-level": {
+            "label": "Unter KS",
+            "tooltip": "Nicht gelöste Teilaufgaben unterhalb der erreichten Kompetenzstufe anzeigen."
+        },
+        "above-competence-level": {
+            "label": "Über KS",
+            "tooltip": "Gelöste Teilaufgaben oberhalb der erreichten Kompetenzstufe anzeigen."
+        }
+    }
+}

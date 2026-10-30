@@ -1,0 +1,290 @@
+.chart-with-legend-panel {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: var(--layout-gap-relaxed);
+}
+
+.chart-svg-area {
+    flex: 999 1 32rem;
+    min-width: 0;
+}
+
+.chart-legend-panel {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--fs-sm);
+    color: var(--text-color);
+}
+
+/* The side panel, sized by its longest chip up to a cap: a chip never wraps, so
+   the panel grows to the label instead of the label breaking. No taller than the
+   plot: a long key scrolls in the panel, not the plot with it. */
+.chart-with-legend-panel > .chart-legend-panel {
+    flex: 0 1 auto;
+    width: max-content;
+    min-width: min(11rem, 100%);
+    max-width: min(100%, 16rem);
+    max-height: 100%;
+    padding: var(--layout-pad);
+    gap: var(--layout-gap-relaxed);
+    overflow-y: auto;
+}
+
+/* Set on any ancestor of a chart in a tight row beside other panels: chart and
+   panel never wrap apart, and the panel never shrinks, since in a nowrap row that
+   would clip the pills' unbreakable labels. */
+.chart-legend-dense .chart-with-legend-panel {
+    flex-wrap: nowrap;
+    gap: var(--space-sm);
+}
+
+.chart-legend-dense .chart-svg-area {
+    flex: 1 1 auto;
+}
+
+.chart-legend-dense .chart-with-legend-panel > .chart-legend-panel {
+    flex: 0 0 auto;
+    padding: var(--space-sm);
+    gap: var(--layout-gap);
+}
+
+/* A chart's key (ChartRenderer.chartKey): a centred, wrapping row over the plot,
+   first in the DOM so it is read before the data; or (`--beside`, an `auto` key the
+   renderer placed) a column beside the plot while the plot keeps its room. A grid, not a wrapping flex row, so the
+   plot area has a definite height to measure. */
+.chart-with-key {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto minmax(0, 1fr);
+    height: 100%;
+}
+
+/* The host's split body pads nothing, so the key pads its outer edges as the plot
+   does (--chart-container-padding). Its bottom padding is the one gap between key
+   and plot. */
+.chart-with-key > .chart-svg-area {
+    grid-area: 2 / 1 / 3 / 3;
+    min-height: 0;
+    padding-block-start: 0;
+}
+
+.chart-with-key > .chart-legend-panel {
+    grid-area: 1 / 1 / 2 / 3;
+    min-width: 0;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-xs) var(--layout-gap-relaxed);
+    padding: var(--chart-container-padding) var(--chart-container-padding) var(--space-xs);
+}
+
+.chart-with-key > .chart-legend-panel:empty {
+    display: none;
+}
+
+/* Without a key over it, the plot pads its top edge again. */
+.chart-with-key > .chart-legend-panel:empty + .chart-svg-area {
+    padding-block-start: var(--chart-container-padding);
+}
+
+/* Over the plot each block is a row too: its heading before its entries, which
+   wrap as `.legend-swatch-list--row` does. Beside it, the blocks keep their column. */
+.chart-with-key:not(.chart-with-key--beside) :is(.legend-section, .legend-swatch-list) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chart-with-key:not(.chart-with-key--beside) .legend-section {
+    align-items: center;
+}
+
+.chart-with-key:not(.chart-with-key--beside) .legend-swatch-list {
+    gap: var(--space-xs) var(--layout-gap-relaxed);
+}
+
+/* An `auto` key beside the plot, where the renderer placed it (ChartRenderer
+   places it while the plot beside it stays at least as wide as tall), in one
+   column. A plot too long for its card scrolls either way; the key stays in view,
+   outside the scrolling plot area. */
+.chart-with-key--beside > .chart-svg-area {
+    grid-area: 1 / 1 / 3 / 2;
+    padding-block-start: var(--chart-container-padding);
+}
+
+.chart-with-key--beside > .chart-legend-panel {
+    grid-area: 1 / 2 / 3 / 3;
+    align-self: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--layout-gap);
+    padding-block: 0;
+    padding-inline: var(--chart-legend-gap) var(--chart-container-padding);
+}
+
+.legend-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--control-gap);
+    min-width: 0;
+}
+
+/* Same look as the table header. */
+.legend-section-title {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    color: var(--text-secondary);
+}
+
+/* A button that keeps the caption's look. */
+.legend-section-title--clickable {
+    align-self: flex-start;
+    padding: 0;
+    border: 0;
+    /* The hover is the accent ink below, not .interactive-subtle's fill. */
+    --interactive-hover-bg: transparent;
+    font-family: inherit;
+    line-height: inherit;
+    text-align: start;
+}
+
+@media (hover: hover) {
+    .legend-section-title--clickable:hover {
+        color: var(--color-accent-text);
+    }
+}
+
+.legend-pill-group {
+    gap: var(--space-xs);
+    flex-direction: column;
+}
+
+/* The swatch is a chip's only colour; "on" is the selected-row look (primary
+   tint plus an accent edge), "off" a dashed hairline in secondary ink. */
+.legend-pill {
+    --btn-fill: var(--color-card-background);
+    --btn-hover-fill: var(--color-background-hover);
+    --btn-active-fill: var(--primary-color-light);
+    /* No background-color: .btn--text paints --btn-fill and the .btn state rules
+       repaint it in the foundation layer, which a value here would beat
+       regardless of specificity. */
+    font-weight: var(--fw-semibold);
+    border-radius: var(--radius-md);
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    /* A flex box (.btn--text) ignores text-align; start at the leading edge so a
+       label past the panel cap overflows at the end, not over the accent edge. */
+    justify-content: flex-start;
+}
+
+.legend-pill.is-inactive {
+    --btn-fill: transparent;
+    border-style: dashed;
+    color: var(--text-secondary);
+}
+
+.legend-pill.is-active {
+    border-color: color-mix(in srgb, var(--primary-color) 40%, var(--color-border));
+    box-shadow: inset 3px 0 0 var(--primary-color);
+}
+
+.legend-pill-group:not(.legend-pill-group--grid) > .legend-pill.child {
+    margin-inline-start: var(--layout-gap);
+    width: calc(100% - var(--layout-gap));
+}
+
+/* A section's `columns` option; the master pill heads the grid across every column. */
+.legend-pill-group--grid {
+    display: grid;
+    grid-template-columns: repeat(var(--legend-pill-columns), minmax(0, 1fr));
+}
+
+.legend-pill-group--grid > [data-toggle-section] {
+    grid-column: 1 / -1;
+}
+
+/* A hidden comparison's key entry dims, like a pill toggled off. */
+.legend-pill.is-inactive .legend-swatch {
+    opacity: var(--legend-hidden-opacity);
+}
+
+/* Display-only swatch key (htmlLegendPanel's legendSwatchListTemplate). */
+.legend-swatch-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--control-gap);
+}
+
+.legend-swatch-list--row {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--space-xs) var(--layout-gap-relaxed);
+}
+
+.legend-swatch-item {
+    display: flex;
+    align-items: center;
+    gap: var(--layout-gap);
+    color: var(--text-color);
+    transition: opacity var(--motion-duration-base) ease;
+}
+
+/* An entry whose comparison is toggled off (ChartRenderer.chartKey). */
+.legend-swatch-item.is-hidden {
+    opacity: var(--legend-hidden-opacity);
+}
+
+/* The slot a key entry's mark sits centred in. In a key laid out in one column (a
+   side panel, a key beside the plot) every slot is as wide as the key's widest mark
+   (`--legend-mark-slot`, stamped by ChartRenderer), so a chip and a marker share
+   one centre line and every label starts at one edge. */
+.legend-mark-slot {
+    display: inline-flex;
+    flex-shrink: 0;
+    justify-content: center;
+}
+
+:is(.chart-with-legend-panel, .chart-with-key--beside) .legend-mark-slot {
+    min-inline-size: max(0.75rem, var(--legend-mark-slot, 0px));
+}
+
+/* A chart's mark in miniature, leading a key entry (htmlLegendPanel's
+   legendMarkTemplate). */
+.legend-mark {
+    flex-shrink: 0;
+    overflow: visible;
+}
+
+/* A swatch keeps its marks' authored colours (a data mark, dataMark.css). The
+   outline is `--mark-outline`, set per symbol by `renderLegendSymbol`; under
+   forced colours a filled shape is edged in system text, while a line or a
+   hollow shape's outline carries the colour itself and keeps it. */
+.legend-symbol > :is(circle, rect, path):not(.marker-dot) {
+    stroke: var(--mark-outline);
+}
+
+@media (forced-colors: active) {
+    .legend-symbol:not(.legend-symbol--hollow) > :is(circle, rect, path):not(.marker-dot) {
+        stroke: CanvasText;
+    }
+}
+
+/* The one categorical colour chip, in pills and swatch keys. It keeps its colour
+   under forced colours and in print, like the bands it keys (stacked-bar.css);
+   its border then takes the system text colour. */
+.legend-swatch {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: var(--radius-xs);
+    border: 1px solid var(--color-border);
+    flex-shrink: 0;
+}
+
+@media (forced-colors: active) {
+    .legend-swatch {
+        border-color: CanvasText;
+    }
+}

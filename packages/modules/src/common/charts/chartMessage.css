@@ -1,0 +1,44 @@
+/**
+ * Chart message (chartMessage.js): a chart's empty or failed state, as a whole
+ * card (icon over a centred sentence) or, inline, the sentence alone over the
+ * plot area of a drawn chart.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    .chart-message {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: var(--layout-gap);
+        height: 100%;
+        padding: var(--card-pad);
+        color: var(--text-secondary);
+        font-size: var(--fs-base);
+        text-align: center;
+    }
+
+    .chart-message p {
+        margin: 0;
+        max-width: 40ch;
+        text-wrap: balance;
+    }
+
+    .chart-message-icon {
+        opacity: 0.5;
+    }
+
+    /* Placed over layout.chart by the renderer; the plot's own marks are gone,
+       so the frame and axes around it stay readable. */
+    .chart-message--inline {
+        position: absolute;
+        padding: 0;
+        pointer-events: none;
+    }
+
+    .chart-message--error {
+        color: var(--color-error);
+    }
+}

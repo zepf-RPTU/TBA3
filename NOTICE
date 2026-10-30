@@ -1,0 +1,96 @@
+TBA3 — third-party notices
+
+This file lists the third-party software redistributed in a TBA3 build (dist/,
+the Docker image, the GitHub Pages site). Each component remains under its own
+license; the copyright and permission notices below are reproduced as those
+licenses require. Full texts ship with each package under node_modules/<name>/LICENSE.
+
+d3 — ISC
+    Copyright 2010-2023 Mike Bostock
+    Permission to use, copy, modify, and/or distribute this software for any purpose
+    with or without fee is hereby granted, provided that the above copyright notice
+    and this permission notice appear in all copies.
+
+tabulator-tables — MIT
+    Copyright (c) 2015-2025 Oli Folkerd
+
+html-to-image — MIT
+    Copyright (c) 2017-2025 W.Y. (bubkoo)
+
+jsPDF — MIT
+    Copyright (c) 2010-2025 James Hall, https://github.com/MrRio/jsPDF
+    Copyright (c) 2015-2025 yWorks GmbH, https://www.yworks.com/
+    jsPDF bundles Adobe's AFM font metrics for the standard 14 PDF fonts:
+        Copyright (c) 2008, Adobe Systems Incorporated. All rights reserved.
+        Redistribution and use in source and binary forms, with or without
+        modification, are permitted provided that redistributions retain the
+        above copyright notice, the conditions and the disclaimer, and that the
+        name of Adobe Systems Incorporated is not used to endorse or promote
+        products derived from this software without specific prior written
+        permission. (Full text inside jsPDF's distribution.)
+
+pako (via jsPDF) — MIT AND Zlib
+    Copyright (C) 2014-2017 by Vitaly Puzrin and Andrei Tuputcyn (MIT)
+    Contains a port of zlib, Copyright (C) 1995-2024 Jean-loup Gailly and Mark Adler
+    (zlib license: this software is provided 'as-is'; altered source versions must
+    be plainly marked as such and the origin must not be misrepresented).
+
+DOMPurify — Apache-2.0 (dual-licensed MPL-2.0 OR Apache-2.0; used under Apache-2.0)
+    Copyright (c) Cure53 and other contributors
+    Licensed under the Apache License, Version 2.0; full text in
+    node_modules/dompurify/LICENSE. Unmodified.
+
+Valibot — MIT
+    Copyright (c) Fabian Hiller
+
+Floating UI (@floating-ui/dom, @floating-ui/core, @floating-ui/utils) — MIT
+    Copyright (c) 2021-present Floating UI contributors
+
+@preact/signals-core — MIT
+    Copyright (c) 2022-present Preact Team
+
+Quill — BSD-3-Clause
+    Copyright (c) 2017-2024, Slab
+    Copyright (c) 2014, Jason Chen
+    Copyright (c) 2013, salesforce.com
+    All rights reserved.
+
+Parchment (via Quill) — BSD-3-Clause
+    Copyright (c) 2015-2021, Jason Chen
+    Copyright (c) 2022-2024, Slab, Inc.
+    All rights reserved.
+
+lit-html — BSD-3-Clause
+    Copyright (c) 2017 Google LLC. All rights reserved.
+
+    BSD-3-Clause (Quill, Parchment, lit-html): Redistribution and use in source and binary
+    forms, with or without modification, are permitted provided that the copyright
+    notice, the list of conditions and the disclaimer are retained, and that neither
+    the names of the copyright holders nor of their contributors are used to endorse
+    or promote derived products without specific prior written permission.
+
+MIT (tabulator-tables, html-to-image, jsPDF, pako, Valibot, Floating UI, @preact/signals-core,
+    and the TBA III API spec):
+    Permission is hereby granted, free of charge, to any person obtaining a copy of
+    this software and associated documentation files (the "Software"), to deal in the
+    Software without restriction, including without limitation the rights to use,
+    copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the
+    Software, and to permit persons to whom the Software is furnished to do so,
+    subject to the following conditions: The above copyright notice and this
+    permission notice shall be included in all copies or substantial portions of the
+    Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+
+TBA III API spec (packages/modules/docs/tba3-spec.yml, reference copy) — MIT
+    Copyright 2025 indibit GmbH
+
+Material Symbols — Apache-2.0
+    Copyright 2022 Google LLC. Path data from the `material-symbols` npm package,
+    inlined in packages/module-base/src/utils/materialSymbols.js; license text beside
+    it in packages/module-base/src/utils/materialSymbols.LICENSE.
+
+Inter (font, shipped with the documentation site under docs/) — SIL Open Font License 1.1
+    Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter).
+    Bundled by VitePress.
+
+Not redistributed (development and test only): Vite, VitePress, Vitest, Playwright,
+axe-core, oxlint, oxfmt, ESLint, Prettier, TypeScript, knip.

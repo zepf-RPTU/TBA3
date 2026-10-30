@@ -1,0 +1,40 @@
+/**
+ * The table module's host surfaces. These rules stay table-scoped even when they
+ * compose ContentModule slot classes such as .content-module-body.
+ */
+
+/* The Tabulator mount: TableModule renders a single one into the content body. */
+.table-container {
+    flex: 1;
+    position: relative;
+    overflow: auto;
+    min-height: 0;
+    min-width: 0;
+}
+
+/* A body that hosts a table (class set by tableModule.js) is a flex column, so
+   the inner .table-container is the sole scroll region. min-width: 0 on the body
+   and every direct child lets them shrink below content width, which stops
+   horizontal overflow without overflow: hidden. */
+.content-module-body.has-table {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    min-width: 0;
+}
+
+.content-module-body.has-table > * {
+    min-width: 0;
+}
+
+.content-module-body.has-table > * + * {
+    margin-top: var(--layout-gap-relaxed);
+}
+
+/* A table mounted straight into a card's box (a module with no title bar) sits
+   flush with the card's border, which frames it: no frame of its own, and the
+   card's radius. */
+.module-container > .tabulator {
+    --tabulator-border: none;
+    --tabulator-radius: var(--radius-md);
+}

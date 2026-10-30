@@ -1,0 +1,127 @@
+/**
+ * SL app shell — the nodes SlAppModule itself creates (shared nav cards, the
+ * no-results notice) and its narrow-viewport override of the shared view layout.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    @media (--stacked-layout) {
+        /* .main-content is the one scroll container, so the nav (after the view
+           in the DOM) flows below the view. */
+        .main-content {
+            overflow-y: auto;
+            /* What focus scrolls into view stays clear of the sticky header below
+               (slAppModule.js publishes its height). */
+            scroll-padding-top: var(--sl-header-block-size, 0px);
+        }
+
+        /* Keep the header visible as the user scrolls down to the nav. */
+        .sl-shared-header-container {
+            position: sticky;
+            top: 0;
+            z-index: var(--z-overlay);
+        }
+
+        /* The view flows to its content height; container-type: normal undoes
+           the global size containment. A bounded view (`fit: 'bounded'`, the
+           report's paged preview, which sizes its pages from the scroll area)
+           keeps the shared layout. */
+        .view-shell:not([data-view-fit='bounded']) {
+            flex: none;
+            grid-template-rows: auto;
+        }
+
+        .view-shell:not([data-view-fit='bounded']) > .view-base {
+            overflow-y: visible;
+            container-type: normal;
+        }
+
+        /* While a view loads it has no content height yet: its placeholder holds
+           the viewport, so the nav below does not jump up and back. */
+        .view-shell:has(> .view-skeleton) {
+            min-height: 100%;
+        }
+
+        .sl-shared-nav-cards-container {
+            flex-wrap: wrap;
+        }
+    }
+
+    /* Dataset-level "keine Ergebnisse" notice, between the shared header and
+       the view containers. */
+    .sl-no-results-notice {
+        flex: none;
+        margin: var(--card-pad) var(--card-pad) 0;
+    }
+
+    /* ==========================================================================
+       Nav cards row
+       ========================================================================== */
+
+    /* Not a module card, but a raised panel all the same. */
+    .sl-shared-nav-cards-container {
+        flex: none;
+        margin: 0 var(--card-pad) var(--card-pad);
+        padding: var(--layout-gap);
+        background: var(--color-card-background);
+        box-shadow: var(--shadow-md);
+        /* Concentric with the --radius-md cards inside: outer = inner + inset. */
+        border-radius: calc(var(--radius-md) + var(--layout-gap));
+        display: flex;
+        flex-direction: row;
+        gap: var(--layout-gap);
+    }
+
+    .sl-shared-nav-cards-container .preview-item {
+        position: relative;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: var(--control-gap);
+        padding: var(--layout-gap-relaxed);
+        --interactive-bg: var(--color-card-background);
+        border-width: 1px;
+        border-style: solid;
+        --interactive-border-color: var(--color-border);
+        border-radius: var(--radius-md);
+    }
+
+    /* The current view's card: the selected-tab look; it keeps its tooltip. */
+    .sl-shared-nav-cards-container .preview-item[aria-current='page'] {
+        border-color: var(--primary-color);
+        background-color: var(--color-background-muted);
+    }
+
+    /* An h2: typography.css gives it weight, margin and line height. */
+    .sl-shared-nav-cards-container .preview-label {
+        font-size: var(--fs-base);
+        text-align: center;
+        color: var(--color-accent-text);
+    }
+
+    .sl-shared-nav-cards-container .preview-description {
+        font-size: var(--fs-sm);
+        color: var(--text-secondary);
+        text-align: center;
+        line-height: var(--lh-ui);
+    }
+
+    /* A badge on the card's top border, out of flow: inline after the label it wrapped a
+       long one onto a second line, so the bar's height changed with the card that is
+       current; inside the card it would cover the label. */
+    .sl-shared-nav-cards-container .preview-current-view {
+        position: absolute;
+        inset-block-start: 0;
+        inset-inline-end: var(--layout-gap-relaxed);
+        translate: 0 -50%;
+        padding-inline: var(--control-gap);
+        border: 1px solid var(--primary-color);
+        border-radius: var(--radius-sm);
+        background-color: var(--color-background-muted);
+        font-size: var(--fs-sm);
+        color: var(--color-accent-text);
+    }
+}

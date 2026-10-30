@@ -1,0 +1,5345 @@
+[
+    {
+        "id": "3c-mathe",
+        "type": "group",
+        "name": "Lerngruppe 3c-mathe",
+        "domain": {
+            "id": "zo",
+            "name": "Zahlen und Operationen"
+        },
+        "items": [
+            {
+                "name": "1.0",
+                "position": 1,
+                "iqbId": "MV2310001",
+                "exercise": {
+                    "name": "Drei_Ziffern"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.77,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.3333,
+                    "frequency": 9,
+                    "standardDeviation": 0.4804
+                }
+            },
+            {
+                "name": "2.0",
+                "position": 1,
+                "iqbId": "MV1508401",
+                "exercise": {
+                    "name": "Hundejahre"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.65,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.4815,
+                    "frequency": 13,
+                    "standardDeviation": 0.5092
+                }
+            },
+            {
+                "name": "3.0",
+                "position": 1,
+                "iqbId": "MV1900001",
+                "exercise": {
+                    "name": "Bündeln"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.48,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.5185,
+                    "frequency": 14,
+                    "standardDeviation": 0.5092
+                }
+            },
+            {
+                "name": "4.0",
+                "position": 1,
+                "iqbId": "MV2310401",
+                "exercise": {
+                    "name": "Fehlerbeschreibung"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.23,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2222,
+                    "frequency": 6,
+                    "standardDeviation": 0.4237
+                }
+            },
+            {
+                "name": "5.0",
+                "position": 1,
+                "iqbId": "MV1902101",
+                "exercise": {
+                    "name": "Kommutativgesetz"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.37,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2593,
+                    "frequency": 7,
+                    "standardDeviation": 0.4466
+                }
+            },
+            {
+                "name": "14.0",
+                "position": 1,
+                "iqbId": "MV1986701",
+                "exercise": {
+                    "name": "Fußballtore"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.25,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.4444,
+                    "frequency": 12,
+                    "standardDeviation": 0.5064
+                }
+            }
+        ]
+    },
+    {
+        "id": "3c-mathe",
+        "type": "group",
+        "name": "Lerngruppe 3c-mathe",
+        "domain": {
+            "id": "gm",
+            "name": "Größen und Messen"
+        },
+        "items": [
+            {
+                "name": "6.0",
+                "position": 1,
+                "iqbId": "MV2162701",
+                "exercise": {
+                    "name": "Uhrzeit_verbinden"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.85,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.8148,
+                    "frequency": 22,
+                    "standardDeviation": 0.3958
+                }
+            },
+            {
+                "name": "7.0",
+                "position": 1,
+                "iqbId": "MV1162802",
+                "exercise": {
+                    "name": "Tabelle_Laenge"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.62,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.6667,
+                    "frequency": 18,
+                    "standardDeviation": 0.4804
+                }
+            },
+            {
+                "name": "8.0",
+                "position": 1,
+                "iqbId": "MV1661201",
+                "exercise": {
+                    "name": "Blumen basteln"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.35,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2593,
+                    "frequency": 7,
+                    "standardDeviation": 0.4466
+                }
+            },
+            {
+                "name": "9.0",
+                "position": 1,
+                "iqbId": "MV1162202",
+                "exercise": {
+                    "name": "Obstsorten_2"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.21,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2222,
+                    "frequency": 6,
+                    "standardDeviation": 0.4237
+                }
+            },
+            {
+                "name": "10.0",
+                "position": 1,
+                "iqbId": "MV1261001",
+                "exercise": {
+                    "name": "Geld_zurück_Herr_Petri"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.26,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2222,
+                    "frequency": 6,
+                    "standardDeviation": 0.4237
+                }
+            }
+        ]
+    },
+    {
+        "id": "3c-mathe",
+        "type": "group",
+        "name": "Lerngruppe 3c-mathe",
+        "domain": {
+            "id": "dh",
+            "name": "Daten, Häufigkeit und Wahrscheinlichkeit"
+        },
+        "items": [
+            {
+                "name": "11.0",
+                "position": 1,
+                "iqbId": "MV1980401",
+                "exercise": {
+                    "name": "Schulgarten"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.74,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.5556,
+                    "frequency": 15,
+                    "standardDeviation": 0.5064
+                }
+            },
+            {
+                "name": "12.1",
+                "position": 1,
+                "iqbId": "MV1884301",
+                "exercise": {
+                    "name": "Tiere"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.38,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2593,
+                    "frequency": 7,
+                    "standardDeviation": 0.4466
+                }
+            },
+            {
+                "name": "12.2",
+                "position": 2,
+                "iqbId": "MV1884302",
+                "exercise": {
+                    "name": "Tiere"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.75,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.5556,
+                    "frequency": 15,
+                    "standardDeviation": 0.5064
+                }
+            },
+            {
+                "name": "13.0",
+                "position": 1,
+                "iqbId": "MV2390202",
+                "exercise": {
+                    "name": "unmögliche_Augenzahl"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.21,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "2",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Kommunizieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.1852,
+                    "frequency": 5,
+                    "standardDeviation": 0.3958
+                }
+            }
+        ]
+    },
+    {
+        "id": "3c-mathe",
+        "type": "group",
+        "name": "Lerngruppe 3c-mathe",
+        "domain": {
+            "id": "ms",
+            "name": "Muster und Strukturen"
+        },
+        "items": [
+            {
+                "name": "15.0",
+                "position": 1,
+                "iqbId": "MV1544401",
+                "exercise": {
+                    "name": "Plus_10"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.92,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.8519,
+                    "frequency": 23,
+                    "standardDeviation": 0.362
+                }
+            },
+            {
+                "name": "16.0",
+                "position": 1,
+                "iqbId": "MV2145701",
+                "exercise": {
+                    "name": "Pudel_Kaninchen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.58,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.5185,
+                    "frequency": 14,
+                    "standardDeviation": 0.5092
+                }
+            },
+            {
+                "name": "17.0",
+                "position": 1,
+                "iqbId": "MV1541201",
+                "exercise": {
+                    "name": "Käferbeine"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.34,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2222,
+                    "frequency": 6,
+                    "standardDeviation": 0.4237
+                }
+            },
+            {
+                "name": "18.0",
+                "position": 1,
+                "iqbId": "MV2150401",
+                "exercise": {
+                    "name": "Regel_Zahlenfolge"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.39,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "III",
+                            "type": "Anforderungsbereich",
+                            "name": "Verallgemeinern und Reflektieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.3704,
+                    "frequency": 10,
+                    "standardDeviation": 0.4921
+                }
+            },
+            {
+                "name": "24.0",
+                "position": 1,
+                "iqbId": "MV2352701",
+                "exercise": {
+                    "name": "Kugel_Eis_Preis"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.69,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.6667,
+                    "frequency": 18,
+                    "standardDeviation": 0.4804
+                }
+            },
+            {
+                "name": "25.0",
+                "position": 1,
+                "iqbId": "MV2350101",
+                "exercise": {
+                    "name": "Hundertertafel_Ausschnitt_44"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.77,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.7778,
+                    "frequency": 21,
+                    "standardDeviation": 0.4237
+                }
+            },
+            {
+                "name": "26.0",
+                "position": 1,
+                "iqbId": "MV2353801",
+                "exercise": {
+                    "name": "Nudeln_Preis_Tabelle"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.56,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.5556,
+                    "frequency": 15,
+                    "standardDeviation": 0.5064
+                }
+            },
+            {
+                "name": "27.0",
+                "position": 1,
+                "iqbId": "MV2346102",
+                "exercise": {
+                    "name": "Zahlenfolgen_nach_Regel"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.55,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.5556,
+                    "frequency": 15,
+                    "standardDeviation": 0.5064
+                }
+            },
+            {
+                "name": "28.0",
+                "position": 1,
+                "iqbId": "MV2340101",
+                "exercise": {
+                    "name": "Kette"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.55,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.4815,
+                    "frequency": 13,
+                    "standardDeviation": 0.5092
+                }
+            },
+            {
+                "name": "29.0",
+                "position": 1,
+                "iqbId": "MV2343201",
+                "exercise": {
+                    "name": "Zahlenstrahl"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.37,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.1852,
+                    "frequency": 5,
+                    "standardDeviation": 0.3958
+                }
+            },
+            {
+                "name": "30.0",
+                "position": 1,
+                "iqbId": "MV2350801",
+                "exercise": {
+                    "name": "Getränke_Preis_berechnen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.4,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.3333,
+                    "frequency": 9,
+                    "standardDeviation": 0.4804
+                }
+            },
+            {
+                "name": "31.0",
+                "position": 1,
+                "iqbId": "MV2344201",
+                "exercise": {
+                    "name": "Äpfel und Birnen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.45,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.4444,
+                    "frequency": 12,
+                    "standardDeviation": 0.5064
+                }
+            },
+            {
+                "name": "32.0",
+                "position": 1,
+                "iqbId": "MV2344701",
+                "exercise": {
+                    "name": "Plättchen_maximal"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.24,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.1481,
+                    "frequency": 4,
+                    "standardDeviation": 0.362
+                }
+            },
+            {
+                "name": "33.0",
+                "position": 1,
+                "iqbId": "MV2352001",
+                "exercise": {
+                    "name": "Kartenverkauf_5er-Karten"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.09,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "III",
+                            "type": "Anforderungsbereich",
+                            "name": "Verallgemeinern und Reflektieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.037,
+                    "frequency": 1,
+                    "standardDeviation": 0.1925
+                }
+            },
+            {
+                "name": "34.0",
+                "position": 1,
+                "iqbId": "MV2342701",
+                "exercise": {
+                    "name": "Muster_5_Figur"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.12,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2222,
+                    "frequency": 6,
+                    "standardDeviation": 0.4237
+                }
+            },
+            {
+                "name": "35.0",
+                "position": 1,
+                "iqbId": "MV2350601",
+                "exercise": {
+                    "name": "Ergebnis_Differenz_9"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.31,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "III",
+                            "type": "Anforderungsbereich",
+                            "name": "Verallgemeinern und Reflektieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.1481,
+                    "frequency": 4,
+                    "standardDeviation": 0.362
+                }
+            },
+            {
+                "name": "36.0",
+                "position": 1,
+                "iqbId": "MV2354201",
+                "exercise": {
+                    "name": "Arithmetische_Folge"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.45,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.3704,
+                    "frequency": 10,
+                    "standardDeviation": 0.4921
+                }
+            },
+            {
+                "name": "37.0",
+                "position": 1,
+                "iqbId": "MV2352601",
+                "exercise": {
+                    "name": "Sparen_37_Euro_begründe"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.37,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "III",
+                            "type": "Anforderungsbereich",
+                            "name": "Verallgemeinern und Reflektieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2593,
+                    "frequency": 7,
+                    "standardDeviation": 0.4466
+                }
+            }
+        ]
+    },
+    {
+        "id": "3c-mathe",
+        "type": "group",
+        "name": "Lerngruppe 3c-mathe",
+        "domain": {
+            "id": "rf",
+            "name": "Raum und Form"
+        },
+        "items": [
+            {
+                "name": "19.0",
+                "position": 1,
+                "iqbId": "MV1731402",
+                "exercise": {
+                    "name": "Achsenspiegelung5"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.67,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.6296,
+                    "frequency": 17,
+                    "standardDeviation": 0.4921
+                }
+            },
+            {
+                "name": "20.0",
+                "position": 1,
+                "iqbId": "MV1820901",
+                "exercise": {
+                    "name": "Würfel in Würfel"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.57,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.6667,
+                    "frequency": 18,
+                    "standardDeviation": 0.4804
+                }
+            },
+            {
+                "name": "21.1",
+                "position": 1,
+                "iqbId": "MV1730801",
+                "exercise": {
+                    "name": "Würfelfalten_4"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.5,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.3704,
+                    "frequency": 10,
+                    "standardDeviation": 0.4921
+                }
+            },
+            {
+                "name": "21.2",
+                "position": 2,
+                "iqbId": "MV1730802",
+                "exercise": {
+                    "name": "Würfelfalten_4"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.51,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.5926,
+                    "frequency": 16,
+                    "standardDeviation": 0.5007
+                }
+            },
+            {
+                "name": "22.0",
+                "position": 1,
+                "iqbId": "MV2339901",
+                "exercise": {
+                    "name": "Welche_Figur"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.13,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "2",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Kommunizieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.037,
+                    "frequency": 1,
+                    "standardDeviation": 0.1925
+                }
+            },
+            {
+                "name": "23.0",
+                "position": 1,
+                "iqbId": "MV1322901",
+                "exercise": {
+                    "name": "Ansichten_eines_Bauwerks"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.27,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.1481,
+                    "frequency": 4,
+                    "standardDeviation": 0.362
+                }
+            },
+            {
+                "name": "24.0",
+                "position": 1,
+                "iqbId": "MV2339501",
+                "exercise": {
+                    "name": "Blume"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.56,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.5556,
+                    "frequency": 15,
+                    "standardDeviation": 0.5064
+                }
+            },
+            {
+                "name": "25.0",
+                "position": 1,
+                "iqbId": "MV2336802",
+                "exercise": {
+                    "name": "Schräge_Figuren_übertragen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.75,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.7778,
+                    "frequency": 21,
+                    "standardDeviation": 0.4237
+                }
+            },
+            {
+                "name": "26.1",
+                "position": 1,
+                "iqbId": "MV2327702",
+                "exercise": {
+                    "name": "Anzahl_Flächen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.55,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "2",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Kommunizieren"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.4815,
+                    "frequency": 13,
+                    "standardDeviation": 0.5092
+                }
+            },
+            {
+                "name": "26.2",
+                "position": 2,
+                "iqbId": "MV2327704",
+                "exercise": {
+                    "name": "Anzahl_Flächen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.49,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "2",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Kommunizieren"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.5185,
+                    "frequency": 14,
+                    "standardDeviation": 0.5092
+                }
+            },
+            {
+                "name": "27.0",
+                "position": 1,
+                "iqbId": "MV2323801",
+                "exercise": {
+                    "name": "Zylinderflächen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.49,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.5185,
+                    "frequency": 14,
+                    "standardDeviation": 0.5092
+                }
+            },
+            {
+                "name": "28.0",
+                "position": 1,
+                "iqbId": "MV2327101",
+                "exercise": {
+                    "name": "Obst"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.78,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.7037,
+                    "frequency": 19,
+                    "standardDeviation": 0.4653
+                }
+            },
+            {
+                "name": "29.0",
+                "position": 1,
+                "iqbId": "MV2332101",
+                "exercise": {
+                    "name": "Flächen_Würfelnetz"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.3,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2963,
+                    "frequency": 8,
+                    "standardDeviation": 0.4653
+                }
+            },
+            {
+                "name": "30.0",
+                "position": 1,
+                "iqbId": "MV2329901",
+                "exercise": {
+                    "name": "Kartenmuster_ergänzen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.28,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2963,
+                    "frequency": 8,
+                    "standardDeviation": 0.4653
+                }
+            },
+            {
+                "name": "31.0",
+                "position": 1,
+                "iqbId": "MV2330101",
+                "exercise": {
+                    "name": "Sandkasten_Seitenlängen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.06,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.037,
+                    "frequency": 1,
+                    "standardDeviation": 0.1925
+                }
+            },
+            {
+                "name": "32.0",
+                "position": 1,
+                "iqbId": "MV2327201",
+                "exercise": {
+                    "name": "Richtungsspiegelung"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.16,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.1852,
+                    "frequency": 5,
+                    "standardDeviation": 0.3958
+                }
+            },
+            {
+                "name": "33.0",
+                "position": 1,
+                "iqbId": "MV2331701",
+                "exercise": {
+                    "name": "Großen_Würfel_ausfüllen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.05,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0,
+                    "frequency": 0,
+                    "standardDeviation": 0
+                }
+            },
+            {
+                "name": "34.0",
+                "position": 1,
+                "iqbId": "MV2333701",
+                "exercise": {
+                    "name": "Teilung_Quadrat"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.23,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2593,
+                    "frequency": 7,
+                    "standardDeviation": 0.4466
+                }
+            },
+            {
+                "name": "35.0",
+                "position": 1,
+                "iqbId": "MV2329102",
+                "exercise": {
+                    "name": "Bauplan_ergänzen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.72,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.7037,
+                    "frequency": 19,
+                    "standardDeviation": 0.4653
+                }
+            }
+        ]
+    },
+    {
+        "id": "school",
+        "type": "school",
+        "name": "Schulschnitt",
+        "domain": {
+            "id": "zo",
+            "name": "Zahlen und Operationen"
+        },
+        "items": [
+            {
+                "name": "1.0",
+                "position": 1,
+                "iqbId": "MV2310001",
+                "exercise": {
+                    "name": "Drei_Ziffern"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.77,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.3318,
+                    "frequency": 25,
+                    "standardDeviation": 0.4709
+                }
+            },
+            {
+                "name": "2.0",
+                "position": 1,
+                "iqbId": "MV1508401",
+                "exercise": {
+                    "name": "Hundejahre"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.65,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.4256,
+                    "frequency": 32,
+                    "standardDeviation": 0.4944
+                }
+            },
+            {
+                "name": "3.0",
+                "position": 1,
+                "iqbId": "MV1900001",
+                "exercise": {
+                    "name": "Bündeln"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.48,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.589,
+                    "frequency": 44,
+                    "standardDeviation": 0.492
+                }
+            },
+            {
+                "name": "4.0",
+                "position": 1,
+                "iqbId": "MV2310401",
+                "exercise": {
+                    "name": "Fehlerbeschreibung"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.23,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.3418,
+                    "frequency": 26,
+                    "standardDeviation": 0.4743
+                }
+            },
+            {
+                "name": "5.0",
+                "position": 1,
+                "iqbId": "MV1902101",
+                "exercise": {
+                    "name": "Kommutativgesetz"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.37,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.2885,
+                    "frequency": 22,
+                    "standardDeviation": 0.4531
+                }
+            },
+            {
+                "name": "14.0",
+                "position": 1,
+                "iqbId": "MV1986701",
+                "exercise": {
+                    "name": "Fußballtore"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.25,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.5257,
+                    "frequency": 39,
+                    "standardDeviation": 0.4993
+                }
+            }
+        ]
+    },
+    {
+        "id": "school",
+        "type": "school",
+        "name": "Schulschnitt",
+        "domain": {
+            "id": "gm",
+            "name": "Größen und Messen"
+        },
+        "items": [
+            {
+                "name": "6.0",
+                "position": 1,
+                "iqbId": "MV2162701",
+                "exercise": {
+                    "name": "Uhrzeit_verbinden"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.85,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.8359,
+                    "frequency": 63,
+                    "standardDeviation": 0.3704
+                }
+            },
+            {
+                "name": "7.0",
+                "position": 1,
+                "iqbId": "MV1162802",
+                "exercise": {
+                    "name": "Tabelle_Laenge"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.62,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.7095,
+                    "frequency": 53,
+                    "standardDeviation": 0.454
+                }
+            },
+            {
+                "name": "8.0",
+                "position": 1,
+                "iqbId": "MV1661201",
+                "exercise": {
+                    "name": "Blumen basteln"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.35,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.2362,
+                    "frequency": 18,
+                    "standardDeviation": 0.4247
+                }
+            },
+            {
+                "name": "9.0",
+                "position": 1,
+                "iqbId": "MV1162202",
+                "exercise": {
+                    "name": "Obstsorten_2"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.21,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.2742,
+                    "frequency": 21,
+                    "standardDeviation": 0.4461
+                }
+            },
+            {
+                "name": "10.0",
+                "position": 1,
+                "iqbId": "MV1261001",
+                "exercise": {
+                    "name": "Geld_zurück_Herr_Petri"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.26,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.119,
+                    "frequency": 9,
+                    "standardDeviation": 0.3238
+                }
+            }
+        ]
+    },
+    {
+        "id": "school",
+        "type": "school",
+        "name": "Schulschnitt",
+        "domain": {
+            "id": "dh",
+            "name": "Daten, Häufigkeit und Wahrscheinlichkeit"
+        },
+        "items": [
+            {
+                "name": "11.0",
+                "position": 1,
+                "iqbId": "MV1980401",
+                "exercise": {
+                    "name": "Schulgarten"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.74,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.5519,
+                    "frequency": 41,
+                    "standardDeviation": 0.4973
+                }
+            },
+            {
+                "name": "12.1",
+                "position": 1,
+                "iqbId": "MV1884301",
+                "exercise": {
+                    "name": "Tiere"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.38,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.2824,
+                    "frequency": 21,
+                    "standardDeviation": 0.4502
+                }
+            },
+            {
+                "name": "12.2",
+                "position": 2,
+                "iqbId": "MV1884302",
+                "exercise": {
+                    "name": "Tiere"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.75,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.4998,
+                    "frequency": 37,
+                    "standardDeviation": 0.5
+                }
+            },
+            {
+                "name": "13.0",
+                "position": 1,
+                "iqbId": "MV2390202",
+                "exercise": {
+                    "name": "unmögliche_Augenzahl"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.21,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "2",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Kommunizieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.3006,
+                    "frequency": 23,
+                    "standardDeviation": 0.4585
+                }
+            }
+        ]
+    },
+    {
+        "id": "school",
+        "type": "school",
+        "name": "Schulschnitt",
+        "domain": {
+            "id": "ms",
+            "name": "Muster und Strukturen"
+        },
+        "items": [
+            {
+                "name": "15.0",
+                "position": 1,
+                "iqbId": "MV1544401",
+                "exercise": {
+                    "name": "Plus_10"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.92,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.8977,
+                    "frequency": 67,
+                    "standardDeviation": 0.303
+                }
+            },
+            {
+                "name": "16.0",
+                "position": 1,
+                "iqbId": "MV2145701",
+                "exercise": {
+                    "name": "Pudel_Kaninchen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.58,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.469,
+                    "frequency": 35,
+                    "standardDeviation": 0.499
+                }
+            },
+            {
+                "name": "17.0",
+                "position": 1,
+                "iqbId": "MV1541201",
+                "exercise": {
+                    "name": "Käferbeine"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.34,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.3251,
+                    "frequency": 24,
+                    "standardDeviation": 0.4684
+                }
+            },
+            {
+                "name": "18.0",
+                "position": 1,
+                "iqbId": "MV2150401",
+                "exercise": {
+                    "name": "Regel_Zahlenfolge"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.39,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "III",
+                            "type": "Anforderungsbereich",
+                            "name": "Verallgemeinern und Reflektieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.3993,
+                    "frequency": 30,
+                    "standardDeviation": 0.4898
+                }
+            },
+            {
+                "name": "24.0",
+                "position": 1,
+                "iqbId": "MV2352701",
+                "exercise": {
+                    "name": "Kugel_Eis_Preis"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.69,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.5572,
+                    "frequency": 42,
+                    "standardDeviation": 0.4967
+                }
+            },
+            {
+                "name": "25.0",
+                "position": 1,
+                "iqbId": "MV2350101",
+                "exercise": {
+                    "name": "Hundertertafel_Ausschnitt_44"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.77,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.7771,
+                    "frequency": 58,
+                    "standardDeviation": 0.4162
+                }
+            },
+            {
+                "name": "26.0",
+                "position": 1,
+                "iqbId": "MV2353801",
+                "exercise": {
+                    "name": "Nudeln_Preis_Tabelle"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.56,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.4607,
+                    "frequency": 35,
+                    "standardDeviation": 0.4985
+                }
+            },
+            {
+                "name": "27.0",
+                "position": 1,
+                "iqbId": "MV2346102",
+                "exercise": {
+                    "name": "Zahlenfolgen_nach_Regel"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.55,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.6198,
+                    "frequency": 46,
+                    "standardDeviation": 0.4854
+                }
+            },
+            {
+                "name": "28.0",
+                "position": 1,
+                "iqbId": "MV2340101",
+                "exercise": {
+                    "name": "Kette"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.55,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.4328,
+                    "frequency": 32,
+                    "standardDeviation": 0.4955
+                }
+            },
+            {
+                "name": "29.0",
+                "position": 1,
+                "iqbId": "MV2343201",
+                "exercise": {
+                    "name": "Zahlenstrahl"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.37,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.1618,
+                    "frequency": 12,
+                    "standardDeviation": 0.3683
+                }
+            },
+            {
+                "name": "30.0",
+                "position": 1,
+                "iqbId": "MV2350801",
+                "exercise": {
+                    "name": "Getränke_Preis_berechnen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.4,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.3868,
+                    "frequency": 29,
+                    "standardDeviation": 0.487
+                }
+            },
+            {
+                "name": "31.0",
+                "position": 1,
+                "iqbId": "MV2344201",
+                "exercise": {
+                    "name": "Äpfel und Birnen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.45,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.393,
+                    "frequency": 29,
+                    "standardDeviation": 0.4884
+                }
+            },
+            {
+                "name": "32.0",
+                "position": 1,
+                "iqbId": "MV2344701",
+                "exercise": {
+                    "name": "Plättchen_maximal"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.24,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.0829,
+                    "frequency": 6,
+                    "standardDeviation": 0.2757
+                }
+            },
+            {
+                "name": "33.0",
+                "position": 1,
+                "iqbId": "MV2352001",
+                "exercise": {
+                    "name": "Kartenverkauf_5er-Karten"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.09,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "III",
+                            "type": "Anforderungsbereich",
+                            "name": "Verallgemeinern und Reflektieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.01,
+                    "frequency": 1,
+                    "standardDeviation": 0.0995
+                }
+            },
+            {
+                "name": "34.0",
+                "position": 1,
+                "iqbId": "MV2342701",
+                "exercise": {
+                    "name": "Muster_5_Figur"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.12,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.2094,
+                    "frequency": 16,
+                    "standardDeviation": 0.4069
+                }
+            },
+            {
+                "name": "35.0",
+                "position": 1,
+                "iqbId": "MV2350601",
+                "exercise": {
+                    "name": "Ergebnis_Differenz_9"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.31,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "III",
+                            "type": "Anforderungsbereich",
+                            "name": "Verallgemeinern und Reflektieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.0369,
+                    "frequency": 3,
+                    "standardDeviation": 0.1885
+                }
+            },
+            {
+                "name": "36.0",
+                "position": 1,
+                "iqbId": "MV2354201",
+                "exercise": {
+                    "name": "Arithmetische_Folge"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.45,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.465,
+                    "frequency": 35,
+                    "standardDeviation": 0.4988
+                }
+            },
+            {
+                "name": "37.0",
+                "position": 1,
+                "iqbId": "MV2352601",
+                "exercise": {
+                    "name": "Sparen_37_Euro_begründe"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.37,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "III",
+                            "type": "Anforderungsbereich",
+                            "name": "Verallgemeinern und Reflektieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.2981,
+                    "frequency": 22,
+                    "standardDeviation": 0.4574
+                }
+            }
+        ]
+    },
+    {
+        "id": "school",
+        "type": "school",
+        "name": "Schulschnitt",
+        "domain": {
+            "id": "rf",
+            "name": "Raum und Form"
+        },
+        "items": [
+            {
+                "name": "19.0",
+                "position": 1,
+                "iqbId": "MV1731402",
+                "exercise": {
+                    "name": "Achsenspiegelung5"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.67,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.5371,
+                    "frequency": 40,
+                    "standardDeviation": 0.4986
+                }
+            },
+            {
+                "name": "20.0",
+                "position": 1,
+                "iqbId": "MV1820901",
+                "exercise": {
+                    "name": "Würfel in Würfel"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.57,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.7623,
+                    "frequency": 57,
+                    "standardDeviation": 0.4257
+                }
+            },
+            {
+                "name": "21.1",
+                "position": 1,
+                "iqbId": "MV1730801",
+                "exercise": {
+                    "name": "Würfelfalten_4"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.5,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.4583,
+                    "frequency": 34,
+                    "standardDeviation": 0.4983
+                }
+            },
+            {
+                "name": "21.2",
+                "position": 2,
+                "iqbId": "MV1730802",
+                "exercise": {
+                    "name": "Würfelfalten_4"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.51,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.6787,
+                    "frequency": 51,
+                    "standardDeviation": 0.467
+                }
+            },
+            {
+                "name": "22.0",
+                "position": 1,
+                "iqbId": "MV2339901",
+                "exercise": {
+                    "name": "Welche_Figur"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.13,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "2",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Kommunizieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.107,
+                    "frequency": 8,
+                    "standardDeviation": 0.3091
+                }
+            },
+            {
+                "name": "23.0",
+                "position": 1,
+                "iqbId": "MV1322901",
+                "exercise": {
+                    "name": "Ansichten_eines_Bauwerks"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.27,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.037,
+                    "frequency": 3,
+                    "standardDeviation": 0.1888
+                }
+            },
+            {
+                "name": "24.0",
+                "position": 1,
+                "iqbId": "MV2339501",
+                "exercise": {
+                    "name": "Blume"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.56,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.587,
+                    "frequency": 44,
+                    "standardDeviation": 0.4924
+                }
+            },
+            {
+                "name": "25.0",
+                "position": 1,
+                "iqbId": "MV2336802",
+                "exercise": {
+                    "name": "Schräge_Figuren_übertragen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.75,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.7828,
+                    "frequency": 59,
+                    "standardDeviation": 0.4123
+                }
+            },
+            {
+                "name": "26.1",
+                "position": 1,
+                "iqbId": "MV2327702",
+                "exercise": {
+                    "name": "Anzahl_Flächen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.55,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "2",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Kommunizieren"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.412,
+                    "frequency": 31,
+                    "standardDeviation": 0.4922
+                }
+            },
+            {
+                "name": "26.2",
+                "position": 2,
+                "iqbId": "MV2327704",
+                "exercise": {
+                    "name": "Anzahl_Flächen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.49,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "2",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Kommunizieren"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.5169,
+                    "frequency": 39,
+                    "standardDeviation": 0.4997
+                }
+            },
+            {
+                "name": "27.0",
+                "position": 1,
+                "iqbId": "MV2323801",
+                "exercise": {
+                    "name": "Zylinderflächen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.49,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.4903,
+                    "frequency": 37,
+                    "standardDeviation": 0.4999
+                }
+            },
+            {
+                "name": "28.0",
+                "position": 1,
+                "iqbId": "MV2327101",
+                "exercise": {
+                    "name": "Obst"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.78,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.6329,
+                    "frequency": 47,
+                    "standardDeviation": 0.482
+                }
+            },
+            {
+                "name": "29.0",
+                "position": 1,
+                "iqbId": "MV2332101",
+                "exercise": {
+                    "name": "Flächen_Würfelnetz"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.3,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.3,
+                    "frequency": 23,
+                    "standardDeviation": 0.4583
+                }
+            },
+            {
+                "name": "30.0",
+                "position": 1,
+                "iqbId": "MV2329901",
+                "exercise": {
+                    "name": "Kartenmuster_ergänzen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.28,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.3918,
+                    "frequency": 29,
+                    "standardDeviation": 0.4882
+                }
+            },
+            {
+                "name": "31.0",
+                "position": 1,
+                "iqbId": "MV2330101",
+                "exercise": {
+                    "name": "Sandkasten_Seitenlängen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.06,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.01,
+                    "frequency": 1,
+                    "standardDeviation": 0.0995
+                }
+            },
+            {
+                "name": "32.0",
+                "position": 1,
+                "iqbId": "MV2327201",
+                "exercise": {
+                    "name": "Richtungsspiegelung"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.16,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.0738,
+                    "frequency": 6,
+                    "standardDeviation": 0.2614
+                }
+            },
+            {
+                "name": "33.0",
+                "position": 1,
+                "iqbId": "MV2331701",
+                "exercise": {
+                    "name": "Großen_Würfel_ausfüllen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.05,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.01,
+                    "frequency": 1,
+                    "standardDeviation": 0.0995
+                }
+            },
+            {
+                "name": "34.0",
+                "position": 1,
+                "iqbId": "MV2333701",
+                "exercise": {
+                    "name": "Teilung_Quadrat"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.23,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.2955,
+                    "frequency": 22,
+                    "standardDeviation": 0.4563
+                }
+            },
+            {
+                "name": "35.0",
+                "position": 1,
+                "iqbId": "MV2329102",
+                "exercise": {
+                    "name": "Bauplan_ergänzen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.72,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.6857,
+                    "frequency": 51,
+                    "standardDeviation": 0.4642
+                }
+            }
+        ]
+    },
+    {
+        "id": "state",
+        "type": "state",
+        "name": "Landesschnitt",
+        "domain": {
+            "id": "zo",
+            "name": "Zahlen und Operationen"
+        },
+        "items": [
+            {
+                "name": "1.0",
+                "position": 1,
+                "iqbId": "MV2310001",
+                "exercise": {
+                    "name": "Drei_Ziffern"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.77,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.2138,
+                    "frequency": 96,
+                    "standardDeviation": 0.41
+                }
+            },
+            {
+                "name": "2.0",
+                "position": 1,
+                "iqbId": "MV1508401",
+                "exercise": {
+                    "name": "Hundejahre"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.65,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.5682,
+                    "frequency": 256,
+                    "standardDeviation": 0.4953
+                }
+            },
+            {
+                "name": "3.0",
+                "position": 1,
+                "iqbId": "MV1900001",
+                "exercise": {
+                    "name": "Bündeln"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.48,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.511,
+                    "frequency": 230,
+                    "standardDeviation": 0.4999
+                }
+            },
+            {
+                "name": "4.0",
+                "position": 1,
+                "iqbId": "MV2310401",
+                "exercise": {
+                    "name": "Fehlerbeschreibung"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.23,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.2323,
+                    "frequency": 105,
+                    "standardDeviation": 0.4223
+                }
+            },
+            {
+                "name": "5.0",
+                "position": 1,
+                "iqbId": "MV1902101",
+                "exercise": {
+                    "name": "Kommutativgesetz"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.37,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.3449,
+                    "frequency": 155,
+                    "standardDeviation": 0.4753
+                }
+            },
+            {
+                "name": "14.0",
+                "position": 1,
+                "iqbId": "MV1986701",
+                "exercise": {
+                    "name": "Fußballtore"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.25,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.4976,
+                    "frequency": 224,
+                    "standardDeviation": 0.5
+                }
+            }
+        ]
+    },
+    {
+        "id": "state",
+        "type": "state",
+        "name": "Landesschnitt",
+        "domain": {
+            "id": "gm",
+            "name": "Größen und Messen"
+        },
+        "items": [
+            {
+                "name": "6.0",
+                "position": 1,
+                "iqbId": "MV2162701",
+                "exercise": {
+                    "name": "Uhrzeit_verbinden"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.85,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.8232,
+                    "frequency": 370,
+                    "standardDeviation": 0.3815
+                }
+            },
+            {
+                "name": "7.0",
+                "position": 1,
+                "iqbId": "MV1162802",
+                "exercise": {
+                    "name": "Tabelle_Laenge"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.62,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.5734,
+                    "frequency": 258,
+                    "standardDeviation": 0.4946
+                }
+            },
+            {
+                "name": "8.0",
+                "position": 1,
+                "iqbId": "MV1661201",
+                "exercise": {
+                    "name": "Blumen basteln"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.35,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.3428,
+                    "frequency": 154,
+                    "standardDeviation": 0.4746
+                }
+            },
+            {
+                "name": "9.0",
+                "position": 1,
+                "iqbId": "MV1162202",
+                "exercise": {
+                    "name": "Obstsorten_2"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.21,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.2948,
+                    "frequency": 133,
+                    "standardDeviation": 0.456
+                }
+            },
+            {
+                "name": "10.0",
+                "position": 1,
+                "iqbId": "MV1261001",
+                "exercise": {
+                    "name": "Geld_zurück_Herr_Petri"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.26,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.2395,
+                    "frequency": 108,
+                    "standardDeviation": 0.4268
+                }
+            }
+        ]
+    },
+    {
+        "id": "state",
+        "type": "state",
+        "name": "Landesschnitt",
+        "domain": {
+            "id": "dh",
+            "name": "Daten, Häufigkeit und Wahrscheinlichkeit"
+        },
+        "items": [
+            {
+                "name": "11.0",
+                "position": 1,
+                "iqbId": "MV1980401",
+                "exercise": {
+                    "name": "Schulgarten"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.74,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.5034,
+                    "frequency": 227,
+                    "standardDeviation": 0.5
+                }
+            },
+            {
+                "name": "12.1",
+                "position": 1,
+                "iqbId": "MV1884301",
+                "exercise": {
+                    "name": "Tiere"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.38,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.2934,
+                    "frequency": 132,
+                    "standardDeviation": 0.4553
+                }
+            },
+            {
+                "name": "12.2",
+                "position": 2,
+                "iqbId": "MV1884302",
+                "exercise": {
+                    "name": "Tiere"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.75,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.4867,
+                    "frequency": 219,
+                    "standardDeviation": 0.4998
+                }
+            },
+            {
+                "name": "13.0",
+                "position": 1,
+                "iqbId": "MV2390202",
+                "exercise": {
+                    "name": "unmögliche_Augenzahl"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.21,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "2",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Kommunizieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.2019,
+                    "frequency": 91,
+                    "standardDeviation": 0.4014
+                }
+            }
+        ]
+    },
+    {
+        "id": "state",
+        "type": "state",
+        "name": "Landesschnitt",
+        "domain": {
+            "id": "ms",
+            "name": "Muster und Strukturen"
+        },
+        "items": [
+            {
+                "name": "15.0",
+                "position": 1,
+                "iqbId": "MV1544401",
+                "exercise": {
+                    "name": "Plus_10"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.92,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.7367,
+                    "frequency": 332,
+                    "standardDeviation": 0.4404
+                }
+            },
+            {
+                "name": "16.0",
+                "position": 1,
+                "iqbId": "MV2145701",
+                "exercise": {
+                    "name": "Pudel_Kaninchen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.58,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.4634,
+                    "frequency": 209,
+                    "standardDeviation": 0.4987
+                }
+            },
+            {
+                "name": "17.0",
+                "position": 1,
+                "iqbId": "MV1541201",
+                "exercise": {
+                    "name": "Käferbeine"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.34,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.1603,
+                    "frequency": 72,
+                    "standardDeviation": 0.3669
+                }
+            },
+            {
+                "name": "18.0",
+                "position": 1,
+                "iqbId": "MV2150401",
+                "exercise": {
+                    "name": "Regel_Zahlenfolge"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.39,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "III",
+                            "type": "Anforderungsbereich",
+                            "name": "Verallgemeinern und Reflektieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.3357,
+                    "frequency": 151,
+                    "standardDeviation": 0.4722
+                }
+            },
+            {
+                "name": "24.0",
+                "position": 1,
+                "iqbId": "MV2352701",
+                "exercise": {
+                    "name": "Kugel_Eis_Preis"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.69,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.6229,
+                    "frequency": 280,
+                    "standardDeviation": 0.4847
+                }
+            },
+            {
+                "name": "25.0",
+                "position": 1,
+                "iqbId": "MV2350101",
+                "exercise": {
+                    "name": "Hundertertafel_Ausschnitt_44"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.77,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.8295,
+                    "frequency": 373,
+                    "standardDeviation": 0.3761
+                }
+            },
+            {
+                "name": "26.0",
+                "position": 1,
+                "iqbId": "MV2353801",
+                "exercise": {
+                    "name": "Nudeln_Preis_Tabelle"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.56,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.4635,
+                    "frequency": 209,
+                    "standardDeviation": 0.4987
+                }
+            },
+            {
+                "name": "27.0",
+                "position": 1,
+                "iqbId": "MV2346102",
+                "exercise": {
+                    "name": "Zahlenfolgen_nach_Regel"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.55,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.4504,
+                    "frequency": 203,
+                    "standardDeviation": 0.4975
+                }
+            },
+            {
+                "name": "28.0",
+                "position": 1,
+                "iqbId": "MV2340101",
+                "exercise": {
+                    "name": "Kette"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.55,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.3643,
+                    "frequency": 164,
+                    "standardDeviation": 0.4812
+                }
+            },
+            {
+                "name": "29.0",
+                "position": 1,
+                "iqbId": "MV2343201",
+                "exercise": {
+                    "name": "Zahlenstrahl"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.37,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.1289,
+                    "frequency": 58,
+                    "standardDeviation": 0.3351
+                }
+            },
+            {
+                "name": "30.0",
+                "position": 1,
+                "iqbId": "MV2350801",
+                "exercise": {
+                    "name": "Getränke_Preis_berechnen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.4,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.3358,
+                    "frequency": 151,
+                    "standardDeviation": 0.4723
+                }
+            },
+            {
+                "name": "31.0",
+                "position": 1,
+                "iqbId": "MV2344201",
+                "exercise": {
+                    "name": "Äpfel und Birnen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.45,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.4763,
+                    "frequency": 214,
+                    "standardDeviation": 0.4994
+                }
+            },
+            {
+                "name": "32.0",
+                "position": 1,
+                "iqbId": "MV2344701",
+                "exercise": {
+                    "name": "Plättchen_maximal"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.24,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.0473,
+                    "frequency": 21,
+                    "standardDeviation": 0.2123
+                }
+            },
+            {
+                "name": "33.0",
+                "position": 1,
+                "iqbId": "MV2352001",
+                "exercise": {
+                    "name": "Kartenverkauf_5er-Karten"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.09,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "III",
+                            "type": "Anforderungsbereich",
+                            "name": "Verallgemeinern und Reflektieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.1204,
+                    "frequency": 54,
+                    "standardDeviation": 0.3254
+                }
+            },
+            {
+                "name": "34.0",
+                "position": 1,
+                "iqbId": "MV2342701",
+                "exercise": {
+                    "name": "Muster_5_Figur"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.12,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.3241,
+                    "frequency": 146,
+                    "standardDeviation": 0.468
+                }
+            },
+            {
+                "name": "35.0",
+                "position": 1,
+                "iqbId": "MV2350601",
+                "exercise": {
+                    "name": "Ergebnis_Differenz_9"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.31,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "III",
+                            "type": "Anforderungsbereich",
+                            "name": "Verallgemeinern und Reflektieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.1249,
+                    "frequency": 56,
+                    "standardDeviation": 0.3306
+                }
+            },
+            {
+                "name": "36.0",
+                "position": 1,
+                "iqbId": "MV2354201",
+                "exercise": {
+                    "name": "Arithmetische_Folge"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.45,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.4274,
+                    "frequency": 192,
+                    "standardDeviation": 0.4947
+                }
+            },
+            {
+                "name": "37.0",
+                "position": 1,
+                "iqbId": "MV2352601",
+                "exercise": {
+                    "name": "Sparen_37_Euro_begründe"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.37,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "III",
+                            "type": "Anforderungsbereich",
+                            "name": "Verallgemeinern und Reflektieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.3685,
+                    "frequency": 166,
+                    "standardDeviation": 0.4824
+                }
+            }
+        ]
+    },
+    {
+        "id": "state",
+        "type": "state",
+        "name": "Landesschnitt",
+        "domain": {
+            "id": "rf",
+            "name": "Raum und Form"
+        },
+        "items": [
+            {
+                "name": "19.0",
+                "position": 1,
+                "iqbId": "MV1731402",
+                "exercise": {
+                    "name": "Achsenspiegelung5"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.67,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.6138,
+                    "frequency": 276,
+                    "standardDeviation": 0.4869
+                }
+            },
+            {
+                "name": "20.0",
+                "position": 1,
+                "iqbId": "MV1820901",
+                "exercise": {
+                    "name": "Würfel in Würfel"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.57,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.7826,
+                    "frequency": 352,
+                    "standardDeviation": 0.4125
+                }
+            },
+            {
+                "name": "21.1",
+                "position": 1,
+                "iqbId": "MV1730801",
+                "exercise": {
+                    "name": "Würfelfalten_4"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.5,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.3549,
+                    "frequency": 160,
+                    "standardDeviation": 0.4785
+                }
+            },
+            {
+                "name": "21.2",
+                "position": 2,
+                "iqbId": "MV1730802",
+                "exercise": {
+                    "name": "Würfelfalten_4"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.51,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.6096,
+                    "frequency": 274,
+                    "standardDeviation": 0.4878
+                }
+            },
+            {
+                "name": "22.0",
+                "position": 1,
+                "iqbId": "MV2339901",
+                "exercise": {
+                    "name": "Welche_Figur"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.13,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "2",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Kommunizieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.01,
+                    "frequency": 5,
+                    "standardDeviation": 0.0995
+                }
+            },
+            {
+                "name": "23.0",
+                "position": 1,
+                "iqbId": "MV1322901",
+                "exercise": {
+                    "name": "Ansichten_eines_Bauwerks"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.27,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.1062,
+                    "frequency": 48,
+                    "standardDeviation": 0.3081
+                }
+            },
+            {
+                "name": "24.0",
+                "position": 1,
+                "iqbId": "MV2339501",
+                "exercise": {
+                    "name": "Blume"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.56,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.4886,
+                    "frequency": 220,
+                    "standardDeviation": 0.4999
+                }
+            },
+            {
+                "name": "25.0",
+                "position": 1,
+                "iqbId": "MV2336802",
+                "exercise": {
+                    "name": "Schräge_Figuren_übertragen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.75,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.6656,
+                    "frequency": 300,
+                    "standardDeviation": 0.4718
+                }
+            },
+            {
+                "name": "26.1",
+                "position": 1,
+                "iqbId": "MV2327702",
+                "exercise": {
+                    "name": "Anzahl_Flächen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.55,
+                    "competenceLevel": {
+                        "id": "2",
+                        "nameShort": "II"
+                    },
+                    "competences": [
+                        {
+                            "id": "2",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Kommunizieren"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.5685,
+                    "frequency": 256,
+                    "standardDeviation": 0.4953
+                }
+            },
+            {
+                "name": "26.2",
+                "position": 2,
+                "iqbId": "MV2327704",
+                "exercise": {
+                    "name": "Anzahl_Flächen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.49,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "2",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Kommunizieren"
+                        },
+                        {
+                            "id": "I",
+                            "type": "Anforderungsbereich",
+                            "name": "Reproduzieren"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.5824,
+                    "frequency": 262,
+                    "standardDeviation": 0.4932
+                }
+            },
+            {
+                "name": "27.0",
+                "position": 1,
+                "iqbId": "MV2323801",
+                "exercise": {
+                    "name": "Zylinderflächen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.49,
+                    "competenceLevel": {
+                        "id": "3",
+                        "nameShort": "III"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.6234,
+                    "frequency": 281,
+                    "standardDeviation": 0.4845
+                }
+            },
+            {
+                "name": "28.0",
+                "position": 1,
+                "iqbId": "MV2327101",
+                "exercise": {
+                    "name": "Obst"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.78,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.7943,
+                    "frequency": 357,
+                    "standardDeviation": 0.4042
+                }
+            },
+            {
+                "name": "29.0",
+                "position": 1,
+                "iqbId": "MV2332101",
+                "exercise": {
+                    "name": "Flächen_Würfelnetz"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.3,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.362,
+                    "frequency": 163,
+                    "standardDeviation": 0.4806
+                }
+            },
+            {
+                "name": "30.0",
+                "position": 1,
+                "iqbId": "MV2329901",
+                "exercise": {
+                    "name": "Kartenmuster_ergänzen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.28,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.2759,
+                    "frequency": 124,
+                    "standardDeviation": 0.447
+                }
+            },
+            {
+                "name": "31.0",
+                "position": 1,
+                "iqbId": "MV2330101",
+                "exercise": {
+                    "name": "Sandkasten_Seitenlängen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.06,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "4",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Modellieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.1465,
+                    "frequency": 66,
+                    "standardDeviation": 0.3536
+                }
+            },
+            {
+                "name": "32.0",
+                "position": 1,
+                "iqbId": "MV2327201",
+                "exercise": {
+                    "name": "Richtungsspiegelung"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.16,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.2968,
+                    "frequency": 134,
+                    "standardDeviation": 0.4568
+                }
+            },
+            {
+                "name": "33.0",
+                "position": 1,
+                "iqbId": "MV2331701",
+                "exercise": {
+                    "name": "Großen_Würfel_ausfüllen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.05,
+                    "competenceLevel": {
+                        "id": "5",
+                        "nameShort": "V"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "3",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Argumentieren"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.0968,
+                    "frequency": 44,
+                    "standardDeviation": 0.2957
+                }
+            },
+            {
+                "name": "34.0",
+                "position": 1,
+                "iqbId": "MV2333701",
+                "exercise": {
+                    "name": "Teilung_Quadrat"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.23,
+                    "competenceLevel": {
+                        "id": "4",
+                        "nameShort": "IV"
+                    },
+                    "competences": [
+                        {
+                            "id": "1",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Problemlösen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.1695,
+                    "frequency": 76,
+                    "standardDeviation": 0.3752
+                }
+            },
+            {
+                "name": "35.0",
+                "position": 1,
+                "iqbId": "MV2329102",
+                "exercise": {
+                    "name": "Bauplan_ergänzen"
+                },
+                "parameters": {
+                    "solutionFrequencyPrimarySchool": 0.72,
+                    "competenceLevel": {
+                        "id": "1",
+                        "nameShort": "I"
+                    },
+                    "competences": [
+                        {
+                            "id": "5",
+                            "type": "Allgemeine Kompetenz",
+                            "name": "Darstellen"
+                        },
+                        {
+                            "id": "II",
+                            "type": "Anforderungsbereich",
+                            "name": "Zusammenhänge herstellen"
+                        }
+                    ]
+                },
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.6466,
+                    "frequency": 291,
+                    "standardDeviation": 0.478
+                }
+            }
+        ]
+    }
+]

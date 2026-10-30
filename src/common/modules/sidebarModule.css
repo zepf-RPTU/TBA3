@@ -1,0 +1,234 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    .sidebar {
+        position: fixed;
+        inset-inline-start: 0;
+        top: 0;
+        height: 100vh;
+        width: var(--sidebar-rail-width);
+        --sidebar-tint: rgba(255, 255, 255, 0.1);
+        /* Expanded rail width; the logo fills it. */
+        --sidebar-expanded-width: 250px;
+        background-color: var(--secondary-color);
+        color: white;
+        transition: width var(--motion-duration-base) var(--motion-ease-standard);
+        z-index: var(--z-shell);
+        display: flex;
+        flex-direction: column;
+        box-shadow: var(--shadow-md);
+    }
+
+    /* The rail is a disclosure: only expanding it makes the nav labels, logo and
+       settings readable. So each reveal below exists four times:
+         1. :hover, gated on a pointer that can hover;
+         2. :has(:focus-visible), ungated (a tablet with a paired keyboard tabs
+            into the rail and must see where it landed);
+         3. .is-expanded, ungated, set by SidebarModule when the rail is tapped;
+         4. :has(:popover-open), gated like :hover: it only bridges a pointer's way
+            from a settings trigger to the menu placed beside it, which would leave
+            :hover and collapse the rail, moving the menu away from it. A tap has no
+            such way and would only slide the menu out as the rail widens.
+       `:focus-visible`, not `:focus-within`: Chromium focuses a <button> on
+       click, so `:focus-within` would leave the rail open after every nav click
+       and undo the `is-expanded` removal SidebarModule does on that click.
+       `.sidebar ~ .main-content` keeps its static rail-width offset: the expanded
+       rail overlays the content rather than reflowing it on every tap. */
+    @media (hover: hover) {
+        .sidebar:hover,
+        .sidebar:has(:popover-open) {
+            width: var(--sidebar-expanded-width);
+        }
+    }
+
+    .sidebar:has(:focus-visible),
+    .sidebar.is-expanded {
+        width: var(--sidebar-expanded-width);
+    }
+
+    .sidebar-header {
+        border-bottom: 1px solid var(--sidebar-tint);
+        min-height: var(--header-min-height);
+        overflow: hidden;
+        background-color: var(--primary-color);
+    }
+
+    /* The JPEG carries its own white surface and margins, so it fills the header
+       edge to edge. */
+    .sidebar-logo {
+        display: block;
+        width: var(--sidebar-expanded-width);
+        height: auto;
+    }
+
+    /* Everything the expanded rail reveals; the shadow ::after fades in with it
+       but without the delay. */
+    .sidebar-logo,
+    .sidebar-nav-text,
+    .sidebar-settings-chevron {
+        opacity: 0;
+        transition: opacity var(--motion-duration-fast) var(--motion-ease-standard) 0.1s;
+    }
+
+    @media (hover: hover) {
+        .sidebar:hover :is(.sidebar-logo, .sidebar-nav-text, .sidebar-settings-chevron),
+        .sidebar:hover::after,
+        .sidebar:has(:popover-open)
+            :is(.sidebar-logo, .sidebar-nav-text, .sidebar-settings-chevron),
+        .sidebar:has(:popover-open)::after {
+            opacity: 1;
+        }
+    }
+
+    .sidebar:has(:focus-visible) :is(.sidebar-logo, .sidebar-nav-text, .sidebar-settings-chevron),
+    .sidebar:has(:focus-visible)::after,
+    .sidebar.is-expanded :is(.sidebar-logo, .sidebar-nav-text, .sidebar-settings-chevron),
+    .sidebar.is-expanded::after {
+        opacity: 1;
+    }
+
+    .sidebar-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 255, 0.2) rgba(255, 255, 255, 0.05);
+    }
+
+    /* Inset, or `overflow-x: hidden` above clips its sides; and in the on-primary ink,
+       which reads on the rail and on the active row's fill alike, where the accent
+       ring does not. The rail's entries only: a settings menu is a DOM descendant on
+       the card surface, where the white ring would vanish. */
+    .sidebar-nav-button:focus-visible {
+        outline-color: var(--text-on-primary);
+        outline-offset: calc(-1 * var(--focus-ring-width));
+    }
+
+    .sidebar-nav {
+        flex: 1;
+    }
+
+    .sidebar-nav > ul,
+    .sidebar-nav-bottom > ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .sidebar-nav-item {
+        position: relative;
+    }
+
+    .sidebar-nav-button {
+        --btn-radius: 0;
+        --btn-fill: transparent;
+        --btn-hover-fill: var(--sidebar-tint);
+        --btn-active-fill: var(--color-accent-solid);
+        /* Fill comes from the tokens above: the .btn--text family and .btn state
+           rules paint --btn-fill in the foundation layer, which a background-color
+           set here would beat regardless of specificity. */
+        border: none;
+        border-inline-start: 3px solid transparent;
+        color: white;
+        /* A link to the view's hash, drawn as the rail's button. */
+        text-decoration: none;
+        width: 100%;
+        --btn-padding-block: var(--card-pad);
+        --btn-padding-inline: var(--card-pad);
+        text-align: start;
+        justify-content: flex-start;
+        white-space: nowrap;
+    }
+
+    .sidebar-nav-button.is-active {
+        border-inline-start-color: var(--primary-hover);
+    }
+
+    /* Views with sidebarPinBottom: true, and the imprint link below the settings. */
+    .sidebar-nav-bottom,
+    .sidebar-legal {
+        border-top: 1px solid var(--sidebar-tint);
+        padding-top: 4px;
+    }
+
+    .sidebar-settings {
+        border-top: 1px solid var(--sidebar-tint);
+        padding-block: 4px;
+    }
+
+    /* A menu trigger drawn as a rail entry. Open, it takes the hover tint rather
+       than the current view's accent fill. */
+    .sidebar-settings-trigger {
+        --btn-active-fill: var(--sidebar-tint);
+        --btn-active-hover-fill: var(--sidebar-tint);
+    }
+
+    /* The settings menus are rail chrome: the rail's surface and ink, not a card's.
+       Each token is one the shared menu (headerActionDropdown.css, buttons.css)
+       paints with; the menu is the rail's DOM descendant, so the rail's own reach it.
+       The chosen row shows by its filled radio glyph, not a fill, which would sit
+       under the focus ring. */
+    .sidebar-settings-menu {
+        --color-card-background: var(--secondary-color);
+        --color-border: var(--sidebar-tint);
+        --text-color: var(--text-on-primary);
+        --text-secondary: color-mix(in srgb, var(--text-on-primary) 60%, transparent);
+        --color-accent-text: var(--text-on-primary);
+        --btn-hover-fill: var(--sidebar-tint);
+        --color-background-muted: var(--sidebar-tint);
+    }
+
+    .sidebar-settings-chevron {
+        --btn-icon-size: 1.125em;
+        display: flex;
+        margin-inline-start: auto;
+    }
+
+    /* Three dots centred on the nav glyphs' column, a glyph wide, so the label
+       beside them starts where every other rail label does. */
+    .competence-level-theme-swatch {
+        display: inline-flex;
+        flex: 0 0 auto;
+        width: 1.125em;
+        justify-content: center;
+        gap: 1px;
+    }
+
+    .competence-level-theme-swatch > span {
+        flex: 0 0 auto;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+        background: var(--swatch);
+    }
+
+    .sidebar ~ .main-content {
+        margin-inline-start: var(--sidebar-rail-width);
+        width: calc(100% - var(--sidebar-rail-width));
+    }
+
+    .sidebar::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -10px;
+        width: 10px;
+        height: 100%;
+        background: linear-gradient(to right, rgba(0, 0, 0, 0.1), transparent);
+        opacity: 0;
+        transition: opacity var(--motion-duration-fast) var(--motion-ease-standard);
+        pointer-events: none;
+    }
+
+    /* Beside a 400-weight label of --fs-base, a --fs-lg glyph reads heavier than the
+       text it stands for. */
+    .sidebar-nav-icon {
+        --btn-icon-size: 1.125em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

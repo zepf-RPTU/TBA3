@@ -1,0 +1,28 @@
+/**
+ * Only the anchored popup's hover bridge: the `.tooltip` box is in
+ * cursorTooltip.css, the `.glossary-popup` box in glossary-popup.css.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* An invisible strip extending the popup's hit area across the gap to its
+       trigger, so crossing it does not fire mouseout and hide the popup.
+       anchoredPopup.js sets data-placement: below → the strip reaches up, above →
+       down. Height is POPUP_GAP_PX in anchoredPopup.js (6px) plus a 2px overlap so no
+       dead zone is left; the two must move together. */
+    :is(.tooltip, .glossary-popup)[data-placement]::before {
+        content: '';
+        position: absolute;
+        inset-inline: 0;
+        height: calc(6px + 2px);
+    }
+
+    :is(.tooltip, .glossary-popup)[data-placement='below']::before {
+        bottom: 100%;
+    }
+
+    :is(.tooltip, .glossary-popup)[data-placement='above']::before {
+        top: 100%;
+    }
+}

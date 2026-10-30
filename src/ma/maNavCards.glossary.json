@@ -1,0 +1,34 @@
+{
+    "title": "Navigation",
+    "element_texts": {
+        "nav-welcome": {
+            "title": "Willkommen"
+        },
+        "nav-overview": {
+            "title": "Übersicht",
+            "description": "Sich einen Überblick über die Kompetenzstufen und die Lösungsquoten der Lerngruppe nach Leitideen verschaffen.",
+            "tooltip": "Die Verteilung der Lerngruppe auf die Kompetenzstufen, wahlweise im Vergleich zu Schul- und Landeswerten, sowie die mittleren Lösungsquoten der Lerngruppe gruppiert nach Leitideen."
+        },
+        "nav-group": {
+            "title": "Lerngruppe",
+            "description": "Die Ergebnisse aller Schüler:innen in einer Tabelle durchsuchen, filtern und vergleichen.",
+            "tooltip": "Eine tabellarische Übersicht der gesamten Lerngruppe mit zentralen Merkmalen und Ergebnissen aller Schüler:innen – für alle Teilaufgaben oder eine einzelne Leitidee, filterbar nach Kompetenzstufe."
+        },
+        "nav-item": {
+            "title": "Aufgaben",
+            "description": "Die Lösungsquoten aller Teilaufgaben nach Leitideen vergleichen.",
+            "tooltip": "Die Lösungsquoten aller Teilaufgaben als Aufgabenringe, gruppiert nach Leitideen. Die Aufgabentabelle mit den Aufgabenmerkmalen blenden Sie über die Kopfzeile ein."
+        },
+        "nav-student": {
+            "title": "Schüler:in",
+            "description": "Die Lösungen einzelner Schüler:innen nach Leitideen und im Vergleich zur Lerngruppe einsehen.",
+            "tooltip": "Die Lösungen aller Teilaufgaben eines/einer ausgewählten Schüler:in als Aufgabenringe, gruppiert nach Leitideen und im Vergleich zur Lerngruppe. Die Ergebnistabelle blenden Sie über die Kopfzeile ein."
+        },
+        "nav-help": {
+            "title": "Hilfe"
+        },
+        "nav-report": {
+            "title": "Bericht"
+        }
+    }
+}

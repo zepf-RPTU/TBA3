@@ -1,0 +1,40 @@
+{
+    "results": {
+        "selection-rate": "Lösungsquote {{ name }}"
+    },
+    "notable-items": {
+        "title": "Auffällige Teilaufgaben",
+        "body": "Teilaufgaben, deren Lösungsquote mehr als 20 Prozentpunkte unter der Lösungsquote der Lerngruppe liegt"
+    },
+    "levels": {
+        "title": "Teilaufgaben nach Aufgabenniveau",
+        "columns": {
+            "level": "Aufgabenniveau",
+            "items": "Teilaufgaben",
+            "group-rate": "Lösungsquote Lerngruppe"
+        }
+    },
+    "labels": {
+        "success": "Erfolg"
+    },
+    "students": {
+        "below": {
+            "label": "unter Lerngruppe",
+            "heading": "Schüler:innen unter der Lösungsquote der Lerngruppe",
+            "empty": "Keine Schüler:innen liegen unter der Lösungsquote der Lerngruppe."
+        },
+        "at-or-above": {
+            "label": "auf/über Lerngruppe",
+            "heading": "Schüler:innen auf oder über der Lösungsquote der Lerngruppe",
+            "empty": "Keine Schüler:innen erreichen die Lösungsquote der Lerngruppe."
+        }
+    },
+    "messages": {
+        "no-notable-items": "Keine auffälligen Teilaufgaben gefunden",
+        "no-competence-data": "Keine Kompetenzdaten verfügbar",
+        "no-rings": "Keine Aufgabenringe verfügbar",
+        "no-items": "Keine Teilaufgaben in diesem Aufgabenring verfügbar.",
+        "no-selection-results": "Für die gewählten Schüler:innen liegen keine Ergebnisse vor.",
+        "no-student-results": "Für diesen Aufgabenring liegen keine Ergebnisse der Schüler:innen vor."
+    }
+}

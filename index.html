@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TBA3 – zepf</title>
+    <link rel="icon" href="data:,">
+    <script src="/color-scheme-boot.js"></script>
+    <link rel="stylesheet" href="src/chooser.css">
+</head>
+
+<body>
+    <main class="welcome-splash chooser">
+        <div class="welcome-container">
+            <header class="welcome-greeting">
+                <img class="chooser-logo" src="src/common/modules/RPTU-Zepf-Logo.jpg" width="400" height="182"
+                    alt="RPTU – Zentrum für Empirische Pädagogische Forschung (zepf)">
+                <h1 class="chooser-title">Willkommen zur Ergebnisrückmeldung TBA3</h1>
+                <p class="chooser-intro">Wählen Sie das Dashboard, das Sie ansehen möchten. Die Rückmeldungen für Englisch 8 und
+                    Mathematik 3 richten sich an Lehrkräfte; die Schulleitungsansicht fasst die Ergebnisse
+                    lerngruppenübergreifend zusammen.</p>
+                <!-- The wiki is its own VitePress build one level below the site base, so
+                     the link is relative and holds under any base path. -->
+                <p class="chooser-docs"><a href="docs/">Dokumentation (Wiki)</a> ·
+                    <a href="docs/docs/impressum.html">Impressum</a>
+                </p>
+            </header>
+
+            <nav class="welcome-cards chooser-cards" aria-label="Dashboards">
+                <a href="en/" class="preview-item interactive-card hover-border">
+                    <span class="preview-icon preview-media" data-chooser-icon="menu_book"></span>
+                    <span class="preview-label">Englisch 8</span>
+                    <span class="preview-description">VERA 8 Englisch: Hören und Lesen auf den
+                        GER-Niveaus A1 bis C1.</span>
+                </a>
+
+                <a href="ma/" class="preview-item interactive-card hover-border">
+                    <span class="preview-icon preview-media" data-chooser-icon="bar_chart"></span>
+                    <span class="preview-label">Mathe 3</span>
+                    <span class="preview-description">VERA 3 Mathematik: Kompetenzstufen und
+                        Lösungsquoten der Lerngruppe.</span>
+                </a>
+
+                <a href="sl/" class="preview-item interactive-card hover-border">
+                    <span class="preview-icon preview-media" data-chooser-icon="groups"></span>
+                    <span class="preview-label">Schulleitung</span>
+                    <span class="preview-description">Lerngruppenübergreifende Auswertung für die
+                        Schulleitung.</span>
+                </a>
+            </nav>
+        </div>
+
+        <!-- Repeated from WelcomeSplashViewModule: the chooser loads no glossary, and the
+             Freepik license behind the background requires the credit on every page that
+             shows it. -->
+        <div class="welcome-image-notice">
+            <span class="welcome-image-notice-label">Platzhalter</span>
+            <span>Designed by <a href="https://www.freepik.com" target="_blank"
+                    rel="noopener noreferrer">vectorpocket / Freepik</a></span>
+        </div>
+    </main>
+
+    <script type="module">
+        import { createIcon } from '@tba3/module-base';
+        import { initColorScheme } from '@tba3/modules/theme';
+
+        // The scheme the sidebar of every dashboard set, or the OS's.
+        initColorScheme();
+
+        for (const slot of document.querySelectorAll('[data-chooser-icon]')) {
+            slot.replaceChildren(createIcon(slot.dataset.chooserIcon));
+        }
+    </script>
+</body>
+
+</html>

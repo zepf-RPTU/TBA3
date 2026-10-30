@@ -1,0 +1,90 @@
+/**
+ * The native control surface for `.control-select` and `.control-input`. Width,
+ * layout and context-specific token overrides stay in the owner stylesheets.
+ */
+
+:root {
+    --control-padding: var(--space-sm);
+    --control-radius: var(--radius-sm);
+    --control-hover-border: var(--primary-color);
+}
+
+.control-field {
+    display: flex;
+    flex-direction: column;
+    gap: var(--control-gap);
+    min-width: 0;
+}
+
+.control-field--inline {
+    flex-direction: row;
+    align-items: center;
+}
+
+.control-label {
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.control-select,
+.control-input {
+    max-width: 100%;
+    padding: var(--control-padding);
+    line-height: var(--lh-ui);
+    /* The outer height a select and a text input share, for owners that pin one
+       so both line up side by side. */
+    --control-block-size: calc(1em * var(--lh-ui) + 2 * var(--control-padding) + 2px);
+    border: 1px solid var(--color-border-control);
+    border-radius: var(--control-radius);
+    background: var(--color-card-background);
+    color: var(--text-color);
+    transition:
+        background var(--motion-duration-fast) var(--motion-ease-standard),
+        border-color var(--motion-duration-fast) var(--motion-ease-standard),
+        box-shadow var(--motion-duration-fast) var(--motion-ease-standard),
+        color var(--motion-duration-fast) var(--motion-ease-standard);
+}
+
+.control-select {
+    cursor: pointer;
+}
+
+/* The browser's placeholder grey falls under 4.5:1 on the dark surface; the muted
+   ink passes in both schemes. */
+.control-input::placeholder {
+    color: var(--text-muted);
+    opacity: 1;
+}
+
+:is(.control-select, .control-input):hover:not(:disabled) {
+    border-color: var(--control-hover-border);
+}
+
+:is(.control-select, .control-input):focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 0;
+    border-color: var(--primary-color);
+}
+
+:is(.control-select, .control-input):disabled {
+    background: var(--color-background-muted);
+    color: var(--text-secondary);
+    cursor: default;
+}
+
+/* Panel select variant: a reserved arrow gutter and a muted hover border, quieter
+   than a header select. */
+.control-select--card {
+    padding-inline-end: 2rem;
+    --control-hover-border: var(--text-muted);
+}
+
+/* iOS Safari zooms the page into a focused field whose text is under 16px, and
+   a dense dashboard's root may sit under that. The notes editor takes the same
+   floor in notesController.css. */
+@media (pointer: coarse) {
+    .control-select,
+    .control-input {
+        font-size: max(var(--fs-base), 16px);
+    }
+}

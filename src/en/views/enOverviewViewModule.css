@@ -1,0 +1,40 @@
+/**
+ * EN Überblick view — the scatterplot centered between the two GER charts.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .en-overview-view {
+        display: grid;
+        /* At 1920px the GER bars keep room to stand under their group names. */
+        grid-template-columns: 1fr 1.8fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 'left center right';
+    }
+
+    .en-overview-view > .en-overview-left {
+        grid-area: left;
+    }
+
+    .en-overview-view > .en-overview-center {
+        grid-area: center;
+    }
+
+    .en-overview-view > .en-overview-right {
+        grid-area: right;
+    }
+
+    /* Stacked: the scatterplot, the primary chart, leads; the two GER bars
+       share the second band. Each band stops short of a full screen
+       (--stacked-card-height) so the next band's header peeks past the fold. */
+    @media (--stacked-layout) {
+        .en-overview-view {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: var(--stacked-card-height) var(--stacked-card-height);
+            grid-template-areas:
+                'center center'
+                'left right';
+        }
+    }
+}

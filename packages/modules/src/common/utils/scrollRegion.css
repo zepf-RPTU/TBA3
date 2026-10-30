@@ -1,0 +1,10 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* A scroll container in the tab order (scrollRegion.js). The ring is drawn
+       inward: outside the box it would be clipped by the card it scrolls in. */
+    .scroll-region:focus-visible {
+        outline: var(--focus-ring);
+        outline-offset: calc(-1 * var(--focus-ring-width));
+    }
+}

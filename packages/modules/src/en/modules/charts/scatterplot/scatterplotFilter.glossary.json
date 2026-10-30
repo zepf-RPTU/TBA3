@@ -1,0 +1,26 @@
+{
+    "title": "Schüler:innen suchen und finden",
+    "subtitle": "<p>Jeder Punkt im Koordinatensystem ist eine Person aus der Lerngruppe. Wählen Sie einen oder mehrere Punkte aus und bestätigen Sie die Auswahl, um die Ansicht auf diese Schüler:innen zu filtern.</p>",
+    "tutorial": "<p>Alle Schüler:innen sind anhand ihrer {{Stufen}} in beiden Domänen im Koordinatensystem abgetragen. Die gestrichelten Linien zeigen dabei die Grenzbereiche zu benachbarten Stufen. Diese Darstellung erlaubt Ihnen, einen Überblick über die Verteilung der Lerngruppe zu erhalten und gezielt Schüler:innen zu identifizieren, die sich vom Lerngruppentrend in negativer wie in positiver Weise absetzen. Welche Domäne auf welcher Achse liegt, zeigt die Achsenbeschriftung: Starke Schüler:innen finden Sie weiter <b>oben</b> bzw. weiter <b>rechts</b>.</p>",
+    "interface": {
+        "select-all": {
+            "label": "Alle auswählen"
+        },
+        "clear-selection": {
+            "label": "Auswahl aufheben"
+        },
+        "arm-selection": {
+            "label": "Auswahlmodus",
+            "tooltip": "Mit dem Finger ein Rechteck über mehrere Punkte ziehen. Solange der Auswahlmodus aktiv ist, scrollt die Geste nicht die Seite."
+        },
+        "confirm": {
+            "label": "Auswahl bestätigen"
+        },
+        "cancel": {
+            "label": "Abbrechen"
+        },
+        "selection-count": {
+            "label": "{{count}} ausgewählt"
+        }
+    }
+}

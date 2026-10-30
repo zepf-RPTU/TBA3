@@ -1,0 +1,11 @@
+{
+    "header": {
+        "title": "{{Fach}} VERA-8",
+        "subtitle": "Willkommen im Ergebnisrückmeldesystem."
+    },
+    "greeting": {
+        "title": "Willkommen zur Ergebnisrückmeldung von VERA-8",
+        "body": "<p>Hier erhalten Sie einen umfassenden Einblick in die Testergebnisse Ihrer Schüler:innen. Die Ergebnisse sind in mehreren Ansichten aufbereitet – je nachdem, was Sie (zuerst) wissen möchten. Wählen Sie eine der Kacheln unten oder wechseln Sie über die Seitenleiste am linken Rand in die gewünschte Ansicht. Welche Lerngruppe angezeigt wird, stellen Sie oben in der Kopfzeile ein.</p><p>Das Info-Symbol rechts oben startet in jeder Ergebnisansicht einen Rundgang, der die Inhalte Schritt für Schritt erklärt. Tabellen und Schaubilder können Sie einzeln herunterladen oder für den <b>Bericht</b> am Ende der Seitenleiste vormerken, dort anordnen und als PDF speichern; über das Notizen-Symbol in der Kopfzeile halten Sie eigene Beobachtungen fest.</p>",
+        "tutorial": "<p>Sie wissen nicht, wo Sie anfangen sollen? Gehen Sie die Ansichten in der Seitenleiste von oben nach unten durch: Zuerst erhalten Sie einen Gesamtüberblick, anschließend betrachten Sie die Ergebnisse der Lerngruppe, der einzelnen Aufgaben und einzelner Schüler:innen im Detail. Welche Ansichten für Sie besonders hilfreich sind, hängt von Ihren Fragestellungen ab.</p><p><em>Tipp: Viele Fachbegriffe sind hervorgehoben. Wenn Sie mit dem Mauszeiger darüberfahren oder sie antippen, erscheint eine kurze Erläuterung.</em></p>"
+    }
+}

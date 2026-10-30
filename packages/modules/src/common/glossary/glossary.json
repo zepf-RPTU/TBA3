@@ -1,0 +1,105 @@
+{
+    "general": {
+        "buttons": {
+            "element_texts": {
+                "table-selector": {
+                    "tooltip": "In der Tabelle dargestellte Spalten auswählen und ein- oder ausblenden"
+                },
+                "table-selector-show-all": {
+                    "label": "Alle Spalten einblenden"
+                },
+                "table-selector-other-columns": {
+                    "label": "Weitere Spalten"
+                },
+                "table-filter": {
+                    "tooltip": "Zeilen der Tabelle nach einzelnen Spalten filtern"
+                },
+                "table-filter-clear": {
+                    "label": "Alle Filter zurücksetzen"
+                },
+                "table-filter-all": {
+                    "label": "Alle"
+                },
+                "table-filter-none": {
+                    "label": "Keine"
+                },
+                "table-filter-selected": {
+                    "label": "{{ count }} ausgewählt"
+                },
+                "table-filter-active": {
+                    "label": "{{ label }} ({{ count }} aktiv)"
+                },
+                "comparison-toggle": {
+                    "label": "Vergleichswerte ein-/ausblenden"
+                },
+                "scatter-search": {
+                    "tooltip": "Schüler:innen im Streudiagramm visuell suchen und auswählen"
+                },
+                "table-reset": {
+                    "label": "Ansicht zurücksetzen"
+                },
+                "close": {
+                    "label": "Schließen"
+                },
+                "cancel": {
+                    "label": "Abbrechen"
+                },
+                "item-preview": {
+                    "label": "Aufgabe anzeigen"
+                },
+                "item-preview-text": {
+                    "label": "Text"
+                },
+                "item-preview-image": {
+                    "label": "Bild"
+                },
+                "item-preview-audio": {
+                    "label": "Audio"
+                },
+                "orientation-toggle": {
+                    "label": "Balken liegend"
+                },
+                "data-table-toggle": {
+                    "label": "Als Tabelle anzeigen"
+                },
+                "zoom": {
+                    "label": "Zoom"
+                },
+                "region-hint": {
+                    "label": "Hinweis zur Bearbeitung dieses Bereichs"
+                }
+            }
+        },
+        "messages": {
+            "no-data": "Für diese Auswahl liegen keine Daten vor. Ändern Sie die Auswahl in der Kopfzeile darüber.",
+            "no-data-filtered": "Keine Zeile passt zu den aktiven Filtern. Ändern Sie die Filter oder setzen Sie sie zurück.",
+            "row-count": "{{ shown }} von {{ total }} Zeilen",
+            "chart-error": "Die Grafik konnte nicht dargestellt werden. Laden Sie die Seite neu.",
+            "no-data-short": "Keine Daten",
+            "prototype-unfilled": "Im Prototyp nicht befüllt.",
+            "no-students": "Für diese Lerngruppe liegen keine Ergebnisse vor.",
+            "all-hidden": "Alle Datenreihen sind ausgeblendet. Blenden Sie über die Legende mindestens eine wieder ein.",
+            "series-hidden": "ausgeblendet",
+            "no-participation": "Keine Teilnahme",
+            "no-traits": "Keine Merkmale",
+            "item-preview-placeholder": "Die Inhalte dieser Aufgabe könnten künftig über den Aufgabenbrowser geladen werden. Dieser Prototyp zeigt deswegen nur Platzhalter.",
+            "item-preview-text-pending": "Aufgabentext folgt.",
+            "item-preview-image-pending": "Bild folgt.",
+            "item-preview-audio-pending": "Audio folgt."
+        },
+        "result-rows": {
+            "title": "Leistung",
+            "rate": "Lösungsquote",
+            "correct": "Richtig",
+            "incorrect": "Falsch",
+            "not-attempted": "Unbearbeitet",
+            "total-students": "Gesamt Schüler:innen",
+            "total-responses": "Gesamt Antworten",
+            "pilot": "Pilotierung"
+        },
+        "student-groups": {
+            "toggle-label": "Angezeigte Gruppe",
+            "student-link": "{{ name }} – zur Ansicht dieser Person"
+        }
+    }
+}

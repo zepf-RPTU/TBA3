@@ -1,0 +1,1918 @@
+[
+    {
+        "id": "3c-mathe",
+        "type": "group",
+        "name": "3c",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "properties": [
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>V (Optimalstandard)</li><li>IV (Regelstandard plus)</li><li>III (Regelstandard)</li><li>II (Mindeststandard)</li><li>I (Unter Mindeststandard)</li></ul>"
+            },
+            {
+                "key": "standardBand:1",
+                "value": "low"
+            },
+            {
+                "key": "standardBand:3",
+                "value": "medium"
+            },
+            {
+                "key": "standardBand:5",
+                "value": "high"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "2"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "3"
+            },
+            {
+                "key": "itemLevelSpan:4",
+                "value": "4"
+            },
+            {
+                "key": "itemLevelSpan:5",
+                "value": "5"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": "1",
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>I</b> bedeutet dabei <b>Unter Mindeststandard</b> und beschreibt das Vorliegen <b>technischer Grundlagen</b> (Routineprozeduren auf Grundlage einfachen begrifflichen Wissens).</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.4815,
+                    "frequency": 13
+                }
+            },
+            {
+                "id": "2",
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>II</b> bedeutet dabei <b>Mindeststandard</b> und beschreibt <b>einfache Anwendungen von Grundlagenwissen</b> (Routineprozeduren in einem klar strukturierten Kontext).</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2593,
+                    "frequency": 7
+                }
+            },
+            {
+                "id": "3",
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>III</b> bedeutet dabei <b>Regelstandard</b> und beschreibt <b>Erkennen und Nutzen von Zusammenhängen in einem vertrauten (mathematischen und sachbezogenen) Kontext</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.1852,
+                    "frequency": 5
+                }
+            },
+            {
+                "id": "4",
+                "name": "Regelstandard plus",
+                "nameShort": "IV",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>IV</b> bedeutet dabei <b>Regelstandard plus</b> und beschreibt die <b>Modellierung komplexer Probleme unter selbstständiger Entwicklung geeigneter Strategien</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.037,
+                    "frequency": 1
+                }
+            },
+            {
+                "id": "5",
+                "name": "Optimalstandard",
+                "nameShort": "V",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>V</b> bedeutet dabei <b>Optimalstandard</b> und beschreibt <b>sicheres und flexibles Anwenden von begrifflichem Wissen und Prozeduren im curricularen Umfang</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.037,
+                    "frequency": 1
+                }
+            }
+        ],
+        "covariates": [
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ]
+    },
+    {
+        "id": "school",
+        "type": "school",
+        "name": "Schulschnitt",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "properties": [
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>V (Optimalstandard)</li><li>IV (Regelstandard plus)</li><li>III (Regelstandard)</li><li>II (Mindeststandard)</li><li>I (Unter Mindeststandard)</li></ul>"
+            },
+            {
+                "key": "standardBand:1",
+                "value": "low"
+            },
+            {
+                "key": "standardBand:3",
+                "value": "medium"
+            },
+            {
+                "key": "standardBand:5",
+                "value": "high"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "2"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "3"
+            },
+            {
+                "key": "itemLevelSpan:4",
+                "value": "4"
+            },
+            {
+                "key": "itemLevelSpan:5",
+                "value": "5"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": "1",
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>I</b> bedeutet dabei <b>Unter Mindeststandard</b> und beschreibt das Vorliegen <b>technischer Grundlagen</b> (Routineprozeduren auf Grundlage einfachen begrifflichen Wissens).</p>",
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.4133,
+                    "frequency": 31
+                }
+            },
+            {
+                "id": "2",
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>II</b> bedeutet dabei <b>Mindeststandard</b> und beschreibt <b>einfache Anwendungen von Grundlagenwissen</b> (Routineprozeduren in einem klar strukturierten Kontext).</p>",
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.2,
+                    "frequency": 15
+                }
+            },
+            {
+                "id": "3",
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>III</b> bedeutet dabei <b>Regelstandard</b> und beschreibt <b>Erkennen und Nutzen von Zusammenhängen in einem vertrauten (mathematischen und sachbezogenen) Kontext</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.2,
+                    "frequency": 15
+                }
+            },
+            {
+                "id": "4",
+                "name": "Regelstandard plus",
+                "nameShort": "IV",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>IV</b> bedeutet dabei <b>Regelstandard plus</b> und beschreibt die <b>Modellierung komplexer Probleme unter selbstständiger Entwicklung geeigneter Strategien</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.0933,
+                    "frequency": 7
+                }
+            },
+            {
+                "id": "5",
+                "name": "Optimalstandard",
+                "nameShort": "V",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>V</b> bedeutet dabei <b>Optimalstandard</b> und beschreibt <b>sicheres und flexibles Anwenden von begrifflichem Wissen und Prozeduren im curricularen Umfang</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 75,
+                    "mean": 0.0933,
+                    "frequency": 7
+                }
+            }
+        ]
+    },
+    {
+        "id": "state",
+        "type": "state",
+        "name": "Landesschnitt",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "properties": [
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>V (Optimalstandard)</li><li>IV (Regelstandard plus)</li><li>III (Regelstandard)</li><li>II (Mindeststandard)</li><li>I (Unter Mindeststandard)</li></ul>"
+            },
+            {
+                "key": "standardBand:1",
+                "value": "low"
+            },
+            {
+                "key": "standardBand:3",
+                "value": "medium"
+            },
+            {
+                "key": "standardBand:5",
+                "value": "high"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "2"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "3"
+            },
+            {
+                "key": "itemLevelSpan:4",
+                "value": "4"
+            },
+            {
+                "key": "itemLevelSpan:5",
+                "value": "5"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": "1",
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>I</b> bedeutet dabei <b>Unter Mindeststandard</b> und beschreibt das Vorliegen <b>technischer Grundlagen</b> (Routineprozeduren auf Grundlage einfachen begrifflichen Wissens).</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.3,
+                    "frequency": 135
+                }
+            },
+            {
+                "id": "2",
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>II</b> bedeutet dabei <b>Mindeststandard</b> und beschreibt <b>einfache Anwendungen von Grundlagenwissen</b> (Routineprozeduren in einem klar strukturierten Kontext).</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.22,
+                    "frequency": 99
+                }
+            },
+            {
+                "id": "3",
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>III</b> bedeutet dabei <b>Regelstandard</b> und beschreibt <b>Erkennen und Nutzen von Zusammenhängen in einem vertrauten (mathematischen und sachbezogenen) Kontext</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.24,
+                    "frequency": 108
+                }
+            },
+            {
+                "id": "4",
+                "name": "Regelstandard plus",
+                "nameShort": "IV",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>IV</b> bedeutet dabei <b>Regelstandard plus</b> und beschreibt die <b>Modellierung komplexer Probleme unter selbstständiger Entwicklung geeigneter Strategien</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.14,
+                    "frequency": 63
+                }
+            },
+            {
+                "id": "5",
+                "name": "Optimalstandard",
+                "nameShort": "V",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. <b>V</b> bedeutet dabei <b>Optimalstandard</b> und beschreibt <b>sicheres und flexibles Anwenden von begrifflichem Wissen und Prozeduren im curricularen Umfang</b>.</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.1,
+                    "frequency": 45
+                }
+            }
+        ]
+    },
+    {
+        "id": "92bcef86",
+        "type": "student",
+        "name": "gross baum.85",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            },
+            {
+                "type": "trait",
+                "label": "nicht-dominant deutsch",
+                "value": "nd"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "gross"
+            },
+            {
+                "key": "lastName",
+                "value": "baum.85"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "2efb14f0",
+        "type": "student",
+        "name": "dunkel pflaume.35",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "dunkel"
+            },
+            {
+                "key": "lastName",
+                "value": "pflaume.35"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:5",
+                "value": "5"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Optimalstandard",
+                "nameShort": "V",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "5"
+            }
+        ]
+    },
+    {
+        "id": "c036347b",
+        "type": "student",
+        "name": "leise wald.96",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "leise"
+            },
+            {
+                "key": "lastName",
+                "value": "wald.96"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "3"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "id": "a4df0239",
+        "type": "student",
+        "name": "laut berg.89",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "laut"
+            },
+            {
+                "key": "lastName",
+                "value": "berg.89"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "8d340339",
+        "type": "student",
+        "name": "schnell wiese.13",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "schnell"
+            },
+            {
+                "key": "lastName",
+                "value": "wiese.13"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "1f118998",
+        "type": "student",
+        "name": "warm sonne.84",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "warm"
+            },
+            {
+                "key": "lastName",
+                "value": "sonne.84"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "3"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "id": "40d87221",
+        "type": "student",
+        "name": "hoch wald.84",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "hoch"
+            },
+            {
+                "key": "lastName",
+                "value": "wald.84"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "92f3bbff",
+        "type": "student",
+        "name": "rund baum.44",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "rund"
+            },
+            {
+                "key": "lastName",
+                "value": "baum.44"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "3"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "id": "e813c9b1",
+        "type": "student",
+        "name": "schmal baum.53",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "schmal"
+            },
+            {
+                "key": "lastName",
+                "value": "baum.53"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "1b6a8a9b",
+        "type": "student",
+        "name": "hell traube.70",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            },
+            {
+                "type": "trait",
+                "label": "Klassenwiederholung",
+                "value": "kw"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "hell"
+            },
+            {
+                "key": "lastName",
+                "value": "traube.70"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "e0710448",
+        "type": "student",
+        "name": "jung wiese.62",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "jung"
+            },
+            {
+                "key": "lastName",
+                "value": "wiese.62"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "8edeb5e2",
+        "type": "student",
+        "name": "rund stern.68",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "rund"
+            },
+            {
+                "key": "lastName",
+                "value": "stern.68"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "027a34a5",
+        "type": "student",
+        "name": "alt pflaume.62",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "alt"
+            },
+            {
+                "key": "lastName",
+                "value": "pflaume.62"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "3096181b",
+        "type": "student",
+        "name": "klein himbeere.24",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "klein"
+            },
+            {
+                "key": "lastName",
+                "value": "himbeere.24"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "3"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "id": "246aa1f5",
+        "type": "student",
+        "name": "gross apfel.42",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "diverse"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "gross"
+            },
+            {
+                "key": "lastName",
+                "value": "apfel.42"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "3"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Regelstandard",
+                "nameShort": "III",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "id": "1864babe",
+        "type": "student",
+        "name": "leise wolke.51",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "leise"
+            },
+            {
+                "key": "lastName",
+                "value": "wolke.51"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "43e3ba7f",
+        "type": "student",
+        "name": "schnell wolke.43",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "schnell"
+            },
+            {
+                "key": "lastName",
+                "value": "wolke.43"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "a65aa66b",
+        "type": "student",
+        "name": "kalt orange.75",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "orange.75"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "a93000da",
+        "type": "student",
+        "name": "hell kirsche.79",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "hell"
+            },
+            {
+                "key": "lastName",
+                "value": "kirsche.79"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "13a1d341",
+        "type": "student",
+        "name": "hoch blume.31",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "hoch"
+            },
+            {
+                "key": "lastName",
+                "value": "blume.31"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "d925c15a",
+        "type": "student",
+        "name": "gross himbeere.74",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "gross"
+            },
+            {
+                "key": "lastName",
+                "value": "himbeere.74"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:4",
+                "value": "4"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Regelstandard plus",
+                "nameShort": "IV",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "4"
+            }
+        ]
+    },
+    {
+        "id": "1eb0a130",
+        "type": "student",
+        "name": "kalt sonne.42",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "sonne.42"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "84236f25",
+        "type": "student",
+        "name": "jung birne.23",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "jung"
+            },
+            {
+                "key": "lastName",
+                "value": "birne.23"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "97b1ed5f",
+        "type": "student",
+        "name": "langsam stern.74",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "langsam"
+            },
+            {
+                "key": "lastName",
+                "value": "stern.74"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "7ec68b46",
+        "type": "student",
+        "name": "gross zitrone.55",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "gross"
+            },
+            {
+                "key": "lastName",
+                "value": "zitrone.55"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "27de6a25",
+        "type": "student",
+        "name": "laut mond.75",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "laut"
+            },
+            {
+                "key": "lastName",
+                "value": "mond.75"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Unter Mindeststandard",
+                "nameShort": "I",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "2d5932d3",
+        "type": "student",
+        "name": "tief zitrone.96",
+        "subject": {
+            "name": "Mathematik"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "3c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "3c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "tief"
+            },
+            {
+                "key": "lastName",
+                "value": "zitrone.96"
+            },
+            {
+                "key": "booklet",
+                "value": "THB"
+            },
+            {
+                "key": "equivalenceTable:THB",
+                "value": "maxScore=52;itemCount=52;I=0-19;II=20-27;III=28-34;IV=35-40;V=41-52"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "name": "Mindeststandard",
+                "nameShort": "II",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    }
+]

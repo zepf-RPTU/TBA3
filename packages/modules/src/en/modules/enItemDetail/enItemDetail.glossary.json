@@ -1,0 +1,21 @@
+{
+    "messages": {
+        "none-solved": "Keine Schüler:innen haben diese Teilaufgabe richtig gelöst.",
+        "all-solved": "Alle Schüler:innen haben diese Teilaufgabe richtig gelöst.",
+        "no-student-data": "Für diese Teilaufgabe liegen keine Ergebnisse der Schüler:innen vor.",
+        "solved-heading": "Schüler:innen, die diese Teilaufgabe gelöst haben",
+        "unsolved-heading": "Schüler:innen, die diese Teilaufgabe nicht gelöst haben",
+        "not-attempted-flag": "nicht bearbeitet"
+    },
+    "interface": {
+        "solved-group": {
+            "label": "gelöst"
+        },
+        "unsolved-group": {
+            "label": "nicht gelöst"
+        }
+    },
+    "detail-tabs": {
+        "label": "Aufgaben"
+    }
+}

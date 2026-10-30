@@ -1,0 +1,26 @@
+{
+  "name": "@tba3/module-base",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Base classes for titled content modules as light-DOM Lit custom elements: lifecycle, content pass, visibility, resource cleanup and a card shell. Three runtime dependencies: Lit, whose ReactiveElement is the module base and whose templates render the modules, Floating UI (@floating-ui/dom), which keeps an open menu or popup at its anchor (`followAnchor`), and @preact/signals-core, the signals module state is kept in.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": [
+    "*.css"
+  ],
+  "exports": {
+    ".": "./index.js",
+    "./glossary": "./src/glossary/glossaryText.js",
+    "./styles/*": "./src/styles/*"
+  },
+  "dependencies": {
+    "@floating-ui/dom": "^1.8.0",
+    "@preact/signals-core": "^1.14.4",
+    "lit": "^3.3.3"
+  },
+  "files": [
+    "index.js",
+    "src",
+    "README.md"
+  ]
+}

@@ -1,0 +1,51 @@
+#!/bin/sh
+#
+# Pre-push gate. There is no CI on the GitLab remote, so this hook is the gate:
+#
+#   - to the public repository (github.com/zepf-RPTU/TBA3): refused. It receives
+#     squashed snapshots from the private release tooling, which sets TBA3_PUBLISH=1 for
+#     its own push; a direct push would publish the development history.
+#   - to `main` anywhere else: `npm run check` and `npm run test:e2e`. The e2e suite
+#     needs Google Chrome and takes minutes, which `main` is worth.
+#   - anything else: `npm run check`.
+#
+# Lives in the tree rather than in .git/hooks because .git/hooks is not version
+# controlled. Activate once per clone:
+#
+#     git config core.hooksPath tools/hooks
+#
+# Bypass in an emergency with `git push --no-verify`, never toward the public
+# repository.
+
+set -e
+
+remote_url=$2
+zero=0000000000000000000000000000000000000000
+
+# GitHub owner and repository names are case-insensitive, so the URL is too.
+case "$(printf '%s' "$remote_url" | tr '[:upper:]' '[:lower:]')" in
+    *zepf-rptu/tba3*)
+        if [ "${TBA3_PUBLISH:-}" = 1 ]; then
+            # The snapshot is main's tree, which passed the main gate when it was pushed.
+            exit 0
+        fi
+        echo "pre-push: $remote_url is published from the release tooling, not pushed to directly" >&2
+        exit 1
+        ;;
+esac
+
+pushes_main=false
+# One line per pushed ref: <local ref> <local sha> <remote ref> <remote sha>.
+while read -r _local_ref local_sha remote_ref _remote_sha; do
+    [ "$local_sha" = "$zero" ] && continue # a deletion pushes nothing to check
+    [ "$remote_ref" = "refs/heads/main" ] && pushes_main=true
+done
+
+echo "pre-push: running 'npm run check'..."
+npm run check
+
+if $pushes_main; then
+    echo "pre-push: pushing main — running 'npm run test:e2e'..."
+    # `check` has just built dist/ from this tree; the e2e setup serves it as it is.
+    TBA3_E2E_REUSE_DIST=1 npm run test:e2e
+fi

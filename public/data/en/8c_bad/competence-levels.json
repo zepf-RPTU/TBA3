@@ -1,0 +1,3981 @@
+[
+    {
+        "id": "8c-englisch",
+        "type": "group",
+        "name": "8c",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "properties": [
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            },
+            {
+                "key": "itemLevelSpan:4",
+                "value": "7-8"
+            },
+            {
+                "key": "itemLevelSpan:5",
+                "value": "9-10"
+            },
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>C1</li><li>B2</li><li>B1</li><li>A2</li><li>A1</li></ul>"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": "1",
+                "nameShort": "A1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen.</li><li>Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf diese Fragen Antworten geben.</li><li>Kann sich auf einfache Art verständigen, wenn die Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen</li></ul><p>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.4074,
+                    "frequency": 11
+                }
+            },
+            {
+                "id": "2",
+                "nameShort": "A2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung)</li><li>Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht</li><li>Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben</li></ul><p>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2593,
+                    "frequency": 7
+                }
+            },
+            {
+                "id": "3",
+                "nameShort": "B1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann die Hauptpunkte verstehen, wenn klare Standardsprache gesprochen wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht</li><li>Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet.</li><li>Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern</li><li>Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.</li></ul><p>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.1852,
+                    "frequency": 5
+                }
+            },
+            {
+                "id": "4",
+                "nameShort": "B2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Fachgebiet auch Fachdiskussionen.</li><li>Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten möglich ist.</li><li>Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben</li></ul><p>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.1111,
+                    "frequency": 3
+                }
+            },
+            {
+                "id": "5",
+                "nameShort": "C1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutung erfassen.</li><li>Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen</li><li>Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen.</li><li>Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zu Textverknüpfung angemessen verwenden</li></ul><p>(kompetente Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.037,
+                    "frequency": 1
+                }
+            }
+        ],
+        "covariates": [
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ]
+    },
+    {
+        "id": "8c-englisch",
+        "type": "group",
+        "name": "8c",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "properties": [
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=36;itemCount=36;A1=0-8;A2=9-16;B1=17-24;B2=25-31;C1=32-36"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            },
+            {
+                "key": "itemLevelSpan:4",
+                "value": "7-8"
+            },
+            {
+                "key": "itemLevelSpan:5",
+                "value": "9-10"
+            },
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>C1</li><li>B2</li><li>B1</li><li>A2</li><li>A1</li></ul>"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": "1",
+                "nameShort": "A1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen.</li><li>Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf diese Fragen Antworten geben.</li><li>Kann sich auf einfache Art verständigen, wenn die Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen</li></ul><p>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.5185,
+                    "frequency": 14
+                }
+            },
+            {
+                "id": "2",
+                "nameShort": "A2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung)</li><li>Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht</li><li>Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben</li></ul><p>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.2222,
+                    "frequency": 6
+                }
+            },
+            {
+                "id": "3",
+                "nameShort": "B1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann die Hauptpunkte verstehen, wenn klare Standardsprache gesprochen wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht</li><li>Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet.</li><li>Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern</li><li>Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.</li></ul><p>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.1481,
+                    "frequency": 4
+                }
+            },
+            {
+                "id": "4",
+                "nameShort": "B2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Fachgebiet auch Fachdiskussionen.</li><li>Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten möglich ist.</li><li>Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben</li></ul><p>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.037,
+                    "frequency": 1
+                }
+            },
+            {
+                "id": "5",
+                "nameShort": "C1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutung erfassen.</li><li>Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen</li><li>Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen.</li><li>Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zu Textverknüpfung angemessen verwenden</li></ul><p>(kompetente Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 27,
+                    "mean": 0.0741,
+                    "frequency": 2
+                }
+            }
+        ]
+    },
+    {
+        "id": "school",
+        "type": "school",
+        "name": "Schulschnitt",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "properties": [
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            },
+            {
+                "key": "itemLevelSpan:4",
+                "value": "7-8"
+            },
+            {
+                "key": "itemLevelSpan:5",
+                "value": "9-10"
+            },
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>C1</li><li>B2</li><li>B1</li><li>A2</li><li>A1</li></ul>"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": "1",
+                "nameShort": "A1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen.</li><li>Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf diese Fragen Antworten geben.</li><li>Kann sich auf einfache Art verständigen, wenn die Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen</li></ul><p>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 76,
+                    "mean": 0.1974,
+                    "frequency": 15
+                }
+            },
+            {
+                "id": "2",
+                "nameShort": "A2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung)</li><li>Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht</li><li>Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben</li></ul><p>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 76,
+                    "mean": 0.3947,
+                    "frequency": 30
+                }
+            },
+            {
+                "id": "3",
+                "nameShort": "B1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann die Hauptpunkte verstehen, wenn klare Standardsprache gesprochen wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht</li><li>Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet.</li><li>Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern</li><li>Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.</li></ul><p>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 76,
+                    "mean": 0.25,
+                    "frequency": 19
+                }
+            },
+            {
+                "id": "4",
+                "nameShort": "B2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Fachgebiet auch Fachdiskussionen.</li><li>Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten möglich ist.</li><li>Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben</li></ul><p>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 76,
+                    "mean": 0.1053,
+                    "frequency": 8
+                }
+            },
+            {
+                "id": "5",
+                "nameShort": "C1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutung erfassen.</li><li>Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen</li><li>Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen.</li><li>Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zu Textverknüpfung angemessen verwenden</li></ul><p>(kompetente Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 76,
+                    "mean": 0.0526,
+                    "frequency": 4
+                }
+            }
+        ]
+    },
+    {
+        "id": "school",
+        "type": "school",
+        "name": "Schulschnitt",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "properties": [
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            },
+            {
+                "key": "itemLevelSpan:4",
+                "value": "7-8"
+            },
+            {
+                "key": "itemLevelSpan:5",
+                "value": "9-10"
+            },
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>C1</li><li>B2</li><li>B1</li><li>A2</li><li>A1</li></ul>"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": "1",
+                "nameShort": "A1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen.</li><li>Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf diese Fragen Antworten geben.</li><li>Kann sich auf einfache Art verständigen, wenn die Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen</li></ul><p>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 74,
+                    "mean": 0.2162,
+                    "frequency": 16
+                }
+            },
+            {
+                "id": "2",
+                "nameShort": "A2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung)</li><li>Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht</li><li>Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben</li></ul><p>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 74,
+                    "mean": 0.2838,
+                    "frequency": 21
+                }
+            },
+            {
+                "id": "3",
+                "nameShort": "B1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann die Hauptpunkte verstehen, wenn klare Standardsprache gesprochen wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht</li><li>Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet.</li><li>Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern</li><li>Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.</li></ul><p>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 74,
+                    "mean": 0.3649,
+                    "frequency": 27
+                }
+            },
+            {
+                "id": "4",
+                "nameShort": "B2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Fachgebiet auch Fachdiskussionen.</li><li>Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten möglich ist.</li><li>Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben</li></ul><p>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 74,
+                    "mean": 0.0946,
+                    "frequency": 7
+                }
+            },
+            {
+                "id": "5",
+                "nameShort": "C1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutung erfassen.</li><li>Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen</li><li>Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen.</li><li>Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zu Textverknüpfung angemessen verwenden</li></ul><p>(kompetente Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 74,
+                    "mean": 0.0405,
+                    "frequency": 3
+                }
+            }
+        ]
+    },
+    {
+        "id": "state",
+        "type": "state",
+        "name": "Landesschnitt",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "properties": [
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            },
+            {
+                "key": "itemLevelSpan:4",
+                "value": "7-8"
+            },
+            {
+                "key": "itemLevelSpan:5",
+                "value": "9-10"
+            },
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>C1</li><li>B2</li><li>B1</li><li>A2</li><li>A1</li></ul>"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": "1",
+                "nameShort": "A1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen.</li><li>Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf diese Fragen Antworten geben.</li><li>Kann sich auf einfache Art verständigen, wenn die Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen</li></ul><p>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.28,
+                    "frequency": 126
+                }
+            },
+            {
+                "id": "2",
+                "nameShort": "A2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung)</li><li>Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht</li><li>Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben</li></ul><p>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.2511,
+                    "frequency": 113
+                }
+            },
+            {
+                "id": "3",
+                "nameShort": "B1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann die Hauptpunkte verstehen, wenn klare Standardsprache gesprochen wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht</li><li>Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet.</li><li>Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern</li><li>Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.</li></ul><p>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.3489,
+                    "frequency": 157
+                }
+            },
+            {
+                "id": "4",
+                "nameShort": "B2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Fachgebiet auch Fachdiskussionen.</li><li>Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten möglich ist.</li><li>Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben</li></ul><p>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.0911,
+                    "frequency": 41
+                }
+            },
+            {
+                "id": "5",
+                "nameShort": "C1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutung erfassen.</li><li>Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen</li><li>Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen.</li><li>Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zu Textverknüpfung angemessen verwenden</li></ul><p>(kompetente Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 450,
+                    "mean": 0.0289,
+                    "frequency": 13
+                }
+            }
+        ]
+    },
+    {
+        "id": "state",
+        "type": "state",
+        "name": "Landesschnitt",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "properties": [
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            },
+            {
+                "key": "itemLevelSpan:4",
+                "value": "7-8"
+            },
+            {
+                "key": "itemLevelSpan:5",
+                "value": "9-10"
+            },
+            {
+                "key": "competenceScaleDescription",
+                "value": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Dabei zählt ausschließlich die Anzahl der gelösten (Teil-)aufgaben; welche Aufgaben im Detail gelöst wurden, spielt für die Definition zunächst keine Rolle.</p><p>Jede Stufe beschreibt einen objektiven Standard mit Bezug zum Bildungsziel der Jahrgangsstufe. Diese Skala umfasst folgende Stufen:</p><ul><li>C1</li><li>B2</li><li>B1</li><li>A2</li><li>A1</li></ul>"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "id": "1",
+                "nameShort": "A1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann vertraute, alltägliche Ausdrücke und ganz einfache Sätze verstehen und verwenden, die auf die Befriedigung konkreter Bedürfnisse zielen.</li><li>Kann sich und andere vorstellen und anderen Leuten Fragen zu ihrer Person stellen – z. B. wo sie wohnen, was für Leute sie kennen oder was für Dinge sie haben – und kann auf diese Fragen Antworten geben.</li><li>Kann sich auf einfache Art verständigen, wenn die Gesprächspartner langsam und deutlich sprechen und bereit sind zu helfen</li></ul><p>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 451,
+                    "mean": 0.1996,
+                    "frequency": 90
+                }
+            },
+            {
+                "id": "2",
+                "nameShort": "A2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann Sätze und häufig gebrauchte Ausdrücke verstehen, die mit Bereichen von ganz unmittelbarer Bedeutung zusammenhängen (z. B. Informationen zur Person und zur Familie, Einkaufen, Arbeit, nähere Umgebung)</li><li>Kann sich in einfachen, routinemäßigen Situationen verständigen, in denen es um einen einfachen und direkten Austausch von Informationen über vertraute und geläufige Dinge geht</li><li>Kann mit einfachen Mitteln die eigene Herkunft und Ausbildung, die direkte Umgebung und Dinge im Zusammenhang mit unmittelbaren Bedürfnissen beschreiben</li></ul><p>(elementare Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 451,
+                    "mean": 0.3993,
+                    "frequency": 180
+                }
+            },
+            {
+                "id": "3",
+                "nameShort": "B1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann die Hauptpunkte verstehen, wenn klare Standardsprache gesprochen wird und wenn es um vertraute Dinge aus Arbeit, Schule, Freizeit usw. geht</li><li>Kann die meisten Situationen bewältigen, denen man auf Reisen im Sprachgebiet begegnet.</li><li>Kann sich einfach und zusammenhängend über vertraute Themen und persönliche Interessengebiete äußern</li><li>Kann über Erfahrungen und Ereignisse berichten, Träume, Hoffnungen und Ziele beschreiben und zu Plänen und Ansichten kurze Begründungen oder Erklärungen geben.</li></ul><p>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 451,
+                    "mean": 0.2506,
+                    "frequency": 113
+                }
+            },
+            {
+                "id": "4",
+                "nameShort": "B2",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann die Hauptinhalte komplexer Texte zu konkreten und abstrakten Themen verstehen; versteht im eigenen Fachgebiet auch Fachdiskussionen.</li><li>Kann sich so spontan und fließend verständigen, dass ein normales Gespräch mit Muttersprachlern ohne größere Anstrengung auf beiden Seiten möglich ist.</li><li>Kann sich zu einem breiten Themenspektrum klar und detailliert ausdrücken, einen Standpunkt zu einer aktuellen Frage erläutern und die Vor- und Nachteile verschiedener Möglichkeiten angeben</li></ul><p>(selbstständige Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 451,
+                    "mean": 0.1109,
+                    "frequency": 50
+                }
+            },
+            {
+                "id": "5",
+                "nameShort": "C1",
+                "description": "<p>Das Kompetenzstufenmodell definiert ausgehend von der Anzahl richtig gelöster Teilaufgaben eine Kompetenzstufe. Diese entspricht dem Sprachniveau des Gemeinsamen Europäischen Referenzrahmens (GER).</p><p>Für diese SuS gilt gemäß Globalskala des GER:</p><ul><li>Kann breites Spektrum anspruchsvoller, längerer Texte verstehen und auch implizite Bedeutung erfassen.</li><li>Kann sich spontan und fließend ausdrücken, ohne öfter deutlich erkennbar nach Worten suchen zu müssen</li><li>Kann die Sprache im gesellschaftlichen und beruflichen Leben oder in Ausbildung und Studium wirksam und flexibel gebrauchen.</li><li>Kann sich klar, strukturiert und ausführlich zu komplexen Sachverhalten äußern und dabei verschiedene Mittel zu Textverknüpfung angemessen verwenden</li></ul><p>(kompetente Sprachverwendung)</p>",
+                "descriptiveStatistics": {
+                    "total": 451,
+                    "mean": 0.0399,
+                    "frequency": 18
+                }
+            }
+        ]
+    },
+    {
+        "id": "dcac6f05",
+        "type": "student",
+        "name": "neu zitrone.98",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "neu"
+            },
+            {
+                "key": "lastName",
+                "value": "zitrone.98"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "a0f121f3",
+        "type": "student",
+        "name": "dunkel mond.99",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "nicht-dominant deutsch",
+                "value": "nd"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "dunkel"
+            },
+            {
+                "key": "lastName",
+                "value": "mond.99"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "ddd50fa4",
+        "type": "student",
+        "name": "dunkel pflaume.96",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "Förderbedarf",
+                "value": "f"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "dunkel"
+            },
+            {
+                "key": "lastName",
+                "value": "pflaume.96"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "93a1d010",
+        "type": "student",
+        "name": "dunkel wolke.24",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "Förderbedarf",
+                "value": "f"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "dunkel"
+            },
+            {
+                "key": "lastName",
+                "value": "wolke.24"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "71ba1c6b",
+        "type": "student",
+        "name": "jung pflaume.67",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "jung"
+            },
+            {
+                "key": "lastName",
+                "value": "pflaume.67"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "32920573",
+        "type": "student",
+        "name": "laut wolke.93",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "laut"
+            },
+            {
+                "key": "lastName",
+                "value": "wolke.93"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "0f3189aa",
+        "type": "student",
+        "name": "alt apfel.79",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "Teilleistungsschwäche Mathematik",
+                "value": "tm"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "alt"
+            },
+            {
+                "key": "lastName",
+                "value": "apfel.79"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "7a3981e2",
+        "type": "student",
+        "name": "nah apfel.14",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "Teilleistungsstörung Deutsch",
+                "value": "td"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "nah"
+            },
+            {
+                "key": "lastName",
+                "value": "apfel.14"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:4",
+                "value": "7-8"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "B2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "4"
+            }
+        ]
+    },
+    {
+        "id": "e80d33e2",
+        "type": "student",
+        "name": "klein wolke.74",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "klein"
+            },
+            {
+                "key": "lastName",
+                "value": "wolke.74"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "8197c9f8",
+        "type": "student",
+        "name": "kalt himbeere.53",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "himbeere.53"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "5c908e1e",
+        "type": "student",
+        "name": "warm himbeere.36",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "nicht-dominant deutsch",
+                "value": "nd"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "warm"
+            },
+            {
+                "key": "lastName",
+                "value": "himbeere.36"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "5522f7cc",
+        "type": "student",
+        "name": "hoch pflaume.69",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "hoch"
+            },
+            {
+                "key": "lastName",
+                "value": "pflaume.69"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "eb0f4628",
+        "type": "student",
+        "name": "dunkel sonne.94",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "dunkel"
+            },
+            {
+                "key": "lastName",
+                "value": "sonne.94"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "f30e49bf",
+        "type": "student",
+        "name": "klein berg.82",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "Klassenwiederholung",
+                "value": "kw"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "klein"
+            },
+            {
+                "key": "lastName",
+                "value": "berg.82"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "b1948185",
+        "type": "student",
+        "name": "jung mond.46",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "jung"
+            },
+            {
+                "key": "lastName",
+                "value": "mond.46"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "B1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "id": "3420f7fc",
+        "type": "student",
+        "name": "tief blume.53",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "tief"
+            },
+            {
+                "key": "lastName",
+                "value": "blume.53"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "bb34caac",
+        "type": "student",
+        "name": "kalt apfel.57",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "apfel.57"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "B1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "id": "bc9ffb6c",
+        "type": "student",
+        "name": "tief zitrone.11",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "tief"
+            },
+            {
+                "key": "lastName",
+                "value": "zitrone.11"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "B1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "id": "d0752929",
+        "type": "student",
+        "name": "nah apfel.98",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "nah"
+            },
+            {
+                "key": "lastName",
+                "value": "apfel.98"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "5b9b43c1",
+        "type": "student",
+        "name": "breit orange.14",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "breit"
+            },
+            {
+                "key": "lastName",
+                "value": "orange.14"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:5",
+                "value": "9-10"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "C1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "5"
+            }
+        ]
+    },
+    {
+        "id": "2d4d3794",
+        "type": "student",
+        "name": "breit erdbeere.15",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "breit"
+            },
+            {
+                "key": "lastName",
+                "value": "erdbeere.15"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "bcf96593",
+        "type": "student",
+        "name": "dunkel baum.58",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "ungenügende Sprachkenntnisse",
+                "value": "s"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "dunkel"
+            },
+            {
+                "key": "lastName",
+                "value": "baum.58"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:4",
+                "value": "7-8"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "B2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "4"
+            }
+        ]
+    },
+    {
+        "id": "ae9a15bb",
+        "type": "student",
+        "name": "rund baum.30",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "rund"
+            },
+            {
+                "key": "lastName",
+                "value": "baum.30"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:4",
+                "value": "7-8"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "B2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "4"
+            }
+        ]
+    },
+    {
+        "id": "54212a3c",
+        "type": "student",
+        "name": "breit traube.39",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "ungenügende Sprachkenntnisse",
+                "value": "s"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "breit"
+            },
+            {
+                "key": "lastName",
+                "value": "traube.39"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "a2e466b7",
+        "type": "student",
+        "name": "dunkel traube.56",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "dunkel"
+            },
+            {
+                "key": "lastName",
+                "value": "traube.56"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "B1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "id": "aefe2cf7",
+        "type": "student",
+        "name": "schmal wolke.90",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "schmal"
+            },
+            {
+                "key": "lastName",
+                "value": "wolke.90"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "0ad3319a",
+        "type": "student",
+        "name": "leise berg.41",
+        "domain": {
+            "id": "ho",
+            "name": "Hören"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "leise"
+            },
+            {
+                "key": "lastName",
+                "value": "berg.41"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "B1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "id": "dcac6f05",
+        "type": "student",
+        "name": "neu zitrone.98",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "neu"
+            },
+            {
+                "key": "lastName",
+                "value": "zitrone.98"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "a0f121f3",
+        "type": "student",
+        "name": "dunkel mond.99",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "nicht-dominant deutsch",
+                "value": "nd"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "dunkel"
+            },
+            {
+                "key": "lastName",
+                "value": "mond.99"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "ddd50fa4",
+        "type": "student",
+        "name": "dunkel pflaume.96",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "Förderbedarf",
+                "value": "f"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "dunkel"
+            },
+            {
+                "key": "lastName",
+                "value": "pflaume.96"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "93a1d010",
+        "type": "student",
+        "name": "dunkel wolke.24",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "Förderbedarf",
+                "value": "f"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "dunkel"
+            },
+            {
+                "key": "lastName",
+                "value": "wolke.24"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "71ba1c6b",
+        "type": "student",
+        "name": "jung pflaume.67",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "jung"
+            },
+            {
+                "key": "lastName",
+                "value": "pflaume.67"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "32920573",
+        "type": "student",
+        "name": "laut wolke.93",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "laut"
+            },
+            {
+                "key": "lastName",
+                "value": "wolke.93"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "0f3189aa",
+        "type": "student",
+        "name": "alt apfel.79",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "Teilleistungsschwäche Mathematik",
+                "value": "tm"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "alt"
+            },
+            {
+                "key": "lastName",
+                "value": "apfel.79"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "7a3981e2",
+        "type": "student",
+        "name": "nah apfel.14",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "Teilleistungsstörung Deutsch",
+                "value": "td"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "nah"
+            },
+            {
+                "key": "lastName",
+                "value": "apfel.14"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "B1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "id": "e80d33e2",
+        "type": "student",
+        "name": "klein wolke.74",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "klein"
+            },
+            {
+                "key": "lastName",
+                "value": "wolke.74"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "8197c9f8",
+        "type": "student",
+        "name": "kalt himbeere.53",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "himbeere.53"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "5c908e1e",
+        "type": "student",
+        "name": "warm himbeere.36",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "nicht-dominant deutsch",
+                "value": "nd"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "warm"
+            },
+            {
+                "key": "lastName",
+                "value": "himbeere.36"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "5522f7cc",
+        "type": "student",
+        "name": "hoch pflaume.69",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "hoch"
+            },
+            {
+                "key": "lastName",
+                "value": "pflaume.69"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "eb0f4628",
+        "type": "student",
+        "name": "dunkel sonne.94",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "dunkel"
+            },
+            {
+                "key": "lastName",
+                "value": "sonne.94"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "f30e49bf",
+        "type": "student",
+        "name": "klein berg.82",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "Klassenwiederholung",
+                "value": "kw"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "klein"
+            },
+            {
+                "key": "lastName",
+                "value": "berg.82"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "b1948185",
+        "type": "student",
+        "name": "jung mond.46",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "jung"
+            },
+            {
+                "key": "lastName",
+                "value": "mond.46"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "B1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "id": "3420f7fc",
+        "type": "student",
+        "name": "tief blume.53",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "tief"
+            },
+            {
+                "key": "lastName",
+                "value": "blume.53"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "bb34caac",
+        "type": "student",
+        "name": "kalt apfel.57",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "kalt"
+            },
+            {
+                "key": "lastName",
+                "value": "apfel.57"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "bc9ffb6c",
+        "type": "student",
+        "name": "tief zitrone.11",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "tief"
+            },
+            {
+                "key": "lastName",
+                "value": "zitrone.11"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "B1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "3"
+            }
+        ]
+    },
+    {
+        "id": "d0752929",
+        "type": "student",
+        "name": "nah apfel.98",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "nah"
+            },
+            {
+                "key": "lastName",
+                "value": "apfel.98"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "5b9b43c1",
+        "type": "student",
+        "name": "breit orange.14",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "breit"
+            },
+            {
+                "key": "lastName",
+                "value": "orange.14"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:5",
+                "value": "9-10"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "C1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "5"
+            }
+        ]
+    },
+    {
+        "id": "2d4d3794",
+        "type": "student",
+        "name": "breit erdbeere.15",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "breit"
+            },
+            {
+                "key": "lastName",
+                "value": "erdbeere.15"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "bcf96593",
+        "type": "student",
+        "name": "dunkel baum.58",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "ungenügende Sprachkenntnisse",
+                "value": "s"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "dunkel"
+            },
+            {
+                "key": "lastName",
+                "value": "baum.58"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:5",
+                "value": "9-10"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "C1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "5"
+            }
+        ]
+    },
+    {
+        "id": "ae9a15bb",
+        "type": "student",
+        "name": "rund baum.30",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "rund"
+            },
+            {
+                "key": "lastName",
+                "value": "baum.30"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:4",
+                "value": "7-8"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "B2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "4"
+            }
+        ]
+    },
+    {
+        "id": "54212a3c",
+        "type": "student",
+        "name": "breit traube.39",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "female"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            },
+            {
+                "type": "trait",
+                "label": "ungenügende Sprachkenntnisse",
+                "value": "s"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "breit"
+            },
+            {
+                "key": "lastName",
+                "value": "traube.39"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "a2e466b7",
+        "type": "student",
+        "name": "dunkel traube.56",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "dunkel"
+            },
+            {
+                "key": "lastName",
+                "value": "traube.56"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:2",
+                "value": "3-4"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A2",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "2"
+            }
+        ]
+    },
+    {
+        "id": "aefe2cf7",
+        "type": "student",
+        "name": "schmal wolke.90",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "schmal"
+            },
+            {
+                "key": "lastName",
+                "value": "wolke.90"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:1",
+                "value": "1-2"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "A1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "1"
+            }
+        ]
+    },
+    {
+        "id": "0ad3319a",
+        "type": "student",
+        "name": "leise berg.41",
+        "domain": {
+            "id": "le",
+            "name": "Lesen"
+        },
+        "subject": {
+            "name": "Englisch"
+        },
+        "covariates": [
+            {
+                "type": "gender",
+                "value": "male"
+            },
+            {
+                "type": "group",
+                "label": "Klasse",
+                "value": "8c"
+            },
+            {
+                "type": "homeroom",
+                "label": "Stammklasse",
+                "value": "8c"
+            }
+        ],
+        "properties": [
+            {
+                "key": "firstName",
+                "value": "leise"
+            },
+            {
+                "key": "lastName",
+                "value": "berg.41"
+            },
+            {
+                "key": "booklet",
+                "value": "TH01"
+            },
+            {
+                "key": "equivalenceTable:TH01",
+                "value": "maxScore=30;itemCount=30;A1=0-4;A2=5-10;B1=11-19;B2=20-26;C1=27-30"
+            },
+            {
+                "key": "itemLevelSpan:3",
+                "value": "5-6"
+            }
+        ],
+        "competenceLevels": [
+            {
+                "nameShort": "B1",
+                "descriptiveStatistics": {
+                    "total": 1,
+                    "mean": 1,
+                    "frequency": 1
+                },
+                "id": "3"
+            }
+        ]
+    }
+]

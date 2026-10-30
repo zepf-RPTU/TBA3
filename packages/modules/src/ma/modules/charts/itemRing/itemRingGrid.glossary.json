@@ -1,0 +1,24 @@
+{
+    "title": "Mittlere Lösungsquoten der Lerngruppe",
+    "grouping-subtitle": "Gruppiert nach {{ grouping }}",
+    "grouping-toggle": {
+        "label": "Aufgabenringe gruppieren"
+    },
+    "inner-ring-toggle": {
+        "label": "Inneren Ring ein-/ausblenden"
+    },
+    "legend": {
+        "result": "gelöst / nicht gelöst – äußerer Ring: alle Teilaufgaben, innerer Ring: je Aufgabenniveau",
+        "result-outer-only": "gelöst / nicht gelöst",
+        "pilot": "Pilotierung (erwartete Lösungsquote)"
+    },
+    "tooltips": {
+        "success-rate": "Lösungsquote",
+        "solved": "Gelöst",
+        "item-count": "Anzahl Teilaufgaben",
+        "item-share": "Anteil",
+        "group-average-title": "Lerngruppenschnitt",
+        "selected-students": "Ausgewählte Schüler:innen",
+        "pilot": "Pilotierung"
+    }
+}

@@ -1,0 +1,77 @@
+/**
+ * SL Überblick view — one card per subject×domain, in payload order, in a
+ * responsive grid of at most two cards per row, filling the view when they fit.
+ * Generic card styles come from contentModule.css.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .sl-summary-view {
+        /* Floor for the chart surface — the school value box plus a full-height bar
+           need this much. Cards grow past it when the grid has room to spare. */
+        --summary-chart-min-height: 180px;
+        /* Card header plus the padding the shared card shell puts around the body. */
+        --summary-card-chrome-height: 4.5rem;
+        --summary-row-min-height: calc(
+            var(--summary-chart-min-height) + var(--summary-card-chrome-height)
+        );
+        /* Widest a card grows on a wide screen, so two cards stay centred rather
+           than stretched across the view. */
+        --summary-card-width-cap: 800px;
+    }
+
+    /* Columns: the view writes --summary-chart-min-width; the half-row cap
+       holds auto-fit at two cards, `min(…, 100%)` keeps a lone narrow card from
+       overflowing and the `1fr` max stretches the placed tracks. A fixed track
+       max would not do: auto-fit counts its repetitions against a definite max,
+       which drops two cards to one.
+
+       Rows: `1fr` splits the view height evenly; short of the floor the tracks
+       stay at it and this grid scrolls. The floor is a fixed length: a
+       content-based minimum would let the SVG grow its card, which re-renders a
+       taller SVG. */
+    .summary-rows {
+        /* 1px off the half absorbs sub-pixel rounding that would otherwise drop
+           the row to one card; the `1fr` max hands the width straight back. */
+        --summary-column-cap: calc((100% - var(--layout-gap) - 1px) / 2);
+        /* The chart surface the widest card needs (the view writes it on this
+           element in the same task that renders it) plus the card body's padding and
+           border. Declared here, not on the view: a custom property resolves its
+           var()s where it is declared. */
+        --summary-row-min-width: calc(var(--summary-chart-min-width) + 2 * var(--layout-pad) + 2px);
+        /* Never below what the widest card needs. */
+        --summary-card-max-width: max(var(--summary-row-min-width), var(--summary-card-width-cap));
+
+        display: grid;
+        grid-template-columns: repeat(
+            auto-fit,
+            minmax(min(max(var(--summary-row-min-width), var(--summary-column-cap)), 100%), 1fr)
+        );
+        /* Padding, not a max-width: the scrollbar stays at the view's edge. */
+        padding-inline: max(
+            0px,
+            (100% - 2 * var(--summary-card-max-width) - var(--layout-gap)) / 2
+        );
+        grid-auto-rows: minmax(var(--summary-row-min-height), 1fr);
+        flex: 1;
+        gap: var(--layout-gap);
+        overflow-y: auto;
+    }
+
+    .summary-rows > .summary-row-card {
+        width: 100%;
+        max-width: var(--summary-card-max-width);
+        justify-self: center;
+    }
+
+    /* Shown when the dataset has no subject×domain. Plain text, not a card. */
+    .summary-empty-state {
+        max-width: 60ch;
+        margin: auto;
+        padding: var(--layout-pad);
+        color: var(--text-secondary);
+        text-align: center;
+        line-height: var(--lh-text);
+    }
+}

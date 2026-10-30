@@ -1,0 +1,16 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* The ring that keeps overlapping heads apart: the card surface, or system text
+       under forced colours. Stems and heads keep their script-set data colours
+       there (dataMark.css). */
+    .lollipop-circle {
+        stroke: var(--color-card-background);
+    }
+
+    @media (forced-colors: active) {
+        .lollipop-circle {
+            stroke: CanvasText;
+        }
+    }
+}

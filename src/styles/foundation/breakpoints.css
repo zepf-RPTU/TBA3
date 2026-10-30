@@ -1,0 +1,10 @@
+/**
+ * The dashboard's one layout breakpoint. Inside it every view leaves the
+ * fit-to-viewport layout: cards stack, take `--stacked-card-height` and the page
+ * scrolls. Short viewports stack too: below 690px of height the side-by-side cards
+ * squash their charts flat at any width. vite.config.js (`tba3-breakpoints`) imports
+ * this file into every sheet, so a sheet just queries `@media (--stacked-layout)`;
+ * Lightning CSS resolves the query at build, and this file emits no rules of its own.
+ */
+
+@custom-media --stacked-layout (width <= 1280px) or (height < 690px);

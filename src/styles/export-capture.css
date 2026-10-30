@@ -1,0 +1,58 @@
+/**
+ * The off-screen stage exportCapture.js clones a module card into. JS removes the
+ * controls; these rules only unclip content, stop motion and size print tables.
+ * The stage paints the card surface in its scheme (light for paper captures, the
+ * screen's otherwise), and the rasterizer fills the image with it.
+ */
+
+.export-capture-stage {
+    position: fixed;
+    top: 0;
+    left: -100000px;
+    z-index: -1;
+    pointer-events: none;
+    background: var(--color-card-background);
+    /* Glossary terms are hover affordances: keep the words, drop the dotted
+       underline. */
+    --glossary-term-underline-color: transparent;
+}
+
+/* A table cell sets its own underline colour (table-base.css), which inheritance from
+   the stage cannot override; this selector outranks that rule. */
+.export-capture-stage .tabulator .tabulator-cell {
+    --glossary-term-underline-color: transparent;
+}
+
+/* Let every card and body grow to its content; a chart host pins its own body
+   to its on-screen height (its SVG sizes via height:100%). */
+.export-capture-stage .module-container,
+.export-capture-stage .content-module-body {
+    flex: none;
+    height: auto;
+    max-height: none;
+    min-height: 0;
+    overflow: visible;
+}
+
+/* A deliberate css/no-important exception, as in the reduced-motion reset in
+   interactive.css: nothing else lets a broad reset beat component transitions
+   and animations, and a capture must never rasterize a mid-transition frame. */
+/* eslint-disable css/no-important */
+.export-capture-stage *,
+.export-capture-stage *::before,
+.export-capture-stage *::after {
+    transition: none !important;
+    animation: none !important;
+}
+
+/* eslint-enable css/no-important */
+
+/* Legend pills stay as information, not as buttons. */
+.export-capture-stage .legend-pill {
+    box-shadow: none;
+}
+
+/* Tabulator's print table sizes to its content; the export spans the card. */
+.export-capture-stage .tabulator-print-table {
+    width: 100%;
+}

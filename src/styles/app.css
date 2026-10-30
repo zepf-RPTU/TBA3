@@ -1,0 +1,42 @@
+/**
+ * The sheets every dashboard shares, in cascade order, imported first by each
+ * app's main.css. Unit-owned CSS is not listed: every module/view imports its own
+ * `<unit>.css` (layer `modules` / `views`) beside its source.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+/* Foundation: the packages' token defaults, tba3's deltas over them, reset,
+   typography and the module-base taxonomies */
+@import '@tba3/module-base/styles/tokens.css' layer(foundation);
+@import '@tba3/modules/styles/tokens.css' layer(foundation);
+@import './foundation/variables.css' layer(foundation);
+@import '@tba3/modules/styles/competence-levels.css' layer(foundation);
+@import './foundation/typography.css' layer(foundation);
+@import './foundation/responsive.css' layer(foundation);
+@import '@tba3/module-base/styles/interactive.css' layer(foundation);
+@import '@tba3/module-base/styles/controls.css' layer(foundation);
+@import '@tba3/module-base/styles/buttons.css' layer(foundation);
+@import './foundation/layout-reset.css' layer(foundation);
+/* The skeleton is static markup in the HTML entry, so no module can bring it. */
+@import './skeleton.css' layer(foundation);
+
+/* Common: shared shells and primitives with more than one owner */
+@import './view-layout.css' layer(common);
+@import '@tba3/module-base/styles/layout.css' layer(common);
+@import './header-module.css' layer(common);
+@import '@tba3/modules/styles/modal-dialog.css' layer(common);
+@import '@tba3/modules/styles/detail-rows.css' layer(common);
+@import './export-capture.css' layer(common);
+@import '@tba3/module-base/styles/notice-callout.css' layer(common);
+@import './preview-media.css' layer(common);
+@import '@tba3/modules/styles/glossary-popup.css' layer(common);
+@import '@tba3/modules/styles/html-legend-panel.css' layer(common);
+@import '@tba3/modules/styles/stacked-bar.css' layer(common);
+@import '@tba3/modules/styles/table-host.css' layer(common);
+
+/* Tables: Tabulator in `vendor`, the shared overrides in `common`; each app's
+   table overrides live beside its table module in `modules` and win by layer */
+@import 'tabulator-tables/dist/css/tabulator.min.css' layer(vendor);
+@import '@tba3/modules/styles/table-base.css' layer(common);
+@import '@tba3/modules/styles/table-header-layout.css' layer(common);

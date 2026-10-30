@@ -1,0 +1,44 @@
+/**
+ * SL charts row — a flex row of module cards that becomes a column of stacked
+ * cards at the `--stacked-layout` breakpoint (breakpoints.css): a wide chart card
+ * (3/4) beside a narrow text card (1/4) (slChartsRow.js), or the bare row shell
+ * around equal cards. More than one view's sheet, so the SL entry sheet imports it
+ * into `views`.
+ */
+
+.sl-charts-row {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    gap: var(--layout-gap);
+}
+
+.sl-charts-row > .sl-charts-row-card {
+    min-height: 300px;
+}
+
+.sl-charts-row > .sl-charts-row-card--chart {
+    flex: 3 1 0%;
+}
+
+.sl-charts-row > .sl-charts-row-card--text {
+    flex: 1 1 0%;
+    min-width: 250px;
+}
+
+@media (--stacked-layout) {
+    .sl-charts-row {
+        flex-direction: column;
+        flex: none;
+    }
+
+    .sl-charts-row > .sl-charts-row-card--text {
+        min-width: 0;
+        flex: none;
+    }
+
+    .sl-charts-row > .sl-charts-row-card--chart {
+        flex: none;
+        height: var(--stacked-card-height-vh);
+    }
+}

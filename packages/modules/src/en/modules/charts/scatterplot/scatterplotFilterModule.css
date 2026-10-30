@@ -1,0 +1,141 @@
+/**
+ * The scatterplot student selection modal.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    /* ==========================================================================
+       Modal overlay
+       ========================================================================== */
+
+    /* Card, radius and shadow come from .modal-panel; shell, backdrop, fade and
+       centring from .modal-dialog (modal-dialog.css). border: none because the
+       panel's shadow replaces the ContentModule border; margin: 0 because the
+       panel's overlay margin would push the 95%-tall box past the dialog. The
+       ContentModule's overflow: auto keeps the panel scrollable and clips the
+       sidebar's square fill to the rounded corner. */
+    .scatterplot-filter-modal {
+        /* Sized off the shell, not the viewport: below the shell floor the modal
+           keeps its floor size and scrolls with the page. */
+        --scatterplot-modal-height: calc(0.95 * var(--shell-height));
+        /* Title bar plus instructions: 4.7rem with a one-line subtitle, 6.1rem
+           with two. Halfway, the leftover around the square chart stays under
+           ~10px either way. */
+        --scatterplot-modal-header-height: 5.4rem;
+        --scatterplot-modal-sidebar-width: 8.75rem;
+        --scatterplot-modal-body-padding: var(--space-sm);
+        border: none;
+        margin: 0;
+        /* The chart is square, so the width is the height left under the header,
+           plus the sidebar and the body padding. */
+        height: var(--scatterplot-modal-height);
+        width: calc(
+            var(--scatterplot-modal-height) - var(--scatterplot-modal-header-height) +
+                var(--scatterplot-modal-sidebar-width) + var(--scatterplot-modal-body-padding) * 2
+        );
+        max-width: calc(0.95 * var(--shell-width));
+        flex: none;
+    }
+
+    /* The ✕ sits in the title bar's actions slot, so it takes the slot's place
+       instead of the shared .modal-close corner pin. */
+    .scatterplot-filter-modal .modal-close {
+        position: static;
+    }
+
+    .scatterplot-filter-modal-body {
+        display: flex;
+        padding: 0;
+    }
+
+    /* ==========================================================================
+       Modal chart container
+       ========================================================================== */
+
+    .scatterplot-filter-body {
+        flex: 1 1 auto;
+        display: flex;
+        min-width: 0;
+    }
+
+    .scatterplot-filter-chart-area {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: var(--scatterplot-modal-body-padding);
+        min-width: 0;
+    }
+
+    /* Square container sized by the smaller dimension;
+       border/radius/flex reset card-shell defaults that conflict with
+       the square container. The key's last row sits flush on the square's bottom
+       edge, and its glossary terms' underline hangs 2px below their line box: as
+       a scroll container the square would scroll by those 2px, so the underline
+       paints into the chart area's padding instead. */
+    .scatterplot-filter-chart {
+        aspect-ratio: 1 / 1;
+        height: 100%;
+        max-width: 100%;
+        border: none;
+        border-radius: 0;
+        flex: none;
+        overflow: visible;
+    }
+
+    .scatterplot-filter-chart svg.chart-root {
+        cursor: crosshair;
+    }
+
+    /* ==========================================================================
+       Modal sidebar
+       ========================================================================== */
+
+    /* Two .btn-stack groups — the selection helpers, then the count with the commit
+       pair — twice as far apart as the buttons inside a group. */
+    .scatterplot-filter-sidebar {
+        display: flex;
+        flex-direction: column;
+        justify-content: safe center;
+        gap: calc(2 * var(--layout-gap-relaxed));
+        padding: var(--layout-pad);
+        border-inline-start: 1px solid var(--color-border);
+        background-color: var(--color-background-secondary);
+        width: var(--scatterplot-modal-sidebar-width);
+        flex-shrink: 0;
+    }
+
+    /* Secondary text buttons get a card-like fill; the primary confirm button
+       keeps its .btn--primary fill so its light text stays legible. */
+    .scatterplot-filter-sidebar .btn--text:not(.btn--primary) {
+        --btn-fill: var(--color-background);
+    }
+
+    /* What the commit pair will hand over. Owner-scoped: a bare `.selection-count`
+       collides with the batch-export toolbar's class. Plain ink, not the accent:
+       a report, not an action. */
+    .scatterplot-selection-count {
+        margin: 0;
+        text-align: center;
+        font-size: var(--fs-sm);
+        font-variant-numeric: tabular-nums;
+        color: var(--text-secondary);
+    }
+
+    .scatterplot-selection-count.has-selection {
+        font-weight: var(--fw-bold);
+        color: var(--text-color);
+    }
+
+    /* The armed-mode toggle is the touch route to the marquee; a mouse drags
+       without arming. Hidden without a coarse pointer, not on `hover: hover`: the
+       JS gate is per event (`pointerType === 'touch'`), and a tablet with keyboard
+       and trackpad reports `hover: hover` / `pointer: fine` while its touchscreen
+       still needs the button. */
+    @media not (any-pointer: coarse) {
+        .scatterplot-filter-sidebar [data-scatterplot-filter-action='arm-selection'] {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+/**
+ * MA split-view layout modes — the grid and visibility rules of MaLayoutViewBase's
+ * scaffold; a view's own `<prefix>-view-content` class carries its deltas.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    /* The content is a .layout-grid of .view-section flex columns that
+       auto-place in DOM order; the optional shell (a top row stacked over it)
+       fills the view the same way. */
+    .ma-split-view-shell,
+    .ma-split-view-content {
+        flex: 1;
+    }
+
+    .ma-split-view-content.layout-mode-both {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .ma-split-view-content.layout-mode-table-only {
+        grid-template-columns: 1fr;
+    }
+
+    .ma-split-view-content.layout-mode-table-only > .right-column,
+    .ma-split-view-content.layout-mode-chart-only > .left-column,
+    .ma-split-view-content.layout-mode-chart-only > .right-column {
+        display: none;
+    }
+
+    .ma-split-view-content.layout-mode-chart-only {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: minmax(0, 1fr);
+    }
+
+    /* The item-ring grid left, the focus chart right. */
+    .ma-chart-only-content {
+        display: none;
+        grid-template-columns: minmax(0, 13fr) minmax(0, 7fr);
+        grid-template-rows: minmax(0, 1fr);
+    }
+
+    .ma-split-view-content.layout-mode-chart-only > .ma-chart-only-content {
+        display: grid;
+    }
+
+    /* Narrow: the `both` and `chart-only` modes stack into --stacked-card-height
+       cards. */
+    @media (--stacked-layout) {
+        .ma-split-view-content.layout-mode-both {
+            grid-template-columns: 1fr;
+            flex: none;
+        }
+
+        .ma-split-view-content.layout-mode-both > .left-column,
+        .ma-split-view-content.layout-mode-both > .right-column {
+            height: var(--stacked-card-height);
+        }
+
+        .ma-split-view-content.layout-mode-chart-only {
+            grid-template-rows: auto;
+            flex: none;
+        }
+
+        .ma-chart-only-content {
+            grid-template-columns: 1fr;
+        }
+
+        .ma-chart-only-content > .item-ring-chart-container,
+        .ma-chart-only-content > .item-ring-focus-container {
+            height: var(--stacked-card-height);
+        }
+    }
+}

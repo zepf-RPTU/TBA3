@@ -1,0 +1,13 @@
+/**
+ * Data marks: the one forced-colours and print opt-out (dataMark.js).
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    .data-mark {
+        /* eslint-disable-next-line css/use-baseline -- progressive enhancement: only engines with forced colours read it */
+        forced-color-adjust: none;
+        print-color-adjust: exact;
+    }
+}

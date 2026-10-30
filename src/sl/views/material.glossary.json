@@ -1,0 +1,35 @@
+{
+    "header": {
+        "title": "Materialien zur Weiterarbeit",
+        "subtitle": "Vorlagen zur Anwendung der Ergebnisse im Kontext der Schul- und Unterrichtsentwicklung. Dieser Prototyp enthält nur eine Auswahl der Materialien; weitere könnten in Zukunft beispielsweise über die Materialschnittstelle des FWU angebunden werden.",
+        "interface": {
+            "overview": {
+                "label": "Übersicht"
+            },
+            "summary": {
+                "label": "Ergebniszusammenfassung"
+            },
+            "data-view": {
+                "label": "Datensicht",
+                "tooltip": "Im Prototyp nicht befüllt."
+            },
+            "questions": {
+                "label": "Leitfragen",
+                "tooltip": "Im Prototyp nicht befüllt."
+            },
+            "general": {
+                "label": "Gesamt",
+                "tooltip": "Im Prototyp nicht befüllt."
+            },
+            "type-group": {
+                "label": "Material"
+            },
+            "subject-group": {
+                "label": "Fach"
+            }
+        }
+    },
+    "material": {
+        "title": "Materialauswahl"
+    }
+}

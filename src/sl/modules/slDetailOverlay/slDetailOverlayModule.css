@@ -1,0 +1,47 @@
+/**
+ * SL detail overlay. Dialog shell, card and close button are the shared
+ * .modal-* classes (modal-dialog.css); the legend layout is the shared
+ * `.chart-legend-dense` variant (html-legend-panel.css).
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    .sl-detail-overlay-content {
+        display: flex;
+        flex: 1;
+        gap: var(--layout-gap);
+        padding: var(--card-pad);
+        /* Never below the shell floor, as the shared panels promise (modal-dialog.css):
+           in a smaller viewport the dialog scrolls, and the chart keeps the room it
+           has on the floor instead of shrinking inside nested scrollers. */
+        min-width: calc(var(--shell-width) - 2 * var(--overlay-margin));
+        min-height: calc(var(--shell-height) - 2 * var(--overlay-margin));
+    }
+
+    /* The chart panels stack in a column beside the Kasten. The panels are cards
+       (flex: 1, a scroll box); the Kasten and the SP strip take a fixed size instead. */
+    .sl-detail-overlay-charts {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: var(--layout-gap);
+        min-width: 0;
+    }
+
+    .sl-detail-overlay-kasten {
+        flex: 0 0 25%;
+    }
+
+    /* The Selbstwirksamkeit strip: one band of bar like the MA competence-level bar, or,
+       opened in the box plot mode, one lying box over its rating axis beside the box
+       plot's reading key. */
+    .overlay-panel--sp {
+        flex: 0 0 auto;
+        height: var(--strip-card-height);
+    }
+
+    .sl-detail-overlay-content[data-viz-mode='boxplot'] .overlay-panel--sp {
+        height: calc(11rem + 2.5rem);
+    }
+}

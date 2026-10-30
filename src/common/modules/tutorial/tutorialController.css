@@ -1,0 +1,123 @@
+/**
+ * Owns only `.tutorial-tour-*` classes; TutorialController renders the same
+ * shell for every dashboard.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* A `popover="manual"` (top layer, no z-index): the UA popover box (centred
+       fit-content, bordered, padded, scrolling, Canvas-coloured) is reset to a
+       bare full-viewport layer. Clicks and hover pass through to the page; only
+       the card re-enables pointer events. Navigating away closes the tour, so
+       the interactive page underneath stays consistent. `display` and `overlay`
+       transition discretely so it stays in the top layer until the fade ends. */
+    .tutorial-tour-overlay {
+        width: auto;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        background: none;
+        color: inherit;
+        overflow: visible;
+        pointer-events: none;
+        opacity: 0;
+        transition:
+            opacity var(--motion-duration-fast) ease-out,
+            display var(--motion-duration-fast) allow-discrete,
+            overlay var(--motion-duration-fast) allow-discrete;
+    }
+
+    .tutorial-tour-overlay:popover-open {
+        opacity: 1;
+    }
+
+    @starting-style {
+        .tutorial-tour-overlay:popover-open {
+            opacity: 0;
+        }
+    }
+
+    /* The huge box-shadow dims the whole viewport except the ring's rect, keeping
+       the anchor visible and hoverable. */
+    .tutorial-tour-ring {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 0;
+        border-radius: var(--radius-md);
+        box-shadow: 0 0 0 9999px var(--overlay-backdrop);
+        pointer-events: none;
+    }
+
+    /* Ring and card are placed by an inline `translate` (tutorialController.js)
+       and glide between steps only once .is-ready. */
+    .tutorial-tour-overlay.is-ready .tutorial-tour-ring {
+        transition:
+            translate var(--motion-duration-base) var(--motion-ease-standard),
+            width var(--motion-duration-base) var(--motion-ease-standard),
+            height var(--motion-duration-base) var(--motion-ease-standard);
+    }
+
+    .tutorial-tour-card {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: min(360px, calc(100vw - 2 * var(--space-md)));
+        /* Long copy must not push the Weiter/Fertig row below the fold: the
+           card caps at the viewport and its body scrolls instead. */
+        max-height: calc(100vh - 2 * var(--space-md));
+        padding: var(--layout-pad);
+        background: var(--color-card-background);
+        /* Concentric with the buttons inside: outer = inner + inset. */
+        border-radius: calc(var(--btn-radius) + var(--layout-pad));
+        box-shadow: var(--shadow-lg);
+        pointer-events: auto;
+    }
+
+    .tutorial-tour-overlay.is-ready .tutorial-tour-card {
+        transition: translate var(--motion-duration-base) var(--motion-ease-standard);
+    }
+
+    .tutorial-tour-card-body {
+        font-size: var(--fs-base);
+        line-height: var(--lh-text);
+        color: var(--text-secondary);
+        min-height: 0;
+        overflow-y: auto;
+    }
+
+    .tutorial-tour-card-body p + p {
+        margin-top: var(--space-sm);
+    }
+
+    .tutorial-tour-progress {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-xs);
+    }
+
+    .tutorial-tour-progress-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--color-border);
+    }
+
+    .tutorial-tour-progress-dot.is-active {
+        background: var(--primary-color);
+    }
+
+    .tutorial-tour-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        margin-top: var(--space-xs);
+    }
+
+    .tutorial-tour-actions .tutorial-tour-back {
+        margin-inline-end: auto;
+    }
+}

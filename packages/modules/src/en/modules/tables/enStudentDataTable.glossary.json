@@ -1,0 +1,14 @@
+{
+    "title": "Teilaufgaben des/der Schüler:in im Detail",
+    "tutorial": "<p>Diese Tabelle zeigt, welche Teilaufgaben der/die ausgewählte Schüler:in richtig gelöst, nicht bearbeitet oder falsch gelöst hat. Jede Teilaufgabe gehört dabei zu einer übergeordneten Aufgabe, welche auf demselben Material basiert. Sie können zunächst alle Teilaufgaben betrachten, oder aber die Auswahl auf eine Domäne beschränken. Die Schaltflächen „Unter {{Skala}}“ und „Über {{Skala}}“ zeigen nicht gelöste Teilaufgaben unterhalb bzw. gelöste Teilaufgaben oberhalb der {{Stufe}}, die die Person in der jeweiligen Domäne erreicht hat.</p><p>Wenn Sie eine Teilaufgabe auswählen, erhalten Sie im nebenstehenden Kasten detailliertere Informationen.</p>",
+    "interface": {
+        "below-competence-level": {
+            "label": "Unter {{Skala}}",
+            "tooltip": "Nicht gelöste Teilaufgaben unterhalb der erreichten {{Stufe}} anzeigen."
+        },
+        "above-competence-level": {
+            "label": "Über {{Skala}}",
+            "tooltip": "Gelöste Teilaufgaben oberhalb der erreichten {{Stufe}} anzeigen."
+        }
+    }
+}

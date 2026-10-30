@@ -1,0 +1,13 @@
+{
+    "header": {
+        "title": "Ergebnisse einzelner Schüler:innen",
+        "subtitle": "Merkmale und Aufgabenlösungen, gruppiert nach Leitideen"
+    },
+    "student-row": {
+        "title": "Schüler:in im Detail"
+    },
+    "item-ring-grid": {
+        "title": "Lösungsquoten (Schüler:in im Lerngruppenvergleich)",
+        "tutorial": "<p>Für jede Leitidee und für alle Teilaufgaben zusammen zeigt ein Ring die mittlere Lösungsquote der Lerngruppe; über die Schaltfläche „Aufgabenringe gruppieren“ gruppieren Sie die Ringe stattdessen nach allgemeinen Kompetenzen oder Anforderungsbereichen. Der Strich mit dem Personensymbol markiert das Ergebnis der ausgewählten Person, der schmale Strich ohne Symbol die nach der Pilotierung erwartete Lösungsquote. Der innere Ring, den Sie über die Schaltfläche ein- und ausblenden, zeigt, wie sich die Teilaufgaben einer Leitidee auf die Aufgabenniveaus verteilen.</p><p>So sehen Sie auf einen Blick, ob sich die Leistungen gleichmäßig verteilen oder ob es inhaltlich klar abgrenzbare Stärken und Schwächen gibt. VERA ist nicht für die Individualdiagnostik konzipiert; die Ergebnisse können aber Anstoß für weitere diagnostische Schritte sein.</p>"
+    }
+}

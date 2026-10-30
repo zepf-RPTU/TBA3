@@ -1,0 +1,157 @@
+/**
+ * Shell and content slots of ContentModule cards. Every custom property this
+ * sheet reads carries a light-value fallback.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* ==========================================================================
+       Card shell
+       ========================================================================== */
+
+    .module-container {
+        --content-module-header-pad-block: 0.35rem;
+        --content-module-header-pad-inline: 0.85rem;
+        --content-module-header-pad: var(--content-module-header-pad-block)
+            var(--content-module-header-pad-inline);
+        --content-module-subtitle-pad: 0.4rem var(--content-module-header-pad-inline);
+        background: var(--color-card-background, #ffffff);
+        border: 1px solid var(--color-border, #e2e8f0);
+        border-radius: var(--radius-md, 8px);
+        overflow: auto;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+        flex: 1;
+    }
+
+    /* ==========================================================================
+       Content slots (ContentModule subclasses)
+       ========================================================================== */
+
+    /* Title left, actions right (pushed by the actions slot's
+       `margin-inline-start: auto`). */
+    .content-module-header {
+        display: flex;
+        /* On a narrow card the action cluster drops under the title instead of
+           clipping. */
+        flex-wrap: wrap;
+        align-items: center;
+        gap: var(--layout-gap, 0.5rem);
+        padding: var(--content-module-header-pad);
+        border-bottom: 1px solid var(--color-border, #e2e8f0);
+        flex-shrink: 0;
+        position: relative;
+        z-index: var(--z-module-content, 10);
+    }
+
+    /* Sized below the page's h2 scale so the card keeps its proportions. */
+    .content-module-title {
+        margin: 0;
+        flex: 1 1 auto;
+        min-width: 0;
+        font-size: var(--fs-module-title, 1.45rem);
+    }
+
+    .content-module-chevron {
+        font-size: var(--fs-lg, 1.25rem);
+        color: var(--text-muted, #666);
+        transition: transform var(--motion-duration-base, 300ms)
+            var(--motion-ease-standard, cubic-bezier(0.65, 0, 0.35, 1));
+        flex-shrink: 0;
+    }
+
+    :not(.collapsed) > .content-module-header > .content-module-toggle > .content-module-chevron {
+        transform: rotate(90deg);
+    }
+
+    /* The keyboard's collapse control: the bare chevron, no button chrome. */
+    .content-module-toggle {
+        display: inline-flex;
+        align-items: center;
+        flex-shrink: 0;
+        padding: 0;
+        border: 0;
+        background: none;
+        color: inherit;
+        cursor: inherit;
+    }
+
+    .content-module-toggle:focus-visible {
+        outline: var(--focus-ring, 3px solid #3b82f6);
+        outline-offset: 0;
+    }
+
+    .content-module-subtitle {
+        padding: var(--content-module-subtitle-pad);
+        font-size: var(--fs-sm, max(0.8125rem, 12px));
+        line-height: var(--lh-text, 1.5);
+        color: var(--text-secondary, #666);
+        border-bottom: 1px solid var(--color-border, #e2e8f0);
+        flex-shrink: 0;
+    }
+
+    .content-module-subtitle:empty {
+        display: none;
+    }
+
+    .content-module-header-actions {
+        display: flex;
+        align-items: center;
+        gap: var(--layout-gap, 0.5rem);
+        margin-inline-start: auto;
+    }
+
+    .content-module-header-actions:empty {
+        display: none;
+    }
+
+    @media print {
+        .content-module-header-actions {
+            display: none;
+        }
+    }
+
+    .content-module-body {
+        flex: 1;
+        min-height: 0;
+        overflow: auto;
+        padding: var(--layout-pad, 0.75rem);
+    }
+
+    /* No inline-baseline gap below body SVGs. Not the icons.js glyphs: they keep
+       the text flow icons.css gives them. */
+    .content-module-body svg:not(.icon) {
+        display: block;
+    }
+
+    /* ==========================================================================
+       Collapsed state
+       ========================================================================== */
+
+    /* The card's own slots, with or without a card frame. Important in the first layer
+       that hides them, as `[hidden]` is in baseModule.css: a body class's display in a
+       later layer (a split chart body) would otherwise unfold the card. */
+    /* eslint-disable css/no-important */
+    .collapsed > :is(.content-module-subtitle, .content-module-body),
+    .collapsed > .content-module-header > .content-module-header-actions {
+        display: none !important;
+    }
+
+    /* A collapsed card is its title bar, whatever size its view gives it (a flex
+       share, a fixed height) or its chart writes inline (a minimum height). A view
+       whose grid sizes the card's track shrinks the track itself, to `min-content`: the
+       card scrolls, so an `auto` track beside full rows shrinks it to its border. */
+    .module-container.collapsed {
+        flex: none !important;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+    /* eslint-enable css/no-important */
+
+    .collapsed > .content-module-header {
+        border-bottom: none;
+    }
+}

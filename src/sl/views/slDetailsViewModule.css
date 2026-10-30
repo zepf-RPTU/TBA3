@@ -1,0 +1,139 @@
+/**
+ * SL Details view — which of the four content wrappers shows (keyed on the
+ * view's `data-display-mode` / `data-grouping`), and the thumbnail card grid.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    /* ==========================================================================
+       Content wrappers (charts/tables)
+       ========================================================================== */
+
+    .sl-details-view > [data-details-section] {
+        display: none;
+    }
+
+    /* flex (not block): a table section is a ContentModule host, whose card shell's
+       flex column sizes its header/body slots; a chart section lays its grid and
+       Kasten side by side. */
+    .sl-details-view[data-display-mode='table'][data-grouping='by_subjects']
+        > [data-details-section='table:by_subjects'],
+    .sl-details-view[data-display-mode='table'][data-grouping='by_groups']
+        > [data-details-section='table:by_groups'],
+    .sl-details-view[data-display-mode='charts'][data-grouping='by_subjects']
+        > [data-details-section='charts:by_subjects'],
+    .sl-details-view[data-display-mode='charts'][data-grouping='by_groups']
+        > [data-details-section='charts:by_groups'] {
+        display: flex;
+    }
+
+    /* Tables size to their content; the view scrolls, not the table. */
+    [data-details-section='table:by_subjects'],
+    [data-details-section='table:by_groups'] {
+        overflow: visible;
+        flex: none;
+    }
+
+    /* ==========================================================================
+       Details-local surfaces
+       ========================================================================== */
+
+    [data-details-section='charts:by_subjects'],
+    [data-details-section='charts:by_groups'] {
+        flex: 1;
+        gap: var(--layout-gap);
+        overflow: hidden;
+    }
+
+    .thumbnail-grid {
+        --thumbnail-row-count: 1;
+        flex: 3 1 0%;
+        height: 100%;
+        /* Scrolls only once large text grows a row past the box. */
+        overflow-y: auto;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        /* A row grows with a title that large text wraps (WCAG 1.4.4), rather than
+           clipping it. */
+        grid-template-rows: repeat(var(--thumbnail-row-count), minmax(min-content, 1fr));
+        gap: var(--layout-gap);
+    }
+
+    .chart-thumbnail-card {
+        --interactive-bg: var(--color-card-background);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        display: flex;
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        align-items: center;
+        justify-content: center;
+        padding: var(--card-pad-loose);
+        text-align: center;
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-lg);
+        color: var(--text-color);
+    }
+
+    .chart-thumbnail-card__preview {
+        position: absolute;
+        inset: 0;
+        z-index: 0;
+        opacity: 0.24;
+        pointer-events: none;
+        transition:
+            opacity var(--motion-duration-fast) var(--motion-ease-standard),
+            transform var(--motion-duration-fast) var(--motion-ease-standard);
+    }
+
+    .chart-thumbnail-card__preview::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        /* A scrim in the surface colour, so the preview fades into the card in
+           either scheme. */
+        background: linear-gradient(
+            180deg,
+            color-mix(in srgb, var(--color-card-background) 92%, transparent) 0%,
+            color-mix(in srgb, var(--color-card-background) 60%, transparent) 38%,
+            color-mix(in srgb, var(--color-card-background) 82%, transparent) 100%
+        );
+    }
+
+    .chart-thumbnail-card__preview svg {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .chart-thumbnail-card__title {
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        /* A long subject name ("Selbstwirksamkeit") can outgrow a half-width
+           thumbnail; it wraps inside the pill rather than clipping. */
+        overflow-wrap: anywhere;
+        padding: var(--layout-gap-relaxed) var(--card-pad);
+        border-radius: 999px;
+        background: color-mix(in srgb, var(--color-card-background) 82%, transparent);
+        box-shadow: 0 0 0 1px color-mix(in srgb, var(--color-card-background) 54%, transparent);
+    }
+
+    .chart-thumbnail-card:hover .chart-thumbnail-card__preview,
+    .chart-thumbnail-card:focus-visible .chart-thumbnail-card__preview {
+        opacity: 0.34;
+        transform: scale(1.02);
+    }
+
+    @media (--stacked-layout) {
+        [data-details-section='charts:by_subjects'],
+        [data-details-section='charts:by_groups'] {
+            flex-direction: column;
+        }
+    }
+}

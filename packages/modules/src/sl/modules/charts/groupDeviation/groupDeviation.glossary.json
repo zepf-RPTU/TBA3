@@ -1,0 +1,16 @@
+{
+    "title": "{{Bereich}}",
+    "key": {
+        "favourable": "Günstig für die Schule",
+        "unfavourable": "Ungünstig für die Schule",
+        "neutral": "Kein Unterschied"
+    },
+    "messages": {
+        "no-group-data": "Für diesen Bereich enthält der Datensatz keine Lerngruppendaten; nur der Schulwert liegt vor.",
+        "no-school": "Für diesen Bereich enthält der Datensatz keine Schulzeile. Ohne Schulwert lässt sich keine Abweichung der Lerngruppen zeigen.",
+        "no-group-values": "Keine Lerngruppe liefert für diesen Bereich einen Wert für „{{Kennzahl}}“.",
+        "metric-unsupported-competence-levels": "„{{Kennzahl}}“ lässt sich für diesen Bereich nicht berechnen: Das Kompetenzstufenmodell dieses Bereichs enthält keine passende Stufe.",
+        "metric-unsupported-solution-rate": "„{{Kennzahl}}“ lässt sich für diesen Bereich nicht berechnen: Der Datensatz enthält für diesen Bereich keine Aufgabenergebnisse.",
+        "mixed-booklets": "„{{Kennzahl}}“ wird für diesen Bereich nicht gezeigt: In diesem Bereich wurden unterschiedliche Testhefte bearbeitet, Lösungsquoten sind daher nicht vergleichbar."
+    }
+}

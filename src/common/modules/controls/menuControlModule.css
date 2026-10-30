@@ -1,0 +1,19 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* The select look (controls.css), with the current choice at the start and the
+       chevron at the end, as a native select draws them. */
+    .control-menu-trigger {
+        display: inline-flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--space-xs);
+        text-align: start;
+    }
+
+    .control-menu-value {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}

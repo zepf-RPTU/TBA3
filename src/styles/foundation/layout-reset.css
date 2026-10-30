@@ -1,0 +1,46 @@
+/* `auto`, never `hidden`: a `hidden` viewport paints no scrollbars but still scrolls
+   programmatically, so a scrollIntoView() could strand the shell scrolled with no
+   scrollbar to recover. At or above a dashboard's shell minimum (view-layout.css)
+   nothing overflows; below it the page scrolls with real scrollbars. */
+html {
+    box-sizing: border-box;
+    height: 100%;
+    overflow: auto;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body,
+p {
+    margin: 0;
+}
+
+/* Form controls take the page's font, not the UA's small-control system face. */
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+/* Prose: no orphan on the last line. Headings balance in typography.css. */
+p,
+li {
+    /* eslint-disable-next-line css/use-baseline -- progressive enhancement: a browser without `pretty` wraps as before */
+    text-wrap: pretty;
+}
+
+/* The dashboards' shell floor is view-layout.css's: the chooser, which shares this
+   sheet, reflows down to a phone's width. */
+body {
+    /* The page surface, so no browser default shows wherever no view paints. */
+    background: var(--color-background-page);
+    font-family: var(--font-family-main);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: 100%;
+}

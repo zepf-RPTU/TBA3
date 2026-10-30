@@ -1,0 +1,24 @@
+{
+    "$schema": "./node_modules/oxfmt/configuration_schema.json",
+    "printWidth": 100,
+    "tabWidth": 4,
+    "singleQuote": true,
+    "sortPackageJson": false,
+    "overrides": [
+        { "files": ["*.json"], "options": { "printWidth": 120 } },
+        { "files": ["package.json"], "options": { "tabWidth": 2 } }
+    ],
+    "ignorePatterns": [
+        "dist/",
+        "public/",
+        "coverage/",
+        "node_modules/",
+        "package-lock.json",
+        "docs/module-index.md",
+        "docs/endpoint-fields.md",
+        "packages/modules/docs/tba3-spec.yml",
+        "docs/.vitepress/.temp/",
+        "**/*.md",
+        "**/*.html"
+    ]
+}

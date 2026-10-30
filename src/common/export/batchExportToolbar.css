@@ -1,0 +1,51 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* The shell's last flex item (view-layout.css), under the views: it takes its room
+       from them, so it never covers a card's legend. Shown in one step (`hidden`); only
+       its opacity fades in. */
+    .batch-export-toolbar {
+        flex: none;
+        background: var(--color-card-background);
+        border-top: 2px solid var(--export-success-color);
+        box-shadow: var(--shadow-md);
+        padding: var(--space-md) var(--space-lg);
+        transition: opacity var(--motion-duration-base) var(--motion-ease-standard);
+    }
+
+    @starting-style {
+        .batch-export-toolbar {
+            opacity: 0;
+        }
+    }
+
+    .toolbar-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* The count is text, in text ink; only the check glyph carries the green, which
+       falls under 4.5:1 as text. */
+    .selection-info {
+        display: flex;
+        align-items: center;
+        gap: var(--space-sm);
+        color: var(--text-color);
+    }
+
+    .selection-info .icon {
+        font-size: var(--fs-lg);
+        color: var(--export-success-color);
+    }
+
+    .toolbar-actions {
+        gap: var(--space-md);
+    }
+
+    @media print {
+        .batch-export-toolbar {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,83 @@
+@layer vendor, foundation, common, modules, views;
+
+@layer modules {
+    .item-ring-focus-body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* The split body pads nothing: the chart area pads the ring and the text blocks
+       together, as the card body did. */
+    .chart-host-chart-area.item-ring-focus-body {
+        padding: var(--layout-pad);
+    }
+
+    .item-ring-focus-text-blocks {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: var(--layout-gap);
+        max-width: 800px;
+    }
+
+    /* The ring text at the size the script stamps for the ring's diameter. */
+    .item-ring-focus-ring-container {
+        font-size: var(--ring-fs);
+    }
+
+    .item-ring-focus-svg {
+        overflow: visible;
+    }
+
+    .item-ring-focus-text-block {
+        padding: var(--card-pad);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-md);
+        background-color: var(--color-card-background);
+    }
+
+    .item-ring-focus-text-block h4 {
+        margin: 0 0 var(--layout-gap);
+        font-size: inherit;
+        font-weight: var(--fw-bold);
+    }
+
+    .item-ring-focus-text-block-list {
+        margin: 0;
+        padding-inline-start: var(--list-indent);
+    }
+
+    .item-ring-focus-text-block-list-item:not(:last-child) {
+        margin-bottom: var(--control-gap);
+    }
+
+    /* The inner ring's table: Niveau, its items, the group's rate and, with a
+       selection, the selection's. Figures centred, in the chart's tabular digits. */
+    .item-ring-focus-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    .item-ring-focus-table th,
+    .item-ring-focus-table td {
+        padding: var(--control-gap) var(--layout-gap-relaxed);
+        border-bottom: 1px solid var(--color-border);
+        text-align: center;
+    }
+
+    .item-ring-focus-table th:first-child {
+        text-align: start;
+    }
+
+    .item-ring-focus-table thead th {
+        color: var(--text-secondary);
+        font-weight: var(--fw-semibold);
+    }
+
+    .item-ring-focus-text-block-note {
+        margin: var(--layout-gap) 0 0;
+        color: var(--text-secondary);
+        font-style: italic;
+    }
+}

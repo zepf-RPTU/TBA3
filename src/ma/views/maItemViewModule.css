@@ -1,0 +1,23 @@
+/**
+ * MA item view — item-local sizing only; the split-view grid and layout-mode
+ * visibility come from maLayoutViewBase.css.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .item-view-content > .left-column {
+        gap: var(--layout-gap);
+    }
+
+    /* The lollipop shows in table-only mode alone. */
+    .item-view-content .lollipop-section {
+        display: none;
+    }
+
+    .item-view-content.layout-mode-table-only .lollipop-section {
+        flex: 0 0 auto;
+        display: flex;
+        height: calc(0.3 * var(--shell-height) + 2.5rem);
+    }
+}

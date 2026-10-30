@@ -1,0 +1,185 @@
+{
+    "$schema": "./node_modules/oxlint/configuration_schema.json",
+    "plugins": ["eslint", "unicorn", "oxc", "import", "promise", "jsdoc", "vitest"],
+    "jsPlugins": [
+        {
+            "name": "jsdoc-eslint",
+            "specifier": "eslint-plugin-jsdoc"
+        },
+        "./config/oxlintPlugin.mjs"
+    ],
+    "categories": {
+        "correctness": "error",
+        "suspicious": "error"
+    },
+    "env": {
+        "browser": true,
+        "es2024": true
+    },
+    "settings": {
+        "jsdoc": {
+            "tagNamePreference": {
+                "module": false
+            }
+        }
+    },
+    "rules": {
+        "tba3/unit-suffix": "error",
+        "no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        "no-underscore-dangle": "off",
+        "jsdoc/no-defaults": "off",
+        "jsdoc/require-property-description": "off",
+        "unicorn/no-array-sort": "off",
+        "unicorn/no-array-reverse": "off",
+        "unicorn/consistent-function-scoping": "off",
+        "import/no-unassigned-import": [
+            "error",
+            {
+                "allow": ["**/*.css"]
+            }
+        ],
+        "unicorn/prefer-add-event-listener": "off",
+        "promise/always-return": "off",
+        "promise/no-promise-in-callback": "off",
+        "vitest/no-commented-out-tests": "off"
+    },
+    "overrides": [
+        {
+            "files": [
+                "config/**/*.{js,mjs}",
+                "tools/**/*.mjs",
+                "tests/**/*.js",
+                "packages/*/test/**/*.js",
+                "vite.config.js",
+                "playwright.config.js"
+            ],
+            "env": {
+                "node": true
+            }
+        },
+        {
+            "files": ["tests/**/*.js", "packages/*/test/**/*.js"],
+            "rules": {
+                "vitest/valid-expect": [
+                    "error",
+                    {
+                        "maxArgs": 2
+                    }
+                ],
+                "vitest/expect-expect": [
+                    "error",
+                    {
+                        "assertFunctionNames": ["expect", "expect*"]
+                    }
+                ]
+            }
+        },
+        {
+            "files": [
+                "src/**/*.js",
+                "packages/*/index.js",
+                "packages/*/src/**/*.js",
+                "config/**/*.{js,mjs}",
+                "tools/**/*.mjs",
+                "vite.config.js",
+                "playwright.config.js"
+            ],
+            "rules": {
+                "jsdoc/check-access": "error",
+                "jsdoc/check-property-names": "error",
+                "jsdoc/check-tag-names": "error",
+                "jsdoc/empty-tags": "error",
+                "jsdoc/implements-on-classes": "error",
+                "jsdoc/require-param-name": "error",
+                "jsdoc/require-param-type": "error",
+                "jsdoc/require-property": "error",
+                "jsdoc/require-property-name": "error",
+                "jsdoc/require-property-type": "error",
+                "jsdoc/require-returns-type": "error",
+                "jsdoc/require-throws-type": "error",
+                "jsdoc/require-yields": "error",
+                "jsdoc/require-yields-type": "error",
+                "jsdoc-eslint/check-alignment": "error",
+                "jsdoc-eslint/check-param-names": "error",
+                "jsdoc-eslint/check-types": "error",
+                "jsdoc-eslint/check-values": "error",
+                "jsdoc-eslint/escape-inline-tags": "error",
+                "jsdoc-eslint/multiline-blocks": "error",
+                "jsdoc-eslint/require-jsdoc": "error",
+                "jsdoc-eslint/require-next-type": "error",
+                "jsdoc-eslint/require-returns-check": "error",
+                "jsdoc-eslint/require-yields-check": "error",
+                "jsdoc-eslint/tag-lines": "error",
+                "jsdoc-eslint/ts-no-empty-object-type": "error",
+                "jsdoc-eslint/valid-types": "error",
+                "jsdoc-eslint/require-param": "error",
+                "jsdoc-eslint/require-returns": "error"
+            }
+        },
+        {
+            "files": ["src/**/*.js", "packages/*/index.js", "packages/*/src/**/*.js"],
+            "rules": {
+                "tba3/icon-sources": "error",
+                "tba3/banner-label-noise": "error",
+                "tba3/tracked-source-markers": "error",
+                "tba3/comment-doc-references": "error"
+            }
+        },
+        {
+            "files": ["src/**/*.js", "packages/*/src/**/*.js"],
+            "rules": {
+                "tba3/glossary-copy-ownership": "error",
+                "tba3/no-raw-html-sink": "error"
+            }
+        },
+        {
+            "files": ["src/**/*.js", "packages/modules/src/**/*.js", "tests/**/*.js", "packages/*/test/**/*.js"],
+            "rules": {
+                "tba3/module-element-contract": "error"
+            }
+        },
+        {
+            "files": ["**/*Constants.js"],
+            "rules": {
+                "tba3/constants-mutable-state": "error"
+            }
+        },
+        {
+            "files": ["packages/modules/**/*.js"],
+            "rules": {
+                "no-restricted-imports": [
+                    "error",
+                    {
+                        "patterns": [
+                            {
+                                "group": ["@tba3/modules", "@tba3/modules/**"],
+                                "message": "inside the package the import is relative"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "files": ["packages/module-base/**/*.js"],
+            "rules": {
+                "no-restricted-imports": [
+                    "error",
+                    {
+                        "patterns": [
+                            {
+                                "group": ["@tba3/module-base", "@tba3/module-base/**"],
+                                "message": "inside the package the import is relative"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

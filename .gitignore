@@ -1,0 +1,36 @@
+# Default ignored files
+/shelf/
+# Editor-based HTTP Client requests
+/httpRequests/
+
+test-results/
+playwright-report/
+
+.vscode/
+
+/.idea/
+
+coverage/
+
+# Only the workflows are tracked; editor/agent instructions stay local.
+.github/*
+!.github/workflows/
+.claude/
+CLAUDE.md
+.playwright-mcp/*
+
+# Local secrets, OS litter
+.env*
+.DS_Store
+
+# Node/npm
+node_modules/
+npm-debug.log
+.npm/
+
+# Claude temporary files
+tmpclaude-*
+
+dist/
+# VitePress build scratch (deleted when docs:build finishes)
+docs/.vitepress/.temp/

@@ -1,0 +1,13 @@
+/**
+ * What the SL dashboard adds to, or overrides in, the shared variables.css.
+ */
+
+:root {
+    --color-background-page: light-dark(#f8fafc, #161a22);
+
+    /* The comparison/school row and SL chart colours are the package defaults
+       (@tba3/modules/styles/tokens.css). */
+
+    --chart-grid-color: light-dark(var(--color-border), #3a4352);
+    --group-average-color: #10b981;
+}

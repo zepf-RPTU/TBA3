@@ -1,0 +1,129 @@
+/* ==========================================================================
+   Glossary term annotation
+   A term shows its affordance only once `tooltipService.init()` stamps
+   `data-glossary` on the root; until then it reads as plain text.
+   ========================================================================== */
+
+/* A text decoration, not a border, in HTML and SVG alike: it is ink overflow, so a
+   term on a scroll container's last line never makes that container scroll. */
+:root[data-glossary] .glossary-term {
+    text-decoration: underline dotted;
+    text-decoration-color: var(--glossary-term-underline-color);
+    text-decoration-thickness: 1px;
+    cursor: help;
+}
+
+/* A legend's heading term is no running text: it is a target of its own, at least the
+   pointer minimum tall, so the pills under it keep their distance (WCAG 2.5.8). */
+:root[data-glossary] .legend-section-title .glossary-term {
+    display: inline-block;
+    min-block-size: var(--pointer-target-min);
+}
+
+/* Hit-test the glyphs even where a chart turns pointer events off on its labels. */
+:root[data-glossary] :is(text, tspan).glossary-term {
+    pointer-events: all;
+}
+
+/* A term is a tab stop (its focus opens the popup). SVG text draws no outline, so
+   there the ring is a solid accent underline and accent ink. */
+:root[data-glossary] .glossary-term:focus-visible {
+    outline: var(--focus-ring);
+    outline-offset: 1px;
+}
+
+:root[data-glossary] :is(text, tspan).glossary-term:focus-visible {
+    outline: none;
+    fill: var(--color-accent-text);
+    text-decoration: underline solid var(--primary-color);
+    text-decoration-thickness: 2px;
+}
+
+/* The popover box, placement and fade are the tooltip's (cursorTooltip.css, which
+   tooltipService.js always loads with it); here the light surface, and pointer
+   events for its interactive, scrollable content. Nested levels stack by the
+   order they open in. */
+.glossary-popup {
+    background: var(--color-background);
+    color: var(--text-color);
+    border: 1px solid var(--chart-grid-color);
+    max-width: 400px;
+    min-width: 200px;
+    pointer-events: auto;
+}
+
+/* ==========================================================================
+   Popup content elements
+   ========================================================================== */
+
+/* Only tap-opened popups carry this `.btn--icon` (tooltipService renders it): a
+   tapped popup has no cursor to move away and a tablet has no Escape key. Floated
+   so the title keeps its full width and underline; sized from
+   `--touch-target-min` outside any coarse-pointer query, since only a fingertip
+   uses it. */
+.glossary-popup-close {
+    --btn-height-toolbar: var(--touch-target-min);
+    --btn-fill: transparent;
+    --btn-hover-fill: var(--color-border-light);
+    float: inline-end;
+    /* Pulls the oversized hit area into the popup's padding so the glyph sits in
+       the corner and the title is not pushed down. */
+    margin: calc(-1 * var(--notice-padding-block)) calc(-1 * var(--notice-padding-inline)) 0
+        var(--space-sm);
+    border: none;
+    color: var(--text-color);
+}
+
+.glossary-popup-title {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-base);
+    margin-bottom: var(--space-sm);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-border-light);
+}
+
+/* A glossary entry's HTML body, wherever it is shown. */
+.glossary-prose p {
+    margin: 0 0 var(--space-sm) 0;
+}
+
+.glossary-prose p:last-child {
+    margin-bottom: 0;
+}
+
+.glossary-prose ul,
+.glossary-prose ol {
+    margin: var(--control-gap) 0 var(--layout-gap) 0;
+    padding-inline-start: var(--list-indent);
+}
+
+.glossary-prose li {
+    margin-bottom: calc(var(--control-gap) / 2);
+}
+
+/* The Pilotierung entry names the colours the table paints the difference in
+   (table-base.css), as classes: the CSP allows no inline style. */
+.glossary-prose .result-diff--up {
+    color: var(--result-correct-text);
+}
+
+.glossary-prose .result-diff--down {
+    color: var(--result-incorrect-text);
+}
+
+/* Separates the scales of a multi-scale entry (competenceLevelGlossary.js). */
+.glossary-prose hr {
+    margin: var(--layout-gap) 0;
+    border: 0;
+    border-top: 1px solid var(--color-border-light);
+}
+
+@media (prefers-contrast: more) {
+    .glossary-popup {
+        border: 2px solid var(--text-color);
+    }
+
+    .glossary-popup-title {
+        border-bottom-color: var(--text-color);
+    }
+}

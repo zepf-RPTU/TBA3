@@ -1,0 +1,115 @@
+/**
+ * Competence-level theme hooks, keyed on `data-competence-level-theme` on <html>. The
+ * band colours are not here: the scale varies by state, so competenceLevelColors.js
+ * generates the ramp once competence-levels.json has loaded (paint rules in
+ * stacked-bar.css). Here: the grayscale steps, and the grayscale variant of the other
+ * data colours (result, gender, EN domains, average markers, SL series); the other
+ * themes keep the tokens.css defaults.
+ */
+
+/* ==========================================================================
+   Theme: grayscale
+   ========================================================================== */
+
+html[data-competence-level-theme='grayscale'] {
+    /* The complete grayscale vocabulary: every grayscale override resolves to one of
+       these five steps. Categories that never render against each other share
+       steps: gender and richtig/falsch each own a bar and legend, so both draw from
+       steps 1/3/5. Custom properties resolve on <html>, so every
+       data-competence-level-theme override sees these. A sixth shade needs two
+       colours that render together and cannot be told apart.
+
+       RAMP_STOPS in colorRamp.js builds the grayscale competence-level ramp from the
+       same steps, so a five-level scale lands exactly on them; each clears 3:1 on the
+       white card, and sampled to seven levels they still step ≥ 0.06 in OKLab
+       lightness. On dark the steps run dim to bright, so step 5 stays the emphatic
+       end: RAMP_STOPS.dark.grayscale, as the light five are RAMP_STOPS.light.grayscale. */
+    --gray-1: light-dark(#909090, #5c6270);
+    --gray-2: light-dark(#747474, #7d8390);
+    --gray-3: light-dark(#595959, #9fa4ae);
+    --gray-4: light-dark(#3f3f3f, #c2c5cc);
+    --gray-5: light-dark(#272727, #e6e8ec);
+
+    --result-correct: var(--gray-5);
+    --result-incorrect: var(--gray-3);
+    --result-correct-text: var(--gray-5);
+    --result-incorrect-text: var(--gray-4);
+    --result-not-attempted: var(--gray-1);
+
+    --gender-male-color: var(--gray-5);
+    --gender-female-color: var(--gray-3);
+    --gender-diverse-color: var(--gray-1);
+
+    --chart-domain0-color: var(--gray-3);
+    --chart-domain1-color: var(--gray-5);
+
+    --group-average-color: var(--gray-5);
+    --school-average-color: var(--gray-4);
+    /* Drawn beside the group's web (gray-5), so three steps away; it shares its step
+       only with the catch-all marker, a different mark. */
+    --student-performance-color: var(--gray-2);
+    --state-average-color: var(--gray-3);
+    --other-average-color: var(--gray-2);
+
+    /* The two series can be drawn side by side, so their greys must differ
+       clearly. */
+    --sl-teaching-quality: var(--gray-4);
+    --sl-self-efficacy: var(--gray-2);
+}
+
+/* ==========================================================================
+   Level text cells
+   ========================================================================== */
+
+/* A level cell (itemCompetenceLevelAppearance.js). The scale comes from the
+   data, so the cell carries the resolved band colour inline as
+   --competence-level-band-color instead of CSS keying on level names. The text stays
+   in --text-color with the band as a swatch in front: text in the band colour fails
+   4.5:1 on every band of every ramp, and a swatch fits any ramp and theme without
+   per-band ink math. */
+.ger-text {
+    /* Body size, not --fs-lg: a larger label would set the row height. */
+    font-size: var(--fs-base);
+    font-weight: var(--fw-semibold);
+    white-space: nowrap;
+}
+
+/* Swatch | label, the label column as wide as the scale's widest label: the hidden,
+   zero-height `::after` row reserves `data-level-sizer`, so every value of one scale
+   is equally wide and a centred column lines its swatches up. `visibility: hidden`
+   keeps the sizer out of the accessible name. The grid's baseline is its first
+   row's, so the cell's text baseline stays where inline text had it; `line-height:
+   normal` keeps the box as tall as the inline span's content box was. */
+.ger-text.competence-level {
+    display: inline-grid;
+    grid-template-columns: auto auto;
+    align-items: baseline;
+    justify-items: start;
+    line-height: normal;
+}
+
+/* One label per line, so the column takes the widest as rendered. */
+.ger-text.competence-level::after {
+    content: attr(data-level-sizer);
+    grid-column: 2;
+    block-size: 0;
+    overflow: hidden;
+    visibility: hidden;
+    white-space: pre;
+}
+
+.ger-text.competence-level::before {
+    content: '';
+    width: 0.7em;
+    height: 0.7em;
+    margin-inline-end: 0.35em;
+    border-radius: var(--radius-xs);
+    background: var(--competence-level-band-color);
+    /* A box without text sits its bottom edge on the baseline; this drops it as
+       far below as the inline swatch sat. */
+    translate: 0 0.05em;
+    /* Keeps its colour under forced colours and in print, like the bands. */
+    /* eslint-disable-next-line css/use-baseline -- progressive enhancement: only engines with forced colours read it */
+    forced-color-adjust: none;
+    print-color-adjust: exact;
+}

@@ -1,0 +1,80 @@
+{
+    "header": {
+        "title": "Hilfe",
+        "subtitle": "Glossar, didaktische Hinweise und Antworten auf häufige Fragen."
+    },
+    "back-link": {
+        "label": "Zurück zur vorherigen Ansicht: {{view}}"
+    },
+    "placeholder-notice": {
+        "body": "Dieser Teil der Rückmeldung ist vorerst nur ein Platzhalter und befindet sich in Bearbeitung."
+    },
+    "glossary": {
+        "title": "Glossar",
+        "search-label": "Im Glossar suchen",
+        "search-placeholder": "z. B. Kompetenzstufe",
+        "result-count-one": "1 Eintrag gefunden",
+        "result-count-many": "{{count}} Einträge gefunden",
+        "clear": "Suche zurücksetzen"
+    },
+    "didactic": {
+        "title": "Didaktische Hinweise",
+        "support-ideas": {
+            "title": "Förderideen",
+            "body": "<p>Förderideen sind konkrete Vorschläge und Ansätze zur individuellen Unterstützung von Schüler:innen basierend auf ihren Leistungsdaten.</p><p><strong>Ziele:</strong></p><ul><li>Gezielte Unterstützung bei Schwächen</li><li>Förderung von Stärken</li><li>Differenzierung im Unterricht</li></ul>"
+        },
+        "materials": {
+            "title": "Materialien",
+            "body": "<p>Materialien umfassen Arbeitsblätter, Übungsaufgaben, digitale Ressourcen und weitere Lehrmittel, die zur Förderung und zum Üben eingesetzt werden können.</p><p><strong>Einsatzbereiche:</strong> Binnendifferenzierung, Hausaufgaben, Zusatzübungen, Wiederholung.</p>"
+        },
+        "links": {
+            "title": "Links",
+            "body": "<p>Weiterführende Links zu externen Ressourcen, Plattformen und Materialien, die den Unterricht bereichern und zusätzliche Unterstützung bieten.</p><p><strong>Beispiele:</strong> Fachportale, digitale Lernplattformen, Fortbildungsangebote, Bildungsserver.</p>"
+        }
+    },
+    "faq": {
+        "title": "FAQ und technische Hilfe",
+        "navigation": {
+            "title": "Navigation",
+            "body": "<p>Die Navigation erfolgt über die linke Seitenleiste. Hier können Sie zwischen verschiedenen Ansichten wechseln:</p><ul><li><strong>Willkommen:</strong> Startseite mit Überblick</li><li><strong>Übersicht:</strong> Kompetenzstufenverteilung und Lösungsquoten der Lerngruppe</li><li><strong>Lerngruppe:</strong> Lerngruppenübersicht aller Schüler:innen</li><li><strong>Aufgaben:</strong> Analyse der Aufgabenlösungen</li><li><strong>Schüler:in:</strong> Ergebnisse einzelner Schüler:innen</li><li><strong>Bericht:</strong> Vorgemerkte Inhalte anordnen und als PDF speichern</li><li><strong>Hilfe:</strong> Diese Seite</li></ul>"
+        },
+        "symbols": {
+            "title": "Symbole",
+            "body": "<p>Erklärung wichtiger Symbole im Dashboard. In den Kartenköpfen blendet ⌀ die Vergleichswerte (etwa den Landesschnitt) ein und aus.</p>",
+            "home": {
+                "label": "Willkommen / Startseite"
+            },
+            "bar_chart": {
+                "label": "Übersicht / Statistiken"
+            },
+            "groups": {
+                "label": "Lerngruppe"
+            },
+            "list_alt": {
+                "label": "Aufgaben"
+            },
+            "person": {
+                "label": "Schüler:in"
+            },
+            "download": {
+                "label": "Export / Download"
+            },
+            "check_box": {
+                "label": "Karte für den Bericht vormerken"
+            },
+            "visibility": {
+                "label": "Aufgabe ansehen"
+            },
+            "tune": {
+                "label": "Tabelle filtern"
+            },
+            "swap_horiz": {
+                "label": "Diagramm drehen"
+            }
+        },
+        "questions": {
+            "title": "Typische Fragen",
+            "body": "<p><strong>Wie interpretiere ich die Diagramme?</strong><br>Balken und Ringe zeigen Anteile: Je länger ein Abschnitt, desto größer sein Anteil. Bei Kompetenzstufen sind es Anteile der Schüler:innen, bei Teilaufgaben Anteile der Antworten (richtig, unbearbeitet, falsch). Was ein Diagramm zählt, nennen sein Untertitel und sein Tooltip.</p><p><strong>Kann ich Daten exportieren?</strong><br>Ja. Überall dort, wo ein Export-Symbol ({{downloadIcon}}) angezeigt wird, lassen sich Tabellen als CSV, JSON oder PDF und Diagramme als PDF, PNG oder JPG herunterladen – jeweils im aktuell angezeigten Zustand (Filter, Sortierung, ausgeblendete Spalten).</p><p><strong>Was bedeuten die Farben?</strong><br>Farben kennzeichnen unterschiedliche Leistungsniveaus oder Kategorien. Die Legende finden Sie jeweils bei den Diagrammen.</p>"
+        }
+    }
+}

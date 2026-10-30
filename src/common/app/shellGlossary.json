@@ -1,0 +1,257 @@
+{
+    "general": {
+        "tour": {
+            "hover-help": {
+                "title": "Schon gewusst? – Erklärungen per Mouseover",
+                "tutorial": "<p>Viele Fachbegriffe und Spaltenüberschriften sind hinterlegt: Wenn Sie mit der Maus darüberfahren, erscheint eine kurze Erklärung. So können Sie jederzeit nachschlagen, ohne die Ansicht zu verlassen.</p>"
+            },
+            "export-help": {
+                "title": "Schon gewusst? – Inhalte herunterladen",
+                "tutorial": "<p>Über diese Schaltfläche können Sie Tabellen und Schaubilder herunterladen – Tabellen als CSV, JSON oder PDF, Schaubilder als PDF oder Bild. So nehmen Sie die Ergebnisse mit oder binden sie in eigene Dokumente ein.</p>"
+            },
+            "notes-help": {
+                "title": "Schon gewusst? – Eigene Notizen",
+                "tutorial": "<p>Mit dieser Schaltfläche öffnen Sie das Notizfeld. Dort können Sie eigene Beobachtungen und Gedanken festhalten und mit einzelnen Modulen verknüpfen. Die Notizen gelten für das ganze Dashboard und bleiben erhalten, wenn Sie die Ansicht wechseln.</p>"
+            }
+        },
+        "report": {
+            "header": {
+                "title": "Bericht",
+                "subtitle": "In den Ansichten vorgemerkte Karten anordnen und als PDF speichern."
+            },
+            "empty": "Noch keine Karten im Bericht. Merken Sie in den Ansichten Karten über das Kästchen-Symbol neben dem Export-Symbol vor – sie erscheinen hier und lassen sich anordnen und als PDF speichern.",
+            "exported-notice": "Bericht gespeichert – die Auswahl wurde geleert.",
+            "healed-notice-one": "1 Karte ohne gespeichertes Bild wurde aus dem Bericht entfernt – bitte erneut vormerken.",
+            "healed-notice-many": "{{count}} Karten ohne gespeichertes Bild wurden aus dem Bericht entfernt – bitte erneut vormerken.",
+            "zoom": {
+                "label": "Ansichtsgröße",
+                "fit-page": "Seite",
+                "fit-width": "Breite",
+                "full": "100 %",
+                "half": "50 %"
+            },
+            "export": "Als PDF exportieren",
+            "summary-empty": "Keine Karten",
+            "summary-one": "1 Karte",
+            "summary-many": "{{count}} Karten",
+            "caption-view": "Ansicht {{view}}",
+            "caption-captured": "aufgenommen {{time}}",
+            "pages": {
+                "label": "Karten des Berichts"
+            },
+            "card-width": {
+                "label": "Breite",
+                "12": "1/1",
+                "8": "2/3",
+                "6": "1/2",
+                "4": "1/3"
+            },
+            "card-up": {
+                "label": "Nach oben"
+            },
+            "card-down": {
+                "label": "Nach unten"
+            },
+            "card-position": "„{{title}}“ an Position {{position}} von {{count}}",
+            "card-remove": {
+                "label": "Aus Bericht entfernen"
+            }
+        },
+        "buttons": {
+            "element_texts": {
+                "single-download": {
+                    "tooltip": "Diese Karte herunterladen"
+                },
+                "export-csv": {
+                    "description": "Tabellendaten, z. B. für Excel"
+                },
+                "export-json": {
+                    "description": "Tabellendaten zur Weiterverarbeitung"
+                },
+                "export-pdf": {
+                    "description": "Bild der Karte als PDF"
+                },
+                "export-png": {
+                    "description": "Bild der Karte, verlustfrei"
+                },
+                "export-jpg": {
+                    "description": "Bild der Karte, kleinere Datei"
+                },
+                "cart-toggle": {
+                    "tooltip": "Diese Karte für den Bericht vormerken"
+                },
+                "cart-toggle-remove": {
+                    "tooltip": "Diese Karte aus dem Bericht entfernen"
+                },
+                "note-rename": {
+                    "label": "Seite umbenennen",
+                    "tooltip": "Seite umbenennen"
+                },
+                "note-rename-hint": {
+                    "tooltip": "Umbenennen: Stift oder Doppelklick"
+                },
+                "notes-toggle": {
+                    "label": "Notizen öffnen"
+                },
+                "tour-start": {
+                    "label": "Rundgang"
+                },
+                "tour-back": {
+                    "label": "Zurück"
+                },
+                "tour-skip": {
+                    "label": "Überspringen"
+                },
+                "tour-next": {
+                    "label": "Weiter"
+                },
+                "tour-finish": {
+                    "label": "Fertig"
+                },
+                "note-add": {
+                    "label": "Seite hinzufügen"
+                },
+                "note-delete": {
+                    "label": "Seite löschen"
+                },
+                "note-link": {
+                    "label": "Karte verknüpfen",
+                    "text": "Verknüpfen"
+                },
+                "notes-title": {
+                    "label": "Notizen"
+                },
+                "notes-format-bold": {
+                    "label": "Fett"
+                },
+                "notes-format-italic": {
+                    "label": "Kursiv"
+                },
+                "notes-format-ordered": {
+                    "label": "Nummerierte Liste"
+                },
+                "notes-format-bullet": {
+                    "label": "Aufzählung"
+                },
+                "notes-format-check": {
+                    "label": "Checkliste"
+                },
+                "notes-close": {
+                    "label": "Notizen schließen"
+                },
+                "notes-pages": {
+                    "label": "Notizseiten"
+                },
+                "notes-placeholder": {
+                    "label": "Notizen…"
+                },
+                "notes-export": {
+                    "label": "Notizen exportieren"
+                },
+                "notes-clear": {
+                    "label": "Alle Notizen löschen"
+                },
+                "notes-delete-confirm": {
+                    "label": "Löschen"
+                },
+                "notes-take-over": {
+                    "label": "Hier bearbeiten"
+                },
+                "sidebar-logo": {
+                    "label": "RPTU – Zentrum für Empirische Pädagogische Forschung (zepf)"
+                },
+                "sidebar-views": {
+                    "label": "Ansichten"
+                },
+                "sidebar-more-views": {
+                    "label": "Weitere Ansichten"
+                },
+                "sidebar-color-scheme": {
+                    "label": "Darstellung"
+                },
+                "sidebar-competence-level-theme": {
+                    "label": "Farbschema"
+                },
+                "sidebar-color-scheme-system": {
+                    "label": "System"
+                },
+                "sidebar-color-scheme-light": {
+                    "label": "Hell"
+                },
+                "sidebar-color-scheme-dark": {
+                    "label": "Dunkel"
+                },
+                "sidebar-competence-level-theme-default": {
+                    "label": "Standard"
+                },
+                "sidebar-competence-level-theme-grayscale": {
+                    "label": "Graustufen"
+                },
+                "sidebar-competence-level-theme-data": {
+                    "label": "Landesvorgabe"
+                },
+                "sidebar-imprint": {
+                    "label": "Impressum"
+                },
+                "batch-export": {
+                    "label": "Berichtsauswahl"
+                },
+                "report-open": {
+                    "label": "Bericht öffnen"
+                },
+                "report-clear": {
+                    "label": "Alle Karten entfernen"
+                },
+                "report-clear-confirm": {
+                    "label": "Alle entfernen"
+                },
+                "notes-toolbar": {
+                    "label": "Formatierung"
+                },
+                "notes-dock": {
+                    "label": "Notizen auf die andere Seite verschieben"
+                },
+                "notes-size": {
+                    "label": "Notizen größer oder kleiner stellen"
+                },
+                "new-tab-hint": {
+                    "label": "(öffnet in neuem Tab)"
+                }
+            }
+        },
+        "messages": {
+            "capture-failed": "Die Karte konnte nicht in den Bericht aufgenommen werden. Versuchen Sie es erneut.",
+            "export-failed": "Der Export ist fehlgeschlagen. Versuchen Sie es erneut.",
+            "report-export-failed": "Der Bericht konnte nicht als PDF gespeichert werden. Versuchen Sie es erneut.",
+            "no-entries": "Keine Einträge gefunden.",
+            "current-view": "Sie sind hier",
+            "confirm-delete-note": "Diese Seite mit ihrem Inhalt löschen?",
+            "confirm-clear-report": "Alle Karten aus dem Bericht entfernen?",
+            "selection-count-one": "1 Karte vorgemerkt",
+            "selection-count-many": "{{count}} Karten vorgemerkt",
+            "view-failed": "Die Ansicht konnte nicht geladen werden. Laden Sie die Seite neu.",
+            "app-load-failed": "Das Dashboard „{{dashboard}}“ konnte nicht geladen werden.",
+            "data-load-failed": "Die Daten für „{{dataset}}“ konnten nicht geladen werden.",
+            "load-cause-unreachable": "Die Datenquelle ist nicht erreichbar.",
+            "load-cause-malformed": "Die gelieferten Daten haben nicht die erwartete Form.",
+            "load-cause-error": "Beim Laden ist ein Fehler aufgetreten.",
+            "load-recovery-switch": "Wählen Sie oben einen anderen Datensatz oder versuchen Sie es später erneut.",
+            "load-link-chooser": "Zur Dashboard-Auswahl",
+            "load-link-default": "Mit dem Standarddatensatz öffnen",
+            "load-link-imprint": "Impressum",
+            "data-malformed": "Die Ansicht konnte nicht geladen werden: Die gelieferten Daten haben nicht die erwartete Form.",
+            "notes-failed": "Die Notizen konnten nicht geöffnet werden. Versuchen Sie es erneut.",
+            "notes-link-back": "← Ansichten",
+            "notes-link-unvisited": "Ansicht zuerst öffnen",
+            "notes-link-empty": "Keine verknüpfbaren Karten",
+            "confirm-clear-notes": "Alle Notizseiten zu diesem Datensatz löschen? Das lässt sich nicht rückgängig machen.",
+            "notes-read-only": "Diese Notizen werden in einem anderen Tab bearbeitet. Hier können Sie sie nur lesen.",
+            "tour-progress": "Schritt {{step}} von {{total}}",
+            "tour-busy": "Die Ansicht wird noch aufgebaut. Starten Sie den Rundgang gleich noch einmal.",
+            "unexpected-error": "Ein unerwarteter Fehler ist aufgetreten. Laden Sie die Seite neu, falls das Dashboard nicht mehr reagiert.",
+            "splash-placeholder": "Platzhalter",
+            "splash-image-credit": "Designed by <a href=\"https://www.freepik.com\" target=\"_blank\" rel=\"noopener noreferrer\">vectorpocket / Freepik</a>",
+            "notes-keyboard-hint": "Esc schließt die Notizen, Umschalt+Tab verlässt den Editor."
+        }
+    }
+}

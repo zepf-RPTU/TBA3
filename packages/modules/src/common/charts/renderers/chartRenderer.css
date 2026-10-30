@@ -1,0 +1,149 @@
+/**
+ * Shared chart-host typography and sizing. No font-family here: charts render
+ * in the page's one family (--font-family-main on body).
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* Modules override the padding via --chart-container-padding on it or an
+       ancestor. Positioned so an inline chart message (chartMessage.js) can sit
+       over the plot. */
+    .chart-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: var(--chart-container-padding);
+        font-size: var(--fs-base);
+        color: var(--text-color);
+        /* Ticks, value labels and deltas re-render on every state change;
+           equal-width digits keep them still. Inherited by every SVG text node. */
+        font-variant-numeric: tabular-nums;
+        --chart-reference-dash: 4 4;
+        --chart-reference-width: 1px;
+        /* The `band` hover preset's tint on a hit rect (chartInteractionUtils.js). */
+        --chart-hover-band: color-mix(in srgb, currentColor 6%, transparent);
+    }
+
+    /* A transparent hit target over marks (a band, box, wedge or tick stroke).
+       It opts out of forced colours so a contrast theme never fills it over the
+       marks under it. The band hover tints it inline (`--chart-hover-band`) and
+       resets it. */
+    .chart-hit {
+        fill: transparent;
+        /* eslint-disable-next-line css/use-baseline -- progressive enhancement: only engines with forced colours read it */
+        forced-color-adjust: none;
+    }
+
+    /* A line's hit target is its stroke, `MARK_DEFAULTS.minHitSizePx` wide. */
+    .chart-hit--stroke {
+        stroke: transparent;
+        pointer-events: stroke;
+    }
+
+    /* `.chart-root` is the SVG the renderer draws (chartRenderer.js #appendSVG); a
+       bare `.chart-container svg` would also blow the host's inline text icons up
+       to the full card. */
+    .chart-container svg.chart-root {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    /* d3-axis stamps `font-size="10" font-family="sans-serif"` on the group it is
+       called on; every axis group is a `.chart-axis` (appendAxisGroup /
+       axisGroupClass). A presentation attribute loses to any rule, so axis text
+       inherits the SVG root's family and size. Gridline groups get the attributes
+       too but hold no text (callGridLines removes it). */
+    .chart-container .chart-axis {
+        font-size: inherit;
+        font-family: inherit;
+    }
+
+    /* Axis ink (the standard is in chartAxisUtils.js). A rule outranks the
+       `fill`/`stroke` attributes d3-axis stamps on every draw and transition. */
+    .chart-container .chart-axis .domain,
+    .chart-container .axis-baseline {
+        stroke: var(--chart-axis-color);
+    }
+
+    .chart-container .chart-axis--no-line .domain {
+        display: none;
+    }
+
+    /* `.axis-tick-label` is a category label placed by hand (under a bar group, a
+       box) rather than by a d3 axis; it takes tick ink. */
+    .chart-container .chart-axis .tick text,
+    .chart-container .axis-tick-label {
+        fill: var(--text-secondary);
+    }
+
+    .chart-container .axis-label {
+        fill: var(--text-color);
+    }
+
+    .chart-container .grid line {
+        stroke: var(--chart-grid-color);
+    }
+
+    /* Reference lines (appendReferenceLine in chartAxisUtils.js): an average, a
+       group boundary, a centre. Axis ink, like the baseline, so a guide reads as
+       frame, never as a data mark. The accent variant is a threshold guide in its
+       axis's domain colour, set inline. */
+    .chart-container .chart-reference-line,
+    .chart-container .chart-separator {
+        stroke: var(--chart-axis-color);
+        stroke-width: var(--chart-reference-width);
+    }
+
+    .chart-container .chart-reference-line {
+        stroke-dasharray: var(--chart-reference-dash);
+    }
+
+    .chart-container .chart-reference-line--accent {
+        --chart-reference-dash: 4 2;
+        --chart-reference-width: 2px;
+    }
+
+    /* A value label (chartValueLabels.js) over a mixed background (a gridline, a
+       neighbouring mark) is ringed in the surface under it, stroke under the glyphs,
+       in either colour scheme without a redraw: the card, or the fill of the mark it
+       sits inside (a value pill), where the ring disappears into the fill. */
+    .chart-container .value-label--halo {
+        paint-order: stroke;
+        stroke: var(--value-label-halo, var(--color-card-background));
+        stroke-width: 3px;
+        stroke-linejoin: round;
+    }
+
+    /* Set by ChartRenderer.fitContentWidth while the content is wider than the
+       card. The scrollbar sits at the bottom of a card that can be a screen tall,
+       so it may start off-screen; two background layers paint a trailing-edge
+       shadow only while more chart lies to the right: the shadow is fixed to the
+       box, the card-coloured cover scrolls with the content and slides over it at
+       the end. */
+    .chart-content-scroll {
+        overflow-x: auto;
+        background:
+            linear-gradient(to left, var(--color-card-background) 40%, transparent) right / 2rem
+                100% no-repeat local,
+            linear-gradient(to left, var(--shadow-color), transparent) right / 1.25rem 100%
+                no-repeat scroll;
+    }
+
+    /* Lets the renderer's width attribute beat the 100% clamp above, which would
+       squeeze the widened chart back into the card. Same specificity, so it wins
+       by coming after. */
+    .chart-content-scroll svg.chart-root {
+        width: auto;
+        min-width: 100%;
+    }
+
+    /* A mark with keyboard focus (the roving tab stop, chartRenderer.js), in the
+       scroll regions' focus ink. An SVG outline follows the bounding box; the
+       mark's hover look also shows and carries the cue where the outline does not. */
+    .chart-container svg [tabindex]:focus-visible {
+        outline: var(--focus-ring);
+        outline-offset: var(--focus-ring-offset);
+    }
+}

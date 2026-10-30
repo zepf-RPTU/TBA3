@@ -1,0 +1,16 @@
+{
+    "title": "Tabellarische Übersicht der Schüler:innen",
+    "subtitle": "<p>Die Tabelle bildet die wichtigsten Merkmale und Ergebnisse aller Schüler:innen (oder eines ausgewählten Teils) ab. Sortieren Sie über die Spaltenüberschriften und filtern Sie über die Filter-Schaltfläche über der Tabelle.</p>",
+    "tutorial": "<p>In dieser Tabelle finden Sie alle Ihre Schüler:innen inklusive einiger Personenmerkmale und den erreichten Leistungen in den Bereichen {{Domänen}}. Neben der {{Stufe}} erhalten Sie eine Aufschlüsselung der gelösten, nicht bearbeiteten und falsch gelösten Teilaufgaben. Mithilfe der Tabellenkopfzeile oder der visuellen Suche im Streudiagramm können Sie die Auswahl auf einen kleineren Ausschnitt Ihrer Lerngruppe beschränken.</p>",
+    "interface": {
+        "best-five": {
+            "label": "Stärkste 5"
+        },
+        "worst-five": {
+            "label": "Schwächste 5"
+        },
+        "student-link": {
+            "tooltip": "Einzelergebnisse anzeigen"
+        }
+    }
+}

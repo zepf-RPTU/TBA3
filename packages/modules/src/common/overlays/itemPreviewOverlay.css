@@ -1,0 +1,72 @@
+/**
+ * Item preview overlay: the modal for one item ("Aufgabe").
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer common {
+    /* The card and its close button are the shared .modal-panel / .modal-close. */
+    .item-preview-overlay-content {
+        position: relative;
+        padding: var(--space-lg);
+        /* Sized off the shell, not the viewport (modal-dialog.css). */
+        width: min(640px, calc(0.9 * var(--shell-width)));
+        max-height: calc(var(--shell-height) - 2 * var(--overlay-margin));
+        overflow-y: auto;
+    }
+
+    .item-preview-overlay-body {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+    }
+
+    .item-preview-overlay-header {
+        display: flex;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: var(--space-sm);
+        /* Keeps clear of the close button. */
+        padding-inline-end: 2rem;
+    }
+
+    .item-preview-overlay-number {
+        font-weight: var(--fw-bold);
+        color: var(--text-secondary);
+    }
+
+    .item-preview-overlay-title {
+        font-size: var(--fs-lg);
+    }
+
+    /* Placeholder media slots (Text, Bild, Audio). */
+    .item-preview-media {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: var(--space-sm);
+    }
+
+    .item-preview-media-slot {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-xs);
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 96px;
+        padding: var(--space-md);
+        border: 1px dashed var(--chart-grid-color);
+        border-radius: var(--radius-md);
+        background: var(--color-background);
+    }
+
+    .item-preview-media-slot-label {
+        font-weight: var(--fw-bold);
+        color: var(--text-color);
+    }
+
+    .item-preview-media-slot-hint {
+        font-size: var(--fs-sm);
+        color: var(--text-muted);
+    }
+}

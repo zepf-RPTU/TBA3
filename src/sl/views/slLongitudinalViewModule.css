@@ -1,0 +1,26 @@
+/**
+ * SL Entwicklung view. The cards are equal width by the card shell's own
+ * `flex: 1` (contentModule.css); the row shell is charts-row.css.
+ */
+
+@layer vendor, foundation, common, modules, views;
+
+@layer views {
+    .longitudinal-chart-body {
+        min-height: 200px;
+    }
+
+    /* The box plot draws both survey measures in place of their two cards, so it
+       takes their two shares of the row. Stacked (`--stacked-layout`) the row sizes to its
+       cards, so there is no free space for this to share out. */
+    .longitudinal-charts-row > .longitudinal-chart-card--box-plot {
+        flex-grow: 2;
+    }
+
+    @media (--stacked-layout) {
+        .longitudinal-charts-row > .longitudinal-chart-card {
+            flex: none;
+            height: var(--stacked-card-height-vh);
+        }
+    }
+}
